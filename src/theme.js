@@ -1,4 +1,4 @@
-import swatch from "./colors";
+import swatch from './colors';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
@@ -12,31 +12,31 @@ const colors = {
   secondary: swatch.black,
   accent: swatch.blue,
   muted: swatch.grays[5],
-  highlight: swatch.blue,
+  highlight: swatch.blue
 };
 
 const fonts = {
-  body: "Proxima Nova, Arial, sans-serif",
-  heading: "Gimlet Text, Arial, sans-serif",
+  body: 'Proxima Nova, Arial, sans-serif',
+  heading: 'Gimlet Text, Arial, sans-serif'
 };
 
 const fontWeights = {
   body: 500,
   heading: 400,
-  bold: 700,
+  bold: 700
 };
 
 const lineHeights = {
   body: 1.5,
-  heading: 1.125,
+  heading: 1.125
 };
 
 const letterSpacings = {
-  normal: "normal",
+  normal: 'normal'
 };
 
 // Rounded radius.
-const round = "50%";
+const round = '50%';
 const radii = [0, 4, 8, 12, round];
 
 const theme = {
@@ -47,7 +47,7 @@ const theme = {
   fontWeights,
   lineHeights,
   letterSpacings,
-  radii,
+  radii
 };
 
 export default theme;
