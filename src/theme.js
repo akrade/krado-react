@@ -8,7 +8,7 @@ const colors = {
   // UI Colors
   text: swatch.black,
   background: swatch.white,
-  primary: swatch.blues,
+  primary: swatch.blue,
   secondary: swatch.black,
   accent: swatch.blue,
   muted: swatch.grays[5],
