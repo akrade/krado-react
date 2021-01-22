@@ -1,10 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-import { ExampleComponent } from 'krado-react'
-import 'krado-react/dist/index.css'
-
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+export default function App() {
+  return <div>Hello!</div>;
 }
-
-export default App
