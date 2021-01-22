@@ -50,4 +50,4 @@ const theme = {
   radii
 };
 
-export default theme;
+export { theme };
