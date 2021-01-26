@@ -6,6 +6,7 @@ export default function App() {
     <Flex height="100vh" justifyContent="center" alignItems="center">
       <Box backgroundColor="muted" padding={6} borderRadius={3}>
         <Text backgroundColor="red">FOOBAR</Text>
+        <p>Barfoo</p>
       </Box>
     </Flex>
   );
