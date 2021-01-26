@@ -23,6 +23,7 @@ const Box = styled.div(
   flexbox,
   grid,
   typography,
+
   variant({
     variants: {
       root: {

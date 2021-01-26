@@ -1,11 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { typography } from 'styled-system';
+import { space, layout, color, typography } from 'styled-system';
+import propTypes from '@styled-system/prop-types';
 
 const BaseText = styled.div`
+  ${space}
+  ${layout}
+  ${color}
   ${typography}
 `;
 
-export default function Text(props) {
-  return <BaseText>{props.children}</BaseText>;
+function Text(props) {
+  return (
+    <BaseText fontSize={3} {...props}>
+      {props.children}
+    </BaseText>
+  );
 }
+
+Text.propTypes = {
+  ...propTypes.space,
+  ...propTypes.layout,
+  ...propTypes.color,
+  ...propTypes.typography
+};
+
+export default Text;
