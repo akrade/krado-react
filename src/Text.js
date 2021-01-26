@@ -1,25 +1,11 @@
+import React from 'react';
 import styled from 'styled-components';
-import { space, color, layout, typography, position } from 'styled-system';
-import propTypes from '@styled-system/prop-types';
-import themeGet from '@styled-system/theme-get';
+import { typography } from 'styled-system';
 
-const Text = styled.div`
-  color: ${themeGet('colors.text', 'black')};
-  /* font-family: ${themeGet('fonts.body')}; */
-
-  ${space}
-  ${color}
-  ${layout}
+const BaseText = styled.div`
   ${typography}
-  ${position}
 `;
 
-Text.propTypes = {
-  ...propTypes.space,
-  ...propTypes.color,
-  ...propTypes.layout,
-  ...propTypes.typography,
-  ...propTypes.position
-};
-
-export default Text;
+export default function Text(props) {
+  return <BaseText>{props.children}</BaseText>;
+}
