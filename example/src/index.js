@@ -6,7 +6,7 @@ import { theme, Box } from 'krado-react';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <Box fontFamily="body">
+    <Box variant="root">
       <App />
     </Box>
   </ThemeProvider>,

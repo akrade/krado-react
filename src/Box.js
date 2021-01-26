@@ -6,7 +6,8 @@ import {
   border,
   flexbox,
   grid,
-  typography
+  typography,
+  variant
 } from 'styled-system';
 import propTypes from '@styled-system/prop-types';
 
@@ -21,7 +22,16 @@ const Box = styled.div(
   border,
   flexbox,
   grid,
-  typography
+  typography,
+  variant({
+    variants: {
+      root: {
+        fontFamily: 'body',
+        fontWeight: 'body',
+        lineHeight: 'normal'
+      }
+    }
+  })
 );
 
 Box.propTypes = {
