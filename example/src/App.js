@@ -1,18 +1,12 @@
 import React from 'react';
-import { Box, Flex, Grid } from 'krado-react';
+import { Box, Flex, Text } from 'krado-react';
 
 export default function App() {
   return (
-    <>
-      <Flex>
-        <Box backgroundColor="primary">Hello!</Box>
-      </Flex>
-      <Grid>
-        <Box backgroundColor="primary">Hello!</Box>
-        <Box backgroundColor="primary">Hello!</Box>
-        <Box backgroundColor="primary">Hello!</Box>
-        <Box backgroundColor="primary">Hello!</Box>
-      </Grid>
-    </>
+    <Flex height="100vh" justifyContent="center" alignItems="center">
+      <Box backgroundColor="muted" padding={6} borderRadius={3}>
+        <Text>FOOBAR</Text>
+      </Box>
+    </Flex>
   );
 }
