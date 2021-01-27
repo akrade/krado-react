@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { variant, color, space } from 'styled-system';
+import { variant, color, space, typography } from 'styled-system';
 import PropTypes from 'prop-types';
 import propTypes from '@styled-system/prop-types';
 import Text from './Text';
@@ -30,22 +30,27 @@ const variants = {
   }
 };
 
-const BaseHeading = ({ level, as: Component = Text, ...props }) => (
-  <Component {...props} />
-);
-
-const Heading = styled(BaseHeading)(
+const BaseHeading = styled(Text)(
   {
-    margin: 0,
-    lineHeight: 'heading'
+    margin: 0
   },
+  color,
+  space,
+  typography,
+
   variant({
     variants,
     prop: 'level'
-  }),
-  color,
-  space
+  })
 );
+
+function Heading(props) {
+  return (
+    <BaseHeading as={`h${props.level}`} fontFamily="heading" {...props}>
+      {props.children}
+    </BaseHeading>
+  );
+}
 
 Heading.propTypes = {
   ...propTypes.color,

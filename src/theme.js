@@ -17,7 +17,8 @@ const colors = {
 
 const fonts = {
   body: 'Proxima Nova, Arial, sans-serif',
-  heading: 'Gimlet Text, Arial, sans-serif'
+  heading: 'Proxima Nova, Arial, sans-serif',
+  display: 'Gimlet Text, Arial, sans-serif'
 };
 
 const fontWeights = {
