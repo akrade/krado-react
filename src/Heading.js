@@ -46,7 +46,12 @@ const BaseHeading = styled(Text)(
 
 function Heading(props) {
   return (
-    <BaseHeading as={`h${props.level}`} fontFamily="heading" {...props}>
+    <BaseHeading
+      as={`h${props.level}`}
+      fontFamily="heading"
+      marginBottom={3}
+      {...props}
+    >
       {props.children}
     </BaseHeading>
   );
