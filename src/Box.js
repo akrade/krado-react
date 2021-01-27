@@ -29,7 +29,8 @@ const Box = styled.div(
       root: {
         fontFamily: 'body',
         fontWeight: 'body',
-        lineHeight: 'normal'
+        lineHeight: 'normal',
+        color: 'text'
       }
     }
   })
