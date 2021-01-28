@@ -3,10 +3,7 @@ import { Flex, Grid, Text, Heading } from 'krado-react';
 
 export default function App() {
   return (
-    <Grid
-      gridGap={4}
-      gridTemplateColumns={`repeat( auto-fit, minmax(1rem, 1fr) )`}
-    >
+    <Grid gridGap={4} gridTemplateColumns={`repeat( 3, minmax(1rem, 1fr) )`}>
       <Flex
         backgroundColor="muted"
         justifyContent="center"
@@ -29,6 +26,15 @@ export default function App() {
         <Heading level={4}>Heading 4</Heading>
         <Heading level={5}>Heading 5</Heading>
         <Heading level={6}>Heading 6</Heading>
+      </Flex>
+      <Flex
+        padding={5}
+        justifyContent="center"
+        alignItems="center"
+        borderRadius={3}
+        backgroundColor="muted"
+      >
+        <Text>Title Component</Text>
       </Flex>
     </Grid>
   );
