@@ -24,13 +24,15 @@ const variants = {
     fontStyle: 'italic'
   },
   extraSmall: {
-    fontSize: 6
+    fontSize: 6,
+    fontWeight: 500
   }
 };
 
 const BaseTitle = styled(Text)(
   {
-    margin: 0
+    margin: 0,
+    fontWeight: 400
   },
   variant({
     variants
@@ -39,12 +41,16 @@ const BaseTitle = styled(Text)(
 
 function Title(props) {
   return (
-    <BaseTitle fontFamily="display" {...props}>
+    <BaseTitle fontFamily="display" letterSpacing="display" {...props}>
       {props.children}
     </BaseTitle>
   );
 }
 
 Title.propTypes = Text.propTypes;
+
+Title.defaultProps = {
+  variant: 'title'
+};
 
 export default Title;

@@ -34,7 +34,7 @@ export default function App() {
         borderRadius={3}
         backgroundColor="muted"
       >
-        <Title variant="title">Title</Title>
+        <Title>Title</Title>
       </Flex>
     </Grid>
   );
