@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Grid, Text, Heading } from 'krado-react';
+import { Flex, Grid, Text, Heading, Title } from 'krado-react';
 
 export default function App() {
   return (
@@ -34,7 +34,7 @@ export default function App() {
         borderRadius={3}
         backgroundColor="muted"
       >
-        <Text>Title Component</Text>
+        <Title variant="title">Title</Title>
       </Flex>
     </Grid>
   );
