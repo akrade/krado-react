@@ -12,7 +12,13 @@ const BaseText = styled.div`
 
 function Text(props) {
   return (
-    <BaseText fontSize={3} fontFamily="body" color="text" {...props}>
+    <BaseText
+      fontSize={3}
+      fontFamily="body"
+      color="text"
+      fontWeight="body"
+      {...props}
+    >
       {props.children}
     </BaseText>
   );

@@ -11,7 +11,7 @@ export default function App() {
         padding={5}
         borderRadius={3}
       >
-        <Text>Text</Text>
+        <Text marginTop={5}>Text</Text>
       </Flex>
       <Flex
         justifyContent="center"
@@ -28,7 +28,7 @@ export default function App() {
         <Heading level={6}>Heading 6</Heading>
       </Flex>
       <Flex
-        padding={5}
+        padding={0}
         justifyContent="center"
         alignItems="center"
         borderRadius={3}
@@ -36,6 +36,9 @@ export default function App() {
       >
         <Title>Title</Title>
       </Flex>
+      <Title variant="display" color="primary">
+        Display
+      </Title>
     </Grid>
   );
 }

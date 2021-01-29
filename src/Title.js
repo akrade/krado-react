@@ -31,7 +31,6 @@ const variants = {
 
 const BaseTitle = styled(Text)(
   {
-    margin: 0,
     fontWeight: 400
   },
   variant({
