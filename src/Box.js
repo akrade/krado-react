@@ -35,7 +35,7 @@ const Box = styled.div(
       container: {
         mx: 'auto',
         px: [3, 4, 5],
-        maxWidth: 1440
+        maxWidth: 'large'
       }
     }
   })

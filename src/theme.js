@@ -6,7 +6,7 @@ const sizes = {
   small: '24rem',
   medium: '52rem',
   large: '90rem',
-  xlarge: '120rem'
+  extraLarge: '120rem'
 };
 
 const fontSizes = [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84];
