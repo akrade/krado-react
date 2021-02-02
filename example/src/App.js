@@ -4,6 +4,7 @@ import { Box, Flex, Grid, Text, Heading, Title } from 'krado-react';
 export default function App() {
   return (
     <Box variant="container">
+      <Box backgroundColor="primary" width="large" height="large"></Box>
       <Grid
         gridGap={4}
         gridTemplateColumns={['1fr', 'repeat( 3, minmax(1rem, 1fr) )']}

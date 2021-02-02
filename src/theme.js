@@ -2,6 +2,13 @@ import swatch from './colors';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
+const sizes = {
+  small: '24rem',
+  medium: '52rem',
+  large: '90rem',
+  xlarge: '120rem'
+};
+
 const fontSizes = [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84];
 
 const colors = {
@@ -43,6 +50,7 @@ const radii = [0, 4, 8, 12, round];
 
 const theme = {
   space,
+  sizes,
   fontSizes,
   colors,
   fonts,
