@@ -14,6 +14,7 @@ import propTypes from '@styled-system/prop-types';
 const Box = styled.div(
   {
     boxSizing: 'border-box',
+    margin: 0,
     minWidth: 0
   },
   space,
