@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Grid, Text, Heading, Title, Container } from 'krado-react';
+import { Box, Flex, Grid, Text, Heading, Title } from 'krado-react';
 
 export default function App() {
   return (
