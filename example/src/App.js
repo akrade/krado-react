@@ -47,7 +47,13 @@ export default function App() {
           borderRadius={3}
           backgroundColor="muted"
         >
-          <Link>Title</Link>
+          <Link
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Link
+          </Link>
         </Flex>
       </Grid>
     </Box>

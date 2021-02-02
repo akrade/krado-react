@@ -3,7 +3,9 @@ import Text from './Text';
 import themeGet from '@styled-system/theme-get';
 
 const Link = styled(Text)`
-  color: ${themeGet('accent', 'royalblue')};
+  color: ${themeGet('colors.accent', 'royalblue')};
+  text-decoration: underline;
+  cursor: pointer;
 `;
 
 Link.defaultProps = {
