@@ -1,9 +1,9 @@
 import React from 'react';
-import { Flex, Grid, Text, Heading, Title, Container } from 'krado-react';
+import { Box, Flex, Grid, Text, Heading, Title, Container } from 'krado-react';
 
 export default function App() {
   return (
-    <Container>
+    <Box variant="container">
       <Grid
         gridGap={4}
         gridTemplateColumns={['1fr', 'repeat( 3, minmax(1rem, 1fr) )']}
@@ -41,6 +41,6 @@ export default function App() {
           <Title>Title</Title>
         </Flex>
       </Grid>
-    </Container>
+    </Box>
   );
 }

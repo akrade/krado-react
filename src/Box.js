@@ -31,6 +31,11 @@ const Box = styled.div(
         fontWeight: 'body',
         lineHeight: 'normal',
         color: 'text'
+      },
+      container: {
+        mx: 'auto',
+        px: [3, 4, 5],
+        maxWidth: 1440
       }
     }
   })
