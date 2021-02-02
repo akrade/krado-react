@@ -30,19 +30,18 @@ const variants = {
   }
 };
 
-const BaseHeading = styled(Text)(
-  {
-    margin: 0
-  },
-  color,
-  space,
-  typography,
+const BaseHeading = styled(Text)`
+  margin: 0;
 
-  variant({
+  ${color}
+  ${space}
+  ${typography}
+
+    ${variant({
     variants,
     prop: 'level'
-  })
-);
+  })};
+`;
 
 function Heading(props) {
   return (

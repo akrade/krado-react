@@ -36,7 +36,7 @@ export default function App() {
       >
         <Title>Title</Title>
       </Flex>
-      <Title variant="display" color="primary">
+      <Title variant="display" color="primary" margin={6}>
         Display
       </Title>
     </Grid>

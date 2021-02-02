@@ -1,7 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 import Text from './Text';
+import themeGet from '@styled-system/theme-get';
 
 const variants = {
   display: {
@@ -29,22 +29,15 @@ const variants = {
   }
 };
 
-const BaseTitle = styled(Text)(
-  {
-    fontWeight: 400
-  },
-  variant({
-    variants
-  })
-);
+const Title = styled(Text)`
+  font-weight: 400;
+  font-family: ${themeGet('fonts.display')};
+  letter-spacing: ${themeGet('letterSpacings.display')};
 
-function Title(props) {
-  return (
-    <BaseTitle fontFamily="display" letterSpacing="display" {...props}>
-      {props.children}
-    </BaseTitle>
-  );
-}
+  ${variant({
+    variants
+  })}
+`;
 
 Title.propTypes = Text.propTypes;
 
