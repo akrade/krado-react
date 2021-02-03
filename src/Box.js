@@ -8,7 +8,8 @@ import {
   grid,
   typography,
   shadow,
-  variant
+  variant,
+  system
 } from 'styled-system';
 import propTypes from '@styled-system/prop-types';
 
@@ -41,6 +42,10 @@ const Box = styled.div(
         maxWidth: 'large'
       }
     }
+  }),
+
+  system({
+    perspective: true
   })
 );
 
