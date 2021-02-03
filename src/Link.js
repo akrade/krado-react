@@ -6,6 +6,11 @@ const Link = styled(Text)`
   color: ${themeGet('colors.accent', 'royalblue')};
   text-decoration: underline;
   cursor: pointer;
+
+  &:focus {
+    outline: 1px dashed;
+    outline-offset: 1;
+  }
 `;
 
 Link.defaultProps = {
