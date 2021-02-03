@@ -6,7 +6,11 @@ export default function App() {
     <Box variant="container">
       <Grid
         gridGap={4}
-        gridTemplateColumns={['1fr', 'repeat( 3, minmax(1rem, 1fr) )']}
+        gridTemplateColumns={[
+          '1fr',
+          '1fr 1fr',
+          'repeat( 3, minmax(1rem, 1fr) )'
+        ]}
       >
         <Flex
           backgroundColor="muted"
