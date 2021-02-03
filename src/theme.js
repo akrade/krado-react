@@ -48,7 +48,11 @@ const letterSpacings = {
 const round = '50%';
 const radii = [0, 4, 8, 12, round];
 
-const shadows = ['none', '0px 4px 24px rgba(0, 0, 0, 0.1)'];
+const shadows = [
+  'none',
+  '0px 3px 7px rgba(0, 0, 0, 0.15)',
+  '0px 4px 24px rgba(0, 0, 0, 0.1)'
+];
 
 const theme = {
   space,

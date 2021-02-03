@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Grid, Text, Heading, Title, Link, Card } from 'krado-react';
+import { Box, Grid, Text, Heading, Title, Link, Card } from 'krado-react';
 
 export default function App() {
   return (
@@ -11,6 +11,7 @@ export default function App() {
           '1fr 1fr',
           'repeat( 3, minmax(1rem, 1fr) )'
         ]}
+        paddingTop={5}
       >
         <Card display="flex" justifyContent="center" alignItems="center">
           <Text>Text</Text>
