@@ -7,6 +7,7 @@ import {
   flexbox,
   grid,
   typography,
+  shadow,
   variant
 } from 'styled-system';
 import propTypes from '@styled-system/prop-types';
@@ -24,6 +25,7 @@ const Box = styled.div(
   flexbox,
   grid,
   typography,
+  shadow,
 
   variant({
     variants: {
