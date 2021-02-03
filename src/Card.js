@@ -32,7 +32,7 @@ Card.defaultProps = {
   boxShadow: 2,
   hoverAnimation: true,
   boxShadowHover: '0 11px 27px -6px rgba(0, 0, 0, 0.39)',
-  scaleHover: 1.05,
+  scaleHover: 1.02,
   shadowTransition: '325ms ease',
   scaleTransition: '300ms ease'
 };
