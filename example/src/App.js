@@ -9,7 +9,8 @@ import {
   Link,
   Card,
   Image,
-  Avatar
+  Avatar,
+  Button
 } from 'krado-react';
 
 export default function App() {
@@ -76,6 +77,21 @@ export default function App() {
               Avatar
             </Title>
             <Avatar marginBottom="auto" src="http://placekitten.com/300/300" />
+          </Flex>
+        </Card>
+        <Card>
+          <Flex
+            height="100%"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Button>Button</Button>
+            <Button body="small">Button</Button>
+            <Button type="outline">Button</Button>
+            <Button type="outline" body="small">
+              Button
+            </Button>
           </Flex>
         </Card>
       </Grid>

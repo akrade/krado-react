@@ -19,7 +19,10 @@ const colors = {
   secondary: swatch.black,
   accent: swatch.blue,
   muted: swatch.grays[5],
-  highlight: swatch.blue
+  highlight: swatch.blue,
+  black: swatch.black,
+  white: swatch.white,
+  transparent: 'rgba(0, 0, 0, 0)'
 };
 
 const fonts = {
@@ -55,6 +58,8 @@ const shadows = [
   '0px 4px 24px rgba(0, 0, 0, 0.1)'
 ];
 
+const borders = ['none', `2px solid ${colors.black}`];
+
 const theme = {
   space,
   sizes,
@@ -65,7 +70,8 @@ const theme = {
   lineHeights,
   letterSpacings,
   radii,
-  shadows
+  shadows,
+  borders
 };
 
 export { theme };
