@@ -23,9 +23,12 @@ export default function App() {
         ]}
         paddingTop={5}
       >
+        {/* Text component. */}
         <Card display="flex" justifyContent="center" alignItems="center">
           <Text>Text</Text>
         </Card>
+
+        {/* Heading component. */}
         <Card display="flex" justifyContent="center" flexDirection="column">
           <Heading level={1}>Heading 1</Heading>
           <Heading level={2}>Heading 2</Heading>
@@ -34,9 +37,13 @@ export default function App() {
           <Heading level={5}>Heading 5</Heading>
           <Heading level={6}>Heading 6</Heading>
         </Card>
+
+        {/* Title component. */}
         <Card display="flex" justifyContent="center" alignItems="center">
           <Title>Title</Title>
         </Card>
+
+        {/* Link component. */}
         <Card display="flex" justifyContent="center" alignItems="center">
           <Link
             href="https://example.com"
@@ -46,6 +53,8 @@ export default function App() {
             Link
           </Link>
         </Card>
+
+        {/* Image Component */}
         <Card>
           <Flex flexDirection="column" alignItems="center">
             <Title variant="extraSmall" marginBottom={5}>
