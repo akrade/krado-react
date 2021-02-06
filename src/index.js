@@ -12,3 +12,4 @@ export { default as Title } from './Title';
 export { default as Link } from './Link';
 export { default as Card } from './Card';
 export { default as Image } from './Image';
+export { default as Avatar } from './Avatar';

@@ -8,7 +8,8 @@ import {
   Title,
   Link,
   Card,
-  Image
+  Image,
+  Avatar
 } from 'krado-react';
 
 export default function App() {
@@ -61,6 +62,12 @@ export default function App() {
               Image
             </Title>
             <Image src="https://source.unsplash.com/random" />
+          </Flex>
+        </Card>
+
+        <Card>
+          <Flex justifyContent="center" alignItems="center">
+            <Avatar src="http://placekitten.com/300/300" />
           </Flex>
         </Card>
       </Grid>
