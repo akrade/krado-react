@@ -15,6 +15,9 @@ const Button = styled(Box)`
         color: 'text',
         backgroundColor: 'transparent',
         border: 1
+      },
+      clear: {
+        backgroundColor: 'transparent'
       }
     },
     prop: 'type'
@@ -44,6 +47,7 @@ Button.defaultProps = {
   body: 'large',
   shape: 'round',
   margin: 2,
+  fontSize: 2,
   fontWeight: 'bold'
 };
 
