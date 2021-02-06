@@ -45,8 +45,9 @@ const letterSpacings = {
 };
 
 // Rounded radius.
-const round = '50%';
-const radii = [0, 4, 8, 12, round];
+const radii = [0, 4, 8, 12, 99999];
+// Alias
+radii.round = radii[4];
 
 const shadows = [
   'none',

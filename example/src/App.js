@@ -61,13 +61,21 @@ export default function App() {
             <Title variant="extraSmall" marginBottom={5}>
               Image
             </Title>
-            <Image src="https://source.unsplash.com/random" />
+            <Image src="https://source.unsplash.com/random/500x500" />
           </Flex>
         </Card>
 
         <Card>
-          <Flex justifyContent="center" alignItems="center">
-            <Avatar src="http://placekitten.com/300/300" />
+          <Flex
+            height="100%"
+            flexDirection="column"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Title variant="extraSmall" marginBottom="auto">
+              Avatar
+            </Title>
+            <Avatar marginBottom="auto" src="http://placekitten.com/300/300" />
           </Flex>
         </Card>
       </Grid>
