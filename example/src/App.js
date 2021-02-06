@@ -1,5 +1,15 @@
 import React from 'react';
-import { Box, Grid, Text, Heading, Title, Link, Card } from 'krado-react';
+import {
+  Box,
+  Flex,
+  Grid,
+  Text,
+  Heading,
+  Title,
+  Link,
+  Card,
+  Image
+} from 'krado-react';
 
 export default function App() {
   return (
@@ -35,6 +45,14 @@ export default function App() {
           >
             Link
           </Link>
+        </Card>
+        <Card>
+          <Flex flexDirection="column" alignItems="center">
+            <Title variant="extraSmall" marginBottom={5}>
+              Image
+            </Title>
+            <Image src="https://source.unsplash.com/random" />
+          </Flex>
         </Card>
       </Grid>
     </Box>
