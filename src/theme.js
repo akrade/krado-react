@@ -55,7 +55,8 @@ radii.round = radii[4];
 const shadows = [
   'none',
   '0px 3px 7px rgba(0, 0, 0, 0.15)',
-  '0px 4px 24px rgba(0, 0, 0, 0.1)'
+  '0px 4px 24px rgba(0, 0, 0, 0.1)',
+  '0 11px 27px -6px rgba(0, 0, 0, 0.39)'
 ];
 
 const borders = ['none', `2px solid ${colors.black}`];

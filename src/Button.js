@@ -5,11 +5,17 @@ import Box from './Box';
 const Button = styled(Box)`
   border: none;
   outline: none;
+  transition: box-shadow ${(props) => props.shadowTransition},
+    transform ${(props) => props.scaleTransition};
   ${variant({
     variants: {
       solid: {
         color: 'background',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        '&:hover': {
+          transform: 'scale(1.1)',
+          boxShadow: 3
+        }
       },
       outline: {
         color: 'text',
@@ -48,7 +54,9 @@ Button.defaultProps = {
   shape: 'round',
   margin: 2,
   fontSize: 2,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  shadowTransition: '325ms ease',
+  scaleTransition: '300ms ease'
 };
 
 export default Button;
