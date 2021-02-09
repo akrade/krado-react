@@ -22,6 +22,7 @@ const colors = {
   highlight: swatch.blue,
   black: swatch.black,
   white: swatch.white,
+  darkGray: swatch.grays[2],
   transparent: 'rgba(0, 0, 0, 0)'
 };
 

@@ -8,7 +8,8 @@ const Button = styled(Box)`
   outline: none;
   transition: box-shadow ${(props) => props.transitionEase},
     transform ${(props) => props.transitionEase},
-    border ${(props) => props.transitionEase};
+    border ${(props) => props.transitionEase},
+    background ${(props) => props.transitionEase};
 
   &:hover {
     transform: scale(1.1);
@@ -19,7 +20,10 @@ const Button = styled(Box)`
     variants: {
       solid: {
         color: 'background',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        '&:active': {
+          backgroundColor: 'darkGray'
+        }
       },
       outline: {
         color: 'text',
