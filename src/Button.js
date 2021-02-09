@@ -20,7 +20,7 @@ const Button = styled(Box)`
   ${variant({
     variants: {
       solid: {
-        color: 'background',
+        color: 'textDark',
         backgroundColor: 'black',
         '&:active, &:focus': {
           backgroundColor: 'darkGray'

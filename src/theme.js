@@ -14,12 +14,19 @@ const fontSizes = [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84];
 const colors = {
   // UI Colors
   text: swatch.black,
+  textDark: swatch.white,
   background: swatch.white,
   primary: swatch.blue,
   secondary: swatch.black,
   accent: swatch.blue,
   muted: swatch.grays[5],
   highlight: swatch.blue,
+
+  // Utility
+  success: swatch.green,
+  danger: swatch.red,
+
+  // Basic Colors
   black: swatch.black,
   white: swatch.white,
   gray: swatch.grays[3],
@@ -63,6 +70,26 @@ const shadows = [
 
 const borders = ['none', `2px solid ${colors.black}`];
 
+const buttons = {
+  primary: {
+    color: colors.white,
+    backgroundColor: colors.black
+  },
+  secondary: {
+    color: colors.black,
+    backgroundColor: 'transparent',
+    border: borders[1]
+  },
+  success: {
+    color: colors.white,
+    backgroundColor: colors.success
+  },
+  danger: {
+    color: colors.white,
+    backgroundColor: colors.danger
+  }
+};
+
 const theme = {
   space,
   sizes,
@@ -74,7 +101,8 @@ const theme = {
   letterSpacings,
   radii,
   shadows,
-  borders
+  borders,
+  buttons
 };
 
 export { theme };
