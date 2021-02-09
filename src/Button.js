@@ -1,26 +1,35 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 import Box from './Box';
+import themeGet from '@styled-system/theme-get';
 
 const Button = styled(Box)`
   border: none;
   outline: none;
-  transition: box-shadow ${(props) => props.shadowTransition},
-    transform ${(props) => props.scaleTransition};
+  transition: box-shadow ${(props) => props.transition},
+    transform ${(props) => props.transition},
+    border ${(props) => props.transition};
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: ${themeGet('shadows.3')};
+  }
+
   ${variant({
     variants: {
       solid: {
         color: 'background',
-        backgroundColor: 'black',
-        '&:hover': {
-          transform: 'scale(1.1)',
-          boxShadow: 3
-        }
+        backgroundColor: 'black'
       },
       outline: {
         color: 'text',
         backgroundColor: 'transparent',
-        border: 1
+        border: 1,
+        '&:hover': {
+          color: 'text',
+          backgroundColor: 'white',
+          borderColor: 'white'
+        }
       },
       clear: {
         backgroundColor: 'transparent'
@@ -55,8 +64,7 @@ Button.defaultProps = {
   margin: 2,
   fontSize: 2,
   fontWeight: 'bold',
-  shadowTransition: '325ms ease',
-  scaleTransition: '300ms ease'
+  transition: '325ms ease'
 };
 
 export default Button;
