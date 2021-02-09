@@ -14,6 +14,7 @@ const Button = styled(Box)`
   &:hover {
     transform: scale(1.1);
     box-shadow: ${themeGet('shadows.3')};
+    cursor: pointer;
   }
 
   ${variant({
@@ -21,7 +22,7 @@ const Button = styled(Box)`
       solid: {
         color: 'background',
         backgroundColor: 'black',
-        '&:active': {
+        '&:active, &:focus': {
           backgroundColor: 'darkGray'
         }
       },
@@ -33,20 +34,24 @@ const Button = styled(Box)`
           color: 'text',
           backgroundColor: 'white',
           borderColor: 'white'
+        },
+        '&:active, &:focus': {
+          backgroundColor: 'muted',
+          borderColor: 'muted'
         }
       },
       clear: {
         backgroundColor: 'transparent'
       }
     },
-    prop: 'type'
+    prop: 'buttonType'
   })};
   ${variant({
     variants: {
       small: { px: 4, py: 2 },
       large: { px: 5, py: 3 }
     },
-    prop: 'body'
+    prop: 'buttonSize'
   })};
   ${variant({
     variants: {
@@ -54,7 +59,7 @@ const Button = styled(Box)`
       round: { borderRadius: 1 },
       pill: { borderRadius: 'round' }
     },
-    prop: 'shape'
+    prop: 'buttonShape'
   })};
 `;
 
@@ -62,9 +67,10 @@ Button.propTypes = Box.propTypes;
 
 Button.defaultProps = {
   as: 'button',
-  type: 'solid',
-  body: 'large',
-  shape: 'round',
+  type: 'button',
+  buttonType: 'solid',
+  buttonSize: 'large',
+  buttonShape: 'round',
   margin: 2,
   fontSize: 2,
   fontWeight: 'bold',

@@ -87,9 +87,9 @@ export default function App() {
             alignItems="center"
           >
             <Button>Button</Button>
-            <Button body="small">Button</Button>
-            <Button type="outline">Button</Button>
-            <Button type="outline" body="small">
+            <Button buttonSize="small">Button</Button>
+            <Button buttonType="outline">Button</Button>
+            <Button buttonType="outline" buttonSize="small">
               Button
             </Button>
           </Flex>
