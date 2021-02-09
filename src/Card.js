@@ -5,8 +5,8 @@ import Box from './Box';
 const Card = styled(Box)`
   width: 100%;
   height: 100%;
-  transition: box-shadow ${(props) => props.shadowTransition},
-    transform ${(props) => props.scaleTransition};
+  transition: box-shadow ${(props) => props.transition},
+    transform ${(props) => props.transition};
 
   ${(props) =>
     props.enableHoverAnimation &&
@@ -33,8 +33,7 @@ Card.defaultProps = {
   enableHoverAnimation: true,
   boxShadowHover: '0 11px 27px -6px rgba(0, 0, 0, 0.39)',
   scaleHover: 1.02,
-  shadowTransition: '325ms ease',
-  scaleTransition: '300ms ease'
+  transition: '325ms ease'
 };
 
 export default Card;
