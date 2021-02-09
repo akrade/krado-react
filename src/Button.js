@@ -6,9 +6,9 @@ import themeGet from '@styled-system/theme-get';
 const Button = styled(Box)`
   border: none;
   outline: none;
-  transition: box-shadow ${(props) => props.transition},
-    transform ${(props) => props.transition},
-    border ${(props) => props.transition};
+  transition: box-shadow ${(props) => props.transitionEase},
+    transform ${(props) => props.transitionEase},
+    border ${(props) => props.transitionEase};
 
   &:hover {
     transform: scale(1.1);
@@ -64,7 +64,7 @@ Button.defaultProps = {
   margin: 2,
   fontSize: 2,
   fontWeight: 'bold',
-  transition: '325ms ease'
+  transitionEase: '325ms ease'
 };
 
 export default Button;
