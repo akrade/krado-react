@@ -132,12 +132,12 @@ const buttonSizes = {
   small: {
     fontSize: fontSizes[2],
     margin: space[2],
-    padding: `0.5rem 3.5rem`
+    padding: '0.5rem 3.5rem'
   },
   large: {
     fontSize: fontSizes[2],
     margin: space[2],
-    padding: `1rem 4.6rem`
+    padding: '1rem 4.6rem'
   }
 };
 
