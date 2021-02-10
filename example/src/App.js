@@ -12,6 +12,8 @@ import {
   Avatar,
   Button
 } from 'krado-react';
+import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
+import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
 
 export default function App() {
   return (
@@ -92,7 +94,7 @@ export default function App() {
             <Title variant="extraSmall" marginBottom={[4, 5]}>
               Image
             </Title>
-            <Image src="https://source.unsplash.com/random/500x500" />
+            <Image src={imagePlaceholder} />
           </Flex>
         </Card>
 
@@ -106,7 +108,7 @@ export default function App() {
             <Title variant="extraSmall" marginBottom="auto">
               Avatar
             </Title>
-            <Avatar marginBottom="auto" src="http://placekitten.com/300/300" />
+            <Avatar marginBottom="auto" src={avatarPlaceHolder} />
           </Flex>
         </Card>
         <Card gridArea={['auto', 'auto / span 2']}>
