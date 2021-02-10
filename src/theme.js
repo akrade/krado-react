@@ -73,12 +73,46 @@ const borders = ['none', `2px solid ${colors.black}`];
 const buttons = {
   primary: {
     color: colors.white,
-    backgroundColor: colors.black
+    backgroundColor: colors.black,
+    '&:active, &:focus': {
+      backgroundColor: colors.darkGray
+    }
   },
   secondary: {
     color: colors.black,
     backgroundColor: 'transparent',
-    border: borders[1]
+    border: borders[1],
+    '&:hover': {
+      color: colors.black,
+      backgroundColor: colors.white,
+      borderColor: colors.white
+    },
+    '&:active, &:focus': {
+      backgroundColor: colors.muted,
+      borderColor: colors.muted
+    }
+  },
+  secondaryDark: {
+    color: colors.white,
+    backgroundColor: 'transparent',
+    border: borders[1],
+    borderColor: colors.white,
+    '&:hover': {
+      color: colors.black,
+      backgroundColor: colors.white,
+      borderColor: colors.white
+    },
+    '&:active, &:focus': {
+      backgroundColor: colors.muted,
+      borderColor: colors.muted
+    }
+  },
+  clear: {
+    color: colors.black,
+    backgroundColor: 'transparent',
+    '&:active, &:focus': {
+      backgroundColor: colors.muted
+    }
   },
   success: {
     color: colors.white,
@@ -88,6 +122,23 @@ const buttons = {
     color: colors.white,
     backgroundColor: colors.danger
   }
+};
+
+const buttonSizes = {
+  small: {
+    fontSize: fontSizes[2],
+    padding: `${space[2]}px ${space[4]}px`
+  },
+  large: {
+    fontSize: fontSizes[2],
+    padding: `1rem 4.6rem`
+  }
+};
+
+const buttonShapes = {
+  square: { borderRadius: radii[0] },
+  round: { borderRadius: radii[1] },
+  pill: { borderRadius: radii.round }
 };
 
 const theme = {
@@ -102,7 +153,9 @@ const theme = {
   radii,
   shadows,
   borders,
-  buttons
+  buttons,
+  buttonSizes,
+  buttonShapes
 };
 
 export { theme };

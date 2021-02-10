@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variant } from 'styled-system';
+import { variant, buttonStyle } from 'styled-system';
 import Box from './Box';
 import themeGet from '@styled-system/theme-get';
 
@@ -9,7 +9,8 @@ const Button = styled(Box)`
   transition: box-shadow ${(props) => props.transitionEase},
     transform ${(props) => props.transitionEase},
     border ${(props) => props.transitionEase},
-    background ${(props) => props.transitionEase};
+    background ${(props) => props.transitionEase},
+    color ${(props) => props.transitionEase};
 
   &:hover {
     transform: scale(1.1);
@@ -17,50 +18,15 @@ const Button = styled(Box)`
     cursor: pointer;
   }
 
+  ${buttonStyle}
   ${variant({
-    variants: {
-      solid: {
-        color: 'textDark',
-        backgroundColor: 'black',
-        '&:active, &:focus': {
-          backgroundColor: 'darkGray'
-        }
-      },
-      outline: {
-        color: 'text',
-        backgroundColor: 'transparent',
-        border: 1,
-        '&:hover': {
-          color: 'text',
-          backgroundColor: 'white',
-          borderColor: 'white'
-        },
-        '&:active, &:focus': {
-          backgroundColor: 'muted',
-          borderColor: 'muted'
-        }
-      },
-      clear: {
-        backgroundColor: 'transparent'
-      }
-    },
-    prop: 'buttonType'
-  })};
+    prop: 'buttonSize',
+    key: 'buttonSizes'
+  })}
   ${variant({
-    variants: {
-      small: { px: 4, py: 2 },
-      large: { px: 5, py: 3 }
-    },
-    prop: 'buttonSize'
-  })};
-  ${variant({
-    variants: {
-      square: { borderRadius: 0 },
-      round: { borderRadius: 1 },
-      pill: { borderRadius: 'round' }
-    },
-    prop: 'buttonShape'
-  })};
+    prop: 'buttonShape',
+    key: 'buttonShapes'
+  })}
 `;
 
 Button.propTypes = Box.propTypes;
@@ -68,13 +34,13 @@ Button.propTypes = Box.propTypes;
 Button.defaultProps = {
   as: 'button',
   type: 'button',
-  buttonType: 'solid',
+  variant: 'primary',
   buttonSize: 'large',
   buttonShape: 'round',
+  transitionEase: '325ms ease',
   margin: 2,
   fontSize: 2,
-  fontWeight: 'bold',
-  transitionEase: '325ms ease'
+  fontWeight: 'bold'
 };
 
 export default Button;

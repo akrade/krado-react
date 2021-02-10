@@ -88,10 +88,27 @@ export default function App() {
           >
             <Button>Button</Button>
             <Button buttonSize="small">Button</Button>
-            <Button buttonType="outline">Button</Button>
-            <Button buttonType="outline" buttonSize="small">
+            <Button variant="secondary">Button</Button>
+            <Button variant="secondary" buttonSize="small">
               Button
             </Button>
+            <Flex
+              backgroundColor="black"
+              width="100%"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              borderRadius={1}
+              padding={2}
+            >
+              <Button variant="secondaryDark">Button</Button>
+              <Button variant="secondaryDark" buttonSize="small">
+                Button
+              </Button>
+            </Flex>
+            <Button variant="clear">Button</Button>
+            <Button variant="success">Button</Button>
+            <Button variant="danger">Button</Button>
           </Flex>
         </Card>
       </Grid>
