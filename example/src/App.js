@@ -29,6 +29,11 @@ export default function App() {
         {/* Text component. */}
         <Card display="flex" justifyContent="center" alignItems="center">
           <Text>Text</Text>
+          <Text>Text</Text>
+          <Text>Text</Text>
+          <Text>Text</Text>
+          <Text>Text</Text>
+          <Text>Text</Text>
         </Card>
 
         {/* Heading component. */}

@@ -53,7 +53,8 @@ const lineHeights = {
 
 const letterSpacings = {
   normal: 'normal',
-  display: '-0.05em'
+  display: '-0.05em',
+  pretext: '0.22em'
 };
 
 // Rounded radius.

@@ -7,7 +7,8 @@ import Text from './Text';
 
 const variants = {
   1: {
-    fontSize: 8
+    fontSize: 8,
+    fontWeight: 'bold'
   },
   // Heading
   2: {
