@@ -87,6 +87,7 @@ export default function App() {
             alignItems="center"
           >
             <Button>Button</Button>
+            <Button>Download</Button>
             <Button buttonSize="small">Button</Button>
             <Button variant="outline.light">Button</Button>
             <Button variant="outline.light" buttonSize="small">
