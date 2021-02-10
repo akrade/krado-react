@@ -93,6 +93,7 @@ export default function App() {
           </Flex>
         </Card>
 
+        {/* Avatar Component */}
         <Card>
           <Flex
             height="100%"
@@ -106,6 +107,8 @@ export default function App() {
             <Avatar marginBottom="auto" src={avatarPlaceHolder} />
           </Flex>
         </Card>
+
+        {/* Button Component */}
         <Card>
           <Flex
             height="100%"
