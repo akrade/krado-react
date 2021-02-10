@@ -27,13 +27,31 @@ export default function App() {
         paddingTop={5}
       >
         {/* Text component. */}
-        <Card display="flex" justifyContent="center" alignItems="center">
-          <Text>Text</Text>
-          <Text>Text</Text>
-          <Text>Text</Text>
-          <Text>Text</Text>
-          <Text>Text</Text>
-          <Text>Text</Text>
+        <Card
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+        >
+          <Text marginBottom={3}>Body</Text>
+          <Text variant="smallBody" marginBottom={3}>
+            Small Body
+          </Text>
+          <Text variant="bold" marginBottom={3}>
+            Bold
+          </Text>
+          <Text variant="callout" marginBottom={3}>
+            Callout
+          </Text>
+          <Text variant="caption" marginBottom={3}>
+            Caption
+          </Text>
+          <Text variant="footnote" marginBottom={3}>
+            Footnote
+          </Text>
+          <Text variant="pretext" marginBottom={3}>
+            Pre Text
+          </Text>
         </Card>
 
         {/* Heading component. */}
@@ -71,7 +89,7 @@ export default function App() {
         {/* Image Component */}
         <Card>
           <Flex flexDirection="column" alignItems="center">
-            <Title variant="extraSmall" marginBottom={5}>
+            <Title variant="extraSmall" marginBottom={[4, 5]}>
               Image
             </Title>
             <Image src="https://source.unsplash.com/random/500x500" />
