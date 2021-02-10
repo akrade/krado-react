@@ -20,12 +20,7 @@ export default function App() {
     <Box variant="container">
       <Grid
         gridGap={4}
-        gridTemplateColumns={[
-          '1fr',
-          '1fr 1fr',
-          '1fr 1fr',
-          'repeat( 3, minmax(1rem, 1fr) )'
-        ]}
+        gridTemplateColumns={['auto', 'repeat(auto-fit, minmax(26rem, 1fr))']}
         paddingTop={5}
       >
         {/* Text component. */}
@@ -105,13 +100,13 @@ export default function App() {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Title variant="extraSmall" marginBottom="auto">
+            <Title variant="extraSmall" marginBottom={'auto'}>
               Avatar
             </Title>
             <Avatar marginBottom="auto" src={avatarPlaceHolder} />
           </Flex>
         </Card>
-        <Card gridArea={['auto', 'auto / span 2']}>
+        <Card>
           <Flex
             height="100%"
             flexDirection="column"
