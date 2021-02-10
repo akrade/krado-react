@@ -88,8 +88,8 @@ export default function App() {
           >
             <Button>Button</Button>
             <Button buttonSize="small">Button</Button>
-            <Button variant="secondary">Button</Button>
-            <Button variant="secondary" buttonSize="small">
+            <Button variant="outline.light">Button</Button>
+            <Button variant="outline.light" buttonSize="small">
               Button
             </Button>
             <Flex
@@ -101,8 +101,8 @@ export default function App() {
               borderRadius={1}
               padding={2}
             >
-              <Button variant="secondaryDark">Button</Button>
-              <Button variant="secondaryDark" buttonSize="small">
+              <Button variant="outline.dark">Button</Button>
+              <Button variant="outline.dark" buttonSize="small">
                 Button
               </Button>
             </Flex>

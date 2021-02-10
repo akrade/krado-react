@@ -78,33 +78,37 @@ const buttons = {
       backgroundColor: colors.darkGray
     }
   },
-  secondary: {
-    color: colors.black,
-    backgroundColor: 'transparent',
-    border: borders[1],
-    '&:hover': {
+  outline: {
+    light: {
       color: colors.black,
-      backgroundColor: colors.white,
-      borderColor: colors.white
+      backgroundColor: 'transparent',
+      border: borders[1],
+      '&:hover': {
+        color: colors.black,
+        backgroundColor: colors.white,
+        borderColor: colors.white
+      },
+      '&:active, &:focus': {
+        color: colors.black,
+        backgroundColor: colors.muted,
+        borderColor: colors.muted
+      }
     },
-    '&:active, &:focus': {
-      backgroundColor: colors.muted,
-      borderColor: colors.muted
-    }
-  },
-  secondaryDark: {
-    color: colors.white,
-    backgroundColor: 'transparent',
-    border: borders[1],
-    borderColor: colors.white,
-    '&:hover': {
-      color: colors.black,
-      backgroundColor: colors.white,
-      borderColor: colors.white
-    },
-    '&:active, &:focus': {
-      backgroundColor: colors.muted,
-      borderColor: colors.muted
+    dark: {
+      color: colors.white,
+      backgroundColor: 'transparent',
+      border: borders[1],
+      borderColor: colors.white,
+      '&:hover': {
+        color: colors.black,
+        backgroundColor: colors.white,
+        borderColor: colors.white
+      },
+      '&:active, &:focus': {
+        color: colors.black,
+        backgroundColor: colors.muted,
+        borderColor: colors.muted
+      }
     }
   },
   clear: {
@@ -127,10 +131,12 @@ const buttons = {
 const buttonSizes = {
   small: {
     fontSize: fontSizes[2],
-    padding: `${space[2]}px ${space[4]}px`
+    margin: space[2],
+    padding: `0.5rem 3.5rem`
   },
   large: {
     fontSize: fontSizes[2],
+    margin: space[2],
     padding: `1rem 4.6rem`
   }
 };
