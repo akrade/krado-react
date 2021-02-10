@@ -42,7 +42,8 @@ const Title = styled(Text)`
 Title.propTypes = Text.propTypes;
 
 Title.defaultProps = {
-  variant: 'title'
+  variant: 'title',
+  marginBottom: 3
 };
 
 export default Title;

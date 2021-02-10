@@ -11,10 +11,12 @@ const variants = {
   },
   // Heading
   2: {
-    fontSize: 7
+    fontSize: 7,
+    fontWeight: 400
   },
   3: {
-    fontSize: 6
+    fontSize: 6,
+    fontWeight: 400
   },
   4: {
     fontSize: 3,

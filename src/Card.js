@@ -26,7 +26,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  padding: [3, 4, 5],
+  padding: [4, 5],
   borderRadius: 3,
   backgroundColor: 'background',
   boxShadow: 2,

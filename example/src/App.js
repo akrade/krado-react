@@ -21,6 +21,7 @@ export default function App() {
         gridTemplateColumns={[
           '1fr',
           '1fr 1fr',
+          '1fr 1fr',
           'repeat( 3, minmax(1rem, 1fr) )'
         ]}
         paddingTop={5}
@@ -41,8 +42,14 @@ export default function App() {
         </Card>
 
         {/* Title component. */}
-        <Card display="flex" justifyContent="center" alignItems="center">
+        <Card display="flex" flexDirection="column" justifyContent="center">
+          <Title variant="display">Display</Title>
+          <Title variant="extraLarge">XL Title</Title>
+          <Title variant="large">Large Title</Title>
           <Title>Title</Title>
+          <Title variant="subtitle">Subtile</Title>
+          <Title variant="quote">Quote</Title>
+          <Title variant="extraSmall">X Small</Title>
         </Card>
 
         {/* Link component. */}
@@ -79,7 +86,7 @@ export default function App() {
             <Avatar marginBottom="auto" src="http://placekitten.com/300/300" />
           </Flex>
         </Card>
-        <Card>
+        <Card gridArea={['auto', 'auto / span 2']}>
           <Flex
             height="100%"
             flexDirection="column"
@@ -87,7 +94,6 @@ export default function App() {
             alignItems="center"
           >
             <Button>Button</Button>
-            <Button>Download</Button>
             <Button buttonSize="small">Button</Button>
             <Button variant="outline.light">Button</Button>
             <Button variant="outline.light" buttonSize="small">
@@ -95,12 +101,11 @@ export default function App() {
             </Button>
             <Flex
               backgroundColor="black"
-              width="100%"
               justifyContent="center"
               alignItems="center"
               flexDirection="column"
               borderRadius={1}
-              padding={2}
+              padding={3}
             >
               <Button variant="outline.dark">Button</Button>
               <Button variant="outline.dark" buttonSize="small">
