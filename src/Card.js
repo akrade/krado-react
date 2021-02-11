@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { layout } from 'styled-system';
 import Box from './Box';
 
 const Card = styled(Box)`
@@ -16,6 +17,7 @@ const Card = styled(Box)`
         transform: scale(${(props) => props.scaleHover});
       }
     `}
+  ${layout}
 `;
 
 Card.propTypes = {
