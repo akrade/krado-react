@@ -33,7 +33,8 @@ function ComponentCard(props) {
       flexDirection="column"
       flex={1}
       height="auto"
-      margin={3}
+      marginRight={4}
+      marginBottom={4}
       {...props}
     />
   );
@@ -41,8 +42,8 @@ function ComponentCard(props) {
 
 export default function App() {
   return (
-    <Box variant="container">
-      <Flex paddingTop={5} flexDirection="column">
+    <Box variant="container" py={5}>
+      <Flex flexDirection="column">
         {/* First row. */}
         <ComponentRow>
           {/* Text component. */}
