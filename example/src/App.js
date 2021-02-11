@@ -15,7 +15,13 @@ import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
 import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
 
 function ComponentRow(props) {
-  return <Flex flexWrap="wrap" flexDirection={['column', 'row']} {...props} />;
+  return (
+    <Flex
+      flexWrap="wrap"
+      flexDirection={['column', null, null, 'row']}
+      {...props}
+    />
+  );
 }
 
 function ComponentCard(props) {
