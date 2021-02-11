@@ -43,6 +43,7 @@ export default function App() {
   return (
     <Box variant="container">
       <Flex paddingTop={5} flexDirection="column">
+        {/* First row. */}
         <ComponentRow>
           {/* Text component. */}
           <ComponentCard>
@@ -78,6 +79,7 @@ export default function App() {
           </ComponentCard>
         </ComponentRow>
 
+        {/* Second row. */}
         <ComponentRow>
           {/* Title component. */}
           <ComponentCard flex={2} alignItems="flex-start">
@@ -102,16 +104,22 @@ export default function App() {
           </ComponentCard>
         </ComponentRow>
 
+        {/* Third row */}
         <ComponentRow>
           {/* Image Component */}
           <ComponentCard>
-            <Flex flexDirection="column" alignItems="center">
-              <Title variant="extraSmall" marginBottom={[4, 5]}>
+            <Flex
+              flexDirection="column"
+              justifyContent="space=between"
+              alignItems="center"
+            >
+              <Title variant="extraSmall" marginBottom={5}>
                 Image
               </Title>
               <Image src={imagePlaceholder} />
             </Flex>
           </ComponentCard>
+
           {/* Avatar Component */}
           <ComponentCard>
             <Flex
@@ -120,13 +128,15 @@ export default function App() {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Title variant="extraSmall" marginBottom={'auto'}>
+              <Title variant="extraSmall" marginBottom={5}>
                 Avatar
               </Title>
-              <Avatar marginBottom="auto" src={avatarPlaceHolder} />
+              <Avatar src={avatarPlaceHolder} my="auto" />
             </Flex>
           </ComponentCard>
         </ComponentRow>
+
+        {/* Fourth row */}
         <ComponentRow>
           {/* Button Component */}
           <ComponentCard flex={2}>
@@ -161,7 +171,6 @@ export default function App() {
             </Flex>
           </ComponentCard>
         </ComponentRow>
-        <ComponentRow></ComponentRow>
       </Flex>
     </Box>
   );
