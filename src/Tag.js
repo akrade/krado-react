@@ -9,6 +9,12 @@ const Tag = styled(Box)`
         color: 'primary',
         backgroundColor: 'white',
         boxShadow: 2
+      },
+      outline: {
+        color: 'primary',
+        backgroundColor: 'transparent',
+        border: 1,
+        borderColor: 'primary'
       }
     },
     prop: 'tagType'
@@ -18,7 +24,7 @@ const Tag = styled(Box)`
 Tag.propTypes = Box.propTypes;
 
 Tag.defaultProps = {
-  tagType: 'solid'
+  tagType: 'outline'
 };
 
 export default Tag;
