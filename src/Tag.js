@@ -1,12 +1,19 @@
 import styled from 'styled-components';
+import { variant } from 'styled-system';
 import Box from './Box';
 
-const Tag = styled(Box)``;
+const variants = {
+  color: 'red'
+};
+
+const Tag = styled(Box)`
+  ${variant({
+    variants
+  })}
+`;
 
 Tag.propTypes = Box.propTypes;
 
-Tag.defaultProps = {
-  color: 'red'
-};
+Tag.defaultProps = {};
 
 export default Tag;
