@@ -174,8 +174,9 @@ export default function App() {
           </ComponentCard>
 
           {/* Tag component */}
-          <ComponentCard>
+          <ComponentCard flexDirection="row">
             <Tag>Tag</Tag>
+            <Tag tagType="outline">Tag</Tag>
           </ComponentCard>
         </ComponentRow>
       </Flex>

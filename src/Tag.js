@@ -41,6 +41,7 @@ Tag.propTypes = Box.propTypes;
 Tag.defaultProps = {
   tagType: 'solid',
   transitionEase: '325ms ease',
+  margin: 1,
   px: '1rem',
   py: '0.4rem',
   fontWeight: 'bold',
