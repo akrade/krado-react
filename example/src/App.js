@@ -9,7 +9,8 @@ import {
   Card,
   Image,
   Avatar,
-  Button
+  Button,
+  Tag
 } from 'krado-react';
 import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
 import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
@@ -170,6 +171,11 @@ export default function App() {
               <Button variant="success">Button</Button>
               <Button variant="danger">Button</Button>
             </Flex>
+          </ComponentCard>
+
+          {/* Tag component */}
+          <ComponentCard>
+            <Tag>Tag</Tag>
           </ComponentCard>
         </ComponentRow>
       </Flex>
