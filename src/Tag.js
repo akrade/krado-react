@@ -24,7 +24,11 @@ const Tag = styled(Box)`
 Tag.propTypes = Box.propTypes;
 
 Tag.defaultProps = {
-  tagType: 'outline'
+  tagType: 'outline',
+  px: '1rem',
+  py: '0.4rem',
+  fontWeight: 'bold',
+  borderRadius: 2
 };
 
 export default Tag;
