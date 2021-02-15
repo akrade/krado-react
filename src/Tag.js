@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variant, system } from 'styled-system';
+import { color, background, border, variant, system } from 'styled-system';
 import Box from './Box';
 
 const Tag = styled(Box)`
@@ -36,11 +36,14 @@ const Tag = styled(Box)`
   })}
 
   ${system({
-    tagColor: {
+    color: {
       properties: ['color', 'borderColor'],
       scale: 'colors'
     }
   })}
+  ${color}
+  ${background}
+  ${border}
 `;
 
 Tag.propTypes = Box.propTypes;
