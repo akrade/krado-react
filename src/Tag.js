@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variant } from 'styled-system';
+import { variant, system } from 'styled-system';
 import Box from './Box';
 
 const Tag = styled(Box)`
@@ -33,6 +33,13 @@ const Tag = styled(Box)`
       }
     },
     prop: 'tagType'
+  })}
+
+  ${system({
+    tagColor: {
+      properties: ['color', 'borderColor'],
+      scale: 'colors'
+    }
   })}
 `;
 
