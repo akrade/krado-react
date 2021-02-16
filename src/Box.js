@@ -13,22 +13,21 @@ import {
 } from 'styled-system';
 import propTypes from '@styled-system/prop-types';
 
-const Box = styled.div(
-  {
-    boxSizing: 'border-box',
-    margin: 0,
-    minWidth: 0
-  },
-  space,
-  layout,
-  color,
-  border,
-  flexbox,
-  grid,
-  typography,
-  shadow,
+const Box = styled.div`
+  box-sizing: 'border-box';
+  margin: 0;
+  min-width: 0;
 
-  variant({
+  ${space}
+  ${layout}
+  ${color}
+  ${border}
+  ${flexbox}
+  ${grid}
+  ${typography}
+  ${shadow}
+
+  ${variant({
     variants: {
       root: {
         fontFamily: 'body',
@@ -42,12 +41,12 @@ const Box = styled.div(
         maxWidth: 'large'
       }
     }
-  }),
+  })}
 
-  system({
+  ${system({
     perspective: true
-  })
-);
+  })}
+`;
 
 Box.propTypes = {
   ...propTypes.space,
