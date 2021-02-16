@@ -55,7 +55,8 @@ Box.propTypes = {
   ...propTypes.border,
   ...propTypes.flexbox,
   ...propTypes.grid,
-  ...propTypes.typography
+  ...propTypes.typography,
+  ...propTypes.shadow
 };
 
 export default Box;
