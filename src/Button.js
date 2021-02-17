@@ -16,7 +16,8 @@ const Button = styled(Box)`
   ${(props) =>
     props.enableHoverAnimation &&
     css`
-      &:hover {
+      &:hover,
+      &:focus {
         transform: scale(1.1);
         box-shadow: ${themeGet('shadows.3')};
         cursor: pointer;

@@ -75,7 +75,7 @@ const buttons = {
   primary: {
     color: colors.white,
     backgroundColor: colors.black,
-    '&:active, &:focus': {
+    '&:active': {
       backgroundColor: colors.darkGray
     }
   },
@@ -84,12 +84,12 @@ const buttons = {
       color: colors.black,
       backgroundColor: 'transparent',
       border: borders[1],
-      '&:hover': {
+      '&:hover, &:focus': {
         color: colors.black,
         backgroundColor: colors.white,
         borderColor: colors.white
       },
-      '&:active, &:focus': {
+      '&:active': {
         color: colors.black,
         backgroundColor: colors.muted,
         borderColor: colors.muted
@@ -100,12 +100,12 @@ const buttons = {
       backgroundColor: 'transparent',
       border: borders[1],
       borderColor: colors.white,
-      '&:hover': {
+      '&:hover, &:focus': {
         color: colors.black,
         backgroundColor: colors.white,
         borderColor: colors.white
       },
-      '&:active, &:focus': {
+      '&:active': {
         color: colors.black,
         backgroundColor: colors.muted,
         borderColor: colors.muted
@@ -115,7 +115,7 @@ const buttons = {
   clear: {
     color: colors.black,
     backgroundColor: 'transparent',
-    '&:active, &:focus': {
+    '&:active': {
       backgroundColor: colors.muted
     }
   },
