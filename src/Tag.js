@@ -16,7 +16,7 @@ const Tag = styled(Box)`
         color: 'primary',
         backgroundColor: 'white',
         boxShadow: 2,
-        ':hover, :active': {
+        '&:hover, &:focus': {
           color: 'white',
           backgroundColor: 'primary',
           boxShadow: 3
@@ -27,7 +27,7 @@ const Tag = styled(Box)`
         backgroundColor: 'transparent',
         border: 1,
         borderColor: 'primary',
-        ':hover, :active': {
+        '&:hover, &:focus': {
           textDecoration: 'underline'
         }
       }
