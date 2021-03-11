@@ -24,7 +24,8 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "styled-components": ">= 5"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
@@ -45,6 +46,7 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "styled-components": "^5.2.1",
     "react-scripts": "^3.4.1"
   },
   "files": [
@@ -53,7 +55,6 @@
   "dependencies": {
     "@styled-system/prop-types": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
-    "styled-components": "^5.2.1",
     "styled-system": "^5.1.5"
   }
 }
