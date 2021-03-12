@@ -4,8 +4,6 @@ import { layout } from 'styled-system';
 import Box from './Box';
 
 const Card = styled(Box)`
-  width: 100%;
-  height: 100%;
   transition: box-shadow ${(props) => props.transitionEase},
     transform ${(props) => props.transitionEase};
 

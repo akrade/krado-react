@@ -34,8 +34,7 @@ function ComponentCard(props) {
       flexDirection="column"
       flex={1}
       height="auto"
-      marginRight={4}
-      marginBottom={4}
+      margin={3}
       {...props}
     />
   );
