@@ -21,7 +21,7 @@
 - Example page for showcasing the core components.
 - `CHANGELOG.md` written in "[Keep a Changelog](https://keepachangelog.com/en/1.0.0/)" conventions. (KRAD-32)
 
-## [v0.1.0] - 2021-02-19
+## [0.1.0] - 2021-02-19
 
 Initial development
 
