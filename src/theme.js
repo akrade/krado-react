@@ -2,13 +2,6 @@ import swatch from './colors';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
-// const sizes = {
-//   small: '24rem',
-//   medium: '52rem',
-//   large: '90rem',
-//   extraLarge: '120rem'
-// };
-
 const breakpoints = ['40em', '52em', '64em', '120rem'];
 
 breakpoints.small = breakpoints[0];
