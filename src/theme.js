@@ -2,12 +2,19 @@ import swatch from './colors';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
-const sizes = {
-  small: '24rem',
-  medium: '52rem',
-  large: '90rem',
-  extraLarge: '120rem'
-};
+// const sizes = {
+//   small: '24rem',
+//   medium: '52rem',
+//   large: '90rem',
+//   extraLarge: '120rem'
+// };
+
+const breakpoints = ['40em', '52em', '64em', '120rem'];
+
+breakpoints.small = breakpoints[0];
+breakpoints.medium = breakpoints[1];
+breakpoints.large = breakpoints[2];
+breakpoints.extraLarge = breakpoints[3];
 
 const fontSizes = [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84];
 
@@ -150,7 +157,7 @@ const buttonShapes = {
 
 const theme = {
   space,
-  sizes,
+  breakpoints,
   fontSizes,
   colors,
   fonts,
