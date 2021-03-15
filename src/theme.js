@@ -3,13 +3,13 @@ import swatch from './colors';
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
 const sizes = {
-  small: '24rem',
+  small: '40rem',
   medium: '52rem',
   large: '90rem',
   extraLarge: '120rem'
 };
 
-const breakpoints = ['24em', '52em', '90em', '120rem'];
+const breakpoints = ['40em', '52em', '90em', '120rem'];
 
 const fontSizes = [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84];
 
