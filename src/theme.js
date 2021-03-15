@@ -11,11 +11,6 @@ const sizes = {
 
 const breakpoints = ['24em', '52em', '90em', '120rem'];
 
-breakpoints.small = breakpoints[0];
-breakpoints.medium = breakpoints[1];
-breakpoints.large = breakpoints[2];
-breakpoints.extraLarge = breakpoints[3];
-
 const fontSizes = [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84];
 
 const colors = {
