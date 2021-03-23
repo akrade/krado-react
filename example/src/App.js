@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Title, Avatar, Button, Tag } from 'krado-react';
+import { Box, Flex, Button, Tag } from 'krado-react';
 import ComponentRow from './components/ComponentRow';
 import ComponentCard from './components/ComponentCard';
 import TextExample from './components/TextExample';
@@ -7,7 +7,7 @@ import HeadingExample from './components/HeadingExample';
 import TitleExample from './components/TitleExample';
 import LinkExample from './components/LinkExample';
 import ImageExample from './components/ImageExample';
-import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
+import AvatarExample from './components/AvatarExample';
 
 export default function App() {
   return (
@@ -28,21 +28,7 @@ export default function App() {
         {/* Third row */}
         <ComponentRow>
           <ImageExample />
-
-          {/* Avatar Component */}
-          <ComponentCard>
-            <Flex
-              height="100%"
-              flexDirection="column"
-              justifyContent="space-between"
-              alignItems="center"
-            >
-              <Title variant="extraSmall" marginBottom={5}>
-                Avatar
-              </Title>
-              <Avatar src={avatarPlaceHolder} my="auto" />
-            </Flex>
-          </ComponentCard>
+          <AvatarExample />
         </ComponentRow>
 
         {/* Fourth row */}
