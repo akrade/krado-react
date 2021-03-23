@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text } from 'krado-react';
 import ComponentCard from './ComponentCard';
+import { Text } from 'krado-react';
 
 export default function TextExample() {
   return (

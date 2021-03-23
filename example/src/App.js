@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Box,
   Flex,
-  Heading,
   Title,
   Link,
   Image,
@@ -13,6 +12,7 @@ import {
 import ComponentRow from './components/ComponentRow';
 import ComponentCard from './components/ComponentCard';
 import TextExample from './components/TextExample';
+import HeadingExample from './components/HeadingExample';
 import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
 import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
 
@@ -23,16 +23,7 @@ export default function App() {
         {/* First row. */}
         <ComponentRow>
           <TextExample />
-
-          {/* Heading component. */}
-          <ComponentCard flex={2} alignItems="flex-start">
-            <Heading level={1}>Heading 1</Heading>
-            <Heading level={2}>Heading 2</Heading>
-            <Heading level={3}>Heading 3</Heading>
-            <Heading level={4}>Heading 4</Heading>
-            <Heading level={5}>Heading 5</Heading>
-            <Heading level={6}>Heading 6</Heading>
-          </ComponentCard>
+          <HeadingExample />
         </ComponentRow>
 
         {/* Second row. */}
