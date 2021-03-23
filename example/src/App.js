@@ -14,25 +14,21 @@ export default function App() {
   return (
     <Box variant="container" py={5}>
       <Flex flexDirection="column">
-        {/* First row. */}
         <ComponentRow>
           <TextExample />
           <HeadingExample />
         </ComponentRow>
 
-        {/* Second row. */}
         <ComponentRow>
           <TitleExample />
           <LinkExample />
         </ComponentRow>
 
-        {/* Third row */}
         <ComponentRow>
           <ImageExample />
           <AvatarExample />
         </ComponentRow>
 
-        {/* Fourth row */}
         <ComponentRow>
           <ButtonExample />
           <TagExample />
