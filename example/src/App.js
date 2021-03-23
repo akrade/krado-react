@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Box,
   Flex,
-  Text,
   Heading,
   Title,
   Link,
@@ -13,6 +12,7 @@ import {
 } from 'krado-react';
 import ComponentRow from './components/ComponentRow';
 import ComponentCard from './components/ComponentCard';
+import TextExample from './components/TextExample';
 import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
 import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
 
@@ -23,27 +23,7 @@ export default function App() {
         {/* First row. */}
         <ComponentRow>
           {/* Text component. */}
-          <ComponentCard>
-            <Text marginBottom={3}>Body</Text>
-            <Text variant="smallBody" marginBottom={3}>
-              Small Body
-            </Text>
-            <Text variant="bold" marginBottom={3}>
-              Bold
-            </Text>
-            <Text variant="callout" marginBottom={3}>
-              Callout
-            </Text>
-            <Text variant="caption" marginBottom={3}>
-              Caption
-            </Text>
-            <Text variant="footnote" marginBottom={3}>
-              Footnote
-            </Text>
-            <Text variant="pretext" marginBottom={3}>
-              Pre Text
-            </Text>
-          </ComponentCard>
+          <TextExample />
 
           {/* Heading component. */}
           <ComponentCard flex={2} alignItems="flex-start">
