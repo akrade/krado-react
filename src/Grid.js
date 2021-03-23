@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import Box from './Box';
 
-const Grid = styled(Box)({
-  display: 'grid'
-});
+const Grid = styled(Box)`
+  display: Grid;
+`;
 
 Grid.propTypes = Box.propTypes;
 
