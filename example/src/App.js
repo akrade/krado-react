@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Button, Tag } from 'krado-react';
+import { Box, Flex, Tag } from 'krado-react';
 import ComponentRow from './components/ComponentRow';
 import ComponentCard from './components/ComponentCard';
 import TextExample from './components/TextExample';
@@ -8,6 +8,7 @@ import TitleExample from './components/TitleExample';
 import LinkExample from './components/LinkExample';
 import ImageExample from './components/ImageExample';
 import AvatarExample from './components/AvatarExample';
+import ButtonExample from './components/ButtonExample';
 
 export default function App() {
   return (
@@ -33,38 +34,7 @@ export default function App() {
 
         {/* Fourth row */}
         <ComponentRow>
-          {/* Button Component */}
-          <ComponentCard flex={2}>
-            <Flex
-              height="100%"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Button>Button</Button>
-              <Button buttonSize="small">Button</Button>
-              <Button variant="outline.light">Button</Button>
-              <Button variant="outline.light" buttonSize="small">
-                Button
-              </Button>
-              <Flex
-                backgroundColor="black"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                borderRadius={1}
-                padding={3}
-              >
-                <Button variant="outline.dark">Button</Button>
-                <Button variant="outline.dark" buttonSize="small">
-                  Button
-                </Button>
-              </Flex>
-              <Button variant="clear">Button</Button>
-              <Button variant="success">Button</Button>
-              <Button variant="danger">Button</Button>
-            </Flex>
-          </ComponentCard>
+          <ButtonExample />
 
           {/* Tag component */}
           <ComponentCard flexDirection="row">
