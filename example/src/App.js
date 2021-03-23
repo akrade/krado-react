@@ -1,7 +1,6 @@
 import React from 'react';
-import { Box, Flex, Tag } from 'krado-react';
+import { Box, Flex } from 'krado-react';
 import ComponentRow from './components/ComponentRow';
-import ComponentCard from './components/ComponentCard';
 import TextExample from './components/TextExample';
 import HeadingExample from './components/HeadingExample';
 import TitleExample from './components/TitleExample';
@@ -9,6 +8,7 @@ import LinkExample from './components/LinkExample';
 import ImageExample from './components/ImageExample';
 import AvatarExample from './components/AvatarExample';
 import ButtonExample from './components/ButtonExample';
+import TagExample from './components/TagExample';
 
 export default function App() {
   return (
@@ -35,15 +35,7 @@ export default function App() {
         {/* Fourth row */}
         <ComponentRow>
           <ButtonExample />
-
-          {/* Tag component */}
-          <ComponentCard flexDirection="row">
-            <Tag>Tag</Tag>
-            <Tag backgroundColor="secondary" color="white">
-              Tag
-            </Tag>
-            <Tag tagType="outline">Tag</Tag>
-          </ComponentCard>
+          <TagExample />
         </ComponentRow>
       </Flex>
     </Box>
