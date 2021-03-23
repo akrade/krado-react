@@ -17,8 +17,6 @@ const colors = {
   // The "Oshun" color swatch.
   yellows: ['#FBEAC7', '#FFE49F', '#F6B100', '#966C00', '#725200'],
 
-  // The gray color swatches.
-
   grays: [
     '#262626',
     '#333333',
@@ -28,14 +26,6 @@ const colors = {
     '#F5F5F5',
     '#FFFFFF'
   ]
-
-  // // The utility colors swatches.
-  // boneUy: '#EDE7DE',
-  // tissueUy: '#F4F3F1',
-  // goldUy: '#B49E5E',
-  // ironUy: '#614F36',
-  // fleshUy: '#FF6161',
-  // transparentUY: 'rgba(255,255,255,0)'
 };
 
 colors.blue = colors.blues[2];
