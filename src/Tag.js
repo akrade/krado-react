@@ -36,7 +36,7 @@ const Tag = styled(Box)`
   })}
 
   ${system({
-    color: {
+    tagColor: {
       properties: ['color', 'borderColor'],
       scale: 'colors'
     }
