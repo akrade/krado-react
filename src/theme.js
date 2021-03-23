@@ -59,10 +59,8 @@ const letterSpacings = {
   pretext: '0.22em'
 };
 
-// Rounded radius.
 const radii = [0, 4, 8, 12, 99999];
-// Alias
-radii.round = radii[4];
+radii.round = radii[4]; // Alias
 
 const shadows = [
   'none',
