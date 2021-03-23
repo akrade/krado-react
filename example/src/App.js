@@ -22,7 +22,6 @@ export default function App() {
       <Flex flexDirection="column">
         {/* First row. */}
         <ComponentRow>
-          {/* Text component. */}
           <TextExample />
 
           {/* Heading component. */}
