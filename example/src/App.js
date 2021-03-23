@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  Box,
-  Flex,
-  Title,
-  Link,
-  Image,
-  Avatar,
-  Button,
-  Tag
-} from 'krado-react';
+import { Box, Flex, Title, Image, Avatar, Button, Tag } from 'krado-react';
 import ComponentRow from './components/ComponentRow';
 import ComponentCard from './components/ComponentCard';
 import TextExample from './components/TextExample';
 import HeadingExample from './components/HeadingExample';
+import TitleExample from './components/TitleExample';
+import LinkExample from './components/LinkExample';
 import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
 import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
 
@@ -28,27 +21,8 @@ export default function App() {
 
         {/* Second row. */}
         <ComponentRow>
-          {/* Title component. */}
-          <ComponentCard flex={2} alignItems="flex-start">
-            <Title variant="display">Display</Title>
-            <Title variant="extraLarge">XL Title</Title>
-            <Title variant="large">Large Title</Title>
-            <Title>Title</Title>
-            <Title variant="subtitle">Subtile</Title>
-            <Title variant="quote">Quote</Title>
-            <Title variant="extraSmall">X Small</Title>
-          </ComponentCard>
-
-          {/* Link component. */}
-          <ComponentCard>
-            <Link
-              href="https://example.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Link
-            </Link>
-          </ComponentCard>
+          <TitleExample />
+          <LinkExample />
         </ComponentRow>
 
         {/* Third row */}
