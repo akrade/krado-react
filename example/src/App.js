@@ -6,39 +6,15 @@ import {
   Heading,
   Title,
   Link,
-  Card,
   Image,
   Avatar,
   Button,
   Tag
 } from 'krado-react';
+import ComponentRow from './components/ComponentRow';
+import ComponentCard from './components/ComponentCard';
 import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
 import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
-
-function ComponentRow(props) {
-  return (
-    <Flex
-      flexWrap="wrap"
-      flexDirection={['column', null, null, 'row']}
-      {...props}
-    />
-  );
-}
-
-function ComponentCard(props) {
-  return (
-    <Card
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      flex={1}
-      height="auto"
-      margin={3}
-      {...props}
-    />
-  );
-}
 
 export default function App() {
   return (
