@@ -1,13 +1,13 @@
 import React from 'react';
-import { Box, Flex, Title, Image, Avatar, Button, Tag } from 'krado-react';
+import { Box, Flex, Title, Avatar, Button, Tag } from 'krado-react';
 import ComponentRow from './components/ComponentRow';
 import ComponentCard from './components/ComponentCard';
 import TextExample from './components/TextExample';
 import HeadingExample from './components/HeadingExample';
 import TitleExample from './components/TitleExample';
 import LinkExample from './components/LinkExample';
+import ImageExample from './components/ImageExample';
 import avatarPlaceHolder from './assets/images/avatar-placeholder.png';
-import imagePlaceholder from './assets/images/assortment-of-natural-ingredients-on-wooden-table.jpg';
 
 export default function App() {
   return (
@@ -27,19 +27,7 @@ export default function App() {
 
         {/* Third row */}
         <ComponentRow>
-          {/* Image Component */}
-          <ComponentCard>
-            <Flex
-              flexDirection="column"
-              justifyContent="space=between"
-              alignItems="center"
-            >
-              <Title variant="extraSmall" marginBottom={5}>
-                Image
-              </Title>
-              <Image src={imagePlaceholder} />
-            </Flex>
-          </ComponentCard>
+          <ImageExample />
 
           {/* Avatar Component */}
           <ComponentCard>
