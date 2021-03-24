@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2021-03-24
+
 ### Added
 
 - Core components. (KRAD-4)
@@ -26,4 +28,5 @@
 Initial development
 
 [unreleased]: https://github.com/akrade/krado-react/compare/v0.1.0...HEAD
+[0.2.0]: https://github.com/akrade/krado-react/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/akrade/krado-react/releases/tag/v0.1.0
