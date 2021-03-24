@@ -1,7 +1,15 @@
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { ThemeProvider } from 'styled-components';
+import { theme, Box } from 'krado-react';
+// import './styles/index.css';
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <Box variant="root">
+      <App />
+    </Box>
+  </ThemeProvider>,
+  document.getElementById('root')
+);
