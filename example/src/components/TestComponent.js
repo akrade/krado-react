@@ -1,11 +1,13 @@
 import React from 'react';
 import ComponentCard from './ComponentCard';
-import { Heading, Title } from 'krado-react';
+import { Title } from 'krado-react';
 
 export default function TestComponent() {
   return (
     <ComponentCard>
-      <Heading>Test Card</Heading>
+      <Title variant="extraSmall" marginBottom={5}>
+        Test Card
+      </Title>
       <Title fontWeight="bold">Title</Title>
     </ComponentCard>
   );
