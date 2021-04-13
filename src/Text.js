@@ -41,12 +41,7 @@ const Text = styled(Box)`
   })}
 `;
 
-Text.propTypes = {
-  ...propTypes.space,
-  ...propTypes.layout,
-  ...propTypes.color,
-  ...propTypes.typography
-};
+Text.propTypes = Box.propTypes;
 
 Text.defaultProps = {
   color: 'text',
