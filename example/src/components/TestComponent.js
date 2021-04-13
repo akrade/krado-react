@@ -8,6 +8,7 @@ export default function TestComponent() {
       <Title variant="extraSmall" marginBottom={5}>
         Test Card
       </Title>
+
       <Title fontWeight="bold">Title</Title>
     </ComponentCard>
   );

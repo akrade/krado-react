@@ -30,10 +30,6 @@ const variants = {
 };
 
 const Title = styled(Text)`
-  font-weight: 400;
-  font-family: ${themeGet('fonts.display')};
-  letter-spacing: ${themeGet('letterSpacings.display')};
-
   ${variant({
     variants
   })}
@@ -43,6 +39,9 @@ Title.propTypes = Text.propTypes;
 
 Title.defaultProps = {
   variant: 'title',
+  fontWeight: 400,
+  fontFamily: 'display',
+  letterSpacing: 'display',
   marginBottom: 3
 };
 
