@@ -15,9 +15,7 @@ export default function App() {
     <Box variant="container" py={5}>
       <Flex flexDirection="column">
         <ComponentRow>
-          <Title variant="title" fontWeight="bold">
-            Title
-          </Title>
+          <Title fontWeight="bold">Title</Title> {/* temp */}
           <TextExample />
           <HeadingExample />
         </ComponentRow>
