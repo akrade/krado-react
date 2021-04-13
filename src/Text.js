@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 import Box from './Box';
-import propTypes from '@styled-system/prop-types';
 
 const variants = {
   body: {
