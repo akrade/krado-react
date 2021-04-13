@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 import Text from './Text';
-import themeGet from '@styled-system/theme-get';
 
 const variants = {
   display: {
