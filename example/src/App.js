@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Title } from 'krado-react';
+import { Box, Flex } from 'krado-react';
 import ComponentRow from './components/ComponentRow';
 import TextExample from './components/TextExample';
 import HeadingExample from './components/HeadingExample';
@@ -9,13 +9,14 @@ import ImageExample from './components/ImageExample';
 import AvatarExample from './components/AvatarExample';
 import ButtonExample from './components/ButtonExample';
 import TagExample from './components/TagExample';
+import TestComponent from './components/TestComponent';
 
 export default function App() {
   return (
     <Box variant="container" py={5}>
       <Flex flexDirection="column">
         <ComponentRow>
-          <Title fontWeight="bold">Title</Title> {/* temp */}
+          <TestComponent />
           <TextExample />
           <HeadingExample />
         </ComponentRow>
