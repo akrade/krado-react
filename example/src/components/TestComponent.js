@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentCard from './ComponentCard';
-import { Title } from 'krado-react';
+import { Text, Title } from 'krado-react';
 
 export default function TestComponent() {
   return (
@@ -10,6 +10,7 @@ export default function TestComponent() {
       </Title>
 
       <Title fontWeight="bold">Title</Title>
+      <Text fontWeight="bold">Text</Text>
     </ComponentCard>
   );
 }
