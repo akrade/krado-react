@@ -10,7 +10,9 @@ export default function TestComponent() {
       </Title>
 
       <Title fontWeight="bold">Title</Title>
-      <Text fontWeight="bold">Text</Text>
+      <Text fontWeight="bold" fontSize={6}>
+        Text
+      </Text>
     </ComponentCard>
   );
 }
