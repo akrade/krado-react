@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
-import Text from './Text';
+import Box from './Box';
 
 const variants = {
   display: {
@@ -28,13 +28,13 @@ const variants = {
   }
 };
 
-const Title = styled(Text)`
+const Title = styled(Box)`
   ${variant({
     variants
   })}
 `;
 
-Title.propTypes = Text.propTypes;
+Title.propTypes = Box.propTypes;
 
 Title.defaultProps = {
   variant: 'title',
