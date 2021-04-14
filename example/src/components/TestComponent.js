@@ -9,7 +9,9 @@ export default function TestComponent() {
         Test Card
       </Title>
 
-      <Title fontWeight="bold">Title</Title>
+      <Title fontWeight="bold" fontSize={11}>
+        Title
+      </Title>
       <Text fontWeight="bold" fontSize={6}>
         Text
       </Text>

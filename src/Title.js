@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variant } from 'styled-system';
+import { variant, typography } from 'styled-system';
 import Box from './Box';
 
 const variants = {
@@ -32,6 +32,7 @@ const Title = styled(Box)`
   ${variant({
     variants
   })}
+  ${typography}
 `;
 
 Title.propTypes = Box.propTypes;
