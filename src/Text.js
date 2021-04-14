@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { space, layout, color, typography, variant } from 'styled-system';
-import propTypes from '@styled-system/prop-types';
+import { variant, typography, color } from 'styled-system';
+import Box from './Box';
 
 const variants = {
   body: {
@@ -34,28 +34,20 @@ const variants = {
   }
 };
 
-const Text = styled.div`
-  ${space}
-  ${layout}
-  ${color}
-  ${typography}
-
+const Text = styled(Box)`
   ${variant({
     variants
   })}
+  ${typography}
+  ${color}
 `;
 
-Text.propTypes = {
-  ...propTypes.space,
-  ...propTypes.layout,
-  ...propTypes.color,
-  ...propTypes.typography
-};
+Text.propTypes = Box.propTypes;
 
 Text.defaultProps = {
+  variant: 'body',
   color: 'text',
-  fontFamily: 'body',
-  variant: 'body'
+  fontFamily: 'body'
 };
 
 export default Text;

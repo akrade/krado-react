@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { variant } from 'styled-system';
-import Text from './Text';
-import themeGet from '@styled-system/theme-get';
+import { variant, typography } from 'styled-system';
+import Box from './Box';
 
 const variants = {
   display: {
@@ -29,20 +28,20 @@ const variants = {
   }
 };
 
-const Title = styled(Text)`
-  font-weight: 400;
-  font-family: ${themeGet('fonts.display')};
-  letter-spacing: ${themeGet('letterSpacings.display')};
-
+const Title = styled(Box)`
   ${variant({
     variants
   })}
+  ${typography}
 `;
 
-Title.propTypes = Text.propTypes;
+Title.propTypes = Box.propTypes;
 
 Title.defaultProps = {
   variant: 'title',
+  fontWeight: 400,
+  fontFamily: 'display',
+  letterSpacing: 'display',
   marginBottom: 3
 };
 

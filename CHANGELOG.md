@@ -2,6 +2,23 @@
 
 ## [Unreleased]
 
+## [0.2.1] - 2021-04-14
+
+### Added
+
+- Hidden `TestComponent` in example page for debugging.
+
+### Changed
+
+- Adobe Fonts import to support bold [display fonts.](https://fonts.adobe.com/fonts/gimlet-text)
+- Made some style declarations for `Title` component to use the `defaultProps` property instead.
+- Made the `Text` component extend `Box` instead of a `div` element.
+- Made the `Title` component extend `Box`.
+
+### Fixed
+
+- Some `Text` and `Title` style props not working when a variant is applied (KRAD-43).
+
 ## [0.2.0] - 2021-03-24
 
 ### Added
@@ -27,6 +44,7 @@
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/akrade/krado-react/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/akrade/krado-react/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/akrade/krado-react/releases/tag/v0.1.0
