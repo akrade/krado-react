@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variant } from 'styled-system';
+import { variant, space, color, typography } from 'styled-system';
 import Box from './Box';
 
 const variants = {
@@ -38,14 +38,17 @@ const Text = styled(Box)`
   ${variant({
     variants
   })}
+  ${space}
+  ${color}
+  ${typography}
 `;
 
 Text.propTypes = Box.propTypes;
 
 Text.defaultProps = {
+  variant: 'body',
   color: 'text',
-  fontFamily: 'body',
-  variant: 'body'
+  fontFamily: 'body'
 };
 
 export default Text;
