@@ -9,14 +9,12 @@ import ImageExample from './components/ImageExample';
 import AvatarExample from './components/AvatarExample';
 import ButtonExample from './components/ButtonExample';
 import TagExample from './components/TagExample';
-import TestComponent from './components/TestComponent';
 
 export default function App() {
   return (
     <Box variant="container" py={5}>
       <Flex flexDirection="column">
         <ComponentRow>
-          <TestComponent />
           <TextExample />
           <HeadingExample />
         </ComponentRow>
