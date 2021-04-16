@@ -7,6 +7,7 @@ import {
   flexbox,
   grid,
   typography,
+  position,
   shadow,
   variant,
   system
@@ -25,6 +26,7 @@ const Box = styled.div`
   ${flexbox}
   ${grid}
   ${typography}
+  ${position}
   ${shadow}
 
   ${variant({
