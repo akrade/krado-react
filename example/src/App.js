@@ -13,7 +13,7 @@ import TagExample from './components/TagExample';
 export default function App() {
   return (
     <Box variant="container" py={5}>
-      <Box backgroundColor={colors.yellow[2]} width="100px" height="100px" />
+      <Box backgroundColor={colors.yellows[3]} width="100px" height="100px" />
       <Flex flexDirection="column">
         <ComponentRow>
           <TextExample />
