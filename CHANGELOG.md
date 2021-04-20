@@ -6,7 +6,7 @@
 
 ### Changed
 
-- Exported `color.js` for use in extending themes.
+- Exported `color.js` for use in extending themes. (KRAD-48)
 
 ## [0.2.2] - 2021-04-15
 
