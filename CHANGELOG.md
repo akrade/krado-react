@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Exported `color.js` for use in extending themes.
+
 ## [0.2.2] - 2021-04-15
 
 ### Added
