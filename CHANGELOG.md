@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.3] - 2021-04-19
+
 ### Changed
 
 - Exported `color.js` for use in extending themes.
@@ -54,7 +56,8 @@
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.2...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/akrade/krado-react/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/akrade/krado-react/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/akrade/krado-react/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/akrade/krado-react/compare/v0.1.0...v0.2.0
