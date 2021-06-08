@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.2.5] - 2021-06-08
+
+### Fixed
+
+- Correct `CHANGELOG.md` mistakes ([KRAD-91])
+
+[krad-91]: https://akrade.atlassian.net/browse/KRAD-91
+
 ## [0.2.4] - 2021-06-08
 
 ### Changed
@@ -72,7 +80,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.3...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.5...HEAD
+[0.2.5]: https://github.com/akrade/krado-react/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/akrade/krado-react/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/akrade/krado-react/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/akrade/krado-react/compare/v0.2.1...v0.2.2
