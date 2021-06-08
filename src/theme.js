@@ -38,7 +38,7 @@ const colors = {
 
 const fonts = {
   body: "'Source Sans Pro', Arial, sans-serif",
-  heading: "'proxima-nova', Arial, sans-serif",
+  heading: "'Source Sans Pro', Arial, sans-serif",
   display: "'gimlet-text', Arial, sans-serif"
 };
 
