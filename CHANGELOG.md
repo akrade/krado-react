@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Security
+
+Upgraded dependencies. ([KRAD-42])
+
+[krad-42]: https://akrade.atlassian.net/browse/KRAD-42
+
 ## [0.2.3] - 2021-04-19
 
 ### Changed
