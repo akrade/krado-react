@@ -6,7 +6,7 @@
 
 ### Changed
 
-- Body and heading fonts has been changed from [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova) to [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro). ([KRAD-47])
+- Body and heading fonts have been changed from [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova) to [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro). ([KRAD-47])
 - Display font has been changed from [Gimlet Text](https://fonts.adobe.com/fonts/gimlet-text) to [Merriweather](https://fonts.google.com/specimen/Merriweather). ([KRAD-47])
 - Updated fallback display fonts to [Georgia](<https://en.wikipedia.org/wiki/Georgia_(typeface)>) and `serif`. ([KRAD-51])
 
