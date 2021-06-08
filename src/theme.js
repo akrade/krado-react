@@ -37,9 +37,9 @@ const colors = {
 };
 
 const fonts = {
-  body: "'proxima-nova', Arial, sans-serif",
-  heading: "'proxima-nova', Arial, sans-serif",
-  display: "'gimlet-text', Arial, sans-serif"
+  body: "'Source Sans Pro', Arial, sans-serif",
+  heading: "'Source Sans Pro', Arial, sans-serif",
+  display: "'Merriweather', Arial, sans-serif"
 };
 
 const fontWeights = {

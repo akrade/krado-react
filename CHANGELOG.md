@@ -2,10 +2,16 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Body and heading fonts has been changed from [Proxima Nova](https://fonts.adobe.com/fonts/proxima-nova) to [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro). ([KRAD-47])
+- Display font has been changed from [Gimlet Text](https://fonts.adobe.com/fonts/gimlet-text) to [Merriweather](https://fonts.google.com/specimen/Merriweather). ([KRAD-47])
+
 ### Security
 
 Upgraded dependencies. ([KRAD-42])
 
+[krad-47]: https://akrade.atlassian.net/browse/KRAD-47
 [krad-42]: https://akrade.atlassian.net/browse/KRAD-42
 
 ## [0.2.3] - 2021-04-19
