@@ -39,7 +39,7 @@ const colors = {
 const fonts = {
   body: "'Source Sans Pro', Arial, sans-serif",
   heading: "'Source Sans Pro', Arial, sans-serif",
-  display: "'Merriweather', Arial, sans-serif"
+  display: "'Merriweather', Georgia, serif"
 };
 
 const fontWeights = {
