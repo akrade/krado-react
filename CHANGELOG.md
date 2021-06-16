@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.6]
+
 ### Changed
 
 - Display font has been changed from [Merriweather](https://fonts.google.com/specimen/Merriweather) to [Source Serif Pro](https://fonts.google.com/specimen/Source+Serif+Pro). ([KRAD-93])
@@ -86,7 +88,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.5...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.6...HEAD
+[0.2.6]: https://github.com/akrade/krado-react/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/akrade/krado-react/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/akrade/krado-react/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/akrade/krado-react/compare/v0.2.2...v0.2.3
