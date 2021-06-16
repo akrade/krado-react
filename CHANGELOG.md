@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Display font has been changed from [Merriweather](https://fonts.google.com/specimen/Merriweather) to [Source Serif Pro](https://fonts.google.com/specimen/Source+Serif+Pro). ([KRAD-93])
+
+[krad-93]: https://akrade.atlassian.net/browse/KRAD-93
+
 ## [0.2.5] - 2021-06-08
 
 ### Fixed
