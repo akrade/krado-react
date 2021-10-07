@@ -1,4 +1,4 @@
-import swatch from './colors';
+import kradoColors from './colors';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
@@ -14,26 +14,26 @@ const breakpoints = ['40em', '52em', '90em', '120rem'];
 const fontSizes = [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84];
 
 const colors = {
-  // UI Colors
-  text: swatch.black,
-  textDark: swatch.white,
-  background: swatch.white,
-  primary: swatch.blue,
-  secondary: swatch.black,
-  accent: swatch.blue,
-  muted: swatch.grays[5],
-  highlight: swatch.blue,
+  // UI colors
+  text: kradoColors.ash900,
+  textDark: kradoColors.ash000,
+  background: kradoColors.ash000,
+  primary: kradoColors.ptah500,
+  secondary: kradoColors.ash1000,
+  accent: kradoColors.ptah500,
+  muted: kradoColors.ash300,
+  highlight: kradoColors.ptah500,
 
   // Utility
-  success: swatch.green,
-  danger: swatch.red,
+  success: kradoColors.usir500,
+  danger: kradoColors.sekmet500,
 
-  // Basic Colors
-  black: swatch.black,
-  white: swatch.white,
-  gray: swatch.grays[3],
-  lightGray: swatch.grays[4],
-  darkGray: swatch.grays[2]
+  // Basic colors
+  white: kradoColors.ash000,
+  lightGray: kradoColors.ash200,
+  gray: kradoColors.ash300,
+  darkGray: kradoColors.ash600,
+  black: kradoColors.ash800
 };
 
 const fonts = {
