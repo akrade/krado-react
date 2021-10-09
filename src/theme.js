@@ -148,6 +148,13 @@ const buttonShapes = {
   pill: { borderRadius: radii.round }
 };
 
+const styles = {
+  root: {
+    fontFamily: 'body',
+    fontWeight: 'body'
+  }
+};
+
 const theme = {
   space,
   sizes,
@@ -163,7 +170,8 @@ const theme = {
   borders,
   buttons,
   buttonSizes,
-  buttonShapes
+  buttonShapes,
+  styles
 };
 
 export { theme };
