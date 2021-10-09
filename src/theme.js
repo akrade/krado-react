@@ -148,6 +148,13 @@ const buttonShapes = {
   pill: { borderRadius: radii.round }
 };
 
+const images = {
+  avatar: {
+    width: 42,
+    height: 42
+  }
+};
+
 const styles = {
   root: {
     fontFamily: 'body',
@@ -171,6 +178,7 @@ const theme = {
   buttons,
   buttonSizes,
   buttonShapes,
+  images,
   styles
 };
 

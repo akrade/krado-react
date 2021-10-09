@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Grid } from 'krado-react';
+import { Avatar, Box, Flex, Grid } from 'krado-react';
 
 export default function App() {
   return (
@@ -19,6 +19,8 @@ export default function App() {
         <Box>Item 2</Box>
         <Box>Item 3</Box>
       </Grid>
+
+      <Avatar src="https://source.unsplash.com/random/42x42" />
     </div>
   );
 }
