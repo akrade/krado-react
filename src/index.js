@@ -2,9 +2,9 @@ export { theme } from './theme';
 export { default as colors } from './colors';
 
 // Layout
-export { default as Box } from './Box';
-export { default as Flex } from './Flex';
-export { default as Grid } from './Grid';
+export { default as Box } from './Box/Box';
+export { default as Flex } from './Flex/Flex';
+export { default as Grid } from './Grid/Grid';
 
 // Components
 export { default as Text } from './Text';

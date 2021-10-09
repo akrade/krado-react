@@ -1,4 +1,4 @@
-import Box from './Box';
+import Box from './Box/Box';
 import styled from 'styled-components';
 import { background } from 'styled-system';
 

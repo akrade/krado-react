@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { color, background, border, variant, system } from 'styled-system';
-import Box from './Box';
+import Box from './Box/Box';
 
 const Tag = styled(Box)`
   text-decoration: none;

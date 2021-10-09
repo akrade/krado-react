@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { layout } from 'styled-system';
-import Box from './Box';
+import Box from './Box/Box';
 
 const Card = styled(Box)`
   transition: box-shadow ${(props) => props.transitionEase},

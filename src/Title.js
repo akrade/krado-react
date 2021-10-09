@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variant, typography } from 'styled-system';
-import Box from './Box';
+import Box from './Box/Box';
 
 const variants = {
   display: {

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { color, background, border, variant, buttonStyle } from 'styled-system';
-import Box from './Box';
+import Box from './Box/Box';
 import themeGet from '@styled-system/theme-get';
 
 const Button = styled(Box)`
