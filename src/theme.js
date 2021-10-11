@@ -83,6 +83,7 @@ const theme = {
         bg: 'muted'
       },
       '&:focus-visible': {
+        outline: 'none',
         boxShadow: 'onFocus'
       }
     },
