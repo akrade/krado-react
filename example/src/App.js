@@ -8,10 +8,10 @@ export default function App() {
         Box
       </Box>
 
-      <Flex>
-        <Box>Item 1</Box>
-        <Box>Item 2</Box>
-        <Box>Item 3</Box>
+      <Flex sx={{ gap: 4 }}>
+        <Box>Flex item 1</Box>
+        <Box>Flex item 2</Box>
+        <Box>Flex item 3</Box>
       </Flex>
 
       <Grid gap={4}>
