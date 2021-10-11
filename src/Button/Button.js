@@ -9,7 +9,7 @@ export default function Button({ size = 'large', ...rest }) {
         paddingX: '55px',
         paddingY: '20px',
         borderRadius: 1,
-        transition: 'all 1000ms ease',
+        transition: 'all 200ms ease',
         variant: `buttonSize.large`
       }}
       {...rest}
