@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+### Added
+
+- Rewrote all components with [Theme UI](https://theme-ui.com).
+
+### Removed
+
+- References to [Styled System](https://styled-system.com).
+- `Title` component.
+- `Tag` component.
+
 ## [0.2.6]
 
 ### Changed

@@ -82,7 +82,7 @@ const theme = {
         color: 'darkGray',
         bg: 'muted'
       },
-      '&:focus': {
+      '&:focus-visible': {
         boxShadow: 'onFocus'
       }
     },
