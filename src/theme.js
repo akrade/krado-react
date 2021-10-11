@@ -52,12 +52,21 @@ const theme = {
     pretext: '0.22em'
   },
   radii: [0, 4, 8, 12, 99999],
-  shadows: [
-    'none',
-    '0px 3px 7px rgba(0, 0, 0, 0.15)',
-    '0px 4px 24px rgba(0, 0, 0, 0.1)',
-    '0 11px 27px -6px rgba(0, 0, 0, 0.39)'
-  ],
+  shadows: {
+    soft: {
+      low: '0px 4px 24px rgba(0, 0, 0, 0.1)',
+      highMiddle: '0px 20px 64px rgba(0, 0, 0, 0.08)',
+      highNorth: '0px -20px 114px rgba(0, 0, 0, 0.16)',
+      highSouth: '0px 40px 114px rgba(0, 0, 0, 0.16)',
+      highWest: '-40px 0px 114px rgba(0, 0, 0, 0.16)',
+      highEast: '40px 0px 114px rgba(0, 0, 0, 0.16)'
+    },
+    hard: {
+      low: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+      high: '0px 9px 15px rgba(0, 0, 0, 0.13)'
+    },
+    onFocus: `0px 0px 10px 5px ${kradoColors.ptah500}`
+  },
   borders: ['none', `2px solid black`],
   buttons: {
     primary: {
