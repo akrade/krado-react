@@ -12,7 +12,7 @@ const theme = {
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84],
   colors: {
     // UI colors
-    text: kradoColors.ash900,
+    text: kradoColors.warmAsh800,
     textDark: kradoColors.ash000,
     background: kradoColors.ash000,
     primary: kradoColors.taweret700,
