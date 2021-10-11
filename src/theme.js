@@ -147,6 +147,12 @@ const theme = {
     root: {
       fontFamily: 'body',
       fontWeight: 'body'
+    },
+    a: {
+      color: 'highlight',
+      borderBottom: '3px solid',
+      borderColor: 'highlight',
+      textDecoration: 'none'
     }
   }
 };
