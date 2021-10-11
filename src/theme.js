@@ -15,11 +15,11 @@ const theme = {
     text: kradoColors.ash900,
     textDark: kradoColors.ash000,
     background: kradoColors.ash000,
-    primary: kradoColors.ptah500,
-    secondary: kradoColors.ash1000,
+    primary: kradoColors.taweret700,
+    secondary: kradoColors.taweret600,
     accent: kradoColors.ptah500,
-    muted: kradoColors.ash300,
-    highlight: kradoColors.ptah500,
+    muted: kradoColors.ash100,
+    highlight: kradoColors.taweret500,
 
     // Utility
     success: kradoColors.usir500,
