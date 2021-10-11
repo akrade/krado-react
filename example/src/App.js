@@ -21,6 +21,27 @@ export default function App() {
       </Grid>
 
       <Avatar src="https://source.unsplash.com/random/42x42" />
-    </div>
+
+      <Flex sx={{ gap: 4 }}>
+        <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          <Button size="large">Button</Button>
+          <Button disabled>Button</Button>
+        </Flex>
+
+        <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          <Button variant="text">Button</Button>
+          <Button variant="text" disabled>
+            Button
+          </Button>
+        </Flex>
+
+        <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          <Button variant="ghost">Button</Button>
+          <Button variant="ghost" disabled>
+            Button
+          </Button>
+        </Flex>
+      </Flex>
+    </Flex>
   );
 }

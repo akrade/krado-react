@@ -61,60 +61,55 @@ const theme = {
   borders: ['none', `2px solid black`],
   buttons: {
     primary: {
-      color: 'white',
-      backgroundColor: 'black',
-      '&:active': {
-        backgroundColor: 'darkGray'
-      }
-    },
-    outline: {
-      light: {
-        color: 'black',
-        backgroundColor: 'transparent',
-        border: 1,
-        '&:hover, &:focus': {
-          color: 'black',
-          backgroundColor: 'white',
-          borderColor: 'white'
-        },
-        '&:active': {
-          color: 'black',
-          backgroundColor: 'muted',
-          borderColor: 'muted'
-        }
+      color: 'background',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'secondary'
       },
-      dark: {
-        color: 'white',
-        backgroundColor: 'transparent',
-        border: 1,
-        borderColor: 'white',
-        '&:hover, &:focus': {
-          color: 'black',
-          backgroundColor: 'white',
-          borderColor: 'white'
-        },
-        '&:active': {
-          color: 'black',
-          backgroundColor: 'muted',
-          borderColor: 'muted'
-        }
-      }
-    },
-    clear: {
-      color: 'black',
-      backgroundColor: 'transparent',
       '&:active': {
-        backgroundColor: 'muted'
+        bg: 'primary'
+      },
+      '&:disabled': {
+        color: 'darkGray',
+        bg: 'muted'
+      },
+      '&:focus': {
+        boxShadow: 'onFocus'
       }
     },
-    success: {
-      color: 'white',
-      backgroundColor: 'success'
+    text: {
+      color: 'primary',
+      bg: 'transparent',
+      '&:hover': {
+        color: 'secondary'
+      },
+      '&:active': {
+        color: 'primary'
+      },
+      '&:disabled': {
+        color: 'darkGray'
+      }
     },
-    danger: {
-      color: 'white',
-      backgroundColor: 'danger'
-    }
+    ghost: {
+      color: 'primary',
+      bg: 'transparent',
+      border: 1,
+      borderColor: 'primary',
+      '&:hover': {
+        color: 'secondary',
+        borderColor: 'transparent',
+        bg: 'background',
+        boxShadow: 'hard.high'
+      },
+      '&:active': {
+        color: 'background',
+        bg: 'primary'
+      },
+      '&:disabled': {
+        color: 'darkGray',
+        borderColor: 'darkGray',
+        boxShadow: 'none'
+      }
   },
   buttonSizes: {
     small: {
