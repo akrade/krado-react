@@ -6,8 +6,10 @@ import {
   Card,
   Flex,
   Grid,
+  Heading,
   Image,
-  Link
+  Link,
+  Text
 } from 'krado-react';
 
 export default function App() {
@@ -59,6 +61,78 @@ export default function App() {
       <Box>
         <Link href="#">Link</Link>
       </Box>
+
+      <Flex sx={{ gap: 5 }}>
+        <Box>
+          <Heading variant="body.h1" as="h1">
+            H1
+          </Heading>
+          <Heading variant="body.h2" as="h2">
+            H2
+          </Heading>
+          <Heading variant="body.h3" as="h3">
+            H3
+          </Heading>
+          <Heading variant="body.h4" as="h4">
+            H4
+          </Heading>
+          <Heading variant="body.h5" as="h5">
+            H5
+          </Heading>
+        </Box>
+        <Box>
+          <Heading variant="display.h1" as="h1">
+            H1
+          </Heading>
+          <Heading variant="display.h2" as="h2">
+            H2
+          </Heading>
+          <Heading variant="display.h3" as="h3">
+            H3
+          </Heading>
+          <Heading variant="display.h4" as="h4">
+            H4
+          </Heading>
+          <Heading variant="display.h5" as="h5">
+            H5
+          </Heading>
+        </Box>
+      </Flex>
+
+      <Flex sx={{ gap: 5 }}>
+        <Box>
+          <Text variant="body.summary" as="p">
+            Summary
+          </Text>
+          <Text variant="body.paragraph" as="p">
+            Paragraph
+          </Text>
+          <Text variant="body.smallParagraph" as="p">
+            Small Paragraph
+          </Text>
+          <Text variant="body.bold" as="p">
+            Bold
+          </Text>
+          <Text variant="body.callout" as="p">
+            Callout
+          </Text>
+          <Text variant="body.caption" as="p">
+            Caption
+          </Text>
+          <Text variant="body.footnote" as="p">
+            Footnote
+          </Text>
+          <Text variant="body.pretext" as="p">
+            Pretext
+          </Text>
+        </Box>
+        <Box>
+          <Text variant="display.display">Display</Text>
+          <Text variant="display.quote" as="blockquote">
+            Quote
+          </Text>
+        </Box>
+      </Flex>
     </Flex>
   );
 }

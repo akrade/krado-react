@@ -138,6 +138,111 @@ const theme = {
       borderColor: 'highlight',
       textDecoration: 'none'
     }
+  },
+  text: {
+    body: {
+      h1: {
+        fontSize: 8,
+        lineHeight: 'heading'
+      },
+      h2: {
+        variant: 'text.body.h1',
+        fontSize: 7
+      },
+      h3: {
+        variant: 'text.body.h1',
+        fontSize: 6
+      },
+      h4: {
+        variant: 'text.body.h1',
+        fontSize: 5
+      },
+      h5: {
+        variant: 'text.body.h1',
+        fontWeight: 600,
+        fontSize: 4
+      },
+      summary: {
+        fontSize: 6,
+        lineHeight: '32px',
+        letterSpacing: '-0.02em'
+      },
+      paragraph: {
+        fontSize: 4,
+        lineHeight: '28px'
+      },
+      smallParagraph: {
+        fontSize: 2,
+        lineHeight: '20px'
+      },
+      bold: {
+        fontWeight: 'bold',
+        fontSize: 4,
+        lineHeight: '28px'
+      },
+      callout: {
+        fontSize: 3,
+        lineHeight: '20px'
+      },
+      caption: {
+        fontWeight: 600,
+        fontSize: '15px',
+        lineHeight: '19px'
+      },
+      footnote: {
+        fontWeight: 600,
+        fontSize: '13px',
+        lineHeight: '16px'
+      },
+      pretext: {
+        fontWeight: 'bold',
+        fontSize: 1,
+        lineHeight: '18px',
+        letterSpacing: '0.22em',
+        textTransform: 'uppercase',
+        color: 'darkGray'
+      }
+    },
+    display: {
+      display: {
+        fontFamily: 'display',
+        fontSize: '104px',
+        lineHeight: '104px',
+        letterSpacing: 'display'
+      },
+      h1: {
+        fontFamily: 'display',
+        fontSize: 10,
+        lineHeight: '78px',
+        letterSpacing: 'display'
+      },
+      h2: {
+        variant: 'text.display.h1',
+        fontSize: 9,
+        lineHeight: '65px'
+      },
+      h3: {
+        variant: 'text.display.h1',
+        fontSize: 8,
+        lineHeight: '44px'
+      },
+      h4: {
+        variant: 'text.display.h1',
+        fontSize: 7,
+        lineHeight: '40px'
+      },
+      h5: {
+        variant: 'text.display.h1',
+        fontSize: 5,
+        lineHeight: '28px'
+      },
+      quote: {
+        fontFamily: 'display',
+        fontStyle: 'italic',
+        fontSize: '25px',
+        lineHeight: '31px'
+      }
+    }
   }
 };
 
