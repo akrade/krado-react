@@ -46,6 +46,10 @@ export default function App() {
       <Card>Card</Card>
 
       <Image src="https://source.unsplash.com/random" />
+
+      <Box>
+        <Link href="#">Link</Link>
+      </Box>
     </Flex>
   );
 }
