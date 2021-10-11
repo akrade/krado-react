@@ -3,7 +3,7 @@ import { Avatar, Box, Flex, Grid } from 'krado-react';
 
 export default function App() {
   return (
-    <div>
+    <Flex padding={4} sx={{ flexDirection: 'column', gap: 4 }}>
       <Box padding={4} color="background" backgroundColor="primary">
         Box
       </Box>
