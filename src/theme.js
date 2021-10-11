@@ -119,23 +119,7 @@ const theme = {
         borderColor: 'darkGray',
         boxShadow: 'none'
       }
-  },
-  buttonSizes: {
-    small: {
-      fontSize: 2,
-      margin: 2,
-      padding: '0.5rem 3.5rem'
-    },
-    large: {
-      fontSize: 2,
-      margin: 2,
-      padding: '1rem 4.6rem'
     }
-  },
-  buttonShapes: {
-    square: { borderRadius: 0 },
-    round: { borderRadius: 1 },
-    pill: { borderRadius: 'round' }
   },
   images: {
     avatar: {
