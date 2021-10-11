@@ -42,6 +42,8 @@ export default function App() {
           </Button>
         </Flex>
       </Flex>
+
+      <Card>Card</Card>
     </Flex>
   );
 }
