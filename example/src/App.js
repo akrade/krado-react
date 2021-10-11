@@ -44,6 +44,8 @@ export default function App() {
       </Flex>
 
       <Card>Card</Card>
+
+      <Image src="https://source.unsplash.com/random" />
     </Flex>
   );
 }
