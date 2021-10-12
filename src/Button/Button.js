@@ -8,7 +8,11 @@ export default function Button({ size = 'large', ...rest }) {
         fontWeight: 600,
         borderRadius: 1,
         transition: 'all 200ms ease',
-        variant: `buttonSizes.${size}`
+        cursor: 'pointer',
+        variant: `buttonSizes.${size}`,
+        '&:disabled': {
+          cursor: 'auto'
+        }
       }}
       {...rest}
     />
