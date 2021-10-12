@@ -65,7 +65,7 @@ const theme = {
       low: '0px 4px 4px rgba(0, 0, 0, 0.25)',
       high: '0px 9px 15px rgba(0, 0, 0, 0.13)'
     },
-    onFocus: `0px 0px 10px 5px ${kradoColors.ptah500}`
+    onFocus: `0px 0px 10px 0.5px ${kradoColors.ptah500}`
   },
   borders: ['none', `2px solid black`],
   buttons: {
