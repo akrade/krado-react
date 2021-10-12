@@ -9,7 +9,7 @@ export default function Button({ size = 'large', ...rest }) {
         borderRadius: 1,
         transition: 'all 200ms ease',
         cursor: 'pointer',
-        variant: `buttonSizes.${size}`,
+        variant: `buttons.sizes.${size}`,
         '&:disabled': {
           cursor: 'auto'
         }

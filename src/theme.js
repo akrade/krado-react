@@ -120,11 +120,11 @@ const theme = {
         borderColor: 'darkGray',
         boxShadow: 'none'
       }
+    },
+    sizes: {
+      large: { paddingX: '55px', paddingY: '20px' },
+      small: { paddingX: '35px', paddingY: '15px' }
     }
-  },
-  buttonSizes: {
-    large: { paddingX: '55px', paddingY: '20px' },
-    small: { paddingX: '35px', paddingY: '15px' }
   },
   images: {
     avatar: {
