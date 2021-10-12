@@ -6,11 +6,9 @@ export default function Button({ size = 'large', ...rest }) {
     <ThemeUiButton
       sx={{
         fontWeight: 600,
-        paddingX: '55px',
-        paddingY: '20px',
         borderRadius: 1,
         transition: 'all 200ms ease',
-        variant: `buttonSize.large`
+        variant: `buttonSizes.${size}`
       }}
       {...rest}
     />

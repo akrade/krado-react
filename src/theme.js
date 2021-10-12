@@ -122,6 +122,10 @@ const theme = {
       }
     }
   },
+  buttonSizes: {
+    large: { paddingX: '55px', paddingY: '20px' },
+    small: { paddingX: '35px', paddingY: '15px' }
+  },
   images: {
     avatar: {
       width: 42,

@@ -54,6 +54,33 @@ export default function App() {
         </Flex>
       </Flex>
 
+      <Flex sx={{ gap: 4 }}>
+        <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          <Button size="small">Button</Button>
+          <Button size="small" disabled>
+            Button
+          </Button>
+        </Flex>
+
+        <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          <Button variant="text" size="small">
+            Button
+          </Button>
+          <Button variant="text" size="small" disabled>
+            Button
+          </Button>
+        </Flex>
+
+        <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          <Button variant="ghost" size="small">
+            Button
+          </Button>
+          <Button variant="ghost" size="small" disabled>
+            Button
+          </Button>
+        </Flex>
+      </Flex>
+
       <Card>Card</Card>
 
       <Image src="https://source.unsplash.com/random" />
