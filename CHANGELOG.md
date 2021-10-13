@@ -9,6 +9,7 @@
 ### Removed
 
 - References to [Styled System](https://styled-system.com).
+- References to [styled-components](https://styled-components.com).
 - `Title` component as the `Heading` component now replaces it.
 - `Tag` component.
 
