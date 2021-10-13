@@ -4,12 +4,12 @@
 
 ### Added
 
-- Rewrote all components with [Theme UI](https://theme-ui.com).
+- Brand new components rewritten with [Theme UI](https://theme-ui.com).
 
 ### Removed
 
 - References to [Styled System](https://styled-system.com).
-- `Title` component.
+- `Title` component as the `Heading` component now replaces it.
 - `Tag` component.
 
 ## [0.2.6]
