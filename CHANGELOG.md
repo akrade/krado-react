@@ -7,6 +7,7 @@
 ### Added
 
 - Brand new components rewritten with [Theme UI](https://theme-ui.com). ([KRAD-122])
+- New theme color selection from the _new_ [Krado color system](https://www.figma.com/file/1TAmEbsyXfnJ1J9CitZyZY/Krado-Identity?node-id=4506%3A67). ([KRAD-158])
 
 ### Removed
 
@@ -16,6 +17,7 @@
 - `Tag` component. ([KRAD-122])
 
 [krad-122]: https://akrade.atlassian.net/browse/KRAD-122
+[krad-158]: https://akrade.atlassian.net/browse/KRAD-158
 
 ## [0.2.6]
 
