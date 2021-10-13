@@ -2,6 +2,21 @@
 
 ## [Unreleased]
 
+## [0.3.0]
+
+### Added
+
+- Brand new components rewritten with [Theme UI](https://theme-ui.com). ([KRAD-122])
+
+### Removed
+
+- References to [Styled System](https://styled-system.com). ([KRAD-122])
+- References to [styled-components](https://styled-components.com). ([KRAD-122])
+- `Title` component as the `Heading` component now replaces it. ([KRAD-122])
+- `Tag` component. ([KRAD-122])
+
+[krad-122]: https://akrade.atlassian.net/browse/KRAD-122
+
 ## [0.2.6]
 
 ### Changed
@@ -88,7 +103,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.6...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/akrade/krado-react/compare/v0.2.6...v0.3.0
 [0.2.6]: https://github.com/akrade/krado-react/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/akrade/krado-react/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/akrade/krado-react/compare/v0.2.3...v0.2.4
