@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.3.0]
+
 ### Added
 
 - Brand new components rewritten with [Theme UI](https://theme-ui.com).
@@ -99,7 +101,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.2.6...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/akrade/krado-react/compare/v0.2.6...v0.3.0
 [0.2.6]: https://github.com/akrade/krado-react/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/akrade/krado-react/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/akrade/krado-react/compare/v0.2.3...v0.2.4
