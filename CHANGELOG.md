@@ -6,14 +6,16 @@
 
 ### Added
 
-- Brand new components rewritten with [Theme UI](https://theme-ui.com).
+- Brand new components rewritten with [Theme UI](https://theme-ui.com). ([KRAD-122])
 
 ### Removed
 
-- References to [Styled System](https://styled-system.com).
-- References to [styled-components](https://styled-components.com).
-- `Title` component as the `Heading` component now replaces it.
-- `Tag` component.
+- References to [Styled System](https://styled-system.com). ([KRAD-122])
+- References to [styled-components](https://styled-components.com). ([KRAD-122])
+- `Title` component as the `Heading` component now replaces it. ([KRAD-122])
+- `Tag` component. ([KRAD-122])
+
+[krad-122]: https://akrade.atlassian.net/browse/KRAD-122
 
 ## [0.2.6]
 
