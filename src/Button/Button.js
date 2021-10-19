@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button as ThemeUiButton } from 'theme-ui';
+import PropTypes from 'prop-types';
 
 export default function Button({ size = 'large', ...rest }) {
   return (
@@ -18,3 +19,9 @@ export default function Button({ size = 'large', ...rest }) {
     />
   );
 }
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(['primary', 'text', 'ghost']),
+  size: PropTypes.oneOf(['small', 'large']),
+  disabled: PropTypes.bool
+};
