@@ -7,7 +7,7 @@ export default {
 };
 
 export const Default = () => (
-  <Box p={4} color="background" bg="primary">
+  <Box p={4} color="background" bg="primary" sx={{ borderRadius: 1 }}>
     This is a box
   </Box>
 );
