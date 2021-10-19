@@ -2,7 +2,7 @@ import React from 'react';
 import { Button as ThemeUiButton } from 'theme-ui';
 import PropTypes from 'prop-types';
 
-export default function Button({ size = 'large', ...rest }) {
+export default function Button({ size, ...rest }) {
   return (
     <ThemeUiButton
       sx={{
@@ -24,4 +24,10 @@ Button.propTypes = {
   variant: PropTypes.oneOf(['primary', 'text', 'ghost']),
   size: PropTypes.oneOf(['small', 'large']),
   disabled: PropTypes.bool
+};
+
+Button.defaultProps = {
+  variant: 'primary',
+  size: 'large',
+  disabled: false
 };
