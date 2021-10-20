@@ -13,7 +13,7 @@
 
 ### Removed
 
-- `textDark` color inside the `theme` object. ([KRAD-169])
+- `textDark` color inside `theme.js`. ([KRAD-169])
 
 [krad-153]: https://akrade.atlassian.net/browse/KRAD-153
 [krad-170]: https://akrade.atlassian.net/browse/KRAD-170
