@@ -21,13 +21,13 @@ export default function Button({ size, ...rest }) {
 }
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['primary', 'text', 'ghost']),
+  variant: PropTypes.oneOf(['solid', 'text', 'ghost']),
   size: PropTypes.oneOf(['small', 'large']),
   disabled: PropTypes.bool
 };
 
 Button.defaultProps = {
-  variant: 'primary',
+  variant: 'solid',
   size: 'large',
   disabled: false
 };
