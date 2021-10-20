@@ -13,7 +13,6 @@ const theme = {
   colors: {
     // UI colors
     text: kradoColors.warmAsh800,
-    textDark: kradoColors.ash000,
     background: kradoColors.ash000,
     primary: kradoColors.taweret700,
     secondary: kradoColors.taweret600,
