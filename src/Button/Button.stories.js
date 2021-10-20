@@ -25,7 +25,7 @@ Basic.args = {
 
 export const Variants = () => (
   <Wrapper>
-    <Button variant="primary">Primary</Button>
+    <Button variant="solid">Solid</Button>
     <Button variant="text">Text</Button>
     <Button variant="ghost">Ghost</Button>
   </Wrapper>
@@ -40,8 +40,8 @@ export const Sizes = () => (
 
 export const Disabled = () => (
   <Wrapper>
-    <Button variant="primary" disabled>
-      Primary
+    <Button variant="Solid" disabled>
+      Solid
     </Button>
     <Button variant="text" disabled>
       Text

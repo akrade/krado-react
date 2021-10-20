@@ -69,7 +69,7 @@ const theme = {
   },
   borders: ['none', `2px solid black`],
   buttons: {
-    primary: {
+    solid: {
       color: 'background',
       bg: 'primary',
       '&:hover': {

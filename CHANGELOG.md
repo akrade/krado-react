@@ -7,7 +7,12 @@
 - Storyboard documentation for each component. ([KRAD-153])
 - Component props are now validated with [`prop-types`](https://www.npmjs.com/package/prop-types).
 
+### Changed
+
+- Renamed `Button` variant from `primary` to `solid`. ([KRAD-170])
+
 [krad-153]: https://akrade.atlassian.net/browse/KRAD-153
+[krad-170]: https://akrade.atlassian.net/browse/KRAD-170
 
 ## [0.3.0]
 
