@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Added
+
+- Storyboard documentation for each component. ([KRAD-153])
+- Component props are now validated with [`prop-types`](https://www.npmjs.com/package/prop-types).
+
+[krad-153]: https://akrade.atlassian.net/browse/KRAD-153
+
 ## [0.3.0]
 
 ### Added
