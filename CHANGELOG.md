@@ -6,6 +6,8 @@
 
 - Storyboard documentation for each component. ([KRAD-153])
 - Component props are now validated with [`prop-types`](https://www.npmjs.com/package/prop-types).
+- Ability add left or right icons inside of the `Button` component. ([KRAD-172])
+- `ToggleIcon` component. ([KRAD-173])
 
 ### Changed
 
@@ -16,6 +18,8 @@
 - `textDark` color inside `theme.js`. ([KRAD-169])
 
 [krad-153]: https://akrade.atlassian.net/browse/KRAD-153
+[krad-172]: https://akrade.atlassian.net/browse/KRAD-172
+[krad-173]: https://akrade.atlassian.net/browse/KRAD-173
 [krad-170]: https://akrade.atlassian.net/browse/KRAD-170
 [krad-169]: https://akrade.atlassian.net/browse/KRAD-169
 

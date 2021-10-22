@@ -1521,6 +1521,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fluentui/react-icons@^1.1.144":
+  version "1.1.144"
+  resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-1.1.144.tgz#b2590bab055b83426cb6647d9974ee0a5bd4e0c0"
+  integrity sha512-W87/Zu6o76llJbVNR+HyCD/hfy3cBQdH4nXuzW5N/zC/HPFLfgJk4HR1bcEgRK0x6Nnq2wTBj+SaFmWrWS0xHg==
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"

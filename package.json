@@ -60,6 +60,7 @@
     "dist"
   ],
   "dependencies": {
+    "@fluentui/react-icons": "^1.1.144",
     "theme-ui": "^0.11.3"
   }
 }
