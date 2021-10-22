@@ -22,7 +22,7 @@
 
 ### Fixed
 
-- Missing version [0.2.6] and [0.3.0] release dates in `CHANGELOG.md`.
+- Missing version [0.2.6](https://github.com/akrade/krado-react/releases/tag/v0.2.6) and [0.3.0](https://github.com/akrade/krado-react/releases/tag/v0.3.0) release dates in `CHANGELOG.md`.
 
 [krad-153]: https://akrade.atlassian.net/browse/KRAD-153
 [krad-172]: https://akrade.atlassian.net/browse/KRAD-172
