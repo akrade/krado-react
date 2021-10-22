@@ -122,7 +122,7 @@ const theme = {
     },
     sizes: {
       large: { paddingX: '55px', paddingY: '20px' },
-      small: { paddingX: '35px', paddingY: '15px' }
+      small: { paddingX: '35px', paddingY: '15px', fontSize: '13px' }
     },
     icon: {
       width: '32px',

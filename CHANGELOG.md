@@ -12,6 +12,7 @@
 ### Changed
 
 - Renamed `Button` variant from `primary` to `solid`. ([KRAD-170])
+- The font size of the small `Button` variant is now a bit smaller. ([KRAD-171])
 
 ### Removed
 
@@ -21,6 +22,7 @@
 [krad-172]: https://akrade.atlassian.net/browse/KRAD-172
 [krad-173]: https://akrade.atlassian.net/browse/KRAD-173
 [krad-170]: https://akrade.atlassian.net/browse/KRAD-170
+[krad-171]: https://akrade.atlassian.net/browse/KRAD-171
 [krad-169]: https://akrade.atlassian.net/browse/KRAD-169
 
 ## [0.3.0]
