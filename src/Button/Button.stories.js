@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import Flex from '../Flex/Flex';
+import { Mail20Regular, ArrowRight20Regular } from '@fluentui/react-icons';
 
 const Wrapper = ({ ...props }) => (
   <Flex
@@ -48,6 +49,17 @@ export const Disabled = () => (
     </Button>
     <Button variant="ghost" disabled>
       Ghost
+    </Button>
+  </Wrapper>
+);
+
+export const Icon = () => (
+  <Wrapper>
+    <Button size="small" leftIcon={<Mail20Regular />}>
+      Email
+    </Button>
+    <Button variant="ghost" size="small" rightIcon={<ArrowRight20Regular />}>
+      Call us
     </Button>
   </Wrapper>
 );
