@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.4.0] - 2021-10-22
+
 ### Added
 
 - Storyboard documentation for each component. ([KRAD-153])
@@ -128,7 +130,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.3.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/akrade/krado-react/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/akrade/krado-react/compare/v0.2.6...v0.3.0
 [0.2.6]: https://github.com/akrade/krado-react/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/akrade/krado-react/compare/v0.2.4...v0.2.5
