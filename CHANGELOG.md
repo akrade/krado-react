@@ -20,6 +20,10 @@
 
 - `textDark` color inside `theme.js`. ([KRAD-169])
 
+### Fixed
+
+- Missing version [0.2.6] and [0.3.0] release dates in `CHANGELOG.md`.
+
 [krad-153]: https://akrade.atlassian.net/browse/KRAD-153
 [krad-172]: https://akrade.atlassian.net/browse/KRAD-172
 [krad-173]: https://akrade.atlassian.net/browse/KRAD-173
@@ -27,7 +31,7 @@
 [krad-171]: https://akrade.atlassian.net/browse/KRAD-171
 [krad-169]: https://akrade.atlassian.net/browse/KRAD-169
 
-## [0.3.0]
+## [0.3.0] - 2021-10-13
 
 ### Added
 
@@ -44,7 +48,7 @@
 [krad-122]: https://akrade.atlassian.net/browse/KRAD-122
 [krad-158]: https://akrade.atlassian.net/browse/KRAD-158
 
-## [0.2.6]
+## [0.2.6] 2021-06-16
 
 ### Changed
 
