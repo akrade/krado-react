@@ -56,6 +56,8 @@ export default function Button({
 Button.propTypes = {
   variant: PropTypes.oneOf(['solid', 'text', 'ghost']),
   size: PropTypes.oneOf(['small', 'large']),
+  leftIcon: PropTypes.element,
+  rightIcon: PropTypes.element,
   iconSpacing: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   disabled: PropTypes.bool
 };
