@@ -123,6 +123,12 @@ const theme = {
     sizes: {
       large: { paddingX: '55px', paddingY: '20px' },
       small: { paddingX: '35px', paddingY: '15px' }
+    },
+    icon: {
+      width: '32px',
+      height: '32px',
+      borderRadius: 2,
+      backgroundColor: 'background'
     }
   },
   images: {
