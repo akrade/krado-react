@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.4.1] - 2021-10-22
+
+### Fixed
+
+- Missing dash before date in [0.2.6](https://github.com/akrade/krado-react/releases/tag/v0.2.6) changelog notes.
+
 ## [0.4.0] - 2021-10-22
 
 ### Added
@@ -48,7 +54,7 @@
 [krad-122]: https://akrade.atlassian.net/browse/KRAD-122
 [krad-158]: https://akrade.atlassian.net/browse/KRAD-158
 
-## [0.2.6] 2021-06-16
+## [0.2.6] - 2021-06-16
 
 ### Changed
 
@@ -134,7 +140,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.4.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/akrade/krado-react/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/akrade/krado-react/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/akrade/krado-react/compare/v0.2.6...v0.3.0
 [0.2.6]: https://github.com/akrade/krado-react/compare/v0.2.5...v0.2.6
