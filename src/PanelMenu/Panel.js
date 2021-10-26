@@ -20,7 +20,7 @@ function getSize(size) {
   }
 }
 
-function PanelCloseButton() {
+function CloseButton() {
   return (
     <Box
       sx={{
@@ -73,7 +73,7 @@ export function Panel({ children, size, heading }) {
         <Text variant="body.bold" sx={{ fontSize: 4 }}>
           {heading}
         </Text>
-        <PanelCloseButton />
+        <CloseButton />
       </Flex>
 
       <Box>{children}</Box>
