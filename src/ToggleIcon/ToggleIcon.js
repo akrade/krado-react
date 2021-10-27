@@ -6,6 +6,10 @@ export default function ToggleIcon({ ...rest }) {
     <ThemeUiIconButton
       sx={{
         cursor: 'pointer',
+        transition: '352ms ease',
+        '&:hover': {
+          transform: 'scale(1.1)'
+        },
         '&:disabled': {
           cursor: 'auto'
         }
