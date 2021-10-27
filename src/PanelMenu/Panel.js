@@ -1,10 +1,11 @@
 /** @jsxImportSource theme-ui */
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { Dismiss24Regular } from '@fluentui/react-icons';
+import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Box from '../Box/Box';
 import Flex from '../Flex/Flex';
-import Text from '../Text/Text';
-import { Dismiss24Regular } from '@fluentui/react-icons';
+import theme from '../theme';
 
 function getSize(size) {
   if (size === 'quarter') {
@@ -20,31 +21,57 @@ function getSize(size) {
   }
 }
 
-function CloseButton() {
+function CloseButton({ ...props }) {
   return (
-    <Box
+    <ToggleIcon
       sx={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         width: '42px',
         height: '42px',
         boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.18)',
-        borderRadius: 4,
-        cursor: 'pointer'
+        borderRadius: 4
       }}
+      {...props}
     >
       <Dismiss24Regular sx={{ marginTop: '1px' }} />
-    </Box>
+    </ToggleIcon>
   );
 }
 
-export function Panel({ children, size, heading }) {
-  const [isOpen, setIsOpen] = useState(true);
+export function PanelListItem({ children, href, onClick }) {
+  return (
+    <li>
+      <a
+        href={href}
+        onClick={onClick}
+        sx={{
+          display: 'block',
+          paddingX: 4,
+          paddingY: 3,
+          color: 'inherit',
+          textDecoration: 'none',
+          borderRadius: 1,
+          transition: '325ms ease',
+          cursor: 'pointer',
+          '&:hover, &:focus': {
+            color: 'highlight',
+            outline: 'none',
+            boxShadow: 'soft.highMiddle',
+            transform: 'scale(1.05)'
+          }
+        }}
+      >
+        <Box as="span" variant="text.body.h3">
+          {children}
+        </Box>
+      </a>
+    </li>
+  );
+}
 
+export function Panel({ children, isOpen, onClose, size, heading, ...props }) {
   const variant = {
-    closed: { x: '-100%' },
-    opened: { x: 0 }
+    closed: { x: '-100%', boxShadow: 'none' },
+    opened: { x: 0, boxShadow: theme.shadows.soft.highEast }
   };
 
   return (
@@ -52,35 +79,47 @@ export function Panel({ children, size, heading }) {
       variants={variant}
       initial="closed"
       animate={isOpen ? 'opened' : 'closed'}
-      onTap={() => setIsOpen(!isOpen)}
       transition={{
         type: 'spring',
         bounce: 0.1,
         duration: 0.4
       }}
       sx={{
-        padding: 4,
+        overflow: 'hidden',
         width: getSize(size),
         height: '100vh',
         backgroundColor: 'white',
         boxShadow: 'soft.highEast'
       }}
+      {...props}
     >
       <Flex
-        marginBottom={4}
-        sx={{ alignItems: 'center', justifyContent: 'space-between' }}
+        sx={{
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: 4
+        }}
       >
-        <Text variant="body.bold" sx={{ fontSize: 4 }}>
+        <Box as="span" variant="text.body.h3" sx={{ fontWeight: 'bold' }}>
           {heading}
-        </Text>
-        <CloseButton />
+        </Box>
+        <CloseButton onClick={onClose} />
       </Flex>
 
-      <Box>{children}</Box>
+      <ul
+        sx={{
+          margin: 0,
+          padding: 0,
+          listStyle: 'none'
+        }}
+      >
+        {children}
+      </ul>
     </motion.div>
   );
 }
 
 Panel.defaultProps = {
+  isOpen: false,
   size: 'quarter'
 };
