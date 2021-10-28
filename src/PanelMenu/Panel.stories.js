@@ -18,11 +18,11 @@ export function Default() {
         onClose={() => setIsOpen(false)}
         onTap={() => setIsOpen(true)}
       >
-        <PanelListItem href="#">children</PanelListItem>
-        <PanelListItem href="#">children</PanelListItem>
-        <PanelListItem href="#">children</PanelListItem>
-        <PanelListItem href="#">children</PanelListItem>
-        <PanelListItem href="#">children</PanelListItem>
+        <PanelListItem href="#">Akrade & Company</PanelListItem>
+        <PanelListItem href="#">Bet She Will</PanelListItem>
+        <PanelListItem href="#">Brown Lotus</PanelListItem>
+        <PanelListItem href="#">Kràdoyé</PanelListItem>
+        <PanelListItem href="#">Pepper Crow</PanelListItem>
       </Panel>
     </Box>
   );
