@@ -130,7 +130,6 @@ export function Push({ children, isOpen, onClose, ...props }) {
   return (
     <motion.div
       variants={variant}
-      initial="opened"
       animate={isOpen ? 'opened' : 'closed'}
       transition={{
         type: 'spring',
@@ -138,11 +137,9 @@ export function Push({ children, isOpen, onClose, ...props }) {
         duration: 0.4
       }}
       sx={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        paddingY: 2,
+        flex: '0 0 auto',
         width: '287px',
+        paddingY: 2,
         height: '100vh',
         boxShadow: 'hard.high'
       }}
@@ -175,6 +172,34 @@ export function Push({ children, isOpen, onClose, ...props }) {
           {children}
         </ul>
       </Box>
+    </motion.div>
+  );
+}
+
+export function PushContent({ children, isOpen }) {
+  const variant = {
+    opened: {
+      marginLeft: '0px'
+    },
+    closed: {
+      marginLeft: '-287px'
+    }
+  };
+
+  return (
+    <motion.div
+      variants={variant}
+      animate={isOpen ? 'opened' : 'closed'}
+      transition={{
+        type: 'spring',
+        bounce: 0.1,
+        duration: 0.4
+      }}
+      sx={{
+        paddingX: 6
+      }}
+    >
+      {children}
     </motion.div>
   );
 }

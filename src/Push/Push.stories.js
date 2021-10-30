@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Push, PushListItem } from './Push';
-import Box from '../Box/Box';
+import { Push, PushContent, PushListItem } from './Push';
 import Flex from '../Flex/Flex';
 import Text from '../Text/Text';
 
@@ -14,11 +13,7 @@ export function Default() {
 
   return (
     <Flex>
-      <Push
-        isOpen={isOpen}
-        onClose={() => setIsOpen(!isOpen)}
-        buttonLabel="Identity"
-      >
+      <Push isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}>
         <PushListItem href="#">Identity</PushListItem>
         <PushListItem href="#">Desktop</PushListItem>
         <PushListItem href="#">Web</PushListItem>
@@ -34,7 +29,7 @@ export function Default() {
         <PushListItem href="#">VR/AR</PushListItem>
         <PushListItem href="#">Wearables</PushListItem>
       </Push>
-      <Box sx={{ width: '880px', marginX: 'auto' }}>
+      <PushContent isOpen={isOpen}>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
           tellus etiam, posuere ornare platea sollicitudin netus nostra eget
@@ -81,7 +76,7 @@ export function Default() {
           vulputate metus risus facilisis vestibulum nascetur auctor taciti
           tellus.
         </Text>
-      </Box>
+      </PushContent>
     </Flex>
   );
 }
