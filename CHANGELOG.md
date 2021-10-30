@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Updated body and heading fonts to [Barlow](https://fonts.google.com/specimen/Barlow).
+
 ## [0.4.1] - 2021-10-22
 
 ### Fixed

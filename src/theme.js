@@ -32,8 +32,8 @@ const theme = {
     black: kradoColors.ash800
   },
   fonts: {
-    body: "'Source Sans Pro', Arial, sans-serif",
-    heading: "'Source Sans Pro', Arial, sans-serif",
+    body: 'Barlow, Arial, sans-serif',
+    heading: 'Barlow, Arial, sans-serif',
     display: "'Source Serif Pro', Georgia, serif"
   },
   fontWeights: {
