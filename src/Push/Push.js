@@ -10,7 +10,7 @@ import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
 import { MdChevronRight, MdLaunch, MdLink } from 'react-icons/md';
 
-function CloseButton({ label, isOpen, ...props }) {
+function CloseButton({ isOpen, ...props }) {
   const defaultOptions = {
     autoplay: false,
     loop: false,
@@ -111,7 +111,7 @@ PushListItem.defaultProps = {
   type: 'arrow'
 };
 
-export function Push({ children, isOpen, onClose, buttonLabel, ...props }) {
+export function Push({ children, isOpen, onClose, ...props }) {
   const [isListItemHovered, setIsListItemHovered] = useState(false);
 
   const variant = {
@@ -151,7 +151,6 @@ export function Push({ children, isOpen, onClose, buttonLabel, ...props }) {
       <CloseButton
         isOpen={isOpen}
         onClick={onClose}
-        label={buttonLabel}
         sx={{
           opacity: isListItemHovered && 0,
           transform: isListItemHovered && 'translateX(30%)'
