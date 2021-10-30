@@ -34,7 +34,7 @@ const theme = {
   fonts: {
     body: 'Barlow, Arial, sans-serif',
     heading: 'Barlow, Arial, sans-serif',
-    display: "'Source Serif Pro', Georgia, serif"
+    display: 'Merriweather, Georgia, serif'
   },
   fontWeights: {
     body: 500,

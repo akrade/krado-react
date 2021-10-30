@@ -5,6 +5,7 @@
 ### Changed
 
 - Updated body and heading fonts to [Barlow](https://fonts.google.com/specimen/Barlow).
+- Updated display font to [Merriweather](https://fonts.google.com/specimen/Merriweather).
 
 ## [0.4.1] - 2021-10-22
 
