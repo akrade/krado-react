@@ -8,9 +8,17 @@ export default function ToggleIcon({ ...rest }) {
         width: '32px',
         height: '32px',
         cursor: 'pointer',
-        transition: '352ms ease',
+        borderRadius: 2,
+        transition: '325ms ease',
         '&:hover': {
-          transform: 'scale(1.1)'
+          transformOrigin: 'left bottom -50px',
+          transform: 'scale(1.1)',
+          width: '36px',
+          height: '36px'
+        },
+        '&:focus-visible': {
+          boxShadow: 'onFocus',
+          outline: 'none'
         },
         '&:disabled': {
           cursor: 'auto'
