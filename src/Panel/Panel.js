@@ -27,8 +27,7 @@ function CloseButton({ ...props }) {
       sx={{
         width: '42px',
         height: '42px',
-        boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.18)',
-        borderRadius: 4
+        boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.18)'
       }}
       {...props}
     >
