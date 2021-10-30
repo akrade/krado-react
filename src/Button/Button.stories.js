@@ -41,7 +41,7 @@ export const Sizes = () => (
 
 export const Disabled = () => (
   <Wrapper>
-    <Button variant="Solid" disabled>
+    <Button variant="solid" disabled>
       Solid
     </Button>
     <Button variant="text" disabled>
