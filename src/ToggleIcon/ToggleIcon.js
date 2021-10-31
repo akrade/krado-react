@@ -1,12 +1,18 @@
+/** @jsxImportSource theme-ui */
 import React from 'react';
-import { IconButton as ThemeUiIconButton } from 'theme-ui';
+import { motion } from 'framer-motion';
 
 export default function ToggleIcon({ ...rest }) {
   return (
-    <ThemeUiIconButton
+    <motion.button
       sx={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         width: '32px',
         height: '32px',
+        backgroundColor: 'white',
+        border: 'none',
         cursor: 'pointer',
         borderRadius: 2,
         transition: '325ms ease',
