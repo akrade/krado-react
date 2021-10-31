@@ -50,7 +50,7 @@ export default function ToggleIcon({ behavior, isHidden, ...rest }) {
     <motion.button
       variants={getVariant(behavior)}
       animate={isHidden ? 'hidden' : 'show'}
-      whileHover={{ width: '36px', height: '36px', scale: 1.1 }}
+      whileHover={{ fontSize: '20px', scale: 1.1 }}
       sx={{
         zIndex: 3,
         display: 'inline-flex',
@@ -62,8 +62,7 @@ export default function ToggleIcon({ behavior, isHidden, ...rest }) {
         border: 'none',
         cursor: 'pointer',
         borderRadius: 2,
-        transformOrigin: 'left bottom -50px',
-
+        fontSize: 6,
         '&:focus-visible': {
           boxShadow: 'onFocus',
           outline: 'none'
