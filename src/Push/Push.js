@@ -61,7 +61,7 @@ export function PushListItem({ children, href, onClick, type, level }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          paddingX: '51px',
+          paddingX: 4,
           paddingY: 3,
           color: 'inherit',
           textDecoration: 'none',
