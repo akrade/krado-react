@@ -50,7 +50,7 @@ function CloseButton({ isOpen, ...props }) {
   );
 }
 
-export function PushListItem({ children, href, onClick, type }) {
+export function PushListItem({ children, href, onClick, type, level }) {
   const variant = { hidden: {}, show: {} };
   return (
     <motion.li variants={variant} whileHover="hidden">
@@ -72,14 +72,17 @@ export function PushListItem({ children, href, onClick, type }) {
             color: 'highlight',
             outline: 'none',
             boxShadow: 'soft.highMiddle',
-            transform: 'scale(1.05)',
+            transform: level === 100 ? 'scale(1.05)' : 'none',
             '.list-item-arrow': {
               opacity: 1
             }
           }
         }}
       >
-        <Flex as="span" variant="text.body.h3">
+        <Flex
+          as="span"
+          variant={level === 100 ? 'text.body.h3' : 'text.body.h5'}
+        >
           {children}
         </Flex>
 
@@ -101,6 +104,7 @@ export function PushListItem({ children, href, onClick, type }) {
 }
 
 PushListItem.defaultProps = {
+  level: 100,
   type: 'arrow'
 };
 
