@@ -1,10 +1,13 @@
 /** @jsxImportSource theme-ui */
 import React from 'react';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-export default function ToggleIcon({ ...rest }) {
+export default function ToggleIcon({ behavior, isHidden, ...rest }) {
   return (
     <motion.button
+      variants={getVariant(behavior)}
+      animate={isHidden ? 'hidden' : 'show'}
       sx={{
         display: 'inline-flex',
         alignItems: 'center',
@@ -34,3 +37,12 @@ export default function ToggleIcon({ ...rest }) {
     />
   );
 }
+
+ToggleIcon.propTypes = {
+  behavior: PropTypes.oneOf(['ghost', 'shuffle'])
+};
+
+ToggleIcon.defaultProps = {
+  behavior: 'ghost',
+  isHidden: false
+};
