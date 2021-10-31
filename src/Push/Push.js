@@ -31,13 +31,13 @@ function CloseButton({ isOpen, ...props }) {
 
   return (
     <ToggleIcon
+      behavior="shuffle"
       sx={{
         position: 'absolute',
         top: 3,
         right: '-15px',
         alignItems: 'center',
-        boxShadow: 'soft.low',
-        transitionDelay: '650ms'
+        boxShadow: 'soft.low'
       }}
       {...props}
     >
@@ -136,41 +136,51 @@ export function Push({ children, isOpen, onClose, ...props }) {
         duration: 0.4
       }}
       sx={{
+        position: 'relative',
+        zIndex: 1,
         flex: '0 0 auto',
         width: '287px',
         paddingY: 2,
         height: '100vh',
         boxShadow: 'hard.high'
       }}
-      {...props}
     >
       <CloseButton
         isOpen={isOpen}
         onClick={onClose}
-        sx={{
-          opacity: isListItemHovered && 0,
-          transform: isListItemHovered && 'translateX(30%)'
-        }}
+        isHidden={isListItemHovered}
       />
-
-      <Box
+      <motion.div
         sx={{
-          overflow: 'hidden',
-          display: isOpen ? 'block' : 'none'
+          position: 'fixed',
+          zIndex: 2,
+          flex: '0 0 auto',
+          width: '287px',
+          paddingY: 2,
+          height: '100vh',
+          backgroundColor: 'white'
         }}
+        {...props}
       >
-        <ul
-          onMouseEnter={() => setIsListItemHovered(true)}
-          onMouseLeave={() => setIsListItemHovered(false)}
+        <Box
           sx={{
-            margin: 0,
-            padding: 0,
-            listStyle: 'none'
+            overflow: 'hidden',
+            display: isOpen ? 'block' : 'none'
           }}
         >
-          {children}
-        </ul>
-      </Box>
+          <ul
+            onMouseEnter={() => setIsListItemHovered(true)}
+            onMouseLeave={() => setIsListItemHovered(false)}
+            sx={{
+              margin: 0,
+              padding: 0,
+              listStyle: 'none'
+            }}
+          >
+            {children}
+          </ul>
+        </Box>
+      </motion.div>
     </motion.div>
   );
 }
