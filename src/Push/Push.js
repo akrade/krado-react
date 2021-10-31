@@ -8,7 +8,7 @@ import theme from '../theme';
 import Lottie from 'react-lottie';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
-import { MdChevronRight, MdLaunch, MdLink } from 'react-icons/md';
+import { MdChevronRight, MdLaunch } from 'react-icons/md';
 
 function CloseButton({ isOpen, ...props }) {
   const defaultOptions = {
@@ -85,12 +85,6 @@ export function PushListItem({ children, href, onClick, type }) {
 
         {type === 'arrow' && (
           <MdChevronRight
-            sx={{ opacity: 0, transition: '325ms ease' }}
-            className="list-item-arrow"
-          />
-        )}
-        {type === 'link' && (
-          <MdLink
             sx={{ opacity: 0, transition: '325ms ease' }}
             className="list-item-arrow"
           />
