@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Box from '../Box/Box';
 import Flex from '../Flex/Flex';
+import Heading from '../Heading/Heading';
 import theme from '../theme';
 import Lottie from 'react-lottie';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
-import { MdChevronRight, MdLaunch } from 'react-icons/md';
+import { MdChevronLeft, MdChevronRight, MdLaunch } from 'react-icons/md';
 
 function CloseButton({ isOpen, ...props }) {
   const defaultOptions = {
@@ -34,7 +35,7 @@ function CloseButton({ isOpen, ...props }) {
       behavior="shuffle"
       sx={{
         position: 'absolute',
-        top: 3,
+        top: 4,
         right: '-15px',
         alignItems: 'center',
         boxShadow: 'soft.low'
@@ -47,6 +48,28 @@ function CloseButton({ isOpen, ...props }) {
         <Lottie options={defaultOptions2} width={24} height={24} />
       )}
     </ToggleIcon>
+  );
+}
+
+export function PushPreviousItem({ children, href, onClick, ...props }) {
+  return (
+    <Flex sx={{ alignItems: 'center', paddingX: 2, paddingY: 3 }}>
+      <MdChevronLeft sx={{ fontSize: 5 }} />
+      <Heading
+        as="header"
+        variant="body.h3"
+        sx={{ fontSize: '28px', fontWeight: 'bold' }}
+        {...props}
+      >
+        <a
+          href={href}
+          onClick={onClick}
+          sx={{ color: 'inherit', textDecoration: 'none' }}
+        >
+          {children}
+        </a>
+      </Heading>
+    </Flex>
   );
 }
 
@@ -104,7 +127,7 @@ export function PushListItem({ children, href, onClick, type, level }) {
 }
 
 PushListItem.defaultProps = {
-  level: 100,
+  level: 200,
   type: 'arrow'
 };
 

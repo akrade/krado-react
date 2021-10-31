@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Push, PushContent, PushListItem } from './Push';
+import { Push, PushContent, PushListItem, PushPreviousItem } from './Push';
 import Flex from '../Flex/Flex';
 import Text from '../Text/Text';
 
@@ -14,6 +14,7 @@ export function Default() {
   return (
     <Flex>
       <Push isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}>
+        <PushPreviousItem href="#">Mobile</PushPreviousItem>
         <PushListItem href="#">Identity</PushListItem>
         <PushListItem href="#">Desktop</PushListItem>
         <PushListItem href="#">Web</PushListItem>
