@@ -50,6 +50,7 @@ const theme = {
     display: '-0.05em',
     pretext: '0.22em'
   },
+  zIndices: [0, 10, 20, 30, 40, 50],
   radii: [0, 4, 8, 12, 99999],
   shadows: {
     soft: {
