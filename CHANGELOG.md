@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Updated body and heading fonts to [Barlow](https://fonts.google.com/specimen/Barlow). ([KRAD-175])
+- Updated display font to [Merriweather](https://fonts.google.com/specimen/Merriweather). ([KRAD-175])
+
+### Fixed
+
+- Fixed variant name typo in `Button` story. ([KRAD-181])
+
+[krad-175]: https://akrade.atlassian.net/browse/KRAD-175
+[krad-181]: https://akrade.atlassian.net/browse/KRAD-181
+
 ## [0.4.1] - 2021-10-22
 
 ### Fixed
