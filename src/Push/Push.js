@@ -39,7 +39,6 @@ function CloseButton({ isOpen, ...props }) {
         boxShadow: 'soft.low',
         transitionDelay: '650ms'
       }}
-      className="close-button"
       {...props}
     >
       {isOpen ? (
