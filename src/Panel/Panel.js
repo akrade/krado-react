@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Dismiss24Regular } from '@fluentui/react-icons';
+import { MdClose } from 'react-icons/md';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Box from '../Box/Box';
 import Flex from '../Flex/Flex';
@@ -31,7 +31,7 @@ function CloseButton({ ...props }) {
       }}
       {...props}
     >
-      <Dismiss24Regular sx={{ marginTop: '1px' }} />
+      <MdClose />
     </ToggleIcon>
   );
 }
