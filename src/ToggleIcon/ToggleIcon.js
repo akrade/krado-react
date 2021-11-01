@@ -56,6 +56,7 @@ export default function ToggleIcon({ behavior, isHidden, ...rest }) {
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
+        padding: 0,
         width: '32px',
         height: '32px',
         backgroundColor: 'white',
