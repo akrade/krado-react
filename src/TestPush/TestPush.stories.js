@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdChevronRight } from 'react-icons/md';
 import TestPush, { TestPushItem } from './TestPush';
 
 export default {
@@ -8,7 +9,7 @@ export default {
 
 export const Default = () => (
   <TestPush>
-    <TestPushItem>Identity</TestPushItem>
+    <TestPushItem icon={<MdChevronRight />}>Identity</TestPushItem>
     <TestPushItem>Desktop</TestPushItem>
     <TestPushItem>Web</TestPushItem>
     <TestPushItem>Mobile</TestPushItem>

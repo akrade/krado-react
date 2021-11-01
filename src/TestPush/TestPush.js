@@ -2,6 +2,7 @@
 import React from 'react';
 import { MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
+import Flex from '../Flex/Flex';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
 function PushCloseButton({ ...rest }) {
@@ -21,13 +22,14 @@ function PushCloseButton({ ...rest }) {
   );
 }
 
-export function TestPushItem({ children }) {
+export function TestPushItem({ children, icon }) {
   return (
-    <Box as="li" sx={{ paddingX: 4, paddingY: 3 }}>
+    <Flex as="li" sx={{ alignItems: 'center', paddingX: 4, paddingY: 3 }}>
       <Box as="span" variant="text.body.h3">
         {children}
       </Box>
-    </Box>
+      {icon && <Box sx={{ marginLeft: 'auto' }}>{icon}</Box>}
+    </Flex>
   );
 }
 
