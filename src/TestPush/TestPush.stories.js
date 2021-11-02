@@ -36,7 +36,9 @@ export function Default() {
             <TestPushItem href="#">Wearables</TestPushItem>
           </TestPushContent>
         )}
+      </AnimatePresence>
 
+      <AnimatePresence>
         {activeMenu === 'mobile' && (
           <TestPushContent level={200}>
             <TestPushHeader onClick={() => setActiveMenu('main')}>

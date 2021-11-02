@@ -108,6 +108,10 @@ export function TestPushContent({ children, level }) {
   }
   return (
     <motion.ul
+      key="push"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       sx={{
         variant: getLevel(level),
         position: 'absolute',
