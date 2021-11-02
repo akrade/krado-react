@@ -12,7 +12,7 @@ export function Defaul() {
   const [activeMenu, setActiveMenu] = useState('mobile');
 
   return (
-    <TestPush>
+    <TestPush level={activeMenu === 'main' ? 100 : 200}>
       <AnimatePresence>
         {activeMenu === 'main' && (
           <>
