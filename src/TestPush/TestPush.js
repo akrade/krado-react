@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { useThemeUI } from 'theme-ui';
 import { MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
-import Flex from '../Flex/Flex';
-import theme from '../theme';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
 function PushCloseButton({ ...rest }) {
@@ -25,7 +23,7 @@ function PushCloseButton({ ...rest }) {
   );
 }
 
-export function TestPushItem({ children, icon }) {
+export function TestPushItem({ children, href, onClick, icon }) {
   const variant = {
     idle: {
       boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)'
@@ -36,33 +34,39 @@ export function TestPushItem({ children, icon }) {
   };
 
   return (
-    <motion.li
-      variants={variant}
-      initial="idle"
-      whileHover="active"
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        paddingX: 4,
-        paddingY: 3
-      }}
-    >
-      <motion.span
+    <motion.li variants={variant} initial="idle" whileHover="active">
+      <motion.a
         variants={{
-          active: { color: useThemeUI().theme.colors.highlight, scale: 1.15 }
+          active: { color: useThemeUI().theme.colors.highlight }
         }}
-        sx={{ variant: 'text.body.h3' }}
+        href={href}
+        onClick={onClick}
+        sx={{
+          variant: 'text.body.h3',
+          display: 'flex',
+          alignItems: 'center',
+          paddingX: 4,
+          paddingY: 3,
+          color: 'initial',
+          textDecoration: 'none'
+        }}
       >
-        {children}
-      </motion.span>
-      {icon && (
-        <motion.div
-          variants={{ active: { opacity: 1 } }}
-          sx={{ marginLeft: 'auto', opacity: 0 }}
+        <motion.span
+          variants={{
+            active: { scale: 1.15 }
+          }}
         >
-          {icon}
-        </motion.div>
-      )}
+          {children}
+        </motion.span>
+        {icon && (
+          <motion.span
+            variants={{ active: { opacity: 1 } }}
+            sx={{ marginLeft: 'auto', opacity: 0 }}
+          >
+            {icon}
+          </motion.span>
+        )}
+      </motion.a>
     </motion.li>
   );
 }
