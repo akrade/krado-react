@@ -96,7 +96,7 @@ export function TestPushItem({ children, href, onClick, icon }) {
   );
 }
 
-export default function TestPush({ children, level }) {
+export function TestPushContent({ children, level }) {
   function getLevel(level) {
     if (level === 100) {
       return 'text.body.h3';
@@ -106,32 +106,36 @@ export default function TestPush({ children, level }) {
       return 'text.body.h5';
     }
   }
+  return (
+    <Box
+      as="ul"
+      backgroundColor="background"
+      sx={{
+        variant: getLevel(level),
+        position: 'absolute',
+        padding: 0,
+        width: '100%',
+        height: '100%',
+        boxShadow: 'hard.high',
+        listStyle: 'none'
+      }}
+    >
+      {children}
+    </Box>
+  );
+}
+TestPushContent.defaultProps = {
+  level: 100
+};
 
+export default function TestPush({ children }) {
   return (
     <Box
       as="nav"
       sx={{ position: 'relative', width: '287px', height: '100vh' }}
     >
       <PushCloseButton />
-      <Box
-        as="ul"
-        backgroundColor="background"
-        sx={{
-          variant: getLevel(level),
-          position: 'absolute',
-          padding: 0,
-          width: '100%',
-          height: '100%',
-          boxShadow: 'hard.high',
-          listStyle: 'none'
-        }}
-      >
-        {children}
-      </Box>
+      {children}
     </Box>
   );
 }
-
-TestPush.defaultProps = {
-  level: 100
-};

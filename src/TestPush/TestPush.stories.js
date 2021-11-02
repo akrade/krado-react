@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { MdChevronRight } from 'react-icons/md';
-import TestPush, { TestPushHeader, TestPushItem } from './TestPush';
+import TestPush, {
+  TestPushContent,
+  TestPushHeader,
+  TestPushItem
+} from './TestPush';
 
 export default {
   title: 'TestPush',
@@ -12,10 +16,10 @@ export function Defaul() {
   const [activeMenu, setActiveMenu] = useState('mobile');
 
   return (
-    <TestPush level={activeMenu === 'main' ? 100 : 200}>
+    <TestPush>
       <AnimatePresence>
         {activeMenu === 'main' && (
-          <>
+          <TestPushContent>
             <TestPushItem href="#" icon={<MdChevronRight />}>
               Identity
             </TestPushItem>
@@ -30,11 +34,11 @@ export function Defaul() {
             <TestPushItem href="#">Voice</TestPushItem>
             <TestPushItem href="#">VR/AR</TestPushItem>
             <TestPushItem href="#">Wearables</TestPushItem>
-          </>
+          </TestPushContent>
         )}
 
         {activeMenu === 'mobile' && (
-          <>
+          <TestPushContent level={200}>
             <TestPushHeader onClick={() => setActiveMenu('main')}>
               Mobile
             </TestPushHeader>
@@ -50,7 +54,7 @@ export function Defaul() {
             <TestPushItem href="#">Social Media</TestPushItem>
             <TestPushItem href="#">Survey</TestPushItem>
             <TestPushItem href="#">Security</TestPushItem>
-          </>
+          </TestPushContent>
         )}
       </AnimatePresence>
     </TestPush>
