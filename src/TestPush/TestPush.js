@@ -57,6 +57,7 @@ export function TestPushItem({ children, href, onClick, icon }) {
       boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)'
     },
     active: {
+      color: useThemeUI().theme.colors.highlight,
       boxShadow: useThemeUI().theme.shadows.soft.highMiddle
     }
   };
@@ -64,9 +65,6 @@ export function TestPushItem({ children, href, onClick, icon }) {
   return (
     <motion.li variants={variant} initial="idle" whileHover="active">
       <motion.a
-        variants={{
-          active: { color: useThemeUI().theme.colors.highlight }
-        }}
         href={href}
         onClick={onClick}
         sx={{
@@ -75,7 +73,7 @@ export function TestPushItem({ children, href, onClick, icon }) {
           alignItems: 'center',
           paddingX: 4,
           paddingY: 3,
-          color: 'initial',
+          color: 'inherit',
           textDecoration: 'none'
         }}
       >
