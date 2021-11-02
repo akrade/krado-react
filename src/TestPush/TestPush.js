@@ -107,21 +107,21 @@ export function TestPushContent({ children, level }) {
     }
   }
   return (
-    <Box
-      as="ul"
-      backgroundColor="background"
+    <motion.ul
       sx={{
         variant: getLevel(level),
         position: 'absolute',
+        margin: 0,
         padding: 0,
         width: '100%',
         height: '100%',
+        backgroundColor: 'white',
         boxShadow: 'hard.high',
         listStyle: 'none'
       }}
     >
       {children}
-    </Box>
+    </motion.ul>
   );
 }
 TestPushContent.defaultProps = {
