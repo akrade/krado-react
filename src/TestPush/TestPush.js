@@ -1,8 +1,11 @@
 /** @jsxImportSource theme-ui */
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useThemeUI } from 'theme-ui';
 import { MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import Flex from '../Flex/Flex';
+import theme from '../theme';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
 function PushCloseButton({ ...rest }) {
@@ -23,13 +26,44 @@ function PushCloseButton({ ...rest }) {
 }
 
 export function TestPushItem({ children, icon }) {
+  const variant = {
+    idle: {
+      boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)'
+    },
+    active: {
+      boxShadow: useThemeUI().theme.shadows.soft.highMiddle
+    }
+  };
+
   return (
-    <Flex as="li" sx={{ alignItems: 'center', paddingX: 4, paddingY: 3 }}>
-      <Box as="span" variant="text.body.h3">
+    <motion.li
+      variants={variant}
+      initial="idle"
+      whileHover="active"
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        paddingX: 4,
+        paddingY: 3
+      }}
+    >
+      <motion.span
+        variants={{
+          active: { color: useThemeUI().theme.colors.highlight, scale: 1.15 }
+        }}
+        sx={{ variant: 'text.body.h3' }}
+      >
         {children}
-      </Box>
-      {icon && <Box sx={{ marginLeft: 'auto' }}>{icon}</Box>}
-    </Flex>
+      </motion.span>
+      {icon && (
+        <motion.div
+          variants={{ active: { opacity: 1 } }}
+          sx={{ marginLeft: 'auto', opacity: 0 }}
+        >
+          {icon}
+        </motion.div>
+      )}
+    </motion.li>
   );
 }
 
