@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useThemeUI } from 'theme-ui';
-import { MdChevronRight } from 'react-icons/md';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
@@ -20,6 +20,34 @@ function PushCloseButton({ ...rest }) {
     >
       <MdChevronRight />
     </ToggleIcon>
+  );
+}
+
+export function TestPushHeader({ children, href, onClick }) {
+  return (
+    <motion.li
+      whileHover={{ color: useThemeUI().theme.colors.highlight }}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        paddingX: 2,
+        paddingY: 3,
+        fontWeight: 'bold'
+      }}
+    >
+      <MdChevronLeft sx={{ fontSize: 5 }} />
+      <a
+        href={href}
+        onClick={onClick}
+        sx={{
+          variant: 'text.body.h3',
+          color: 'inherit',
+          textDecoration: 'none'
+        }}
+      >
+        {children}
+      </a>
+    </motion.li>
   );
 }
 
