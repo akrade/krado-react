@@ -25,7 +25,7 @@ function PushCloseButton({ ...rest }) {
 
 export function TestPushHeader({ children, href, onClick }) {
   return (
-    <motion.li
+    <motion.header
       whileHover={{ color: useThemeUI().theme.colors.highlight }}
       sx={{
         display: 'flex',
@@ -47,7 +47,7 @@ export function TestPushHeader({ children, href, onClick }) {
       >
         {children}
       </a>
-    </motion.li>
+    </motion.header>
   );
 }
 
