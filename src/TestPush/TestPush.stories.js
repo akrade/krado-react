@@ -12,7 +12,7 @@ export default {
   component: TestPush
 };
 
-export function Defaul() {
+export function Default() {
   const [activeMenu, setActiveMenu] = useState('mobile');
 
   return (
