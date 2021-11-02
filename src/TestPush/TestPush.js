@@ -68,7 +68,6 @@ export function TestPushItem({ children, href, onClick, icon }) {
         href={href}
         onClick={onClick}
         sx={{
-          variant: 'text.body.h3',
           display: 'flex',
           alignItems: 'center',
           paddingX: 4,
@@ -97,7 +96,17 @@ export function TestPushItem({ children, href, onClick, icon }) {
   );
 }
 
-export default function TestPush({ children }) {
+export default function TestPush({ children, level }) {
+  function getLevel(level) {
+    if (level === 100) {
+      return 'text.body.h3';
+    }
+
+    if (level === 200) {
+      return 'text.body.h5';
+    }
+  }
+
   return (
     <Box
       as="nav"
@@ -108,6 +117,7 @@ export default function TestPush({ children }) {
         as="ul"
         backgroundColor="background"
         sx={{
+          variant: getLevel(level),
           position: 'absolute',
           padding: 0,
           width: '100%',
