@@ -47,6 +47,7 @@ export function TestPushHeader({ children, href, onClick }) {
       sx={{
         display: 'flex',
         alignItems: 'center',
+        marginBottom: 2,
         paddingX: 2,
         paddingY: 3,
         fontWeight: 'bold'
