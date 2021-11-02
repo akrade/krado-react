@@ -13,7 +13,7 @@ export default {
 };
 
 export function Default() {
-  const [activeMenu, setActiveMenu] = useState('mobile');
+  const [activeMenu, setActiveMenu] = useState('main');
 
   return (
     <TestPush>
@@ -44,7 +44,10 @@ export function Default() {
             <TestPushHeader onClick={() => setActiveMenu('main')}>
               Mobile
             </TestPushHeader>
-            <TestPushItem href="#" icon={<MdChevronRight />}>
+            <TestPushItem
+              onClick={() => setActiveMenu('core')}
+              icon={<MdChevronRight />}
+            >
               Core
             </TestPushItem>
             <TestPushItem href="#">Advertising</TestPushItem>
@@ -56,6 +59,22 @@ export function Default() {
             <TestPushItem href="#">Social Media</TestPushItem>
             <TestPushItem href="#">Survey</TestPushItem>
             <TestPushItem href="#">Security</TestPushItem>
+          </TestPushContent>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {activeMenu === 'core' && (
+          <TestPushContent level={200}>
+            <TestPushHeader onClick={() => setActiveMenu('mobile')}>
+              iOS
+            </TestPushHeader>
+            <TestPushItem href="#" icon={<MdChevronRight />}>
+              Grids
+            </TestPushItem>
+            <TestPushItem href="#">Header</TestPushItem>
+            <TestPushItem href="#">Footer</TestPushItem>
+            <TestPushItem href="#">Search</TestPushItem>
           </TestPushContent>
         )}
       </AnimatePresence>
