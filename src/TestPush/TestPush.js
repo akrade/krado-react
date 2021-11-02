@@ -53,8 +53,15 @@ export function TestPushHeader({ children, href, onClick }) {
 
 export function TestPushItem({ children, href, onClick, icon }) {
   const variant = {
-    idle: {
-      boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)'
+    hidden: {
+      x: '50%',
+      opacity: 0,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
     },
     active: {
       color: useThemeUI().theme.colors.highlight,
@@ -63,7 +70,11 @@ export function TestPushItem({ children, href, onClick, icon }) {
   };
 
   return (
-    <motion.li variants={variant} initial="idle" whileHover="active">
+    <motion.li
+      variants={variant}
+      whileHover={variant.active}
+      style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
+    >
       <motion.a
         href={href}
         onClick={onClick}
@@ -97,6 +108,14 @@ export function TestPushItem({ children, href, onClick, icon }) {
 }
 
 export function TestPushContent({ children, level }) {
+  const variant = {
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    },
+    show: { opacity: 1, transition: { staggerChildren: 0.05 } }
+  };
+
   function getLevel(level) {
     if (level === 100) {
       return 'text.body.h3';
@@ -106,14 +125,17 @@ export function TestPushContent({ children, level }) {
       return 'text.body.h5';
     }
   }
+
   return (
     <motion.ul
       key="push"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      variants={variant}
+      initial="hidden"
+      animate="show"
+      exit="hidden"
       sx={{
         variant: getLevel(level),
+        overflow: 'hidden',
         position: 'absolute',
         margin: 0,
         padding: 0,
