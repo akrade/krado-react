@@ -127,7 +127,7 @@ export function PushListItem({ children, href, onClick, type, level }) {
 }
 
 PushListItem.defaultProps = {
-  level: 200,
+  level: 100,
   type: 'arrow'
 };
 

@@ -131,3 +131,7 @@ export default function TestPush({ children, level }) {
     </Box>
   );
 }
+
+TestPush.defaultProps = {
+  level: 100
+};
