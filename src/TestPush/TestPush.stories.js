@@ -4,7 +4,8 @@ import { MdChevronRight } from 'react-icons/md';
 import TestPush, {
   TestPushContent,
   TestPushHeader,
-  TestPushItem
+  TestPushItem,
+  TestPushSecondaryHeader
 } from './TestPush';
 
 export default {
@@ -13,7 +14,7 @@ export default {
 };
 
 export function Default() {
-  const [activeMenu, setActiveMenu] = useState('main');
+  const [activeMenu, setActiveMenu] = useState('core');
 
   return (
     <TestPush>
@@ -69,6 +70,7 @@ export function Default() {
             <TestPushHeader onClick={() => setActiveMenu('mobile')}>
               iOS
             </TestPushHeader>
+            <TestPushSecondaryHeader>Global</TestPushSecondaryHeader>
             <TestPushItem href="#" icon={<MdChevronRight />}>
               Grids
             </TestPushItem>

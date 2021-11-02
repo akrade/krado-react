@@ -68,6 +68,35 @@ export function TestPushHeader({ children, href, onClick }) {
   );
 }
 
+export function TestPushSecondaryHeader({ children }) {
+  const variant = {
+    hidden: {
+      x: '50%',
+      opacity: 0,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    }
+  };
+  return (
+    <motion.li
+      variants={variant}
+      sx={{
+        paddingX: 4,
+        paddingY: 3,
+        color: 'darkGray+',
+        fontSize: 2,
+        textTransform: 'uppercase'
+      }}
+    >
+      {children}
+    </motion.li>
+  );
+}
+
 export function TestPushItem({ children, href, onClick, icon }) {
   const variant = {
     hidden: {
