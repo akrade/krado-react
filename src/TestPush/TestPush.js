@@ -24,9 +24,26 @@ function PushCloseButton({ ...rest }) {
 }
 
 export function TestPushHeader({ children, href, onClick }) {
+  const variant = {
+    hidden: {
+      x: '50%',
+      opacity: 0,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    active: {
+      color: useThemeUI().theme.colors.highlight
+    }
+  };
+
   return (
     <motion.header
-      whileHover={{ color: useThemeUI().theme.colors.highlight }}
+      variants={variant}
+      whileHover={variant.active}
       sx={{
         display: 'flex',
         alignItems: 'center',
