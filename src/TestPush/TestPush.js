@@ -89,7 +89,7 @@ export function TestPushSecondaryHeader({ children }) {
         paddingX: 4,
         paddingY: 3,
         color: 'darkGray',
-        fontSize: 2,
+        fontSize: 1,
         textTransform: 'uppercase'
       }}
     >
