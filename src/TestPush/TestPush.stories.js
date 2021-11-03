@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import { MdChevronRight } from 'react-icons/md';
 import TestPush, {
   TestPushContent,
+  TestPushDivider,
   TestPushHeader,
   TestPushItem,
   TestPushSecondaryHeader
@@ -14,7 +15,7 @@ export default {
 };
 
 export function Default() {
-  const [activeMenu, setActiveMenu] = useState('main');
+  const [activeMenu, setActiveMenu] = useState('core');
 
   return (
     <TestPush>
@@ -70,6 +71,7 @@ export function Default() {
             <TestPushHeader onClick={() => setActiveMenu('mobile')}>
               iOS
             </TestPushHeader>
+            <TestPushDivider />
             <TestPushSecondaryHeader>Global</TestPushSecondaryHeader>
             <TestPushItem href="#" icon={<MdChevronRight />}>
               Grids
@@ -77,6 +79,14 @@ export function Default() {
             <TestPushItem href="#">Header</TestPushItem>
             <TestPushItem href="#">Footer</TestPushItem>
             <TestPushItem href="#">Search</TestPushItem>
+            <TestPushDivider />
+            <TestPushSecondaryHeader>Style</TestPushSecondaryHeader>
+            <TestPushItem href="#" icon={<MdChevronRight />}>
+              Icons
+            </TestPushItem>
+            <TestPushItem href="#">Illustrations</TestPushItem>
+            <TestPushItem href="#">Spacing</TestPushItem>
+            <TestPushItem href="#">Typography</TestPushItem>
           </TestPushContent>
         )}
       </AnimatePresence>
