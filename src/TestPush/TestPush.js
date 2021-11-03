@@ -88,7 +88,7 @@ export function TestPushSecondaryHeader({ children }) {
       sx={{
         paddingX: 4,
         paddingY: 3,
-        color: 'darkGray+',
+        color: 'darkGray',
         fontSize: 2,
         textTransform: 'uppercase'
       }}
