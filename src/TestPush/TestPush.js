@@ -155,6 +155,16 @@ export function TestPushItem({ children, href, onClick, icon }) {
   );
 }
 
+export function TestPushDivider() {
+  return (
+    <Box
+      marginY={2}
+      backgroundColor="lightGray"
+      sx={{ width: '100%', height: '1px' }}
+    />
+  );
+}
+
 export function TestPushContent({ children, level }) {
   const variant = {
     hidden: {
