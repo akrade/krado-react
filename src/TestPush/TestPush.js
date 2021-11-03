@@ -158,9 +158,10 @@ export function TestPushItem({ children, href, onClick, icon }) {
 export function TestPushDivider() {
   return (
     <Box
-      marginY={2}
+      marginX={4}
+      marginY={3}
       backgroundColor="lightGray"
-      sx={{ width: '100%', height: '1px' }}
+      sx={{ height: '1px' }}
     />
   );
 }
