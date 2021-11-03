@@ -47,9 +47,9 @@ export function TestPushHeader({ children, href, onClick }) {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        marginBottom: 2,
+        marginBottom: 1,
         paddingX: 2,
-        paddingY: 3,
+        paddingTop: 3,
         fontWeight: 'bold'
       }}
     >
@@ -86,6 +86,7 @@ export function TestPushSecondaryHeader({ children }) {
     <motion.li
       variants={variant}
       sx={{
+        marginTop: 3,
         paddingX: 4,
         paddingY: 3,
         color: 'darkGray',
