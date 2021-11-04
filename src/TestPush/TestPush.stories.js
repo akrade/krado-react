@@ -23,7 +23,11 @@ export function Default() {
 
   return (
     <Flex>
-      <TestPush isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}>
+      <TestPush
+        isOpen={isOpen}
+        onClose={() => setIsOpen(!isOpen)}
+        behavior="ghost"
+      >
         <AnimatePresence>
           {activeMenu === 'main' && (
             <TestPushContent>

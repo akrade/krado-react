@@ -219,7 +219,7 @@ TestPushContent.defaultProps = {
   level: 100
 };
 
-export default function TestPush({ children, isOpen, onClose }) {
+export default function TestPush({ children, isOpen, onClose, behavior }) {
   const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
   const variant = {
     hidden: { marginLeft: '-272px' },
@@ -242,7 +242,7 @@ export default function TestPush({ children, isOpen, onClose }) {
       <PushCloseButton
         onClick={onClose}
         isHidden={isCloseButtonHidden}
-        behavior="shuffle"
+        behavior={behavior}
       />
       <motion.div
         variants={{
