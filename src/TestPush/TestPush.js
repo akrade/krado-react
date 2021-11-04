@@ -218,14 +218,34 @@ TestPushContent.defaultProps = {
   level: 100
 };
 
-export default function TestPush({ children }) {
+export default function TestPush({ children, isOpen, onClose }) {
+  const variant = {
+    hidden: { marginLeft: '-272px' },
+    show: { marginLeft: '0px' }
+  };
+
   return (
-    <Box
-      as="nav"
-      sx={{ position: 'relative', width: '287px', height: '100vh' }}
+    <motion.nav
+      variants={variant}
+      animate={isOpen ? 'show' : 'hidden'}
+      transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
+      sx={{
+        flex: '0 0 auto',
+        position: 'relative',
+        marginLeft: '-287px',
+        width: '287px',
+        height: '100vh'
+      }}
     >
-      <PushCloseButton />
-      {children}
-    </Box>
+      <PushCloseButton onClick={onClose} />
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, transitionEnd: { display: 'none' } },
+          show: { display: 'block', opacity: 1 }
+        }}
+      >
+        {children}
+      </motion.div>
+    </motion.nav>
   );
 }
