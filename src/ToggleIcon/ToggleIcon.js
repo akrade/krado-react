@@ -20,6 +20,7 @@ export default function ToggleIcon({ behavior, isHidden, ...rest }) {
     hidden: {
       zIndex: 10,
       x: [0, 40, -20],
+      opacity: 0,
       transition: {
         type: 'spring',
         duration: 0.5,
@@ -30,6 +31,7 @@ export default function ToggleIcon({ behavior, isHidden, ...rest }) {
     show: {
       zIndex: 30,
       x: [-20, 40, 0],
+      opacity: 1,
       transition: { type: 'spring', duration: 0.5, zIndex: { delay: 0.3 } }
     }
   };
