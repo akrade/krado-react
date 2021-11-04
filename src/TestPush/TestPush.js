@@ -59,7 +59,10 @@ export function TestPushHeader({ children, href, onClick }) {
         sx={{
           variant: 'text.body.h3',
           color: 'inherit',
-          textDecoration: 'none'
+          textDecoration: 'none',
+          '&:hover': {
+            cursor: 'pointer'
+          }
         }}
       >
         {children}
@@ -131,7 +134,10 @@ export function TestPushItem({ children, href, onClick, icon }) {
           paddingX: 4,
           paddingY: 3,
           color: 'inherit',
-          textDecoration: 'none'
+          textDecoration: 'none',
+          '&:hover': {
+            cursor: 'pointer'
+          }
         }}
       >
         <motion.span
