@@ -199,6 +199,7 @@ export function TestPushContent({ children, level }) {
       exit="hidden"
       sx={{
         variant: getLevel(level),
+        zIndex: 2,
         overflow: 'hidden',
         position: 'absolute',
         margin: 0,
@@ -243,6 +244,7 @@ export default function TestPush({ children, isOpen, onClose }) {
           hidden: { opacity: 0, transitionEnd: { display: 'none' } },
           show: { display: 'block', opacity: 1 }
         }}
+        sx={{ zIndex: 2 }}
       >
         {children}
       </motion.div>
