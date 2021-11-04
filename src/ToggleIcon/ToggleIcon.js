@@ -78,11 +78,9 @@ export default function ToggleIcon({ behavior, isHidden, ...rest }) {
     />
   );
 }
-
 ToggleIcon.propTypes = {
   behavior: PropTypes.oneOf(['ghost', 'shuffle'])
 };
-
 ToggleIcon.defaultProps = {
   behavior: 'ghost',
   isHidden: false
