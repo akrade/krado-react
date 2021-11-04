@@ -66,10 +66,11 @@ export function Default() {
           {activeMenu === 'core' && (
             <PushContent level={200}>
               <PushHeader onClick={() => setActiveMenu('mobile')}>
-                iOS
+                Core
               </PushHeader>
               <PushDivider />
               <PushLabel>Global</PushLabel>
+              <PushItem>iOS</PushItem>
               <PushItem href="#">Grids</PushItem>
               <PushItem href="#">Header</PushItem>
               <PushItem href="#">Footer</PushItem>
