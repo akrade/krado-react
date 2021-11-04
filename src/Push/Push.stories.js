@@ -10,6 +10,7 @@ import Push, {
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
 import Box from '../Box/Box';
+import { MdLaunch, MdLink } from 'react-icons/md';
 
 export default {
   title: 'Push',
@@ -36,8 +37,17 @@ export function Default() {
               <PushItem>Print</PushItem>
               <PushItem>Television</PushItem>
               <PushItem>Voice</PushItem>
-              <PushItem>VR/AR</PushItem>
-              <PushItem>Wearables</PushItem>
+              <PushItem href="#" icon={<MdLink />}>
+                VR/AR
+              </PushItem>
+              <PushItem
+                href="https://example.com"
+                target="_blank"
+                rel="noopener"
+                icon={<MdLaunch />}
+              >
+                Wearables
+              </PushItem>
             </PushContent>
           )}
         </AnimatePresence>
