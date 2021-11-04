@@ -15,7 +15,7 @@ export default {
 };
 
 export function Default() {
-  const [activeMenu, setActiveMenu] = useState('core');
+  const [activeMenu, setActiveMenu] = useState('main');
 
   return (
     <TestPush>
