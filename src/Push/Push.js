@@ -1,235 +1,298 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import ToggleIcon from '../ToggleIcon/ToggleIcon';
+import { useThemeUI } from 'theme-ui';
+import PropTypes from 'prop-types';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
-import Flex from '../Flex/Flex';
-import Heading from '../Heading/Heading';
-import theme from '../theme';
-import Lottie from 'react-lottie';
-import chevronOpen from '../lotties/chevron-open.json';
-import chevronClose from '../lotties/chevron-close.json';
-import { MdChevronLeft, MdChevronRight, MdLaunch } from 'react-icons/md';
+import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
-function CloseButton({ isOpen, ...props }) {
-  const defaultOptions = {
-    autoplay: false,
-    loop: false,
-    animationData: chevronOpen,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
-
-  const defaultOptions2 = {
-    autoplay: false,
-    loop: false,
-    animationData: chevronClose,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
-
+function PushCloseButton({ ...rest }) {
   return (
     <ToggleIcon
-      behavior="shuffle"
       sx={{
         position: 'absolute',
-        top: 4,
-        right: '-15px',
-        alignItems: 'center',
+        top: 3,
+        right: -15,
+        fontSize: 6,
         boxShadow: 'soft.low'
       }}
-      {...props}
+      {...rest}
     >
-      {isOpen ? (
-        <Lottie options={defaultOptions} width={24} height={24} />
-      ) : (
-        <Lottie options={defaultOptions2} width={24} height={24} />
-      )}
+      <MdChevronRight />
     </ToggleIcon>
   );
 }
 
-export function PushPreviousItem({ children, href, onClick, ...props }) {
+export function PushHeader({ children, href, onClick }) {
+  const variant = {
+    hidden: {
+      x: '50%',
+      opacity: 0,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    active: {
+      color: useThemeUI().theme.colors.highlight
+    }
+  };
+
   return (
-    <Flex sx={{ alignItems: 'center', paddingX: 2, paddingY: 3 }}>
+    <motion.li
+      variants={variant}
+      whileHover={variant.active}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        marginY: 4,
+        paddingX: 2,
+        fontWeight: 'bold'
+      }}
+    >
       <MdChevronLeft sx={{ fontSize: 5 }} />
-      <Heading
-        as="header"
-        variant="body.h3"
-        sx={{ fontSize: '28px', fontWeight: 'bold' }}
-        {...props}
+      <a
+        href={href}
+        onClick={onClick}
+        sx={{
+          variant: 'text.body.h3',
+          color: 'inherit',
+          textDecoration: 'none',
+          '&:hover': {
+            cursor: 'pointer'
+          }
+        }}
       >
-        <a
-          href={href}
-          onClick={onClick}
-          sx={{ color: 'inherit', textDecoration: 'none' }}
-        >
-          {children}
-        </a>
-      </Heading>
-    </Flex>
+        {children}
+      </a>
+    </motion.li>
   );
 }
+PushHeader.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  href: PropTypes.string,
+  onClick: PropTypes.func
+};
 
-export function PushListItem({ children, href, onClick, type, level }) {
-  const variant = { hidden: {}, show: {} };
+export function PushSecondaryHeader({ children }) {
+  const variant = {
+    hidden: {
+      x: '50%',
+      opacity: 0,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    }
+  };
   return (
-    <motion.li variants={variant} whileHover="hidden">
-      <a
+    <motion.li
+      variants={variant}
+      sx={{
+        marginTop: 4,
+        marginBottom: 3,
+        paddingX: 4,
+        color: 'darkGray',
+        fontSize: 1,
+        textTransform: 'uppercase'
+      }}
+    >
+      {children}
+    </motion.li>
+  );
+}
+PushSecondaryHeader.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+};
+
+export function PushItem({ children, href, onClick, icon }) {
+  const [isItemHovered, setIsItemHovered] = useState(false);
+  const variant = {
+    hidden: {
+      x: '50%',
+      opacity: 0,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    active: {
+      color: useThemeUI().theme.colors.highlight,
+      boxShadow: useThemeUI().theme.shadows.soft.highMiddle
+    }
+  };
+  const iconVariant = {
+    hidden: {
+      opacity: 0
+    },
+    show: {
+      opacity: 1
+    }
+  };
+
+  return (
+    <motion.li
+      variants={variant}
+      whileHover={variant.active}
+      onHoverStart={() => setIsItemHovered(true)}
+      onHoverEnd={() => setIsItemHovered(false)}
+      style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
+    >
+      <motion.a
         href={href}
         onClick={onClick}
         sx={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
           paddingX: 4,
           paddingY: 3,
           color: 'inherit',
           textDecoration: 'none',
-          borderRadius: 1,
-          transition: '325ms ease',
-          cursor: 'pointer',
-          '&:hover, &:focus-visible': {
-            color: 'highlight',
-            outline: 'none',
-            boxShadow: 'soft.highMiddle',
-            transform: level === 100 ? 'scale(1.05)' : 'none',
-            '.list-item-arrow': {
-              opacity: 1
-            }
+          '&:hover': {
+            cursor: 'pointer'
           }
         }}
       >
-        <Flex
-          as="span"
-          variant={level === 100 ? 'text.body.h3' : 'text.body.h5'}
+        <motion.span
+          variants={{
+            active: { scale: 1.15 }
+          }}
         >
           {children}
-        </Flex>
-
-        {type === 'arrow' && (
-          <MdChevronRight
-            sx={{ opacity: 0, transition: '325ms ease' }}
-            className="list-item-arrow"
-          />
+        </motion.span>
+        {icon && (
+          <motion.span
+            variants={iconVariant}
+            animate={isItemHovered ? 'show' : 'hidden'}
+            sx={{ marginLeft: 'auto' }}
+          >
+            {icon}
+          </motion.span>
         )}
-        {type === 'external' && (
-          <MdLaunch
-            sx={{ opacity: 0, transition: '325ms ease' }}
-            className="list-item-arrow"
-          />
-        )}
-      </a>
+      </motion.a>
     </motion.li>
   );
 }
-
-PushListItem.defaultProps = {
-  level: 100,
-  type: 'arrow'
+PushItem.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
-export function Push({ children, isOpen, onClose, ...props }) {
-  const [isListItemHovered, setIsListItemHovered] = useState(false);
-
-  const variant = {
-    opened: {
-      x: '0',
-      backgroundColor: 'rgba(255,255,255,1)',
-      boxShadow: theme.shadows.hard.high
-    },
-    closed: {
-      x: '-90%',
-      backgroundColor: 'rgba(255,255,255,0)',
-      boxShadow: '0px 4px 7px rgba(0, 0, 0, 0)'
-    }
-  };
-
+export function PushDivider() {
   return (
-    <motion.div
-      variants={variant}
-      animate={isOpen ? 'opened' : 'closed'}
-      transition={{
-        type: 'spring',
-        bounce: 0.1,
-        duration: 0.4
-      }}
-      sx={{
-        position: 'relative',
-        zIndex: 1,
-        flex: '0 0 auto',
-        width: '287px',
-        paddingY: 2,
-        height: '100vh',
-        boxShadow: 'hard.high'
-      }}
-    >
-      <CloseButton
-        isOpen={isOpen}
-        onClick={onClose}
-        isHidden={isListItemHovered}
-      />
-      <motion.div
-        sx={{
-          position: 'fixed',
-          zIndex: 2,
-          flex: '0 0 auto',
-          width: '287px',
-          paddingY: 2,
-          height: '100vh',
-          backgroundColor: 'white'
-        }}
-        {...props}
-      >
-        <Box
-          sx={{
-            overflow: 'hidden',
-            display: isOpen ? 'block' : 'none'
-          }}
-        >
-          <ul
-            onMouseEnter={() => setIsListItemHovered(true)}
-            onMouseLeave={() => setIsListItemHovered(false)}
-            sx={{
-              margin: 0,
-              padding: 0,
-              listStyle: 'none'
-            }}
-          >
-            {children}
-          </ul>
-        </Box>
-      </motion.div>
-    </motion.div>
+    <Box
+      marginX={4}
+      marginY={3}
+      backgroundColor="lightGray"
+      sx={{ height: '1px' }}
+    />
   );
 }
 
-export function PushContent({ children, isOpen }) {
+export function PushContent({ children, level }) {
   const variant = {
-    opened: {
-      marginLeft: '0px'
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 }
     },
-    closed: {
-      marginLeft: '-287px'
-    }
+    show: { opacity: 1, transition: { staggerChildren: 0.05 } }
   };
 
+  function getLevel(level) {
+    if (level === 100) {
+      return 'text.body.h3';
+    }
+
+    if (level === 200) {
+      return 'text.body.h5';
+    }
+  }
+
   return (
-    <motion.div
+    <motion.ul
+      key="push"
       variants={variant}
-      animate={isOpen ? 'opened' : 'closed'}
-      transition={{
-        type: 'spring',
-        bounce: 0.1,
-        duration: 0.4
-      }}
+      initial="hidden"
+      animate="show"
+      exit="hidden"
       sx={{
-        paddingX: 6
+        variant: getLevel(level),
+        zIndex: 2,
+        overflow: 'hidden',
+        position: 'absolute',
+        margin: 0,
+        padding: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'white',
+        boxShadow: 'hard.high',
+        listStyle: 'none'
       }}
     >
       {children}
-    </motion.div>
+    </motion.ul>
   );
 }
+PushContent.propTypes = {
+  level: PropTypes.number
+};
+PushContent.defaultProps = {
+  level: 100
+};
+
+export default function Push({ children, isOpen, onClose, behavior }) {
+  const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
+  const variant = {
+    hidden: { marginLeft: '-272px' },
+    show: { marginLeft: '0px' }
+  };
+
+  return (
+    <motion.nav
+      variants={variant}
+      animate={isOpen ? 'show' : 'hidden'}
+      transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
+      sx={{
+        flex: '0 0 auto',
+        position: 'relative',
+        marginLeft: '-287px',
+        width: '287px',
+        height: '100vh'
+      }}
+    >
+      <PushCloseButton
+        onClick={onClose}
+        isHidden={isCloseButtonHidden}
+        behavior={behavior}
+      />
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, transitionEnd: { display: 'none' } },
+          show: { display: 'block', opacity: 1 }
+        }}
+        onHoverStart={() => setIsCloseButtonHidden(true)}
+        onHoverEnd={() => setIsCloseButtonHidden(false)}
+        sx={{ zIndex: 2 }}
+      >
+        {children}
+      </motion.div>
+    </motion.nav>
+  );
+}
+Push.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  behavior: PropTypes.oneOf(['ghost', 'shuffle'])
+};
+Push.defaultProps = {
+  behavior: 'shuffle'
+};

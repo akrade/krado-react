@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
-import { Push, PushContent, PushListItem, PushPreviousItem } from './Push';
-import Flex from '../Flex/Flex';
+import { AnimatePresence } from 'framer-motion';
+import { MdChevronRight } from 'react-icons/md';
+import Push, {
+  PushContent,
+  PushDivider,
+  PushHeader,
+  PushItem,
+  PushSecondaryHeader
+} from './Push';
 import Text from '../Text/Text';
+import Flex from '../Flex/Flex';
+import Box from '../Box/Box';
 
 export default {
   title: 'Push',
@@ -10,27 +19,88 @@ export default {
 
 export function Default() {
   const [isOpen, setIsOpen] = useState(true);
+  const [activeMenu, setActiveMenu] = useState('main');
 
   return (
     <Flex>
-      <Push isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}>
-        <PushPreviousItem href="#">Mobile</PushPreviousItem>
-        <PushListItem href="#">Identity</PushListItem>
-        <PushListItem href="#">Desktop</PushListItem>
-        <PushListItem href="#">Web</PushListItem>
-        <PushListItem href="#">Mobile</PushListItem>
-        <PushListItem href="#">Tablet</PushListItem>
-        <PushListItem href="#">Print</PushListItem>
-        <PushListItem href="#" type="link">
-          Television
-        </PushListItem>
-        <PushListItem href="#" type="external">
-          Voice
-        </PushListItem>
-        <PushListItem href="#">VR/AR</PushListItem>
-        <PushListItem href="#">Wearables</PushListItem>
+      <Push isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} behavior="ghost">
+        <AnimatePresence>
+          {activeMenu === 'main' && (
+            <PushContent>
+              <PushItem href="#" icon={<MdChevronRight />}>
+                Identity
+              </PushItem>
+              <PushItem href="#">Desktop</PushItem>
+              <PushItem href="#">Web</PushItem>
+              <PushItem
+                onClick={() => setActiveMenu('mobile')}
+                icon={<MdChevronRight />}
+              >
+                Mobile
+              </PushItem>
+              <PushItem href="#">Tablet</PushItem>
+              <PushItem href="#">Print</PushItem>
+              <PushItem href="#">Television</PushItem>
+              <PushItem href="#">Voice</PushItem>
+              <PushItem href="#">VR/AR</PushItem>
+              <PushItem href="#">Wearables</PushItem>
+            </PushContent>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {activeMenu === 'mobile' && (
+            <PushContent level={200}>
+              <PushHeader onClick={() => setActiveMenu('main')}>
+                Mobile
+              </PushHeader>
+              <PushItem
+                onClick={() => setActiveMenu('core')}
+                icon={<MdChevronRight />}
+              >
+                Core
+              </PushItem>
+              <PushItem href="#">Advertising</PushItem>
+              <PushItem href="#">Chat</PushItem>
+              <PushItem href="#">Email</PushItem>
+              <PushItem href="#">Food</PushItem>
+              <PushItem href="#">Publish</PushItem>
+              <PushItem href="#">Shop</PushItem>
+              <PushItem href="#">Social Media</PushItem>
+              <PushItem href="#">Survey</PushItem>
+              <PushItem href="#">Security</PushItem>
+            </PushContent>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {activeMenu === 'core' && (
+            <PushContent level={200}>
+              <PushHeader onClick={() => setActiveMenu('mobile')}>
+                iOS
+              </PushHeader>
+              <PushDivider />
+              <PushSecondaryHeader>Global</PushSecondaryHeader>
+              <PushItem href="#" icon={<MdChevronRight />}>
+                Grids
+              </PushItem>
+              <PushItem href="#">Header</PushItem>
+              <PushItem href="#">Footer</PushItem>
+              <PushItem href="#">Search</PushItem>
+              <PushDivider />
+              <PushSecondaryHeader>Style</PushSecondaryHeader>
+              <PushItem href="#" icon={<MdChevronRight />}>
+                Icons
+              </PushItem>
+              <PushItem href="#">Illustrations</PushItem>
+              <PushItem href="#">Spacing</PushItem>
+              <PushItem href="#">Typography</PushItem>
+            </PushContent>
+          )}
+        </AnimatePresence>
       </Push>
-      <PushContent isOpen={isOpen}>
+
+      <Box paddingX={6}>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
           tellus etiam, posuere ornare platea sollicitudin netus nostra eget
@@ -77,7 +147,7 @@ export function Default() {
           vulputate metus risus facilisis vestibulum nascetur auctor taciti
           tellus.
         </Text>
-      </PushContent>
+      </Box>
     </Flex>
   );
 }
