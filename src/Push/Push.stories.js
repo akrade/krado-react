@@ -5,7 +5,8 @@ import Push, {
   PushDivider,
   PushHeader,
   PushItem,
-  PushLabel
+  PushLabel,
+  PushSubItem
 } from './Push';
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
@@ -19,7 +20,7 @@ export default {
 
 export function Default() {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeMenu, setActiveMenu] = useState('main');
+  const [activeMenu, setActiveMenu] = useState('core');
 
   return (
     <Flex>
@@ -27,27 +28,27 @@ export function Default() {
         <AnimatePresence>
           {activeMenu === 'main' && (
             <PushContent>
-              <PushItem>Identity</PushItem>
-              <PushItem>Desktop</PushItem>
-              <PushItem>Web</PushItem>
-              <PushItem onClick={() => setActiveMenu('mobile')}>
-                Mobile
-              </PushItem>
-              <PushItem>Tablet</PushItem>
-              <PushItem>Print</PushItem>
-              <PushItem>Television</PushItem>
-              <PushItem>Voice</PushItem>
-              <PushItem href="#" icon={<MdLink />}>
-                VR/AR
-              </PushItem>
+              <PushItem label="Identity" />
+              <PushItem label="Desktop" />
+              <PushItem label="Web" />
+              <PushItem
+                onClick={() => setActiveMenu('mobile')}
+                label="
+                Mobile"
+              />
+              <PushItem label="Tablet" />
+              <PushItem label="Print" />
+              <PushItem label="Television" />
+              <PushItem label="Voice" />
+              <PushItem href="#" icon={<MdLink />} label="VR/AR" />
               <PushItem
                 href="https://example.com"
                 target="_blank"
                 rel="noopener"
                 icon={<MdLaunch />}
-              >
-                Wearables
-              </PushItem>
+                label="
+                Wearables"
+              />
             </PushContent>
           )}
         </AnimatePresence>
@@ -58,16 +59,16 @@ export function Default() {
               <PushHeader onClick={() => setActiveMenu('main')}>
                 Mobile
               </PushHeader>
-              <PushItem onClick={() => setActiveMenu('core')}>Core</PushItem>
-              <PushItem>Advertising</PushItem>
-              <PushItem>Chat</PushItem>
-              <PushItem>Email</PushItem>
-              <PushItem>Food</PushItem>
-              <PushItem>Publish</PushItem>
-              <PushItem>Shop</PushItem>
-              <PushItem>Social Media</PushItem>
-              <PushItem>Survey</PushItem>
-              <PushItem>Security</PushItem>
+              <PushItem onClick={() => setActiveMenu('core')} label="Core" />
+              <PushItem label="Advertising" />
+              <PushItem label="Chat" />
+              <PushItem label="Email" />
+              <PushItem label="Food" />
+              <PushItem label="Publish" />
+              <PushItem label="Shop" />
+              <PushItem label="Social Media" />
+              <PushItem label="Survey" />
+              <PushItem label="Security" />
             </PushContent>
           )}
         </AnimatePresence>
@@ -79,18 +80,26 @@ export function Default() {
                 Core
               </PushHeader>
               <PushDivider />
-              <PushLabel>Global</PushLabel>
-              <PushItem>iOS</PushItem>
-              <PushItem>Grids</PushItem>
-              <PushItem>Header</PushItem>
-              <PushItem>Footer</PushItem>
-              <PushItem>Search</PushItem>
+              <PushLabel label="Global" />
+              <PushItem label="iOS">
+                <PushSubItem>Keyboards</PushSubItem>
+                <PushSubItem>Alerts</PushSubItem>
+                <PushSubItem>Pickers</PushSubItem>
+                <PushSubItem>Notifications</PushSubItem>
+                <PushSubItem>Lockscreens</PushSubItem>
+                <PushSubItem>Edit Menus</PushSubItem>
+                <PushSubItem>Devices</PushSubItem>
+              </PushItem>
+              <PushItem label="Grids" />
+              <PushItem label="Header" />
+              <PushItem label="Footer" />
+              <PushItem label="Search" />
               <PushDivider />
-              <PushLabel>Style</PushLabel>
-              <PushItem>Icons</PushItem>
-              <PushItem>Illustrations</PushItem>
-              <PushItem>Spacing</PushItem>
-              <PushItem>Typography</PushItem>
+              <PushLabel label="Style" />
+              <PushItem label="Icons" />
+              <PushItem label="Illustrations" />
+              <PushItem label="Spacing" />
+              <PushItem label="Typography" />
             </PushContent>
           )}
         </AnimatePresence>

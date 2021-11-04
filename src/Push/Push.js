@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useThemeUI } from 'theme-ui';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
@@ -124,8 +124,68 @@ export function PushLabel({ children }) {
   );
 }
 
-export function PushItem({ children, icon, ...props }) {
+function PushSubMenu({ children }) {
+  const variant = {
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.03, staggerDirection: -1 }
+    },
+    show: { opacity: 1, transition: { staggerChildren: 0.03 } }
+  };
+
+  return (
+    <motion.ul
+      variants={variant}
+      initial="hidden"
+      animate="show"
+      exit="hidden"
+      sx={{ padding: 0, listStyle: 'none' }}
+    >
+      {children}
+    </motion.ul>
+  );
+}
+
+export function PushSubItem({ children }) {
+  const variant = {
+    hidden: {
+      x: '50%',
+      opacity: 0,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', damping: 20, duration: 0.4 }
+    },
+    active: {
+      color: useThemeUI().theme.colors.highlight
+    }
+  };
+
+  return (
+    <motion.li
+      variants={variant}
+      whileHover={variant.active}
+      sx={{
+        variant: 'text.body.smallParagraph',
+        paddingX: 4,
+        paddingY: 2,
+        color: 'text',
+        fontWeight: 400,
+        '&:hover': {
+          cursor: 'pointer'
+        }
+      }}
+    >
+      {children}
+    </motion.li>
+  );
+}
+
+export function PushItem({ children, label, icon, ...props }) {
   const [isItemHovered, setIsItemHovered] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const variant = {
     hidden: {
       x: '50%',
@@ -154,12 +214,13 @@ export function PushItem({ children, icon, ...props }) {
   return (
     <motion.li
       variants={variant}
-      whileHover={variant.active}
       onHoverStart={() => setIsItemHovered(true)}
       onHoverEnd={() => setIsItemHovered(false)}
-      style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
     >
       <motion.a
+        whileHover={variant.active}
+        onTap={() => setIsSubMenuOpen(!isSubMenuOpen)}
+        style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -178,7 +239,7 @@ export function PushItem({ children, icon, ...props }) {
             active: { scale: 1.15 }
           }}
         >
-          {children}
+          {label}
         </motion.span>
 
         <motion.span
@@ -189,6 +250,10 @@ export function PushItem({ children, icon, ...props }) {
           {!icon ? <MdChevronRight /> : icon}
         </motion.span>
       </motion.a>
+
+      <AnimatePresence layout>
+        {isSubMenuOpen && <PushSubMenu>{children}</PushSubMenu>}
+      </AnimatePresence>
     </motion.li>
   );
 }
