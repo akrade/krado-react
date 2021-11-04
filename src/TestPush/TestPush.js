@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useThemeUI } from 'theme-ui';
+import PropTypes from 'prop-types';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
@@ -70,6 +71,11 @@ export function TestPushHeader({ children, href, onClick }) {
     </motion.header>
   );
 }
+TestPushHeader.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  href: PropTypes.string,
+  onClick: PropTypes.func
+};
 
 export function TestPushSecondaryHeader({ children }) {
   const variant = {
@@ -100,6 +106,9 @@ export function TestPushSecondaryHeader({ children }) {
     </motion.li>
   );
 }
+TestPushSecondaryHeader.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+};
 
 export function TestPushItem({ children, href, onClick, icon }) {
   const variant = {
@@ -159,6 +168,12 @@ export function TestPushItem({ children, href, onClick, icon }) {
     </motion.li>
   );
 }
+TestPushItem.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+};
 
 export function TestPushDivider() {
   return (
@@ -215,6 +230,9 @@ export function TestPushContent({ children, level }) {
     </motion.ul>
   );
 }
+TestPushContent.propTypes = {
+  level: PropTypes.number
+};
 TestPushContent.defaultProps = {
   level: 100
 };
@@ -258,3 +276,11 @@ export default function TestPush({ children, isOpen, onClose, behavior }) {
     </motion.nav>
   );
 }
+TestPush.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  behavior: PropTypes.oneOf(['ghost', 'shuffle'])
+};
+TestPush.defaultProps = {
+  behavior: 'shuffle'
+};
