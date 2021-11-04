@@ -3,11 +3,30 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useThemeUI } from 'theme-ui';
 import PropTypes from 'prop-types';
+import Lottie from 'react-lottie';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
+import chevronOpen from '../lotties/chevron-open.json';
+import chevronClose from '../lotties/chevron-close.json';
 
-function PushCloseButton({ ...rest }) {
+function PushCloseButton({ isOpen, ...rest }) {
+  const open = {
+    loop: false,
+    animationData: chevronOpen,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
+  const close = {
+    loop: false,
+    animationData: chevronClose,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
   return (
     <ToggleIcon
       sx={{
@@ -19,7 +38,11 @@ function PushCloseButton({ ...rest }) {
       }}
       {...rest}
     >
-      <MdChevronRight />
+      {isOpen ? (
+        <Lottie options={open} width={24} height={24} />
+      ) : (
+        <Lottie options={close} width={24} height={24} />
+      )}
     </ToggleIcon>
   );
 }
@@ -262,6 +285,7 @@ export default function Push({ children, isOpen, onClose, behavior }) {
         onClick={onClose}
         isHidden={isCloseButtonHidden}
         behavior={behavior}
+        isOpen={isOpen}
       />
       <motion.div
         variants={{
