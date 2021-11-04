@@ -5,7 +5,7 @@ import Push, {
   PushDivider,
   PushHeader,
   PushItem,
-  PushSecondaryHeader
+  PushLabel
 } from './Push';
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
@@ -69,13 +69,13 @@ export function Default() {
                 iOS
               </PushHeader>
               <PushDivider />
-              <PushSecondaryHeader>Global</PushSecondaryHeader>
+              <PushLabel>Global</PushLabel>
               <PushItem href="#">Grids</PushItem>
               <PushItem href="#">Header</PushItem>
               <PushItem href="#">Footer</PushItem>
               <PushItem href="#">Search</PushItem>
               <PushDivider />
-              <PushSecondaryHeader>Style</PushSecondaryHeader>
+              <PushLabel>Style</PushLabel>
               <PushItem href="#">Icons</PushItem>
               <PushItem href="#">Illustrations</PushItem>
               <PushItem href="#">Spacing</PushItem>

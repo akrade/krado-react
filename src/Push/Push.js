@@ -77,7 +77,7 @@ PushHeader.propTypes = {
   onClick: PropTypes.func
 };
 
-export function PushSecondaryHeader({ children }) {
+export function PushLabel({ children }) {
   const variant = {
     hidden: {
       x: '50%',
@@ -106,7 +106,7 @@ export function PushSecondaryHeader({ children }) {
     </motion.li>
   );
 }
-PushSecondaryHeader.propTypes = {
+PushLabel.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
