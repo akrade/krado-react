@@ -24,7 +24,7 @@ function PushCloseButton({ ...rest }) {
   );
 }
 
-export function PushHeader({ children, href, onClick }) {
+export function PushHeader({ children, ...props }) {
   const variant = {
     hidden: {
       x: '50%',
@@ -55,8 +55,6 @@ export function PushHeader({ children, href, onClick }) {
     >
       <MdChevronLeft sx={{ fontSize: 5 }} />
       <a
-        href={href}
-        onClick={onClick}
         sx={{
           variant: 'text.body.h3',
           color: 'inherit',
@@ -65,17 +63,13 @@ export function PushHeader({ children, href, onClick }) {
             cursor: 'pointer'
           }
         }}
+        {...props}
       >
         {children}
       </a>
     </motion.li>
   );
 }
-PushHeader.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  href: PropTypes.string,
-  onClick: PropTypes.func
-};
 
 export function PushLabel({ children }) {
   const variant = {
@@ -106,11 +100,8 @@ export function PushLabel({ children }) {
     </motion.li>
   );
 }
-PushLabel.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-};
 
-export function PushItem({ children, href, onClick, icon }) {
+export function PushItem({ children, icon, ...props }) {
   const [isItemHovered, setIsItemHovered] = useState(false);
   const variant = {
     hidden: {
@@ -146,8 +137,6 @@ export function PushItem({ children, href, onClick, icon }) {
       style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
     >
       <motion.a
-        href={href}
-        onClick={onClick}
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -159,6 +148,7 @@ export function PushItem({ children, href, onClick, icon }) {
             cursor: 'pointer'
           }
         }}
+        {...props}
       >
         <motion.span
           variants={{
