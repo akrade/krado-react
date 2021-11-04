@@ -36,7 +36,10 @@ export function Default() {
               </TestPushItem>
               <TestPushItem href="#">Desktop</TestPushItem>
               <TestPushItem href="#">Web</TestPushItem>
-              <TestPushItem onClick={() => setActiveMenu('mobile')}>
+              <TestPushItem
+                onClick={() => setActiveMenu('mobile')}
+                icon={<MdChevronRight />}
+              >
                 Mobile
               </TestPushItem>
               <TestPushItem href="#">Tablet</TestPushItem>

@@ -111,6 +111,7 @@ TestPushSecondaryHeader.propTypes = {
 };
 
 export function TestPushItem({ children, href, onClick, icon }) {
+  const [isItemHovered, setIsItemHovered] = useState(false);
   const variant = {
     hidden: {
       x: '50%',
@@ -127,11 +128,21 @@ export function TestPushItem({ children, href, onClick, icon }) {
       boxShadow: useThemeUI().theme.shadows.soft.highMiddle
     }
   };
+  const iconVariant = {
+    hidden: {
+      opacity: 0
+    },
+    show: {
+      opacity: 1
+    }
+  };
 
   return (
     <motion.li
       variants={variant}
       whileHover={variant.active}
+      onHoverStart={() => setIsItemHovered(true)}
+      onHoverEnd={() => setIsItemHovered(false)}
       style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
     >
       <motion.a
@@ -158,8 +169,9 @@ export function TestPushItem({ children, href, onClick, icon }) {
         </motion.span>
         {icon && (
           <motion.span
-            variants={{ active: { opacity: 1 } }}
-            sx={{ marginLeft: 'auto', opacity: 0 }}
+            variants={iconVariant}
+            animate={isItemHovered ? 'show' : 'hidden'}
+            sx={{ marginLeft: 'auto' }}
           >
             {icon}
           </motion.span>
