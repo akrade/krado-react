@@ -42,7 +42,7 @@ export function TestPushHeader({ children, href, onClick }) {
   };
 
   return (
-    <motion.header
+    <motion.li
       variants={variant}
       whileHover={variant.active}
       sx={{
@@ -68,7 +68,7 @@ export function TestPushHeader({ children, href, onClick }) {
       >
         {children}
       </a>
-    </motion.header>
+    </motion.li>
   );
 }
 TestPushHeader.propTypes = {
