@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { MdChevronRight } from 'react-icons/md';
 import Push, {
   PushContent,
   PushDivider,
@@ -27,15 +26,10 @@ export function Default() {
         <AnimatePresence>
           {activeMenu === 'main' && (
             <PushContent>
-              <PushItem href="#" icon={<MdChevronRight />}>
-                Identity
-              </PushItem>
+              <PushItem href="#">Identity</PushItem>
               <PushItem href="#">Desktop</PushItem>
               <PushItem href="#">Web</PushItem>
-              <PushItem
-                onClick={() => setActiveMenu('mobile')}
-                icon={<MdChevronRight />}
-              >
+              <PushItem onClick={() => setActiveMenu('mobile')}>
                 Mobile
               </PushItem>
               <PushItem href="#">Tablet</PushItem>
@@ -54,12 +48,7 @@ export function Default() {
               <PushHeader onClick={() => setActiveMenu('main')}>
                 Mobile
               </PushHeader>
-              <PushItem
-                onClick={() => setActiveMenu('core')}
-                icon={<MdChevronRight />}
-              >
-                Core
-              </PushItem>
+              <PushItem onClick={() => setActiveMenu('core')}>Core</PushItem>
               <PushItem href="#">Advertising</PushItem>
               <PushItem href="#">Chat</PushItem>
               <PushItem href="#">Email</PushItem>
@@ -81,17 +70,13 @@ export function Default() {
               </PushHeader>
               <PushDivider />
               <PushSecondaryHeader>Global</PushSecondaryHeader>
-              <PushItem href="#" icon={<MdChevronRight />}>
-                Grids
-              </PushItem>
+              <PushItem href="#">Grids</PushItem>
               <PushItem href="#">Header</PushItem>
               <PushItem href="#">Footer</PushItem>
               <PushItem href="#">Search</PushItem>
               <PushDivider />
               <PushSecondaryHeader>Style</PushSecondaryHeader>
-              <PushItem href="#" icon={<MdChevronRight />}>
-                Icons
-              </PushItem>
+              <PushItem href="#">Icons</PushItem>
               <PushItem href="#">Illustrations</PushItem>
               <PushItem href="#">Spacing</PushItem>
               <PushItem href="#">Typography</PushItem>

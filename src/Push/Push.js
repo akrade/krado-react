@@ -167,15 +167,14 @@ export function PushItem({ children, href, onClick, icon }) {
         >
           {children}
         </motion.span>
-        {icon && (
-          <motion.span
-            variants={iconVariant}
-            animate={isItemHovered ? 'show' : 'hidden'}
-            sx={{ marginLeft: 'auto' }}
-          >
-            {icon}
-          </motion.span>
-        )}
+
+        <motion.span
+          variants={iconVariant}
+          animate={isItemHovered ? 'show' : 'hidden'}
+          sx={{ marginLeft: 'auto' }}
+        >
+          {!icon ? <MdChevronRight /> : icon}
+        </motion.span>
       </motion.a>
     </motion.li>
   );
