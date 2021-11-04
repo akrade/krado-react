@@ -7,7 +7,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
-function PushCloseButton({ ...rest }) {
+function TestPushCloseButton({ ...rest }) {
   return (
     <ToggleIcon
       sx={{
@@ -257,7 +257,7 @@ export default function TestPush({ children, isOpen, onClose, behavior }) {
         height: '100vh'
       }}
     >
-      <PushCloseButton
+      <TestPushCloseButton
         onClick={onClose}
         isHidden={isCloseButtonHidden}
         behavior={behavior}
