@@ -26,18 +26,18 @@ export function Default() {
         <AnimatePresence>
           {activeMenu === 'main' && (
             <PushContent>
-              <PushItem href="#">Identity</PushItem>
-              <PushItem href="#">Desktop</PushItem>
-              <PushItem href="#">Web</PushItem>
+              <PushItem>Identity</PushItem>
+              <PushItem>Desktop</PushItem>
+              <PushItem>Web</PushItem>
               <PushItem onClick={() => setActiveMenu('mobile')}>
                 Mobile
               </PushItem>
-              <PushItem href="#">Tablet</PushItem>
-              <PushItem href="#">Print</PushItem>
-              <PushItem href="#">Television</PushItem>
-              <PushItem href="#">Voice</PushItem>
-              <PushItem href="#">VR/AR</PushItem>
-              <PushItem href="#">Wearables</PushItem>
+              <PushItem>Tablet</PushItem>
+              <PushItem>Print</PushItem>
+              <PushItem>Television</PushItem>
+              <PushItem>Voice</PushItem>
+              <PushItem>VR/AR</PushItem>
+              <PushItem>Wearables</PushItem>
             </PushContent>
           )}
         </AnimatePresence>
@@ -49,15 +49,15 @@ export function Default() {
                 Mobile
               </PushHeader>
               <PushItem onClick={() => setActiveMenu('core')}>Core</PushItem>
-              <PushItem href="#">Advertising</PushItem>
-              <PushItem href="#">Chat</PushItem>
-              <PushItem href="#">Email</PushItem>
-              <PushItem href="#">Food</PushItem>
-              <PushItem href="#">Publish</PushItem>
-              <PushItem href="#">Shop</PushItem>
-              <PushItem href="#">Social Media</PushItem>
-              <PushItem href="#">Survey</PushItem>
-              <PushItem href="#">Security</PushItem>
+              <PushItem>Advertising</PushItem>
+              <PushItem>Chat</PushItem>
+              <PushItem>Email</PushItem>
+              <PushItem>Food</PushItem>
+              <PushItem>Publish</PushItem>
+              <PushItem>Shop</PushItem>
+              <PushItem>Social Media</PushItem>
+              <PushItem>Survey</PushItem>
+              <PushItem>Security</PushItem>
             </PushContent>
           )}
         </AnimatePresence>
@@ -71,16 +71,16 @@ export function Default() {
               <PushDivider />
               <PushLabel>Global</PushLabel>
               <PushItem>iOS</PushItem>
-              <PushItem href="#">Grids</PushItem>
-              <PushItem href="#">Header</PushItem>
-              <PushItem href="#">Footer</PushItem>
-              <PushItem href="#">Search</PushItem>
+              <PushItem>Grids</PushItem>
+              <PushItem>Header</PushItem>
+              <PushItem>Footer</PushItem>
+              <PushItem>Search</PushItem>
               <PushDivider />
               <PushLabel>Style</PushLabel>
-              <PushItem href="#">Icons</PushItem>
-              <PushItem href="#">Illustrations</PushItem>
-              <PushItem href="#">Spacing</PushItem>
-              <PushItem href="#">Typography</PushItem>
+              <PushItem>Icons</PushItem>
+              <PushItem>Illustrations</PushItem>
+              <PushItem>Spacing</PushItem>
+              <PushItem>Typography</PushItem>
             </PushContent>
           )}
         </AnimatePresence>
