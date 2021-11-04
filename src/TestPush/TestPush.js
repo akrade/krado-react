@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useThemeUI } from 'theme-ui';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
@@ -220,6 +220,7 @@ TestPushContent.defaultProps = {
 };
 
 export default function TestPush({ children, isOpen, onClose }) {
+  const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
   const variant = {
     hidden: { marginLeft: '-272px' },
     show: { marginLeft: '0px' }
@@ -238,12 +239,18 @@ export default function TestPush({ children, isOpen, onClose }) {
         height: '100vh'
       }}
     >
-      <PushCloseButton onClick={onClose} />
+      <PushCloseButton
+        onClick={onClose}
+        isHidden={isCloseButtonHidden}
+        behavior="shuffle"
+      />
       <motion.div
         variants={{
           hidden: { opacity: 0, transitionEnd: { display: 'none' } },
           show: { display: 'block', opacity: 1 }
         }}
+        onHoverStart={() => setIsCloseButtonHidden(true)}
+        onHoverEnd={() => setIsCloseButtonHidden(false)}
         sx={{ zIndex: 2 }}
       >
         {children}
