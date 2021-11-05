@@ -80,7 +80,7 @@ export function Default() {
                 Core
               </PushHeader>
               <PushDivider />
-              <PushLabel label="Global" />
+              <PushLabel>Global</PushLabel>
               <PushItem label="iOS">
                 <PushSubItem>Keyboards</PushSubItem>
                 <PushSubItem>Alerts</PushSubItem>
@@ -95,7 +95,7 @@ export function Default() {
               <PushItem label="Footer" />
               <PushItem label="Search" />
               <PushDivider />
-              <PushLabel label="Style" />
+              <PushLabel>Style</PushLabel>
               <PushItem label="Icons" />
               <PushItem label="Illustrations" />
               <PushItem label="Spacing" />
