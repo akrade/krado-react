@@ -1,16 +1,17 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react';
 import { MdMenu } from 'react-icons/md';
-import Box from '../Box/Box';
-import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import {
   Panel,
   PanelItem,
   PanelCloseButton,
   PanelContent,
   PanelHeader,
-  PanelBody
+  PanelBody,
+  PanelOverlay
 } from './Panel';
+import Box from '../Box/Box';
+import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
 export default {
   title: 'Panel',
@@ -23,6 +24,7 @@ export function Default() {
   return (
     <>
       <Panel isOpen={isOpen}>
+        <PanelOverlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
         <PanelContent>
           <PanelCloseButton onClick={() => setIsOpen(false)} />
           <PanelHeader>Brands</PanelHeader>
@@ -36,8 +38,13 @@ export function Default() {
         </PanelContent>
       </Panel>
       <Box
-        backgroundColor="muted"
-        sx={{ padding: 4, width: '100vw', height: '100vh' }}
+        sx={{
+          padding: 4,
+          width: '100vw',
+          height: '100vh',
+          background:
+            "center / cover no-repeat url('https://source.unsplash.com/user/chuttersnap') "
+        }}
       >
         <ToggleIcon onClick={() => setIsOpen(!isOpen)}>
           <MdMenu />

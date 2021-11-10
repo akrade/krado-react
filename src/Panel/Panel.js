@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useThemeUI } from 'theme-ui';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { MdChevronRight, MdClose } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
@@ -197,5 +197,32 @@ export function PanelCloseButton({ ...props }) {
     >
       <MdClose />
     </ToggleIcon>
+  );
+}
+
+export function PanelOverlay({ isOpen, onClick }) {
+  const variant = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  };
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          variants={variant}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          onClick={onClick}
+          sx={{
+            position: 'fixed',
+            width: '100vw',
+            height: '100vh',
+            backdropFilter: 'grayscale(100%)'
+          }}
+        />
+      )}
+    </AnimatePresence>
   );
 }
