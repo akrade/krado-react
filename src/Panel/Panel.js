@@ -21,8 +21,22 @@ function getSize(size) {
   }
 }
 
-export function PanelContent({ children, size, ...props }) {
-  const variant = { hidden: { x: '-100%' }, show: { x: 0 } };
+export function PanelContent({ children, size, location, ...props }) {
+  const variant = {
+    hidden: { x: location === 'left' ? '-100%' : '100%' },
+    show: { x: 0 }
+  };
+
+  function getLocation(location) {
+    if (location === 'left') {
+      return { left: 0 };
+    }
+
+    if (location === 'right') {
+      return { right: 0 };
+    }
+  }
+  const panelLocation = getLocation(location);
 
   return (
     <motion.div
@@ -35,7 +49,8 @@ export function PanelContent({ children, size, ...props }) {
         width: getSize(size),
         height: '100vh',
         backgroundColor: 'background',
-        boxShadow: 'soft.highEast'
+        boxShadow: 'soft.highEast',
+        ...panelLocation
       }}
       {...props}
     >
@@ -44,10 +59,12 @@ export function PanelContent({ children, size, ...props }) {
   );
 }
 PanelContent.propTypes = {
-  size: PropTypes.oneOf(['quarter', 'half', 'full'])
+  size: PropTypes.oneOf(['quarter', 'half', 'full']),
+  location: PropTypes.oneOf(['left', 'right', 'top', 'bottom'])
 };
 PanelContent.defaultProps = {
-  size: 'quarter'
+  size: 'quarter',
+  location: 'left'
 };
 
 export function PanelHeader({ children }) {
@@ -210,6 +227,7 @@ export function PanelOverlay({ isOpen, onClick }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
+          key="filter"
           variants={variant}
           initial="hidden"
           animate="show"
