@@ -174,7 +174,7 @@ export function Panel({ children, isOpen, size, ...props }) {
     <motion.div
       variants={variant}
       animate={isOpen ? 'show' : 'hidden'}
-      sx={{ position: 'relative' }}
+      sx={{ position: 'relative', zIndex: 2 }}
       {...props}
     >
       {children}
