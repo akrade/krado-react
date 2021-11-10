@@ -1,6 +1,16 @@
+/** @jsxImportSource theme-ui */
 import React, { useState } from 'react';
+import { MdMenu } from 'react-icons/md';
 import Box from '../Box/Box';
-import { Panel, PanelListItem } from './Panel';
+import ToggleIcon from '../ToggleIcon/ToggleIcon';
+import {
+  Panel,
+  PanelItem,
+  PanelCloseButton,
+  PanelContent,
+  PanelHeader,
+  PanelBody
+} from './Panel';
 
 export default {
   title: 'Panel',
@@ -11,19 +21,28 @@ export function Default() {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <Box backgroundColor="lightGray">
-      <Panel
-        heading="Brands"
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        onTap={() => setIsOpen(true)}
-      >
-        <PanelListItem href="#">Akrade & Company</PanelListItem>
-        <PanelListItem href="#">Bet She Will</PanelListItem>
-        <PanelListItem href="#">Brown Lotus</PanelListItem>
-        <PanelListItem href="#">Kràdoyé</PanelListItem>
-        <PanelListItem href="#">Pepper Crow</PanelListItem>
+    <>
+      <Panel isOpen={isOpen}>
+        <PanelContent>
+          <PanelCloseButton onClick={() => setIsOpen(false)} />
+          <PanelHeader>Brands</PanelHeader>
+          <PanelBody>
+            <PanelItem href="#">Akrade & Company</PanelItem>
+            <PanelItem href="#">Bet She Will</PanelItem>
+            <PanelItem href="#">Brown Lotus</PanelItem>
+            <PanelItem href="#">Kràdoyé</PanelItem>
+            <PanelItem href="#">Pepper Crow</PanelItem>
+          </PanelBody>
+        </PanelContent>
       </Panel>
-    </Box>
+      <Box
+        backgroundColor="muted"
+        sx={{ padding: 4, width: '100vw', height: '100vh' }}
+      >
+        <ToggleIcon onClick={() => setIsOpen(!isOpen)}>
+          <MdMenu />
+        </ToggleIcon>
+      </Box>
+    </>
   );
 }
