@@ -131,7 +131,7 @@ export function PanelBody({ children }) {
       sx={{
         variant: 'text.body.h3',
         overflowX: 'hidden',
-        overflowY: 'scroll',
+        overflowY: 'auto',
         listStyle: 'none',
         margin: 0,
         padding: 0,
