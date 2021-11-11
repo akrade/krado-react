@@ -7,44 +7,44 @@ import { MdChevronRight, MdClose } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
-export function PanelContent({ children, size, location, ...props }) {
-  function getSize(size) {
-    if (size === 'quarter') {
+export function PanelContent({ children, type, location, ...props }) {
+  function getType(type) {
+    if (type === 'quarter') {
       return '25';
     }
 
-    if (size === 'half') {
+    if (type === 'half') {
       return '50';
     }
 
-    if (size === 'full') {
+    if (type === 'full') {
       return '100';
     }
   }
 
-  function setLocationAndSize(location, size) {
+  function setLocationAndType(location, type) {
     var result;
 
     switch (location) {
       case 'left':
-        result = { left: 0, width: `${getSize(size)}vw`, height: '100vh' };
+        result = { left: 0, width: `${getType(type)}vw`, height: '100vh' };
         break;
       case 'right':
-        result = { right: 0, width: `${getSize(size)}vw`, height: '100vh' };
+        result = { right: 0, width: `${getType(type)}vw`, height: '100vh' };
         break;
       case 'top':
-        result = { top: 0, width: '100vw', height: `${getSize(size)}vh` };
+        result = { top: 0, width: '100vw', height: `${getType(type)}vh` };
         break;
       case 'bottom':
-        result = { bottom: 0, width: '100vw', height: `${getSize(size)}vh` };
+        result = { bottom: 0, width: '100vw', height: `${getType(type)}vh` };
         break;
       default:
-        result = { left: 0, width: `${getSize(size)}vw`, height: '100vh' };
+        result = { left: 0, width: `${getType(type)}vw`, height: '100vh' };
     }
 
     return result;
   }
-  const locationAndSize = setLocationAndSize(location, size);
+  const locationAndType = setLocationAndType(location, type);
 
   function setHiddenAnimation(location) {
     if (location === 'left') {
@@ -79,7 +79,7 @@ export function PanelContent({ children, size, location, ...props }) {
         flexDirection: 'column',
         backgroundColor: 'background',
         boxShadow: 'soft.highEast',
-        ...locationAndSize
+        ...locationAndType
       }}
       {...props}
     >
@@ -88,11 +88,11 @@ export function PanelContent({ children, size, location, ...props }) {
   );
 }
 PanelContent.propTypes = {
-  size: PropTypes.oneOf(['quarter', 'half', 'full']),
+  type: PropTypes.oneOf(['quarter', 'half', 'full']),
   location: PropTypes.oneOf(['left', 'right', 'top', 'bottom'])
 };
 PanelContent.defaultProps = {
-  size: 'quarter',
+  type: 'quarter',
   location: 'left'
 };
 
