@@ -217,7 +217,7 @@ export function PanelDivider() {
   );
 }
 
-export function Panel({ children, isOpen, size, ...props }) {
+export function Panel({ children, isOpen, ...props }) {
   const variant = { hidden: { opacity: 0 }, show: { opacity: 1 } };
 
   return (
