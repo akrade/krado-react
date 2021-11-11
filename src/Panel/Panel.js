@@ -7,36 +7,67 @@ import { MdChevronRight, MdClose } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
-function getSize(size) {
-  if (size === 'quarter') {
-    return '25vw';
-  }
-
-  if (size === 'half') {
-    return '50vw';
-  }
-
-  if (size === 'full') {
-    return '100vw';
-  }
-}
-
 export function PanelContent({ children, size, location, ...props }) {
-  const variant = {
-    hidden: { x: location === 'left' ? '-100%' : '100%' },
-    show: { x: 0 }
-  };
+  function getSize(size) {
+    if (size === 'quarter') {
+      return '25';
+    }
 
-  function getLocation(location) {
+    if (size === 'half') {
+      return '50';
+    }
+
+    if (size === 'full') {
+      return '100';
+    }
+  }
+
+  function setLocationAndSize(location, size) {
+    var result;
+
+    switch (location) {
+      case 'left':
+        result = { left: 0, width: `${getSize(size)}vw`, height: '100vh' };
+        break;
+      case 'right':
+        result = { right: 0, width: `${getSize(size)}vw`, height: '100vh' };
+        break;
+      case 'top':
+        result = { top: 0, width: '100vw', height: `${getSize(size)}vh` };
+        break;
+      case 'bottom':
+        result = { bottom: 0, width: '100vw', height: `${getSize(size)}vh` };
+        break;
+      default:
+        result = { left: 0, width: `${getSize(size)}vw`, height: '100vh' };
+    }
+
+    return result;
+  }
+  const locationAndSize = setLocationAndSize(location, size);
+
+  function setHiddenAnimation(location) {
     if (location === 'left') {
-      return { left: 0 };
+      return { x: '-100%' };
+    }
+
+    if (location === 'top') {
+      return { y: '-100%' };
     }
 
     if (location === 'right') {
-      return { right: 0 };
+      return { x: '100%' };
+    }
+
+    if (location === 'bottom') {
+      return { y: '100%' };
     }
   }
-  const panelLocation = getLocation(location);
+  const hiddenAnimation = setHiddenAnimation(location);
+  const variant = {
+    hidden: { ...hiddenAnimation },
+    show: { x: 0, y: 0 }
+  };
 
   return (
     <motion.div
@@ -46,11 +77,9 @@ export function PanelContent({ children, size, location, ...props }) {
         position: 'fixed',
         display: 'flex',
         flexDirection: 'column',
-        width: getSize(size),
-        height: '100vh',
         backgroundColor: 'background',
         boxShadow: 'soft.highEast',
-        ...panelLocation
+        ...locationAndSize
       }}
       {...props}
     >
@@ -87,7 +116,10 @@ export function PanelBody({ children }) {
       opacity: 0,
       transition: { staggerChildren: 0.05, staggerDirection: -1 }
     },
-    show: { opacity: 1, transition: { staggerChildren: 0.05 } }
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.05 }
+    }
   };
 
   return (
@@ -98,7 +130,8 @@ export function PanelBody({ children }) {
       exit="hidden"
       sx={{
         variant: 'text.body.h3',
-        overflow: 'hidden',
+        overflowX: 'hidden',
+        overflowY: 'scroll',
         listStyle: 'none',
         margin: 0,
         padding: 0,
