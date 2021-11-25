@@ -2,15 +2,24 @@
 
 ## [Unreleased]
 
+## Added
+
+- `Panel` menu component. ([KRAD-184])
+- `Push` menu component. ([KRAD-162])
+- Interactive show and hide animation for `ToggleIcon`.
+
 ### Changed
 
 - Updated body and heading fonts to [Barlow](https://fonts.google.com/specimen/Barlow). ([KRAD-175])
 - Updated display font to [Merriweather](https://fonts.google.com/specimen/Merriweather). ([KRAD-175])
+- The `ToggleIcon` now has a more interactive hover animation.
 
 ### Fixed
 
 - Fixed variant name typo in `Button` story. ([KRAD-181])
 
+[krad-184]: https://akrade.atlassian.net/browse/KRAD-184
+[krad-162]: https://akrade.atlassian.net/browse/KRAD-162
 [krad-175]: https://akrade.atlassian.net/browse/KRAD-175
 [krad-181]: https://akrade.atlassian.net/browse/KRAD-181
 
