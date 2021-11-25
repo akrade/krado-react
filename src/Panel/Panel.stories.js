@@ -15,17 +15,17 @@ import ToggleIcon from '../ToggleIcon/ToggleIcon';
 
 export default {
   title: 'Panel',
-  component: Panel
+  component: PanelContent
 };
 
-export function Default() {
+export function Default(args) {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
       <Panel isOpen={isOpen}>
         <PanelOverlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
-        <PanelContent>
+        <PanelContent {...args}>
           <PanelCloseButton onClick={() => setIsOpen(false)} />
           <PanelHeader>Brands</PanelHeader>
           <PanelBody>
