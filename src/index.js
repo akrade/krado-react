@@ -15,3 +15,5 @@ export { default as Image } from './Image/Image';
 export { default as Avatar } from './Avatar/Avatar';
 export { default as Button } from './Button/Button';
 export { default as ToggleIcon } from './ToggleIcon/ToggleIcon';
+export * from './Panel/Panel';
+export * from './Push/Push';
