@@ -11,7 +11,7 @@ import Push, {
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
 import Box from '../Box/Box';
-import { MdLaunch, MdLink } from 'react-icons/md';
+import { MdLaunch, MdLink, MdExpandMore } from 'react-icons/md';
 
 export default {
   title: 'Push',
@@ -20,7 +20,7 @@ export default {
 
 export function Default() {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeMenu, setActiveMenu] = useState('core');
+  const [activeMenu, setActiveMenu] = useState('main');
 
   return (
     <Flex>
@@ -81,7 +81,7 @@ export function Default() {
               </PushHeader>
               <PushDivider />
               <PushLabel>Global</PushLabel>
-              <PushItem label="iOS">
+              <PushItem label="iOS" icon={<MdExpandMore />}>
                 <PushSubItem>Keyboards</PushSubItem>
                 <PushSubItem>Alerts</PushSubItem>
                 <PushSubItem>Pickers</PushSubItem>

@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useThemeUI } from 'theme-ui';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
@@ -114,7 +114,7 @@ export function PushLabel({ children }) {
         marginTop: 4,
         marginBottom: 3,
         paddingX: 4,
-        color: 'darkGray',
+        color: 'accent',
         fontSize: 1,
         textTransform: 'uppercase'
       }}
@@ -251,9 +251,7 @@ export function PushItem({ children, label, icon, ...props }) {
         </motion.span>
       </motion.a>
 
-      <AnimatePresence layout>
-        {isSubMenuOpen && <PushSubMenu>{children}</PushSubMenu>}
-      </AnimatePresence>
+      {isSubMenuOpen && <PushSubMenu>{children}</PushSubMenu>}
     </motion.li>
   );
 }

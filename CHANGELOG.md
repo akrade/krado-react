@@ -2,15 +2,26 @@
 
 ## [Unreleased]
 
+## [0.5.0] - 2021-11-25
+
+## Added
+
+- `Panel` menu component. ([KRAD-184])
+- `Push` menu component. ([KRAD-162])
+- Interactive show and hide animation for `ToggleIcon`.
+
 ### Changed
 
 - Updated body and heading fonts to [Barlow](https://fonts.google.com/specimen/Barlow). ([KRAD-175])
 - Updated display font to [Merriweather](https://fonts.google.com/specimen/Merriweather). ([KRAD-175])
+- The `ToggleIcon` now has a more interactive hover animation.
 
 ### Fixed
 
 - Fixed variant name typo in `Button` story. ([KRAD-181])
 
+[krad-184]: https://akrade.atlassian.net/browse/KRAD-184
+[krad-162]: https://akrade.atlassian.net/browse/KRAD-162
 [krad-175]: https://akrade.atlassian.net/browse/KRAD-175
 [krad-181]: https://akrade.atlassian.net/browse/KRAD-181
 
@@ -152,7 +163,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.4.1...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/akrade/krado-react/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/akrade/krado-react/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/akrade/krado-react/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/akrade/krado-react/compare/v0.2.6...v0.3.0

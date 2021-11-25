@@ -265,6 +265,7 @@ export function PanelOverlay({ isOpen, onClick }) {
           initial="hidden"
           animate="show"
           exit="hidden"
+          transition={{ delay: 0.4 }}
           onClick={onClick}
           sx={{
             position: 'fixed',
