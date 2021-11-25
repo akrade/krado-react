@@ -20,7 +20,7 @@ export default {
 
 export function Default() {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeMenu, setActiveMenu] = useState('core');
+  const [activeMenu, setActiveMenu] = useState('main');
 
   return (
     <Flex>
