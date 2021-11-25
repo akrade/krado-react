@@ -114,7 +114,7 @@ export function PushLabel({ children }) {
         marginTop: 4,
         marginBottom: 3,
         paddingX: 4,
-        color: 'darkGray',
+        color: 'accent',
         fontSize: 1,
         textTransform: 'uppercase'
       }}
