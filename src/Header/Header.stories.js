@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '../Box/Box';
+import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import {
   Header,
   HeaderAvatar,
@@ -15,20 +16,25 @@ export default {
   component: Header
 };
 
-export const Default = () => (
-  <Box sx={{ width: '100%', height: '100vw', backgroundColor: 'muted' }}>
-    <Header>
-      <HeaderMenuButton />
-      <HeaderTitle>Kràdoyé</HeaderTitle>
-      <HeaderNavigation>
-        <HeaderItem href="#">Home</HeaderItem>
-        <HeaderItem href="#">Strategy</HeaderItem>
-        <HeaderItem href="#">Design</HeaderItem>
-        <HeaderItem href="#">About</HeaderItem>
-        <HeaderItem href="#">Help</HeaderItem>
-      </HeaderNavigation>
-      <HeaderSearchButton />
-      <HeaderAvatar />
-    </Header>
-  </Box>
-);
+export function Default() {
+  const [isMenuSmall, setIsMenuSmall] = useState(false);
+
+  return (
+    <Box sx={{ width: '100%', height: '100vw', backgroundColor: 'muted' }}>
+      <Header isSmall={isMenuSmall}>
+        <HeaderMenuButton />
+        <HeaderTitle>Kràdoyé</HeaderTitle>
+        <HeaderNavigation>
+          <HeaderItem href="#">Home</HeaderItem>
+          <HeaderItem href="#">Strategy</HeaderItem>
+          <HeaderItem href="#">Design</HeaderItem>
+          <HeaderItem href="#">About</HeaderItem>
+          <HeaderItem href="#">Help</HeaderItem>
+        </HeaderNavigation>
+        <HeaderSearchButton />
+        <HeaderAvatar />
+      </Header>
+      <ToggleIcon onClick={() => setIsMenuSmall(!isMenuSmall)} />
+    </Box>
+  );
+}

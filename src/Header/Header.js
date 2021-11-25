@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MdMenu, MdSearch } from 'react-icons/md';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
-import Heading from '../Heading/Heading';
 import Avatar from '../Avatar/Avatar';
 import { useThemeUI } from 'theme-ui';
 
@@ -69,10 +68,23 @@ export function HeaderAvatar() {
 }
 
 export function HeaderTitle({ children }) {
+  const variant = {
+    small: { fontSize: `${useThemeUI().theme.fontSizes[6]}px` },
+    large: { fontSize: `${useThemeUI().theme.fontSizes[9]}px` }
+  };
+
   return (
-    <Heading sx={{ fontWeight: 600, textTransform: 'uppercase' }}>
+    <motion.div
+      variants={variant}
+      transition={{ type: 'spring', duration: 0.4, bounce: 0 }}
+      sx={{
+        variant: 'text.display.h2',
+        fontWeight: 600,
+        textTransform: 'uppercase'
+      }}
+    >
       {children}
-    </Heading>
+    </motion.div>
   );
 }
 
@@ -84,14 +96,21 @@ export function HeaderMenuButton() {
   );
 }
 
-export function Header({ children }) {
+export function Header({ children, isSmall = false }) {
+  const variant = {
+    small: { paddingTop: '0px' },
+    large: { paddingTop: `${useThemeUI().theme.space[5]}px` }
+  };
+
   return (
-    <header
+    <motion.header
+      variants={variant}
+      animate={isSmall ? 'small' : 'large'}
+      transition={{ type: 'spring', duration: 0.4, bounce: 0 }}
       sx={{
         position: 'sticky',
         top: 0,
         zIndex: 4,
-        paddingTop: 5,
         backgroundColor: 'background',
         boxShadow: 'soft.low'
       }}
@@ -107,6 +126,6 @@ export function Header({ children }) {
       >
         {children}
       </div>
-    </header>
+    </motion.header>
   );
 }
