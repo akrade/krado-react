@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MdMenu, MdSearch } from 'react-icons/md';
 import Box from '../Box/Box';
-import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import {
   Header,
   HeaderAvatar,
@@ -17,12 +16,10 @@ export default {
   component: Header
 };
 
-export function Default() {
-  const [isMenuSmall, setIsMenuSmall] = useState(false);
-
+export function Default(args) {
   return (
     <Box sx={{ width: '100%', height: '100vw', backgroundColor: 'muted' }}>
-      <Header isSmall={isMenuSmall}>
+      <Header {...args}>
         <HeaderIconButton>
           <MdMenu />
         </HeaderIconButton>
@@ -41,7 +38,6 @@ export function Default() {
           <HeaderAvatar />
         </HeaderBody>
       </Header>
-      <ToggleIcon onClick={() => setIsMenuSmall(!isMenuSmall)} />
     </Box>
   );
 }
