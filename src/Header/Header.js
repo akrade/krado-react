@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdMenu, MdSearch } from 'react-icons/md';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Avatar from '../Avatar/Avatar';
 import { useThemeUI } from 'theme-ui';
@@ -44,7 +43,7 @@ export function HeaderItem({ children, href, onClick }) {
 
 export function HeaderNavigation({ children }) {
   return (
-    <nav>
+    <nav sx={{ marginRight: 3 }}>
       <ul sx={{ display: 'flex', listStyle: 'none' }}>{children}</ul>
     </nav>
   );
@@ -58,21 +57,8 @@ export function HeaderBody({ children }) {
   );
 }
 
-export function HeaderSearchButton() {
-  return (
-    <ToggleIcon sx={{ marginLeft: 4 }}>
-      <MdSearch />
-    </ToggleIcon>
-  );
-}
-
 export function HeaderAvatar() {
-  return (
-    <Avatar
-      src="https://source.unsplash.com/random/42x42"
-      sx={{ marginLeft: 3 }}
-    />
-  );
+  return <Avatar src="https://source.unsplash.com/random/42x42" />;
 }
 
 export function HeaderTitle({ children }) {
@@ -96,12 +82,8 @@ export function HeaderTitle({ children }) {
   );
 }
 
-export function HeaderMenuButton() {
-  return (
-    <ToggleIcon sx={{ marginRight: 4 }}>
-      <MdMenu />
-    </ToggleIcon>
-  );
+export function HeaderIconButton({ children }) {
+  return <ToggleIcon sx={{ marginRight: 3 }}>{children}</ToggleIcon>;
 }
 
 export function Header({ children, isSmall = false }) {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MdMenu, MdSearch } from 'react-icons/md';
 import Box from '../Box/Box';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import {
@@ -6,9 +7,8 @@ import {
   HeaderAvatar,
   HeaderBody,
   HeaderItem,
-  HeaderMenuButton,
+  HeaderIconButton,
   HeaderNavigation,
-  HeaderSearchButton,
   HeaderTitle
 } from './Header';
 
@@ -23,7 +23,9 @@ export function Default() {
   return (
     <Box sx={{ width: '100%', height: '100vw', backgroundColor: 'muted' }}>
       <Header isSmall={isMenuSmall}>
-        <HeaderMenuButton />
+        <HeaderIconButton>
+          <MdMenu />
+        </HeaderIconButton>
         <HeaderTitle>Kràdoyé</HeaderTitle>
         <HeaderBody>
           <HeaderNavigation>
@@ -33,7 +35,9 @@ export function Default() {
             <HeaderItem href="#">About</HeaderItem>
             <HeaderItem href="#">Help</HeaderItem>
           </HeaderNavigation>
-          <HeaderSearchButton />
+          <HeaderIconButton>
+            <MdSearch />
+          </HeaderIconButton>
           <HeaderAvatar />
         </HeaderBody>
       </Header>
