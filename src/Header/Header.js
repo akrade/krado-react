@@ -44,9 +44,17 @@ export function HeaderItem({ children, href, onClick }) {
 
 export function HeaderNavigation({ children }) {
   return (
-    <nav sx={{ marginLeft: 'auto' }}>
+    <nav>
       <ul sx={{ display: 'flex', listStyle: 'none' }}>{children}</ul>
     </nav>
+  );
+}
+
+export function HeaderBody({ children }) {
+  return (
+    <div sx={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}>
+      {children}
+    </div>
   );
 }
 

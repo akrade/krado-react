@@ -4,6 +4,7 @@ import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import {
   Header,
   HeaderAvatar,
+  HeaderBody,
   HeaderItem,
   HeaderMenuButton,
   HeaderNavigation,
@@ -24,15 +25,17 @@ export function Default() {
       <Header isSmall={isMenuSmall}>
         <HeaderMenuButton />
         <HeaderTitle>Kràdoyé</HeaderTitle>
-        <HeaderNavigation>
-          <HeaderItem href="#">Home</HeaderItem>
-          <HeaderItem href="#">Strategy</HeaderItem>
-          <HeaderItem href="#">Design</HeaderItem>
-          <HeaderItem href="#">About</HeaderItem>
-          <HeaderItem href="#">Help</HeaderItem>
-        </HeaderNavigation>
-        <HeaderSearchButton />
-        <HeaderAvatar />
+        <HeaderBody>
+          <HeaderNavigation>
+            <HeaderItem href="#">Home</HeaderItem>
+            <HeaderItem href="#">Strategy</HeaderItem>
+            <HeaderItem href="#">Design</HeaderItem>
+            <HeaderItem href="#">About</HeaderItem>
+            <HeaderItem href="#">Help</HeaderItem>
+          </HeaderNavigation>
+          <HeaderSearchButton />
+          <HeaderAvatar />
+        </HeaderBody>
       </Header>
       <ToggleIcon onClick={() => setIsMenuSmall(!isMenuSmall)} />
     </Box>
