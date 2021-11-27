@@ -1,9 +1,10 @@
 /** @jsxImportSource theme-ui */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import { useThemeUI } from 'theme-ui';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Avatar from '../Avatar/Avatar';
-import { useThemeUI } from 'theme-ui';
 
 export function HeaderItem({ children, href, onClick }) {
   const variant = {
@@ -86,7 +87,7 @@ export function HeaderIconButton({ children }) {
   return <ToggleIcon sx={{ marginRight: 3 }}>{children}</ToggleIcon>;
 }
 
-export function Header({ children, isSmall = false }) {
+export function Header({ children, isSmall }) {
   const variant = {
     small: { paddingTop: '0px' },
     large: { paddingTop: `${useThemeUI().theme.space[5]}px` }
@@ -119,3 +120,9 @@ export function Header({ children, isSmall = false }) {
     </motion.header>
   );
 }
+Header.propTypes = {
+  isSmall: PropTypes.bool
+};
+Header.defaultProps = {
+  isSmall: false
+};
