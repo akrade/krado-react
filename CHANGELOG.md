@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Added
+
+- `Header` component. ([KRAD-163])
+
+[krad-163]: https://akrade.atlassian.net/browse/KRAD-163
+
 ## [0.5.0] - 2021-11-25
 
 ## Added
