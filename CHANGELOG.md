@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.6.1] - 2021-11-27
+
+### Removed
+
+- Removed unused "Dummy" folder.
+
 ## [0.6.0] - 2021-11-27
 
 ### Added
