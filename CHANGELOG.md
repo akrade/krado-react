@@ -4,6 +4,10 @@
 
 ## [0.6.1] - 2021-11-27
 
+### Fixed
+
+- Missing export for `Header` tissue component.
+
 ### Removed
 
 - Removed unused "Dummy" folder.
@@ -181,7 +185,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.6.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.6.1...HEAD
+[0.6.1]: https://github.com/akrade/krado-react/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/akrade/krado-react/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/akrade/krado-react/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/akrade/krado-react/compare/v0.4.0...v0.4.1

@@ -17,3 +17,4 @@ export { default as Button } from './Button/Button';
 export { default as ToggleIcon } from './ToggleIcon/ToggleIcon';
 export * from './Panel/Panel';
 export * from './Push/Push';
+export * from './Heading/Heading';
