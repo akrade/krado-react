@@ -6,11 +6,15 @@
 
 - `Header` component. ([KRAD-163])
 
+### Fixed
+
+- Incorrect formatting in [0.5.0] changelog notes.
+
 [krad-163]: https://akrade.atlassian.net/browse/KRAD-163
 
 ## [0.5.0] - 2021-11-25
 
-## Added
+### Added
 
 - `Panel` menu component. ([KRAD-184])
 - `Push` menu component. ([KRAD-162])
