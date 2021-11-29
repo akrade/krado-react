@@ -8,6 +8,10 @@
 
 - Upgraded from React 16.13.1 to [React 17.0.2](https://github.com/facebook/react/releases/tag/v17.0.2). ([KRAD-203])
 
+### Fixed
+
+- Incorrect `package.json` version.
+
 [krad-203]: https://akrade.atlassian.net/browse/KRAD-203
 
 ## [0.6.2] - 2021-11-27
