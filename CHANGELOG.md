@@ -11,6 +11,10 @@
 - Upgraded to [Theme UI 0.12.1](https://github.com/system-ui/theme-ui/releases/tag/v0.12.1). ([KRAD-204])
 - Upgraded other dependencies. ([KRAD-204])
 
+### Fixed
+
+- Incorrect version number in `package.json`.
+
 [krad-203]: https://akrade.atlassian.net/browse/KRAD-203
 [krad-204]: https://akrade.atlassian.net/browse/KRAD-204
 
