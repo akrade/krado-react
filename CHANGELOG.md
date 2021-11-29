@@ -5,6 +5,12 @@
 ### Changed
 
 - Upgraded from React 16.13.1 to [React 17.0.2](https://github.com/facebook/react/releases/tag/v17.0.2). ([KRAD-203])
+- Upgraded to [Storybook 6.4.0](https://github.com/storybookjs/storybook/releases/tag/v6.4.0). ([KRAD-204])
+- Upgraded to [Theme UI 0.12.1](https://github.com/system-ui/theme-ui/releases/tag/v0.12.1). ([KRAD-204])
+- Upgraded other dependencies. ([KRAD-204])
+
+[krad-203]: https://akrade.atlassian.net/browse/KRAD-203
+[krad-204]: https://akrade.atlassian.net/browse/KRAD-204
 
 ## [0.6.2] - 2021-11-27
 
