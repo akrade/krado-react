@@ -5,7 +5,7 @@
 ### Changed
 
 - Upgraded from React 16.13.1 to [React 17.0.2](https://github.com/facebook/react/releases/tag/v17.0.2). ([KRAD-203])
-- Upgraded to Storybook 6.4.0 ([KRAD-204])
+- Upgraded to Storybook 6.4.0. ([KRAD-204])
 - Upgraded other dependencies. ([KRAD-204])
 
 [krad-203]: https://akrade.atlassian.net/browse/KRAD-203
