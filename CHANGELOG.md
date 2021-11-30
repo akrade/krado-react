@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.6.4] - 2021-11-30
+
 ### Fixed
 
 - "importSource cannot be set when runtime is classic" error by switching back to the [classic JSX pragma syntax](https://github.com/system-ui/theme-ui/issues/1160#issuecomment-715530924). ([KRAD-205])
@@ -213,7 +215,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.6.3...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.6.4...HEAD
+[0.6.4]: https://github.com/akrade/krado-react/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/akrade/krado-react/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/akrade/krado-react/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/akrade/krado-react/compare/v0.6.0...v0.6.1
