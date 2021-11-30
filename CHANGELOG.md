@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- "importSource cannot be set when runtime is classic" error by switching back to the [classic JSX pragma syntax](https://github.com/system-ui/theme-ui/issues/1160#issuecomment-715530924). ([KRAD-205])
+
+[krad-205]: https://akrade.atlassian.net/browse/KRAD-205
+
 ## [0.6.3] - 2021-11-29
 
 ### Changed

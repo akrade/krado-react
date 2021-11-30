@@ -1,8 +1,8 @@
-/** @jsxImportSource theme-ui */
+/** @jsx jsx */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { useThemeUI } from 'theme-ui';
+import { jsx, useThemeUI } from 'theme-ui';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Avatar from '../Avatar/Avatar';
 

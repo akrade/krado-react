@@ -1,7 +1,7 @@
-/** @jsxImportSource theme-ui */
+/** @jsx jsx */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useThemeUI } from 'theme-ui';
+import { jsx, useThemeUI } from 'theme-ui';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MdChevronRight, MdClose } from 'react-icons/md';
 import Box from '../Box/Box';
