@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { jsx, useThemeUI } from 'theme-ui';
+import { useThemeUI } from 'theme-ui';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';

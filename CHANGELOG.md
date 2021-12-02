@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Upgraded to Babel 7.16 ([KRAD-205])
+
+### Fixed
+
+- Incorrect JSX runtime error by [removing the custom pragma comments all together](https://theme-ui.com/guides/jsx-pragma/#automatic-jsx-runtime) and setting it globally inside the Babel config. ([KRAD-205])
+
+[krad-205]: https://akrade.atlassian.net/browse/KRAD-205
+
 ## [0.6.4] - 2021-11-30
 
 ### Fixed

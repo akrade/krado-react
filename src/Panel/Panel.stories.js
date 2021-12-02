@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import React, { useState } from 'react';
-import { jsx } from 'theme-ui';
 import { MdMenu } from 'react-icons/md';
 import {
   Panel,
