@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heading as ThemeUiHeading } from 'theme-ui';
 import PropTypes from 'prop-types';
 

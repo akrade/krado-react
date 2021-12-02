@@ -1,4 +1,3 @@
-import React from 'react';
 import ToggleIcon from './ToggleIcon';
 import { Heart20Filled } from '@fluentui/react-icons';
 import Flex from '../Flex/Flex';

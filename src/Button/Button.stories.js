@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from './Button';
 import Flex from '../Flex/Flex';
 import { Mail20Regular, ArrowRight20Regular } from '@fluentui/react-icons';
