@@ -5,6 +5,7 @@
 ### Changed
 
 - Upgraded to Babel 7.16 ([KRAD-205])
+- Turned off the `react/jsx-uses-react` and `react/react-in-jsx-scope` rules. ([KRAD-207])
 
 ### Fixed
 
