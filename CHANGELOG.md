@@ -4,7 +4,7 @@
 
 ### Changed
 
-- `Heading` cell component has now been combined into `Text`. ([KRAD-177])
+- `Heading` cell component has now been combined into `Text` for simplicity. ([KRAD-177])
 - Upgraded to Babel 7.16 ([KRAD-205])
 - Turned off the `react/jsx-uses-react` and `react/react-in-jsx-scope` rules. ([KRAD-207])
 
