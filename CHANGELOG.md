@@ -15,7 +15,7 @@
 ### Removed
 
 - Unused React imports. See [this blog post from React](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) for more info. ([KRAD-207])
-- `Heading` cell component. ([KRAD-117])
+- `Heading` cell component. ([KRAD-177])
 
 [krad-177]: https://akrade.atlassian.net/browse/KRAD-177
 [krad-205]: https://akrade.atlassian.net/browse/KRAD-205
