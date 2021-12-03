@@ -7,6 +7,7 @@
 - `Heading` cell component has now been combined into `Text` for simplicity. ([KRAD-177])
 - Upgraded to Babel 7.16 ([KRAD-205])
 - Turned off the `react/jsx-uses-react` and `react/react-in-jsx-scope` rules. ([KRAD-207])
+- Swapped existing [Fluent UI Icons](https://www.npmjs.com/package/@fluentui/react-icons) with [Material Icons](https://react-icons.github.io/react-icons/icons?name=md). ([KRAD-183])
 
 ### Fixed
 
@@ -20,6 +21,7 @@
 [krad-177]: https://akrade.atlassian.net/browse/KRAD-177
 [krad-205]: https://akrade.atlassian.net/browse/KRAD-205
 [krad-207]: https://akrade.atlassian.net/browse/KRAD-207
+[krad-183]: https://akrade.atlassian.net/browse/KRAD-183
 
 ## [0.6.4] - 2021-11-30
 

@@ -1,6 +1,6 @@
 import Button from './Button';
+import { MdOutlineEmail, MdArrowForward } from 'react-icons/md';
 import Flex from '../Flex/Flex';
-import { Mail20Regular, ArrowRight20Regular } from '@fluentui/react-icons';
 
 const Wrapper = ({ ...props }) => (
   <Flex
@@ -54,10 +54,14 @@ export const Disabled = () => (
 
 export const Icon = () => (
   <Wrapper>
-    <Button size="small" leftIcon={<Mail20Regular />}>
+    <Button size="small" leftIcon={<MdOutlineEmail sx={{ fontSize: 5 }} />}>
       Email
     </Button>
-    <Button variant="ghost" size="small" rightIcon={<ArrowRight20Regular />}>
+    <Button
+      variant="ghost"
+      size="small"
+      rightIcon={<MdArrowForward sx={{ fontSize: 5 }} />}
+    >
       Call us
     </Button>
   </Wrapper>
