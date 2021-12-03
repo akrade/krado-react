@@ -4,6 +4,7 @@
 
 ### Changed
 
+- `Heading` cell component has now been combined into `Text`. ([KRAD-177])
 - Upgraded to Babel 7.16 ([KRAD-205])
 - Turned off the `react/jsx-uses-react` and `react/react-in-jsx-scope` rules. ([KRAD-207])
 
@@ -14,7 +15,9 @@
 ### Removed
 
 - Unused React imports. See [this blog post from React](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) for more info. ([KRAD-207])
+- `Heading` cell component. ([KRAD-117])
 
+[krad-177]: https://akrade.atlassian.net/browse/KRAD-177
 [krad-205]: https://akrade.atlassian.net/browse/KRAD-205
 [krad-207]: https://akrade.atlassian.net/browse/KRAD-207
 
