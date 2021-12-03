@@ -7,6 +7,11 @@ export default function Text({ ...rest }) {
 
 Text.propTypes = {
   variant: PropTypes.oneOf([
+    'body.h1',
+    'body.h2',
+    'body.h3',
+    'body.h4',
+    'body.h5',
     'body.summary',
     'body.paragraph',
     'body.paragraph',
@@ -17,6 +22,11 @@ Text.propTypes = {
     'body.footnote',
     'body.pretext',
     'display.display',
+    'display.h1',
+    'display.h2',
+    'display.h3',
+    'display.h4',
+    'display.h5',
     'display.quote'
   ])
 };
