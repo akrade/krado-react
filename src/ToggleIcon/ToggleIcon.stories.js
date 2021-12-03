@@ -1,5 +1,5 @@
 import ToggleIcon from './ToggleIcon';
-import { Heart20Filled } from '@fluentui/react-icons';
+import { MdFavorite } from 'react-icons/md';
 import Flex from '../Flex/Flex';
 
 export default {
@@ -14,7 +14,7 @@ export const Basic = () => (
     sx={{ justifyContent: 'center', borderRadius: 1 }}
   >
     <ToggleIcon>
-      <Heart20Filled />
+      <MdFavorite />
     </ToggleIcon>
   </Flex>
 );
