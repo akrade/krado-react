@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.7.0] - 2021-12-03
+
 ### Changed
 
 - `Heading` cell component has now been combined into `Text` for simplicity. ([KRAD-177])
@@ -237,7 +239,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.6.4...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/akrade/krado-react/compare/v0.6.4...v0.7.0
 [0.6.4]: https://github.com/akrade/krado-react/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/akrade/krado-react/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/akrade/krado-react/compare/v0.6.1...v0.6.2
