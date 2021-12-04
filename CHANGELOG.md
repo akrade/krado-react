@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.7.1]
+
 ### Fixed
 
 - Added back in React imports to fix "React is not defined" when package is in use. ([KRAD-208])
@@ -245,7 +247,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.7.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.7.1...HEAD
+[0.7.1]: https://github.com/akrade/krado-react/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/akrade/krado-react/compare/v0.6.4...v0.7.0
 [0.6.4]: https://github.com/akrade/krado-react/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/akrade/krado-react/compare/v0.6.2...v0.6.3
