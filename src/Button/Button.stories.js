@@ -1,3 +1,4 @@
+import React from 'react';
 import Button from './Button';
 import { MdOutlineEmail, MdArrowForward } from 'react-icons/md';
 import Flex from '../Flex/Flex';

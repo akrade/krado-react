@@ -1,3 +1,4 @@
+import React from 'react';
 import ToggleIcon from './ToggleIcon';
 import { MdFavorite } from 'react-icons/md';
 import Flex from '../Flex/Flex';
