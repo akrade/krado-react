@@ -1,3 +1,4 @@
+import React from 'react';
 import { MdMenu, MdSearch } from 'react-icons/md';
 import Box from '../Box/Box';
 import {

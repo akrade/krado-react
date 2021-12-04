@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Added back in React imports to fix "React is not defined" when package is in use. ([KRAD-208])
+
+[krad-208]: https://akrade.atlassian.net/browse/KRAD-208
+
 ## [0.7.0] - 2021-12-03
 
 ### Changed
