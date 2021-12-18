@@ -5,14 +5,20 @@
 ### Added
 
 - `@babel/plugin-transform-react-jsx`. ([KRAD-205])
+- [`microbundle`](https://github.com/developit/microbundle). ([KRAD-205])
 
 ### Changed
 
 - Updated `@babel/core`. ([KRAD-205])
 
+### Fixed
+
+- Broken JSX transform error on compile caused by [`microbundle-crl`](https://www.npmjs.com/package/microbundle-crl). ([KRAD-205])
+
 ### Removed
 
 - `@babel/preset-react`. ([KRAD-205])
+- [`microbundle-crl`](https://www.npmjs.com/package/microbundle-crl). ([KRAD-205])
 
 [krad-205]: https://akrade.atlassian.net/browse/KRAD-205
 
