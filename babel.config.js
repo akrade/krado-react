@@ -1,7 +1,7 @@
 module.exports = {
-  presets: [
+  plugins: [
     [
-      '@babel/preset-react',
+      '@babel/plugin-transform-react-jsx',
       {
         importSource: 'theme-ui',
         runtime: 'automatic',

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text as ThemeUiText } from 'theme-ui';
 import PropTypes from 'prop-types';
 

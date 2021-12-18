@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button as ThemeUiButton } from 'theme-ui';
 import Box from '../Box/Box';
 import PropTypes from 'prop-types';
