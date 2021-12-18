@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.7.2] - 2021-12-17
+
 ### Added
 
 - `@babel/plugin-transform-react-jsx`. ([KRAD-205])
@@ -269,7 +271,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.7.1...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.7.2...HEAD
+[0.7.2]: https://github.com/akrade/krado-react/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/akrade/krado-react/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/akrade/krado-react/compare/v0.6.4...v0.7.0
 [0.6.4]: https://github.com/akrade/krado-react/compare/v0.6.3...v0.6.4
