@@ -19,8 +19,10 @@
 
 - `@babel/preset-react`. ([KRAD-205])
 - [`microbundle-crl`](https://www.npmjs.com/package/microbundle-crl). ([KRAD-205])
+- Unused React imports... [again](https://github.com/akrade/krado-react/releases/tag/v0.7.0). ([KRAD-207])
 
 [krad-205]: https://akrade.atlassian.net/browse/KRAD-205
+[krad-207]: https://akrade.atlassian.net/browse/KRAD-207
 
 ## [0.7.1] - 2021-12-03
 
