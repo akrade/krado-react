@@ -2,9 +2,17 @@
 
 ## [Unreleased]
 
+### Added
+
+- `@babel/plugin-transform-react-jsx`. ([KRAD-205])
+
 ### Changed
 
 - Updated `@babel/core`. ([KRAD-205])
+
+### Removed
+
+- `@babel/preset-react`. ([KRAD-205])
 
 [krad-205]: https://akrade.atlassian.net/browse/KRAD-205
 
