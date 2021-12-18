@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Updated `@babel/core`. ([KRAD-205])
+
+[krad-205]: https://akrade.atlassian.net/browse/KRAD-205
+
 ## [0.7.1] - 2021-12-03
 
 ### Fixed
