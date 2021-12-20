@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Push, {
+import {
+  Push,
   PushContent,
   PushDivider,
   PushHeader,
