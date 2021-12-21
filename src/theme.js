@@ -154,6 +154,7 @@ const theme = {
     body: {
       h1: {
         fontSize: 8,
+        fontWeight: 400,
         lineHeight: 'heading'
       },
       h2: {
@@ -218,12 +219,14 @@ const theme = {
       display: {
         fontFamily: 'display',
         fontSize: '104px',
+        fontWeight: 400,
         lineHeight: '104px',
         letterSpacing: 'display'
       },
       h1: {
         fontFamily: 'display',
         fontSize: 10,
+        fontWeight: 400,
         lineHeight: '78px',
         letterSpacing: 'display'
       },
