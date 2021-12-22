@@ -6,5 +6,7 @@ export default {
 };
 
 export const Default = () => (
-  <Container backgroundColor="muted">Centered container</Container>
+  <Container paddingY={4} backgroundColor="muted">
+    Centered container
+  </Container>
 );
