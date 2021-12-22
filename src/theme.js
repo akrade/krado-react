@@ -18,8 +18,8 @@ const theme = {
     primary: kradoColors.taweret700,
     secondary: kradoColors.taweret600,
     accent: kradoColors.ptah500,
-    muted: kradoColors.ash100,
     highlight: kradoColors.taweret500,
+    muted: kradoColors.ash100,
 
     // Utility
     success: kradoColors.usir500,
