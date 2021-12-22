@@ -5,6 +5,7 @@
 ### Added
 
 - `Container` cell. ([KRAD-218])
+- `Divider` cell. ([KRAD-219])
 
 ### Fixed
 
@@ -12,6 +13,7 @@
 - `Push` not exporting correctly. ([KRAD-214])
 
 [krad-218]: https://akrade.atlassian.net/browse/KRAD-218
+[krad-219]: https://akrade.atlassian.net/browse/KRAD-219
 [krad-217]: https://akrade.atlassian.net/browse/KRAD-217
 [krad-214]: https://akrade.atlassian.net/browse/KRAD-214
 
