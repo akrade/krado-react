@@ -6,7 +6,8 @@ const theme = {
     small: '40rem',
     medium: '52rem',
     large: '90rem',
-    extraLarge: '120rem'
+    extraLarge: '120rem',
+    container: '90rem'
   },
   breakpoints: ['40em', '52em', '90em', '120rem'],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84],
@@ -154,6 +155,7 @@ const theme = {
     body: {
       h1: {
         fontSize: 8,
+        fontWeight: 400,
         lineHeight: 'heading'
       },
       h2: {
@@ -218,12 +220,14 @@ const theme = {
       display: {
         fontFamily: 'display',
         fontSize: '104px',
+        fontWeight: 400,
         lineHeight: '104px',
         letterSpacing: 'display'
       },
       h1: {
         fontFamily: 'display',
         fontSize: 10,
+        fontWeight: 400,
         lineHeight: '78px',
         letterSpacing: 'display'
       },

@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+### Added
+
+- `Container` cell. ([KRAD-218])
+
+### Fixed
+
+- `Text` turning bold when set as an heading tag like `<h2>`. ([KRAD-217])
+
+[krad-218]: https://akrade.atlassian.net/browse/KRAD-218
+[krad-217]: https://akrade.atlassian.net/browse/KRAD-217
+
 ## [0.7.2] - 2021-12-17
 
 ### Added
