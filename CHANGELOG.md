@@ -7,6 +7,10 @@
 - `Container` cell. ([KRAD-218])
 - `Divider` cell. ([KRAD-219])
 
+### Changed
+
+- Adjusted `Push` close animation for give extra space for the open/close open.
+
 ### Fixed
 
 - `Text` turning bold when set as an heading tag like `<h2>`. ([KRAD-217])

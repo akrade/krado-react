@@ -326,7 +326,7 @@ PushContent.defaultProps = {
 export function Push({ children, isOpen, onClose, behavior }) {
   const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
   const variant = {
-    hidden: { marginLeft: '-272px' },
+    hidden: { marginLeft: '-255px' },
     show: { marginLeft: '0px' }
   };
 
