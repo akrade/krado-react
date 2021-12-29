@@ -11,21 +11,6 @@ export const Default = (args) => <Text {...args}>Text</Text>;
 export const Variants = () => (
   <Flex sx={{ gap: 6 }}>
     <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-      <Text as="h1" variant="body.h1">
-        H1
-      </Text>
-      <Text as="h2" variant="body.h2">
-        H2
-      </Text>
-      <Text as="h3" variant="body.h3">
-        H3
-      </Text>
-      <Text as="h4" variant="body.h4">
-        H4
-      </Text>
-      <Text as="h5" variant="body.h5">
-        H5
-      </Text>
       <Text variant="body.summary">Summary</Text>
       <Text variant="body.paragraph">Paragraph</Text>
       <Text variant="body.smallParagraph">Small Paragraph</Text>
@@ -37,22 +22,6 @@ export const Variants = () => (
     </Flex>
 
     <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-      <Text variant="display.display">Display</Text>
-      <Text as="h1" variant="display.h1">
-        H1
-      </Text>
-      <Text as="h2" variant="display.h2">
-        H2
-      </Text>
-      <Text as="h3" variant="display.h3">
-        H3
-      </Text>
-      <Text as="h4" variant="display.h4">
-        H4
-      </Text>
-      <Text as="h5" variant="display.h5">
-        H5
-      </Text>
       <Text variant="display.quote">Quote</Text>
     </Flex>
   </Flex>

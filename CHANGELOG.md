@@ -6,6 +6,7 @@
 
 - `Container` cell. ([KRAD-218])
 - `Divider` cell. ([KRAD-219])
+- Re-added `Heading` cell.
 
 ### Changed
 
