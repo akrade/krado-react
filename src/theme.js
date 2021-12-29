@@ -7,7 +7,7 @@ const theme = {
     medium: '52rem',
     large: '90rem',
     extraLarge: '120rem',
-    container: '90rem'
+    container: '120rem'
   },
   breakpoints: ['40em', '52em', '90em', '120rem'],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84],
