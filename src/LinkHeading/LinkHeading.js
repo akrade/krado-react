@@ -20,6 +20,6 @@ export default function LinkHeading(props) {
     </Heading>
   );
 }
-Heading.defaultProps = {
+LinkHeading.defaultProps = {
   variant: 'display.h4'
 };
