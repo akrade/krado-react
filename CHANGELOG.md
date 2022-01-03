@@ -9,9 +9,12 @@
 ### Fixed
 
 - Gave the title's letter spacing in `Header` more breathing room. ([KRAD-220])
+- `PushHeader` bold font weight not applying. ([KRAD-222])
+- Incorrect `PushLabel` when inside a level 100 `Push` menu. ([KRAD-222])
 
 [krad-238]: https://akrade.atlassian.net/browse/KRAD-238
 [krad-220]: https://akrade.atlassian.net/browse/KRAD-220
+[krad-222]: https://akrade.atlassian.net/browse/KRAD-222
 
 ## [0.8.0] - 2022-01-03
 

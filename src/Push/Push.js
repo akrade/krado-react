@@ -71,14 +71,14 @@ export function PushHeader({ children, ...props }) {
         display: 'flex',
         alignItems: 'center',
         marginY: 4,
-        paddingX: 2,
-        fontWeight: 'bold'
+        paddingX: 2
       }}
     >
       <MdChevronLeft sx={{ fontSize: 5 }} />
       <a
         sx={{
           variant: 'text.body.h3',
+          fontWeight: 'bold',
           color: 'inherit',
           textDecoration: 'none',
           '&:hover': {
@@ -115,6 +115,7 @@ export function PushLabel({ children }) {
         paddingX: 4,
         color: 'accent',
         fontSize: 1,
+        fontWeight: 600,
         textTransform: 'uppercase'
       }}
     >
