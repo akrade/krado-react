@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.8.0] - 2022-01-03
+
 ### Added
 
 - `Container` cell. ([KRAD-218])
@@ -297,7 +299,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.7.2...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/akrade/krado-react/compare/v0.7.2...v0.8.0
 [0.7.2]: https://github.com/akrade/krado-react/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/akrade/krado-react/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/akrade/krado-react/compare/v0.6.4...v0.7.0
