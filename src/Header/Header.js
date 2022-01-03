@@ -100,7 +100,7 @@ export function Header({ children, isSmall }) {
       sx={{
         position: 'sticky',
         top: 0,
-        zIndex: 4,
+        zIndex: 3,
         backgroundColor: 'background',
         boxShadow: 'soft.low'
       }}
