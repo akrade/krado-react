@@ -33,8 +33,8 @@ const theme = {
     black: kradoColors.ash800
   },
   fonts: {
-    body: 'Barlow, Arial, sans-serif',
-    heading: 'Barlow, Arial, sans-serif',
+    body: 'Inter, Arial, sans-serif',
+    heading: 'Inter, Arial, sans-serif',
     display: 'Merriweather, Georgia, serif'
   },
   fontWeights: {

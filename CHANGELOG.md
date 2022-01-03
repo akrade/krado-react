@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Default body font to "[Inter](https://fonts.google.com/specimen/Inter)." ([KRAD-238])
+
+[krad-238]: https://akrade.atlassian.net/browse/KRAD-238
+
 ## [0.8.0] - 2022-01-03
 
 ### Added
