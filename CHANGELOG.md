@@ -9,6 +9,7 @@
 ### Changed
 
 - Default body font to "[Inter](https://fonts.google.com/specimen/Inter)." ([KRAD-238])
+- `Header` now has an lower elevation. ([KRAD-222])
 
 ### Fixed
 
