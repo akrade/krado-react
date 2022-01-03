@@ -16,7 +16,7 @@
 - Gave the title's letter spacing in `Header` more breathing room. ([KRAD-220])
 - `PushHeader` bold font weight not applying. ([KRAD-222])
 - Incorrect `PushLabel` when inside a level 100 `Push` menu. ([KRAD-222])
-- `Panel` menu showing up behind other elements ([KRAD-235])
+- `Panel` menu showing up behind other elements. ([KRAD-235])
 
 [krad-211]: https://akrade.atlassian.net/browse/KRAD-211
 [krad-238]: https://akrade.atlassian.net/browse/KRAD-238
