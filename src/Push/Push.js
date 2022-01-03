@@ -115,6 +115,7 @@ export function PushLabel({ children }) {
         paddingX: 4,
         color: 'accent',
         fontSize: 1,
+        fontWeight: 600,
         textTransform: 'uppercase'
       }}
     >
