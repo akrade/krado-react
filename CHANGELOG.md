@@ -6,7 +6,12 @@
 
 - Default body font to "[Inter](https://fonts.google.com/specimen/Inter)." ([KRAD-238])
 
+### Fixed
+
+- Gave the title's letter spacing in `Header` more breathing room. ([KRAD-220])
+
 [krad-238]: https://akrade.atlassian.net/browse/KRAD-238
+[krad-220]: https://akrade.atlassian.net/browse/KRAD-220
 
 ## [0.8.0] - 2022-01-03
 
