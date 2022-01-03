@@ -18,10 +18,15 @@
 - `Text` turning bold when set as an heading tag like `<h2>`. ([KRAD-217])
 - `Push` not exporting correctly. ([KRAD-214])
 
+### Removed
+
+- Unused React imports inside `Panel` and `Push`. ([KRAD-215])
+
 [krad-218]: https://akrade.atlassian.net/browse/KRAD-218
 [krad-219]: https://akrade.atlassian.net/browse/KRAD-219
 [krad-217]: https://akrade.atlassian.net/browse/KRAD-217
 [krad-214]: https://akrade.atlassian.net/browse/KRAD-214
+[krad-215]: https://akrade.atlassian.net/browse/KRAD-215
 
 ## [0.7.2] - 2021-12-17
 
