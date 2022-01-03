@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Implemented [Storybook's official Emotion 11 quasi-compatibility](https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#emotion11-quasi-compatibility). ([KRAD-211])
+
 ### Changed
 
 - Default body font to "[Inter](https://fonts.google.com/specimen/Inter)." ([KRAD-238])
@@ -12,6 +16,7 @@
 - `PushHeader` bold font weight not applying. ([KRAD-222])
 - Incorrect `PushLabel` when inside a level 100 `Push` menu. ([KRAD-222])
 
+[krad-211]: https://akrade.atlassian.net/browse/KRAD-211
 [krad-238]: https://akrade.atlassian.net/browse/KRAD-238
 [krad-220]: https://akrade.atlassian.net/browse/KRAD-220
 [krad-222]: https://akrade.atlassian.net/browse/KRAD-222
