@@ -62,6 +62,7 @@
   ],
   "dependencies": {
     "framer-motion": "^4.1.17",
+    "prop-types": "^15.7.2",
     "react-icons": "^4.3.1",
     "react-lottie": "^1.2.3",
     "theme-ui": "0.12.1"
