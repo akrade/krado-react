@@ -73,6 +73,7 @@ export function HeaderTitle({ children }) {
       sx={{
         variant: 'text.display.h2',
         fontWeight: 600,
+        letterSpacing: '0.025em',
         textTransform: 'uppercase'
       }}
     >
