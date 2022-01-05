@@ -17,12 +17,14 @@
 - `PushHeader` bold font weight not applying. ([KRAD-222])
 - Incorrect `PushLabel` when inside a level 100 `Push` menu. ([KRAD-222])
 - `Panel` menu showing up behind other elements. ([KRAD-235])
+- `HeaderIconButton` props not working. ([KRAD-213])
 
 [krad-211]: https://akrade.atlassian.net/browse/KRAD-211
 [krad-238]: https://akrade.atlassian.net/browse/KRAD-238
 [krad-220]: https://akrade.atlassian.net/browse/KRAD-220
 [krad-222]: https://akrade.atlassian.net/browse/KRAD-222
 [krad-235]: https://akrade.atlassian.net/browse/KRAD-235
+[krad-213]: https://akrade.atlassian.net/browse/KRAD-213
 
 ## [0.8.0] - 2022-01-03
 
