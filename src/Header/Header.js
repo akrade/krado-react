@@ -82,8 +82,12 @@ export function HeaderTitle({ children }) {
   );
 }
 
-export function HeaderIconButton({ children }) {
-  return <ToggleIcon sx={{ marginRight: 3 }}>{children}</ToggleIcon>;
+export function HeaderIconButton({ children, ...props }) {
+  return (
+    <ToggleIcon sx={{ marginRight: 3 }} {...props}>
+      {children}
+    </ToggleIcon>
+  );
 }
 
 export function Header({ children, isSmall }) {
