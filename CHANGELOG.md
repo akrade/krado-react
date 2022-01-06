@@ -5,6 +5,7 @@
 ### Added
 
 - Implemented [Storybook's official Emotion 11 quasi-compatibility](https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#emotion11-quasi-compatibility). ([KRAD-211])
+- Ability to add descriptions to `PanelItem`. ([KRAD-201])
 
 ### Changed
 
@@ -20,6 +21,7 @@
 - `HeaderIconButton` props not working. ([KRAD-213])
 
 [krad-211]: https://akrade.atlassian.net/browse/KRAD-211
+[krad-201]: https://akrade.atlassian.net/browse/KRAD-201
 [krad-238]: https://akrade.atlassian.net/browse/KRAD-238
 [krad-220]: https://akrade.atlassian.net/browse/KRAD-220
 [krad-222]: https://akrade.atlassian.net/browse/KRAD-222
