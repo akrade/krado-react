@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
+import Text from '../Text/Text';
+import Flex from '../Flex/Flex';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
@@ -183,7 +185,7 @@ export function PushSubItem({ children }) {
   );
 }
 
-export function PushItem({ children, label, icon, ...props }) {
+export function PushItem({ children, label, description, icon, ...props }) {
   const [isItemHovered, setIsItemHovered] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const variant = {
@@ -223,7 +225,7 @@ export function PushItem({ children, label, icon, ...props }) {
         style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
         sx={{
           display: 'flex',
-          alignItems: 'center',
+          flexDirection: 'column',
           paddingX: 4,
           paddingY: 3,
           color: 'inherit',
@@ -234,21 +236,29 @@ export function PushItem({ children, label, icon, ...props }) {
         }}
         {...props}
       >
-        <motion.span
-          variants={{
-            active: { scale: 1.15 }
-          }}
-        >
-          {label}
-        </motion.span>
+        <Flex>
+          <motion.span
+            variants={{
+              active: { scale: 1.15 }
+            }}
+          >
+            {label}
+          </motion.span>
 
-        <motion.span
-          variants={iconVariant}
-          animate={isItemHovered ? 'show' : 'hidden'}
-          sx={{ marginLeft: 'auto' }}
-        >
-          {!icon ? <MdChevronRight /> : icon}
-        </motion.span>
+          <motion.span
+            variants={iconVariant}
+            animate={isItemHovered ? 'show' : 'hidden'}
+            sx={{ marginLeft: 'auto' }}
+          >
+            {!icon ? <MdChevronRight /> : icon}
+          </motion.span>
+        </Flex>
+
+        {description && (
+          <Text variant="body.caption" sx={{ marginTop: 3 }}>
+            {description}
+          </Text>
+        )}
       </motion.a>
 
       {isSubMenuOpen && <PushSubMenu>{children}</PushSubMenu>}

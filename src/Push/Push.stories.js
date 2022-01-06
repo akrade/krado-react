@@ -93,7 +93,10 @@ export function Default() {
               </PushItem>
               <PushItem label="Grids" />
               <PushItem label="Header" />
-              <PushItem label="Footer" />
+              <PushItem
+                label="Footer"
+                description="The fundemental building blocks of the design system."
+              />
               <PushItem label="Search" />
               <PushDivider />
               <PushLabel>Style</PushLabel>
