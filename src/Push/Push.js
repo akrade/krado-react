@@ -6,10 +6,10 @@ import Lottie from 'react-lottie';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
+import Flex from '../Flex/Flex';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
-import Flex from '../Flex/Flex';
 
 function PushCloseButton({ isOpen, ...rest }) {
   const open = {
