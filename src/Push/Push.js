@@ -313,7 +313,7 @@ export function PushContent({ children, level }) {
         variant: getLevel(level),
         position: 'absolute',
         zIndex: 2,
-        overflow: 'hidden',
+        overflow: 'auto',
         listStyle: 'none',
         margin: 0,
         padding: 0,

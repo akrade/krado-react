@@ -21,6 +21,7 @@
 - `HeaderIconButton` props not working. ([KRAD-213])
 - `Push` menu not spanning the full height of the page. ([KRAD-233])
 - `Push` menu's close button not sticking to the top of the screen on scroll. ([KRAD-233])
+- Not being able to scroll down to see more menu content in `Push` menu. ([KRAD-233])
 
 [krad-211]: https://akrade.atlassian.net/browse/KRAD-211
 [krad-201]: https://akrade.atlassian.net/browse/KRAD-201
