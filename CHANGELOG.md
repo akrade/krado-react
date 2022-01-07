@@ -19,10 +19,13 @@
 - Incorrect `PushLabel` when inside a level 100 `Push` menu. ([KRAD-222])
 - `Panel` menu showing up behind other elements. ([KRAD-235])
 - `HeaderIconButton` props not working. ([KRAD-213])
+- `Push` menu not spanning the full height of the page. ([KRAD-233])
+- `Push` menu's close button not sticking to the top of the screen on scroll. ([KRAD-233])
 
 [krad-211]: https://akrade.atlassian.net/browse/KRAD-211
 [krad-201]: https://akrade.atlassian.net/browse/KRAD-201
 [krad-238]: https://akrade.atlassian.net/browse/KRAD-238
+[krad-233]: https://akrade.atlassian.net/browse/KRAD-233
 [krad-220]: https://akrade.atlassian.net/browse/KRAD-220
 [krad-222]: https://akrade.atlassian.net/browse/KRAD-222
 [krad-235]: https://akrade.atlassian.net/browse/KRAD-235

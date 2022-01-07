@@ -311,16 +311,14 @@ export function PushContent({ children, level }) {
       exit="hidden"
       sx={{
         variant: getLevel(level),
+        position: 'absolute',
         zIndex: 2,
         overflow: 'hidden',
-        position: 'absolute',
+        listStyle: 'none',
         margin: 0,
         padding: 0,
         width: '100%',
-        height: '100%',
-        backgroundColor: 'white',
-        boxShadow: 'hard.high',
-        listStyle: 'none'
+        height: '100%'
       }}
     >
       {children}
@@ -349,28 +347,35 @@ export function Push({ children, isOpen, onClose, behavior }) {
       sx={{
         flex: '0 0 auto',
         position: 'relative',
-        marginLeft: '-287px',
         width: '287px',
         height: '100vh'
       }}
     >
-      <PushCloseButton
-        onClick={onClose}
-        isHidden={isCloseButtonHidden}
-        behavior={behavior}
-        isOpen={isOpen}
-      />
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, transitionEnd: { display: 'none' } },
-          show: { display: 'block', opacity: 1 }
-        }}
-        onHoverStart={() => setIsCloseButtonHidden(true)}
-        onHoverEnd={() => setIsCloseButtonHidden(false)}
-        sx={{ zIndex: 2 }}
-      >
-        {children}
-      </motion.div>
+      <Box sx={{ position: 'fixed', width: '287px', height: '100vh' }}>
+        <PushCloseButton
+          onClick={onClose}
+          isHidden={isCloseButtonHidden}
+          behavior={behavior}
+          isOpen={isOpen}
+        />
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, transitionEnd: { display: 'none' } },
+            show: { display: 'block', opacity: 1 }
+          }}
+          onHoverStart={() => setIsCloseButtonHidden(true)}
+          onHoverEnd={() => setIsCloseButtonHidden(false)}
+          sx={{
+            zIndex: 2,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'white',
+            boxShadow: 'hard.high'
+          }}
+        >
+          {children}
+        </motion.div>
+      </Box>
     </motion.nav>
   );
 }
