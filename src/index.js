@@ -21,3 +21,4 @@ export { default as Container } from './Container/Container';
 export * from './Panel/Panel';
 export * from './Push/Push';
 export * from './Header/Header';
+export * from './Footer/Footer';
