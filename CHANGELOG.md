@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Added
+
+- 'Footer' tissue. ([KRAD-133])
+
+[krad-133]: https://akrade.atlassian.net/browse/KRAD-133
+
 ## [0.9.0] - 2022-01-14
 
 ### Added
