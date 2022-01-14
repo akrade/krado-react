@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.9.0] - 2022-01-14
+
 ### Added
 
 - Implemented [Storybook's official Emotion 11 quasi-compatibility](https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#emotion11-quasi-compatibility). ([KRAD-211])
@@ -329,7 +331,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.8.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/akrade/krado-react/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/akrade/krado-react/compare/v0.7.2...v0.8.0
 [0.7.2]: https://github.com/akrade/krado-react/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/akrade/krado-react/compare/v0.7.0...v0.7.1
