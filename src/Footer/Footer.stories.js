@@ -10,7 +10,7 @@ export const Default = () => (
   <Flex sx={{ flexDirection: 'column', height: '100vh' }}>
     <Footer>
       <FooterFootnote>
-        2021 Akrade, LLC. An Akrade & Company. All Rights Reserved.
+        2021 Akrade, LLC. By Akrade & Company. All Rights Reserved.
       </FooterFootnote>
       <FooterContent>
         <FooterItem href="#">Terms of Use</FooterItem>

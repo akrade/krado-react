@@ -6,6 +6,10 @@
 
 - 'Footer' tissue. ([KRAD-133])
 
+### Changed
+
+- Changed footer footnote to from "An Akrade Company" to "By Akrade & Company."
+
 [krad-133]: https://akrade.atlassian.net/browse/KRAD-133
 
 ## [0.9.0] - 2022-01-14
