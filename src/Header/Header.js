@@ -11,7 +11,7 @@ export function HeaderItem({ children, href, onClick }) {
     },
     active: {
       boxShadow: useThemeUI().theme.shadows.hard.high,
-      color: useThemeUI().theme.colors.highlight
+      color: useThemeUI().theme.colors.action.active
     }
   };
 

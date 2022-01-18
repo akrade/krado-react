@@ -6,7 +6,7 @@ export default {
 };
 
 export const Default = () => (
-  <Box p={4} color="background" bg="primary" sx={{ borderRadius: 1 }}>
+  <Box p={4} color="background" bg="primary.regular" sx={{ borderRadius: 1 }}>
     This is a box
   </Box>
 );

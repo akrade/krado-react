@@ -8,7 +8,6 @@ export default function Card({ children }) {
         borderRadius: 3,
         backgroundColor: 'background',
         boxShadow: 'soft.low',
-
         transition: 'transform 325ms ease, box-shadow 325ms ease',
         '&:hover': {
           transform: 'scale(1.02)',

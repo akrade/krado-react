@@ -61,7 +61,7 @@ export function PushHeader({ children, ...props }) {
       transition: { type: 'spring', damping: 20, duration: 0.4 }
     },
     active: {
-      color: useThemeUI().theme.colors.highlight
+      color: useThemeUI().theme.colors.action.active
     }
   };
 
@@ -115,7 +115,7 @@ export function PushLabel({ children }) {
         marginTop: 4,
         marginBottom: 3,
         paddingX: 4,
-        color: 'accent',
+        color: 'secondary.regular',
         fontSize: 1,
         fontWeight: 600,
         textTransform: 'uppercase'
@@ -161,7 +161,7 @@ export function PushSubItem({ children }) {
       transition: { type: 'spring', damping: 20, duration: 0.4 }
     },
     active: {
-      color: useThemeUI().theme.colors.highlight
+      color: useThemeUI().theme.colors.action.active
     }
   };
 
@@ -173,7 +173,7 @@ export function PushSubItem({ children }) {
         variant: 'text.body.smallParagraph',
         paddingX: 4,
         paddingY: 2,
-        color: 'text',
+        color: 'text.primary',
         fontWeight: 400,
         '&:hover': {
           cursor: 'pointer'
@@ -200,7 +200,7 @@ export function PushItem({ children, label, description, icon, ...props }) {
       transition: { type: 'spring', damping: 20, duration: 0.4 }
     },
     active: {
-      color: useThemeUI().theme.colors.highlight,
+      color: useThemeUI().theme.colors.action.active,
       boxShadow: useThemeUI().theme.shadows.soft.highMiddle
     }
   };
@@ -277,7 +277,7 @@ export function PushDivider() {
     <Box
       marginX={4}
       marginY={3}
-      backgroundColor="lightGray"
+      backgroundColor="divider"
       sx={{ height: '1px' }}
     />
   );
@@ -369,7 +369,7 @@ export function Push({ children, isOpen, onClose, behavior }) {
             zIndex: 2,
             width: '100%',
             height: '100%',
-            backgroundColor: 'white',
+            backgroundColor: 'background',
             boxShadow: 'hard.high'
           }}
         >

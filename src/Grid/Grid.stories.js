@@ -12,12 +12,12 @@ const GridItem = ({ ...props }) => (
 
 export const Default = () => (
   <Grid columns={2}>
-    <GridItem color="background" bg="primary">
+    <GridItem color="primary.contrast" backgroundColor="primary.regular">
       Grid
     </GridItem>
-    <GridItem bg="lightGray">Grid</GridItem>
-    <GridItem bg="lightGray">Grid</GridItem>
-    <GridItem color="background" bg="primary">
+    <GridItem backgroundColor="secondary.light">Grid</GridItem>
+    <GridItem backgroundColor="secondary.light">Grid</GridItem>
+    <GridItem color="primary.contrast" backgroundColor="primary.regular">
       Grid
     </GridItem>
   </Grid>

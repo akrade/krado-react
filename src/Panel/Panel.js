@@ -157,7 +157,7 @@ export function PanelItem({ children, icon, ...props }) {
       transition: { type: 'spring', damping: 20, duration: 0.4 }
     },
     active: {
-      color: useThemeUI().theme.colors.highlight,
+      color: useThemeUI().theme.colors.action.active,
       boxShadow: useThemeUI().theme.shadows.soft.highMiddle
     }
   };
@@ -210,7 +210,7 @@ export function PanelDivider() {
     <Box
       marginX={4}
       marginY={3}
-      backgroundColor="lightGray"
+      backgroundColor="divider"
       sx={{ height: '1px' }}
     />
   );

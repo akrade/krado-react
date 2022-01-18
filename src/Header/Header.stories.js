@@ -17,7 +17,13 @@ export default {
 
 export function Default(args) {
   return (
-    <Box sx={{ width: '100%', height: '100vw', backgroundColor: 'muted' }}>
+    <Box
+      sx={{
+        width: '100%',
+        height: '100vw',
+        backgroundColor: 'surface.thin'
+      }}
+    >
       <Header {...args}>
         <HeaderIconButton>
           <MdMenu />

@@ -11,7 +11,7 @@ export default function LinkHeading(props) {
         href={`#${props.id}`}
         sx={{
           marginTop: '2px',
-          color: 'highlight',
+          color: 'primary.regular',
           textDecoration: 'none'
         }}
       >

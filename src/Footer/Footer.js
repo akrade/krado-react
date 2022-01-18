@@ -40,7 +40,7 @@ export function Footer({ ...rest }) {
         justifyContent: 'space-between',
         paddingX: [3, 4, 5],
         paddingY: 3,
-        backgroundColor: 'white',
+        backgroundColor: 'background',
         boxShadow: 'soft.low'
       }}
       {...rest}
