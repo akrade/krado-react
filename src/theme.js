@@ -12,25 +12,80 @@ const theme = {
   breakpoints: ['40em', '52em', '90em', '120rem'],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84],
   colors: {
-    // UI colors
-    text: kradoColors.warmAsh800,
+    primary: {
+      regular: kradoColors.oshun400,
+      contrast: kradoColors.ash000
+    },
+    secondary: {
+      light: kradoColors.oshun300,
+      regular: kradoColors.oshun500,
+      medium: kradoColors.oshun600,
+      bold: kradoColors.oshun700,
+      contrast: kradoColors.ash000
+    },
+    accent: {
+      light: kradoColors.oshun000,
+      regular: kradoColors.oshun100,
+      medium: kradoColors.oshun200,
+      bold: kradoColors.oshun300,
+      contrast: kradoColors.ash000
+    },
+    error: {
+      light: kradoColors.asset000,
+      regular: kradoColors.asset400,
+      medium: kradoColors.asset600,
+      bold: kradoColors.asset700,
+      contrast: kradoColors.ash000
+    },
+    warning: {
+      light: kradoColors.oshun000,
+      regular: kradoColors.oshun400,
+      medium: kradoColors.oshun600,
+      bold: kradoColors.oshun700,
+      contrast: kradoColors.ash000
+    },
+    success: {
+      light: kradoColors.usir000,
+      regular: kradoColors.usir400,
+      medium: kradoColors.usir600,
+      bold: kradoColors.usir700,
+      contrast: kradoColors.ash000
+    },
+    info: {
+      light: kradoColors.ptah000,
+      regular: kradoColors.ptah400,
+      medium: kradoColors.ptah600,
+      bold: kradoColors.ptah700,
+      contrast: kradoColors.ash000
+    },
+    surface: {
+      extrathin: kradoColors.ash000,
+      thin: kradoColors.warmAsh100,
+      extralight: kradoColors.warmAsh200,
+      light: kradoColors.warmAsh300,
+      regular: kradoColors.warmAsh400,
+      medium: kradoColors.warmAsh500,
+      semibold: kradoColors.warmAsh600,
+      bold: kradoColors.warmAsh700,
+      semiblack: kradoColors.warmAsh800,
+      black: kradoColors.ash1000
+    },
+    action: {
+      active: kradoColors.oshun400,
+      hover: kradoColors.oshun500,
+      selected: kradoColors.oshun400,
+      disabled: kradoColors.warmAsh600,
+      disabledBackground: kradoColors.warmAsh100
+    },
+    text: {
+      primary: kradoColors.warmAsh800,
+      secondary: kradoColors.warmAsh600,
+      title: kradoColors.oshun400,
+      placeholder: kradoColors.warmAsh500,
+      disabled: kradoColors.warmAsh400
+    },
     background: kradoColors.ash000,
-    primary: kradoColors.taweret700,
-    secondary: kradoColors.taweret600,
-    accent: kradoColors.ptah500,
-    highlight: kradoColors.taweret500,
-    muted: kradoColors.ash100,
-
-    // Utility
-    success: kradoColors.usir500,
-    danger: kradoColors.sekmet500,
-
-    // Basic colors
-    white: kradoColors.ash000,
-    lightGray: kradoColors.ash200,
-    gray: kradoColors.ash300,
-    darkGray: kradoColors.ash600,
-    black: kradoColors.ash800
+    divider: kradoColors.warmAsh400
   },
   fonts: {
     body: 'Inter, Arial, sans-serif',
