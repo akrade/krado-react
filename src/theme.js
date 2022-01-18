@@ -268,7 +268,7 @@ const theme = {
         lineHeight: '18px',
         letterSpacing: '0.22em',
         textTransform: 'uppercase',
-        color: 'darkGray'
+        color: 'text.secondary'
       }
     },
     display: {
