@@ -200,9 +200,9 @@ const theme = {
       fontWeight: 'body'
     },
     a: {
-      color: 'highlight',
+      color: 'primary.regular',
       borderBottom: '3px solid',
-      borderColor: 'highlight',
+      borderColor: 'primary.regular',
       textDecoration: 'none'
     }
   },
