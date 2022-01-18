@@ -9,14 +9,19 @@ export default {
 export const Default = () => (
   <Flex>
     <Box
-      p={4}
-      color="background"
-      bg="primary"
+      padding={4}
+      color="primary.contrast"
+      backgroundColor="primary.regular"
       sx={{ flex: '1 1 auto', fontWeight: 'bold', borderRadius: 1 }}
     >
       Flex
     </Box>
-    <Box p={4} bg="lightGray" sx={{ fontWeight: 'bold', borderRadius: 1 }}>
+    <Box
+      padding={4}
+      color="secondary.contrast"
+      backgroundColor="secondary.regular"
+      sx={{ fontWeight: 'bold', borderRadius: 1 }}
+    >
       Box
     </Box>
   </Flex>

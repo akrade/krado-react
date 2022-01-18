@@ -10,7 +10,7 @@ export default {
 export const Basic = () => (
   <Flex
     padding={4}
-    backgroundColor="lightGray"
+    backgroundColor="surface.light"
     sx={{ justifyContent: 'center', borderRadius: 1 }}
   >
     <ToggleIcon>

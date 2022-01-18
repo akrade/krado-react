@@ -12,25 +12,79 @@ const theme = {
   breakpoints: ['40em', '52em', '90em', '120rem'],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84],
   colors: {
-    // UI colors
-    text: kradoColors.warmAsh800,
-    background: kradoColors.ash000,
-    primary: kradoColors.taweret700,
-    secondary: kradoColors.taweret600,
-    accent: kradoColors.ptah500,
-    highlight: kradoColors.taweret500,
-    muted: kradoColors.ash100,
-
-    // Utility
-    success: kradoColors.usir500,
-    danger: kradoColors.sekmet500,
-
-    // Basic colors
-    white: kradoColors.ash000,
-    lightGray: kradoColors.ash200,
-    gray: kradoColors.ash300,
-    darkGray: kradoColors.ash600,
-    black: kradoColors.ash800
+    primary: {
+      regular: '#9C264B',
+      contrast: '#FFFFFF'
+    },
+    secondary: {
+      light: '#AB4666',
+      regular: '#6E1B35',
+      bold: '#3E0F1E',
+      contrast: '#FFFFFF'
+    },
+    accent: {
+      light: '#F5E9ED',
+      regular: '#D7A8B7',
+      medium: '#E1BDC9',
+      bold: '#C47D93',
+      contrast: '#FFFFFF'
+    },
+    error: {
+      light: '#FAF4F6',
+      regular: '#9C264B',
+      medium: '#6E1B35',
+      bold: '#3E0F1E',
+      contrast: '#FFFFFF'
+    },
+    warning: {
+      light: '#F3E8CC',
+      regular: '#C18B01',
+      medium: '#876201',
+      bold: '#4D3800',
+      contrast: '#FFFFFF'
+    },
+    success: {
+      light: '#DCE4D4',
+      regular: '#52792A',
+      medium: '#97AF7F',
+      bold: '#213011',
+      contrast: '#FFFFFF'
+    },
+    info: {
+      light: '#F3F7FB',
+      regular: '#1661AB',
+      medium: '#0F4478',
+      bold: '#092744',
+      contrast: '#FFFFFF'
+    },
+    surface: {
+      extrathin: '#F4F4F3',
+      thin: '#DEDEDD',
+      extralight: '#B2B1AF',
+      light: '#868481',
+      regular: '#65625E',
+      medium: '#44403B',
+      semibold: '#393530',
+      bold: '#2E2A25',
+      semiblack: '#242220',
+      black: '#1A1816'
+    },
+    action: {
+      active: '#6E1B35',
+      hover: '#9C264B',
+      selected: '#9C264B',
+      disabled: '#E1BDC9',
+      disabledBackground: '#FFFFFF'
+    },
+    text: {
+      primary: '#2E2A25',
+      secondary: '#5A5753',
+      title: '#6E1B35',
+      placeholder: '#9C9A97',
+      disabled: '#C8C7C5'
+    },
+    background: '#FFFFFF',
+    divider: '#DEDEDD'
   },
   fonts: {
     body: 'Inter, Arial, sans-serif',
@@ -71,17 +125,17 @@ const theme = {
   borders: ['none', `2px solid black`],
   buttons: {
     solid: {
-      color: 'background',
-      bg: 'primary',
+      color: 'primary.contrast',
+      bg: 'primary.regular',
       '&:hover': {
-        bg: 'secondary'
+        bg: 'action.hover'
       },
       '&:active': {
-        bg: 'primary'
+        bg: 'action.active'
       },
       '&:disabled': {
-        color: 'darkGray',
-        bg: 'muted'
+        color: 'action.disabled',
+        bg: 'action.disabledBackground'
       },
       '&:focus-visible': {
         outline: 'none',
@@ -89,36 +143,36 @@ const theme = {
       }
     },
     text: {
-      color: 'primary',
+      color: 'primary.regular',
       bg: 'transparent',
       '&:hover': {
-        color: 'secondary'
+        color: 'action.hover'
       },
       '&:active': {
-        color: 'primary'
+        color: 'action.active'
       },
       '&:disabled': {
-        color: 'darkGray'
+        color: 'action.disabled'
       }
     },
     ghost: {
-      color: 'primary',
+      color: 'primary.regular',
       bg: 'transparent',
       border: 1,
-      borderColor: 'primary',
+      borderColor: 'primary.regular',
       '&:hover': {
-        color: 'secondary',
+        color: 'action.hover',
         borderColor: 'transparent',
         bg: 'background',
         boxShadow: 'hard.high'
       },
       '&:active': {
         color: 'background',
-        bg: 'primary'
+        bg: 'action.active'
       },
       '&:disabled': {
-        color: 'darkGray',
-        borderColor: 'darkGray',
+        color: 'action.disabled',
+        borderColor: 'action.disabled',
         boxShadow: 'none'
       }
     },
@@ -145,15 +199,22 @@ const theme = {
       fontWeight: 'body'
     },
     a: {
-      color: 'highlight',
+      color: 'primary.regular',
       borderBottom: '3px solid',
-      borderColor: 'highlight',
+      borderColor: 'primary.regular',
       textDecoration: 'none'
     }
   },
   text: {
+    base: {
+      color: 'text.primary'
+    },
+    default: {
+      variant: 'text.base'
+    },
     body: {
       h1: {
+        variant: 'text.base',
         fontSize: 8,
         fontWeight: 400,
         lineHeight: 'heading'
@@ -176,48 +237,57 @@ const theme = {
         fontSize: 4
       },
       summary: {
+        variant: 'text.base',
         fontSize: 6,
         lineHeight: '32px',
         letterSpacing: '-0.02em'
       },
       paragraph: {
+        variant: 'text.base',
         fontSize: 4,
         lineHeight: '28px'
       },
       smallParagraph: {
+        variant: 'text.base',
         fontSize: 2,
         lineHeight: '20px'
       },
       bold: {
+        variant: 'text.base',
         fontWeight: 'bold',
         fontSize: 4,
         lineHeight: '28px'
       },
       callout: {
+        variant: 'text.base',
         fontSize: 3,
         lineHeight: '20px'
       },
       caption: {
+        variant: 'text.base',
         fontWeight: 600,
         fontSize: '15px',
         lineHeight: '19px'
       },
       footnote: {
+        variant: 'text.base',
         fontWeight: 600,
         fontSize: '13px',
         lineHeight: '16px'
       },
       pretext: {
+        variant: 'text.base',
         fontWeight: 'bold',
         fontSize: 1,
         lineHeight: '18px',
         letterSpacing: '0.22em',
         textTransform: 'uppercase',
-        color: 'darkGray'
+        color: 'text.secondary'
       }
     },
     display: {
       display: {
+        variant: 'text.base',
         fontFamily: 'display',
         fontSize: '104px',
         fontWeight: 400,
@@ -225,6 +295,7 @@ const theme = {
         letterSpacing: 'display'
       },
       h1: {
+        variant: 'text.base',
         fontFamily: 'display',
         fontSize: 10,
         fontWeight: 400,
@@ -252,6 +323,7 @@ const theme = {
         lineHeight: '28px'
       },
       quote: {
+        variant: 'text.base',
         fontFamily: 'display',
         fontStyle: 'italic',
         fontSize: '25px',

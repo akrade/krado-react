@@ -5,8 +5,10 @@
 ### Added
 
 - 'Footer' tissue. ([KRAD-133])
+- "Color Bond" system for theme base colors. ([KRAD-189])
 
 [krad-133]: https://akrade.atlassian.net/browse/KRAD-133
+[krad-189]: https://akrade.atlassian.net/browse/KRAD-189
 
 ## [0.9.0] - 2022-01-14
 

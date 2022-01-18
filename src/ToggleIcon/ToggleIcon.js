@@ -59,7 +59,7 @@ export default function ToggleIcon({ behavior, isHidden, ...rest }) {
         padding: 0,
         width: '32px',
         height: '32px',
-        backgroundColor: 'white',
+        backgroundColor: 'background',
         border: 'none',
         cursor: 'pointer',
         borderRadius: 2,
