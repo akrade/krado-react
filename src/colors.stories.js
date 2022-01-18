@@ -20,7 +20,6 @@ function ColorItem({ title, color, dark, border }) {
         padding: 3,
         width: '171px',
         height: '80px',
-        color: dark ? 'text.primary' : 'background',
         backgroundColor: color,
         borderRadius: 1,
         boxShadow: 'hard.low',
@@ -32,6 +31,7 @@ function ColorItem({ title, color, dark, border }) {
       <Text
         variant="body.caption"
         sx={{
+          color: dark ? 'text.primary' : 'background',
           marginLeft: 'auto',
           marginTop: 'auto'
         }}
