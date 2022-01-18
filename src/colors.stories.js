@@ -44,7 +44,7 @@ function ColorItem({ title, color, dark, border }) {
 
 function ColorGroup({ children, rest }) {
   return (
-    <Flex sx={{ flexWrap: 'wrap', marginBottom: 4 }} {...rest}>
+    <Flex sx={{ flexWrap: 'wrap', marginBottom: 5 }} {...rest}>
       {children}
     </Flex>
   );
