@@ -203,6 +203,9 @@ const theme = {
       borderBottom: '3px solid',
       borderColor: 'primary.regular',
       textDecoration: 'none'
+    },
+    hr: {
+      color: 'divider'
     }
   },
   text: {
