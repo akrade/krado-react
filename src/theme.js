@@ -13,78 +13,78 @@ const theme = {
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84],
   colors: {
     primary: {
-      regular: kradoColors.oshun400,
-      contrast: kradoColors.ash000
+      regular: '#9C264B',
+      contrast: '#FFFFFF'
     },
     secondary: {
-      light: kradoColors.oshun300,
-      regular: kradoColors.oshun500,
-      bold: kradoColors.oshun700,
-      contrast: kradoColors.ash000
+      light: '#AB4666',
+      regular: '#6E1B35',
+      bold: '#3E0F1E',
+      contrast: '#FFFFFF'
     },
     accent: {
-      light: kradoColors.oshun000,
-      regular: kradoColors.oshun100,
-      medium: kradoColors.oshun200,
-      bold: kradoColors.oshun300,
-      contrast: kradoColors.ash000
+      light: '#F5E9ED',
+      regular: '#D7A8B7',
+      medium: '#E1BDC9',
+      bold: '#C47D93',
+      contrast: '#FFFFFF'
     },
     error: {
-      light: kradoColors.asset000,
-      regular: kradoColors.asset400,
-      medium: kradoColors.asset600,
-      bold: kradoColors.asset700,
-      contrast: kradoColors.ash000
+      light: '#FAF4F6',
+      regular: '#9C264B',
+      medium: '#6E1B35',
+      bold: '#3E0F1E',
+      contrast: '#FFFFFF'
     },
     warning: {
-      light: kradoColors.oshun000,
-      regular: kradoColors.oshun400,
-      medium: kradoColors.oshun600,
-      bold: kradoColors.oshun700,
-      contrast: kradoColors.ash000
+      light: '#F3E8CC',
+      regular: '#C18B01',
+      medium: '#876201',
+      bold: '#4D3800',
+      contrast: '#FFFFFF'
     },
     success: {
-      light: kradoColors.usir000,
-      regular: kradoColors.usir400,
-      medium: kradoColors.usir600,
-      bold: kradoColors.usir700,
-      contrast: kradoColors.ash000
+      light: '#DCE4D4',
+      regular: '#52792A',
+      medium: '#97AF7F',
+      bold: '#213011',
+      contrast: '#FFFFFF'
     },
     info: {
-      light: kradoColors.ptah000,
-      regular: kradoColors.ptah400,
-      medium: kradoColors.ptah600,
-      bold: kradoColors.ptah700,
-      contrast: kradoColors.ash000
+      light: '#F3F7FB',
+      regular: '#1661AB',
+      medium: '#0F4478',
+      bold: '#092744',
+      contrast: '#FFFFFF'
     },
     surface: {
-      extrathin: kradoColors.ash000,
-      thin: kradoColors.warmAsh100,
-      extralight: kradoColors.warmAsh200,
-      light: kradoColors.warmAsh300,
-      regular: kradoColors.warmAsh400,
-      medium: kradoColors.warmAsh500,
-      semibold: kradoColors.warmAsh600,
-      bold: kradoColors.warmAsh700,
-      semiblack: kradoColors.warmAsh800,
-      black: kradoColors.ash1000
+      extrathin: '#F4F4F3',
+      thin: '#DEDEDD',
+      extralight: '#B2B1AF',
+      light: '#868481',
+      regular: '#65625E',
+      medium: '#44403B',
+      semibold: '#393530',
+      bold: '#2E2A25',
+      semiblack: '#242220',
+      black: '#1A1816'
     },
     action: {
-      active: kradoColors.oshun400,
-      hover: kradoColors.oshun500,
-      selected: kradoColors.oshun400,
-      disabled: kradoColors.warmAsh600,
-      disabledBackground: kradoColors.warmAsh100
+      active: '#6E1B35',
+      hover: '#9C264B',
+      selected: '#9C264B',
+      disabled: '#E1BDC9',
+      disabledBackground: '#FFFFFF'
     },
     text: {
-      primary: kradoColors.warmAsh800,
-      secondary: kradoColors.warmAsh600,
-      title: kradoColors.oshun400,
-      placeholder: kradoColors.warmAsh500,
-      disabled: kradoColors.warmAsh400
+      primary: '#2E2A25',
+      secondary: '#5A5753',
+      title: '#6E1B35',
+      placeholder: '#9C9A97',
+      disabled: '#C8C7C5'
     },
-    background: kradoColors.ash000,
-    divider: kradoColors.warmAsh400
+    background: '#FFFFFF',
+    divider: '#DEDEDD'
   },
   fonts: {
     body: 'Inter, Arial, sans-serif',

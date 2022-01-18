@@ -24,7 +24,7 @@ function ColorItem({ title, color, dark, border }) {
         borderRadius: 1,
         boxShadow: 'hard.low',
         border: border ? '1px solid' : 'none',
-        borderColor: 'surface.light',
+        borderColor: 'surface.extralight',
         textAlign: 'right'
       }}
     >
@@ -83,7 +83,7 @@ export const Default = () => (
     <ColorHeading id="secondary">Secondary</ColorHeading>
     <ColorText>Secondary color used for alternative styling.</ColorText>
     <ColorGroup>
-      <ColorItem title="Light" color="secondary.light" dark />
+      <ColorItem title="Light" color="secondary.light" />
       <ColorItem title="Regular" color="secondary.regular" />
       <ColorItem title="Bold" color="secondary.bold" />
       <ColorItem title="Contrast" color="secondary.contrast" dark border />
@@ -93,9 +93,9 @@ export const Default = () => (
     <ColorText>A contrast color used sparingly.</ColorText>
     <ColorGroup>
       <ColorItem title="Light" color="accent.light" dark border />
-      <ColorItem title="Regular" color="accent.regular" dark border />
+      <ColorItem title="Regular" color="accent.regular" dark />
       <ColorItem title="Medium" color="accent.medium" dark />
-      <ColorItem title="Bold" color="accent.bold" dark />
+      <ColorItem title="Bold" color="accent.bold" />
       <ColorItem title="Contrast" color="accent.contrast" dark border />
     </ColorGroup>
 
@@ -152,9 +152,9 @@ export const Default = () => (
     <ColorText>A common muted color used for neutral elements.</ColorText>
     <ColorGroup sx={{ flexWrap: 'wrap' }}>
       <ColorItem title="Extra-Thin" color="surface.extrathin" dark border />
-      <ColorItem title="Thin" color="surface.thin" dark border />
-      <ColorItem title="Extra-Light" color="surface.extralight" dark border />
-      <ColorItem title="Light" color="surface.light" dark border />
+      <ColorItem title="Thin" color="surface.thin" dark />
+      <ColorItem title="Extra-Light" color="surface.extralight" />
+      <ColorItem title="Light" color="surface.light" />
       <ColorItem title="Regular" color="surface.regular" />
       <ColorItem title="Medium" color="surface.medium" />
       <ColorItem title="Semi-Bold" color="surface.semibold" />
@@ -185,7 +185,7 @@ export const Default = () => (
       <ColorItem title="Secondary" color="text.secondary" />
       <ColorItem title="Title" color="text.title" />
       <ColorItem title="Placeholder" color="text.placeholder" />
-      <ColorItem title="Disabled" color="text.disabled" />
+      <ColorItem title="Disabled" color="text.disabled" dark />
     </ColorGroup>
 
     <ColorHeading id="background">Background</ColorHeading>
@@ -197,7 +197,7 @@ export const Default = () => (
     <ColorHeading id="divider">Divider</ColorHeading>
     <ColorText>Color for divider cells.</ColorText>
     <ColorGroup>
-      <ColorItem title="Regular" color="divider" />
+      <ColorItem title="Regular" color="divider" dark border />
     </ColorGroup>
   </Box>
 );
