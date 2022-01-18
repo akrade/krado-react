@@ -207,8 +207,15 @@ const theme = {
     }
   },
   text: {
+    base: {
+      color: 'text.primary'
+    },
+    default: {
+      variant: 'text.base'
+    },
     body: {
       h1: {
+        variant: 'text.base',
         fontSize: 8,
         fontWeight: 400,
         lineHeight: 'heading'
@@ -231,38 +238,46 @@ const theme = {
         fontSize: 4
       },
       summary: {
+        variant: 'text.base',
         fontSize: 6,
         lineHeight: '32px',
         letterSpacing: '-0.02em'
       },
       paragraph: {
+        variant: 'text.base',
         fontSize: 4,
         lineHeight: '28px'
       },
       smallParagraph: {
+        variant: 'text.base',
         fontSize: 2,
         lineHeight: '20px'
       },
       bold: {
+        variant: 'text.base',
         fontWeight: 'bold',
         fontSize: 4,
         lineHeight: '28px'
       },
       callout: {
+        variant: 'text.base',
         fontSize: 3,
         lineHeight: '20px'
       },
       caption: {
+        variant: 'text.base',
         fontWeight: 600,
         fontSize: '15px',
         lineHeight: '19px'
       },
       footnote: {
+        variant: 'text.base',
         fontWeight: 600,
         fontSize: '13px',
         lineHeight: '16px'
       },
       pretext: {
+        variant: 'text.base',
         fontWeight: 'bold',
         fontSize: 1,
         lineHeight: '18px',
@@ -273,6 +288,7 @@ const theme = {
     },
     display: {
       display: {
+        variant: 'text.base',
         fontFamily: 'display',
         fontSize: '104px',
         fontWeight: 400,
@@ -280,6 +296,7 @@ const theme = {
         letterSpacing: 'display'
       },
       h1: {
+        variant: 'text.base',
         fontFamily: 'display',
         fontSize: 10,
         fontWeight: 400,
@@ -307,6 +324,7 @@ const theme = {
         lineHeight: '28px'
       },
       quote: {
+        variant: 'text.base',
         fontFamily: 'display',
         fontStyle: 'italic',
         fontSize: '25px',
