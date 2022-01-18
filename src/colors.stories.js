@@ -85,7 +85,6 @@ export const Default = () => (
     <ColorGroup>
       <ColorItem title="Light" color="secondary.light" dark />
       <ColorItem title="Regular" color="secondary.regular" />
-      <ColorItem title="Medium" color="secondary.medium" />
       <ColorItem title="Bold" color="secondary.bold" />
       <ColorItem title="Contrast" color="secondary.contrast" dark border />
     </ColorGroup>

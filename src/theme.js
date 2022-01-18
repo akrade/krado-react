@@ -19,7 +19,6 @@ const theme = {
     secondary: {
       light: kradoColors.oshun300,
       regular: kradoColors.oshun500,
-      medium: kradoColors.oshun600,
       bold: kradoColors.oshun700,
       contrast: kradoColors.ash000
     },
