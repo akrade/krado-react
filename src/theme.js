@@ -126,17 +126,17 @@ const theme = {
   borders: ['none', `2px solid black`],
   buttons: {
     solid: {
-      color: 'background',
-      bg: 'primary',
+      color: 'primary.contrast',
+      bg: 'primary.regular',
       '&:hover': {
-        bg: 'secondary'
+        bg: 'action.hover'
       },
       '&:active': {
-        bg: 'primary'
+        bg: 'action.active'
       },
       '&:disabled': {
-        color: 'darkGray',
-        bg: 'muted'
+        color: 'action.disabled',
+        bg: 'action.disabledBackground'
       },
       '&:focus-visible': {
         outline: 'none',
@@ -144,36 +144,36 @@ const theme = {
       }
     },
     text: {
-      color: 'primary',
+      color: 'primary.regular',
       bg: 'transparent',
       '&:hover': {
-        color: 'secondary'
+        color: 'action.hover'
       },
       '&:active': {
-        color: 'primary'
+        color: 'action.active'
       },
       '&:disabled': {
-        color: 'darkGray'
+        color: 'action.disabled'
       }
     },
     ghost: {
-      color: 'primary',
+      color: 'primary.regular',
       bg: 'transparent',
       border: 1,
-      borderColor: 'primary',
+      borderColor: 'primary.regular',
       '&:hover': {
-        color: 'secondary',
+        color: 'action.hover',
         borderColor: 'transparent',
         bg: 'background',
         boxShadow: 'hard.high'
       },
       '&:active': {
         color: 'background',
-        bg: 'primary'
+        bg: 'action.active'
       },
       '&:disabled': {
-        color: 'darkGray',
-        borderColor: 'darkGray',
+        color: 'action.disabled',
+        borderColor: 'action.disabled',
         boxShadow: 'none'
       }
     },
