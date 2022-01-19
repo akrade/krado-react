@@ -76,7 +76,7 @@ const theme = {
       hover: '#9C264B',
       selected: '#9C264B',
       disabled: '#E1BDC9',
-      disabledBackground: '#FFFFFF'
+      contrast: '#FFFFFF'
     },
     text: {
       primary: '#2E2A25',
@@ -137,7 +137,7 @@ const theme = {
       },
       '&:disabled': {
         color: 'action.disabled',
-        bg: 'action.disabledBackground'
+        bg: 'action.contrast'
       },
       '&:focus-visible': {
         outline: 'none',

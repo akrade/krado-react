@@ -172,12 +172,7 @@ export const Default = () => (
       <ColorItem title="Hover" color="action.hover" />
       <ColorItem title="Selected" color="action.selected" />
       <ColorItem title="Disabled" color="action.disabled" />
-      <ColorItem
-        title="Disabled Background"
-        color="action.disabledBackground"
-        dark
-        border
-      />
+      <ColorItem title="Contrast" color="action.contrast" dark border />
     </ColorGroup>
 
     <ColorHeading id="text">Text</ColorHeading>
