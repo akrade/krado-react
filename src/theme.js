@@ -76,7 +76,7 @@ const theme = {
       hover: '#9C264B',
       selected: '#9C264B',
       disabled: '#E1BDC9',
-      contrast: '#FFFFFF'
+      contrast: '#F5E9ED'
     },
     text: {
       primary: '#2E2A25',
