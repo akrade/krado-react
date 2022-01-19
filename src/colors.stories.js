@@ -162,6 +162,7 @@ export const Default = () => (
       <ColorItem title="Semi-Black" color="surface.semiblack" />
       <ColorItem title="Black" color="surface.black" />
       <ColorItem title="Heavy" color="surface.heavy" />
+      <ColorItem title="Extra-Heavy" color="surface.extraheavy" />
     </ColorGroup>
 
     <ColorHeading id="action">Action</ColorHeading>

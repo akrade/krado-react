@@ -68,7 +68,8 @@ const theme = {
       bold: '#2E2A25',
       semiblack: '#242220',
       black: '#1A1816',
-      heavy: '#050403'
+      heavy: '#050403',
+      extraheavy: '#000000'
     },
     action: {
       active: '#6E1B35',
