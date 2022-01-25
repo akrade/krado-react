@@ -4,7 +4,7 @@ import { useThemeUI } from 'theme-ui';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Avatar from '../Avatar/Avatar';
 
-export function HeaderItem({ children, href, onClick }) {
+export function HeaderItem({ children, href, onClick, ...rest }) {
   const variant = {
     idle: {
       boxShadow: '0px 9px 15px rgba(0, 0, 0, 0)'
@@ -33,6 +33,7 @@ export function HeaderItem({ children, href, onClick }) {
           textDecoration: 'none',
           cursor: 'pointer'
         }}
+        {...rest}
       >
         {children}
       </a>
