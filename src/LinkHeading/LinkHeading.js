@@ -1,14 +1,14 @@
 import Heading from '../Heading/Heading';
 import { MdLink } from 'react-icons/md';
 
-export default function LinkHeading(props) {
-  if (!props.id) return <Heading {...props} />;
+export default function LinkHeading({ id, children, ...rest }) {
+  if (!id) return <Heading {...rest} />;
 
   return (
-    <Heading sx={{ display: 'flex' }} {...props}>
-      <span sx={{ marginRight: 3 }}>{props.children}</span>
+    <Heading sx={{ display: 'flex' }} {...rest}>
+      <span sx={{ marginRight: 3 }}>{children}</span>
       <a
-        href={`#${props.id}`}
+        href={`#${id}`}
         sx={{
           marginTop: '2px',
           color: 'primary.regular',
