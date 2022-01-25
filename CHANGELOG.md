@@ -9,9 +9,11 @@
 ### Removed
 
 - Content for title in `Header` being uppercase by default. ([KRAD-239])
+- `text.title` color bond. ([KRAD-245])
 
 [krad-246]: https://akrade.atlassian.net/browse/KRAD-246
 [krad-239]: https://akrade.atlassian.net/browse/KRAD-239
+[krad-245]: https://akrade.atlassian.net/browse/KRAD-245
 
 ## [0.10.0] - 2022-01-25
 

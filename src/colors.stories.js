@@ -180,7 +180,6 @@ export const Default = () => (
     <ColorGroup>
       <ColorItem title="Primary" color="text.primary" />
       <ColorItem title="Secondary" color="text.secondary" />
-      <ColorItem title="Title" color="text.title" />
       <ColorItem title="Placeholder" color="text.placeholder" />
       <ColorItem title="Disabled" color="text.disabled" dark />
     </ColorGroup>

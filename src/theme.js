@@ -81,7 +81,6 @@ const theme = {
     text: {
       primary: '#2E2A25',
       secondary: '#5A5753',
-      title: '#6E1B35',
       placeholder: '#9C9A97',
       disabled: '#C8C7C5'
     },
