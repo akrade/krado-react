@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Change default font size of `Text` to `body.paragraph` variant. ([KRAD-246])
+
+[krad-246]: https://akrade.atlassian.net/browse/KRAD-246
+
 ## [0.10.0] - 2022-01-25
 
 ### Added

@@ -32,5 +32,5 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  variant: 'body.smallParagraph'
+  variant: 'body.paragraph'
 };
