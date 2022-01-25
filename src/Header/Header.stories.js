@@ -28,7 +28,7 @@ export function Default(args) {
         <HeaderIconButton>
           <MdMenu />
         </HeaderIconButton>
-        <HeaderTitle>Kràdoyé</HeaderTitle>
+        <HeaderTitle sx={{ textTransform: 'uppercase' }}>Kràdoyé</HeaderTitle>
         <HeaderBody>
           <HeaderNavigation>
             <HeaderItem href="#">Home</HeaderItem>

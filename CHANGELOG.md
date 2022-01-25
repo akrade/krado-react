@@ -6,7 +6,12 @@
 
 - Change default font size of `Text` to `body.paragraph` variant. ([KRAD-246])
 
+### Removed
+
+- Content for title in `Header` being uppercase by default. ([KRAD-239])
+
 [krad-246]: https://akrade.atlassian.net/browse/KRAD-246
+[krad-239]: https://akrade.atlassian.net/browse/KRAD-239
 
 ## [0.10.0] - 2022-01-25
 

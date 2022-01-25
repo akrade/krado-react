@@ -60,7 +60,7 @@ export function HeaderAvatar() {
   return <Avatar src="https://source.unsplash.com/random/42x42" />;
 }
 
-export function HeaderTitle({ children }) {
+export function HeaderTitle({ children, ...rest }) {
   const variant = {
     small: { fontSize: `${useThemeUI().theme.fontSizes[6]}px` },
     large: { fontSize: `${useThemeUI().theme.fontSizes[9]}px` }
@@ -73,9 +73,9 @@ export function HeaderTitle({ children }) {
       sx={{
         variant: 'text.display.h2',
         fontWeight: 600,
-        letterSpacing: '0.025em',
-        textTransform: 'uppercase'
+        letterSpacing: '0.025em'
       }}
+      {...rest}
     >
       {children}
     </motion.div>
