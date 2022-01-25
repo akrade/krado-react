@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.10.0] - 2022-01-25
+
 ### Added
 
 - `Footer` tissue. ([KRAD-133])
@@ -339,7 +341,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.9.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/akrade/krado-react/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/akrade/krado-react/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/akrade/krado-react/compare/v0.7.2...v0.8.0
 [0.7.2]: https://github.com/akrade/krado-react/compare/v0.7.1...v0.7.2
