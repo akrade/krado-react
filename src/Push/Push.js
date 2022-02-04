@@ -34,6 +34,7 @@ function PushCloseButton({ isOpen, ...rest }) {
         position: 'absolute',
         top: 3,
         right: -15,
+        zIndex: 2,
         fontSize: 6,
         boxShadow: 'soft.low'
       }}
