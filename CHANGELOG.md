@@ -5,6 +5,7 @@
 ### Changed
 
 - Change default font size of `Text` to `body.paragraph` variant. ([KRAD-246])
+- `LinkHeading` now contains it's `id`.
 
 ### Removed
 

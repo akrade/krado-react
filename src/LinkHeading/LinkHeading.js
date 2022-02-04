@@ -5,7 +5,7 @@ export default function LinkHeading({ id, children, ...rest }) {
   if (!id) return <Heading {...rest} />;
 
   return (
-    <Heading sx={{ display: 'flex' }} {...rest}>
+    <Heading id={id} sx={{ display: 'flex' }} {...rest}>
       <span sx={{ marginRight: 3 }}>{children}</span>
       <a
         href={`#${id}`}
