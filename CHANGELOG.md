@@ -10,6 +10,7 @@
 
 - Change default font size of `Text` to `body.paragraph` variant. ([KRAD-246])
 - `LinkHeading` now contains it's `id`.
+- Theme font styles have been corrected and adjusted. ([KRAD-266])
 
 ### Removed
 
@@ -18,6 +19,7 @@
 
 [krad-263]: https://akrade.atlassian.net/browse/KRAD-263
 [krad-246]: https://akrade.atlassian.net/browse/KRAD-246
+[krad-266]: https://akrade.atlassian.net/browse/KRAD-266
 [krad-239]: https://akrade.atlassian.net/browse/KRAD-239
 [krad-245]: https://akrade.atlassian.net/browse/KRAD-245
 
