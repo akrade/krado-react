@@ -58,8 +58,8 @@ export function HeaderBody({ children }) {
   );
 }
 
-export function HeaderAvatar() {
-  return <Avatar src="https://source.unsplash.com/random/42x42" />;
+export function HeaderAvatar({ ...rest }) {
+  return <Avatar {...rest} />;
 }
 
 export function HeaderTitle({ children, ...rest }) {
