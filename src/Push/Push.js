@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useThemeUI } from 'theme-ui';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
@@ -10,6 +9,60 @@ import Flex from '../Flex/Flex';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
+import theme from '../theme';
+
+// Predefined Framer Motion animations
+const menuVariant = {
+  hidden: {
+    opacity: 0,
+    transition: { staggerChildren: 0.05, staggerDirection: -1 }
+  },
+  show: { opacity: 1, transition: { staggerChildren: 0.05 } }
+};
+
+const itemVariant = {
+  hidden: {
+    scale: 0,
+    transition: { type: 'spring' }
+  },
+  show: {
+    scale: 1,
+    transition: { type: 'spring', duration: 0.8 }
+  },
+  active: {
+    color: theme.colors.action.active
+  }
+};
+
+const itemVariantShadow = {
+  ...itemVariant,
+  active: {
+    ...itemVariant.active,
+    boxShadow: theme.shadows.soft.highMiddle
+  }
+};
+
+const subMenuVariant = {
+  hidden: {
+    opacity: 0,
+    transition: { staggerChildren: 0.05, staggerDirection: -1 }
+  },
+  show: { opacity: 1, transition: { staggerChildren: 0.03 } }
+};
+
+const subItemVariant = {
+  hidden: {
+    scale: 0,
+    transition: { type: 'spring' }
+  },
+  show: {
+    scale: 1,
+    transition: { type: 'spring', bounce: 0 }
+  },
+  active: {
+    color: theme.colors.action.active
+  }
+};
 
 function PushCloseButton({ isOpen, ...rest }) {
   const open = {
@@ -50,26 +103,10 @@ function PushCloseButton({ isOpen, ...rest }) {
 }
 
 export function PushHeader({ children, ...props }) {
-  const variant = {
-    hidden: {
-      x: '50%',
-      opacity: 0,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    },
-    active: {
-      color: useThemeUI().theme.colors.action.active
-    }
-  };
-
   return (
     <motion.li
-      variants={variant}
-      whileHover={variant.active}
+      variants={itemVariant}
+      whileHover={itemVariant.active}
       sx={{
         display: 'flex',
         alignItems: 'center',
@@ -97,21 +134,9 @@ export function PushHeader({ children, ...props }) {
 }
 
 export function PushLabel({ children }) {
-  const variant = {
-    hidden: {
-      x: '50%',
-      opacity: 0,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    }
-  };
   return (
     <motion.li
-      variants={variant}
+      variants={itemVariantShadow}
       sx={{
         marginTop: 4,
         marginBottom: 3,
@@ -128,17 +153,9 @@ export function PushLabel({ children }) {
 }
 
 function PushSubMenu({ children }) {
-  const variant = {
-    hidden: {
-      opacity: 0,
-      transition: { staggerChildren: 0.03, staggerDirection: -1 }
-    },
-    show: { opacity: 1, transition: { staggerChildren: 0.03 } }
-  };
-
   return (
     <motion.ul
-      variants={variant}
+      variants={subMenuVariant}
       initial="hidden"
       animate="show"
       exit="hidden"
@@ -150,26 +167,10 @@ function PushSubMenu({ children }) {
 }
 
 export function PushSubItem({ children }) {
-  const variant = {
-    hidden: {
-      x: '50%',
-      opacity: 0,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    },
-    active: {
-      color: useThemeUI().theme.colors.action.active
-    }
-  };
-
   return (
     <motion.li
-      variants={variant}
-      whileHover={variant.active}
+      variants={subItemVariant}
+      whileHover={subItemVariant.active}
       sx={{
         variant: 'text.body.smallParagraph',
         paddingX: 4,
@@ -189,22 +190,6 @@ export function PushSubItem({ children }) {
 export function PushItem({ children, label, description, icon, ...props }) {
   const [isItemHovered, setIsItemHovered] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const variant = {
-    hidden: {
-      x: '50%',
-      opacity: 0,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-      transition: { type: 'spring', damping: 20, duration: 0.4 }
-    },
-    active: {
-      color: useThemeUI().theme.colors.action.active,
-      boxShadow: useThemeUI().theme.shadows.soft.highMiddle
-    }
-  };
   const iconVariant = {
     hidden: {
       opacity: 0
@@ -216,12 +201,12 @@ export function PushItem({ children, label, description, icon, ...props }) {
 
   return (
     <motion.li
-      variants={variant}
+      variants={itemVariantShadow}
       onHoverStart={() => setIsItemHovered(true)}
       onHoverEnd={() => setIsItemHovered(false)}
     >
       <motion.a
-        whileHover={variant.active}
+        whileHover={itemVariantShadow.active}
         onTap={() => setIsSubMenuOpen(!isSubMenuOpen)}
         style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
         sx={{
@@ -285,14 +270,6 @@ export function PushDivider() {
 }
 
 export function PushContent({ children, level }) {
-  const variant = {
-    hidden: {
-      opacity: 0,
-      transition: { staggerChildren: 0.05, staggerDirection: -1 }
-    },
-    show: { opacity: 1, transition: { staggerChildren: 0.05 } }
-  };
-
   function getLevel(level) {
     if (level === 100) {
       return 'text.body.h3';
@@ -306,7 +283,7 @@ export function PushContent({ children, level }) {
   return (
     <motion.ul
       key="push"
-      variants={variant}
+      variants={menuVariant}
       initial="hidden"
       animate="show"
       exit="hidden"
