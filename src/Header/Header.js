@@ -4,7 +4,7 @@ import { useThemeUI } from 'theme-ui';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Avatar from '../Avatar/Avatar';
 
-export function HeaderItem({ children, href, onClick, ...rest }) {
+export function HeaderItem({ children, href, onClick, active, ...rest }) {
   const variant = {
     idle: {
       boxShadow: '0px 9px 15px rgba(0, 0, 0, 0)'
@@ -19,6 +19,7 @@ export function HeaderItem({ children, href, onClick, ...rest }) {
     <motion.li
       variants={variant}
       initial="idle"
+      animate={active && 'active'}
       whileHover="active"
       sx={{ marginLeft: 2, fontWeight: 600 }}
     >

@@ -143,7 +143,7 @@ export function PanelBody({ children }) {
   );
 }
 
-export function PanelItem({ children, icon, ...props }) {
+export function PanelItem({ children, icon, active, ...props }) {
   const [isItemHovered, setIsItemHovered] = useState(false);
   const variant = {
     hidden: {
@@ -172,6 +172,7 @@ export function PanelItem({ children, icon, ...props }) {
 
   return (
     <motion.li
+      animate={active && 'active'}
       variants={variant}
       onHoverStart={() => setIsItemHovered(true)}
       onHoverEnd={() => setIsItemHovered(false)}

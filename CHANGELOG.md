@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- `Header` and `Panel` menu items now have have an boolean active state. ([KRAD-263])
+
 ### Changed
 
 - Change default font size of `Text` to `body.paragraph` variant. ([KRAD-246])
@@ -12,6 +16,7 @@
 - Content for title in `Header` being uppercase by default. ([KRAD-239])
 - `text.title` color bond. ([KRAD-245])
 
+[krad-263]: https://akrade.atlassian.net/browse/KRAD-263
 [krad-246]: https://akrade.atlassian.net/browse/KRAD-246
 [krad-239]: https://akrade.atlassian.net/browse/KRAD-239
 [krad-245]: https://akrade.atlassian.net/browse/KRAD-245
