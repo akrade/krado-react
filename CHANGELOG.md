@@ -5,6 +5,7 @@
 ### Added
 
 - `Header` and `Panel` menu items now have have an boolean active state. ([KRAD-263])
+- Ability to add letters inside `Avatar`. ([KRAD-283])
 
 ### Changed
 
