@@ -15,20 +15,12 @@ import theme from '../theme';
 const menuVariant = {
   hidden: {
     opacity: 0,
-    transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    transition: { duration: 0.2 }
   },
-  show: { opacity: 1, transition: { staggerChildren: 0.05 } }
+  show: { opacity: 1, transition: { duration: 0.8 } }
 };
 
 const itemVariant = {
-  hidden: {
-    scale: 0,
-    transition: { type: 'spring' }
-  },
-  show: {
-    scale: 1,
-    transition: { type: 'spring', duration: 0.8 }
-  },
   active: {
     color: theme.colors.action.active
   }
@@ -43,22 +35,11 @@ const itemVariantShadow = {
 };
 
 const subMenuVariant = {
-  hidden: {
-    opacity: 0,
-    transition: { staggerChildren: 0.05, staggerDirection: -1 }
-  },
-  show: { opacity: 1, transition: { staggerChildren: 0.03 } }
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.6 } }
 };
 
 const subItemVariant = {
-  hidden: {
-    scale: 0,
-    transition: { type: 'spring' }
-  },
-  show: {
-    scale: 1,
-    transition: { type: 'spring', bounce: 0 }
-  },
   active: {
     color: theme.colors.action.active
   }
