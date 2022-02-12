@@ -269,15 +269,15 @@ const theme = {
       },
       caption: {
         variant: 'text.base',
-        fontWeight: 600,
-        fontSize: '15px',
-        lineHeight: '19px'
+        fontWeight: 500,
+        fontSize: 0,
+        lineHeight: '14.52px'
       },
       footnote: {
         variant: 'text.base',
         fontWeight: 600,
         fontSize: '13px',
-        lineHeight: '16px'
+        lineHeight: '16.34px'
       },
       pretext: {
         variant: 'text.base',
@@ -330,7 +330,8 @@ const theme = {
         variant: 'text.base',
         fontFamily: 'display',
         fontStyle: 'italic',
-        fontSize: '25px',
+        fontSize: 6,
+        fontWeight: 400,
         lineHeight: '31px'
       }
     }
