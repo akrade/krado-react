@@ -6,6 +6,7 @@
 
 - `Header` and `Panel` menu items now have have an boolean active state. ([KRAD-263])
 - Ability to add letters inside `Avatar`. ([KRAD-283])
+- Ability to add a description/subtitle to a `Push` header item. ([KRAD-282])
 
 ### Changed
 
@@ -28,6 +29,7 @@
 [krad-266]: https://akrade.atlassian.net/browse/KRAD-266
 [krad-258]: https://akrade.atlassian.net/browse/KRAD-258
 [krad-283]: https://akrade.atlassian.net/browse/KRAD-283
+[krad-282]: https://akrade.atlassian.net/browse/KRAD-282
 [krad-239]: https://akrade.atlassian.net/browse/KRAD-239
 [krad-245]: https://akrade.atlassian.net/browse/KRAD-245
 
