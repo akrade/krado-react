@@ -57,9 +57,13 @@ export function Default() {
         <AnimatePresence>
           {activeMenu === 'mobile' && (
             <PushContent level={200}>
-              <PushHeader onClick={() => setActiveMenu('main')}>
+              <PushHeader
+                onClick={() => setActiveMenu('main')}
+                description="The fundemental building blocks of the design system."
+              >
                 Mobile
               </PushHeader>
+              <PushDivider />
               <PushItem onClick={() => setActiveMenu('core')} label="Core" />
               <PushItem label="Advertising" />
               <PushItem label="Chat" />
@@ -77,7 +81,10 @@ export function Default() {
         <AnimatePresence>
           {activeMenu === 'core' && (
             <PushContent level={200}>
-              <PushHeader onClick={() => setActiveMenu('mobile')}>
+              <PushHeader
+                onClick={() => setActiveMenu('mobile')}
+                description="The fundemental building blocks of the design system."
+              >
                 Core
               </PushHeader>
               <PushDivider />

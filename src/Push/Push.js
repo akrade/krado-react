@@ -83,23 +83,16 @@ function PushCloseButton({ isOpen, ...rest }) {
   );
 }
 
-export function PushHeader({ children, ...props }) {
+export function PushHeader({ description, children, ...props }) {
   return (
     <motion.li
       variants={itemVariant}
       whileHover={itemVariant.active}
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        marginY: 4,
-        paddingX: 2
-      }}
+      sx={{ marginY: 4 }}
     >
-      <MdChevronLeft sx={{ fontSize: 5 }} />
       <a
         sx={{
-          variant: 'text.body.h3',
-          fontWeight: 'bold',
+          position: 'relative',
           color: 'inherit',
           textDecoration: 'none',
           '&:hover': {
@@ -108,7 +101,26 @@ export function PushHeader({ children, ...props }) {
         }}
         {...props}
       >
-        {children}
+        <Box sx={{ position: 'absolute', top: 1, left: 2, fontSize: 6 }}>
+          <MdChevronLeft />
+        </Box>
+        <Box sx={{ paddingX: 4 }}>
+          <Text
+            as="div"
+            sx={{
+              color: 'inherit',
+              fontSize: '28px',
+              fontWeight: 'bold'
+            }}
+          >
+            {children}
+          </Text>
+          {description && (
+            <Text as="div" variant="body.caption" sx={{ marginTop: 3 }}>
+              {description}
+            </Text>
+          )}
+        </Box>
       </a>
     </motion.li>
   );
