@@ -26,9 +26,9 @@ export function Default() {
   return (
     <Flex>
       <Push isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} behavior="ghost">
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           {activeMenu === 'main' && (
-            <PushContent>
+            <PushContent key="main">
               <PushItem label="Identity" />
               <PushItem label="Desktop" />
               <PushItem label="Web" />
@@ -52,11 +52,9 @@ export function Default() {
               />
             </PushContent>
           )}
-        </AnimatePresence>
 
-        <AnimatePresence>
           {activeMenu === 'mobile' && (
-            <PushContent level={200}>
+            <PushContent level={200} key="mobile">
               <PushHeader
                 onClick={() => setActiveMenu('main')}
                 description="The fundemental building blocks of the design system."
@@ -76,11 +74,9 @@ export function Default() {
               <PushItem label="Security" />
             </PushContent>
           )}
-        </AnimatePresence>
 
-        <AnimatePresence>
           {activeMenu === 'core' && (
-            <PushContent level={200}>
+            <PushContent level={200} key="core">
               <PushHeader
                 onClick={() => setActiveMenu('mobile')}
                 description="The fundemental building blocks of the design system."
