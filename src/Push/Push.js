@@ -15,9 +15,9 @@ import theme from '../theme';
 const menuVariant = {
   hidden: {
     opacity: 0,
-    transition: { duration: 0.3 }
+    transition: { duration: 0.2 }
   },
-  show: { opacity: 1, transition: { duration: 0.6 } }
+  show: { opacity: 1, transition: { duration: 0.8 } }
 };
 
 const itemVariant = {
