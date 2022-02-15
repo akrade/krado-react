@@ -5,40 +5,30 @@ import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import Avatar from '../Avatar/Avatar';
 
 export function HeaderItem({ children, href, onClick, active, ...rest }) {
-  const variant = {
-    idle: {
-      boxShadow: '0px 9px 15px rgba(0, 0, 0, 0)'
-    },
-    active: {
-      boxShadow: useThemeUI().theme.shadows.hard.high,
-      color: useThemeUI().theme.colors.action.active
-    }
-  };
-
   return (
-    <motion.li
-      variants={variant}
-      initial="idle"
-      animate={active && 'active'}
-      whileHover="active"
-      sx={{ marginLeft: 2, fontWeight: 600 }}
-    >
+    <li sx={{ marginLeft: 2, fontWeight: 600 }}>
       <a
         href={href}
         onClick={onClick}
         sx={{
           padding: 2,
-          color: 'inherit',
+          color: active ? 'action.active' : 'initial',
           backgroundColor: 'background',
           borderRadius: 1,
           textDecoration: 'none',
-          cursor: 'pointer'
+          boxShadow: active ? 'hard.high' : 'none',
+          cursor: 'pointer',
+          transition: 'color 400ms ease, box-shadow 400ms ease',
+          '&:hover': {
+            color: 'action.active',
+            boxShadow: 'hard.high'
+          }
         }}
         {...rest}
       >
         {children}
       </a>
-    </motion.li>
+    </li>
   );
 }
 
