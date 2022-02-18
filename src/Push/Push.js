@@ -65,12 +65,13 @@ function PushCloseButton({ isOpen, ...rest }) {
   return (
     <ToggleIcon
       sx={{
-        position: 'absolute',
+        position: 'sticky',
         top: 3,
-        right: -15,
+        marginLeft: isOpen ? -14 : 3,
         zIndex: 2,
         fontSize: 6,
-        boxShadow: 'soft.low'
+        boxShadow: 'soft.low',
+        transition: 'margin 90ms ease'
       }}
       {...rest}
     >
@@ -258,21 +259,16 @@ export function PushContent({ children, level }) {
 
   return (
     <motion.ul
-      key="push"
       variants={menuVariant}
       initial="hidden"
       animate="show"
       exit="hidden"
       sx={{
         variant: getLevel(level),
-        position: 'absolute',
-        zIndex: 2,
-        overflow: 'auto',
+        zIndex: 1,
         listStyle: 'none',
         margin: 0,
-        padding: 0,
-        width: '100%',
-        height: '100%'
+        padding: 0
       }}
     >
       {children}
@@ -286,51 +282,75 @@ PushContent.defaultProps = {
   level: 100
 };
 
-export function Push({ children, isOpen, onClose, behavior }) {
-  const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
+export function PushBody({ children, isOpen, ...rest }) {
   const variant = {
-    hidden: { marginLeft: '-255px' },
-    show: { marginLeft: '0px' }
+    hidden: { marginLeft: '0px' },
+    show: { marginLeft: '287px' }
   };
 
   return (
-    <motion.nav
+    <motion.div
       variants={variant}
       animate={isOpen ? 'show' : 'hidden'}
       transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
-      sx={{
-        flex: '0 0 auto',
-        position: 'relative',
-        width: '287px',
-        height: '100vh'
-      }}
+      sx={{ position: 'relative' }}
+      {...rest}
     >
-      <Box sx={{ position: 'fixed', width: '287px', height: '100vh' }}>
-        <PushCloseButton
-          onClick={onClose}
-          isHidden={isCloseButtonHidden}
-          behavior={behavior}
-          isOpen={isOpen}
-        />
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, transitionEnd: { display: 'none' } },
-            show: { display: 'block', opacity: 1 }
-          }}
-          onHoverStart={() => setIsCloseButtonHidden(true)}
-          onHoverEnd={() => setIsCloseButtonHidden(false)}
-          sx={{
-            zIndex: 2,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'background',
-            boxShadow: 'hard.high'
-          }}
-        >
-          {children}
-        </motion.div>
-      </Box>
-    </motion.nav>
+      {children}
+    </motion.div>
+  );
+}
+export function Push({ children, isOpen, onClose, behavior }) {
+  const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
+  const variant = {
+    hidden: { x: -287 },
+    show: { x: 0 }
+  };
+
+  return (
+    <>
+      <PushCloseButton
+        onClick={onClose}
+        isHidden={isCloseButtonHidden}
+        behavior={behavior}
+        isOpen={isOpen}
+      />
+      <motion.nav
+        variants={variant}
+        animate={isOpen ? 'show' : 'hidden'}
+        transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
+        onHoverStart={() => setIsCloseButtonHidden(true)}
+        onHoverEnd={() => setIsCloseButtonHidden(false)}
+        sx={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          overflowY: 'auto',
+          width: '287px',
+          height: '100vh',
+          backgroundColor: 'background',
+          boxShadow: 'hard.high',
+          scrollbarWidth: 'thin',
+          '&::-webkit-scrollbar': {
+            width: '16px'
+          },
+          '&::-webkit-scrollbar-track': {
+            marginY: 5
+          },
+          '&::-webkit-scrollbar-thumb': {
+            border: '5px solid transparent',
+            borderRadius: 4,
+            backgroundClip: 'padding-box',
+            backgroundColor: 'surface.thin'
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: 'surface.extralight'
+          }
+        }}
+      >
+        {children}
+      </motion.nav>
+    </>
   );
 }
 Push.propTypes = {
