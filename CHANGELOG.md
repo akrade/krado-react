@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.12.0] - 2022-02-18
+
 ### Changed
 
 - Default body `font-weight` to 400. ([KRAD-303])
@@ -393,7 +395,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.11.0...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.12.0...HEAD
+[0.12.0]: https://github.com/akrade/krado-react/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/akrade/krado-react/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/akrade/krado-react/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/akrade/krado-react/compare/v0.8.0...v0.9.0
