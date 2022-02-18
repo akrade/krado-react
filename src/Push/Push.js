@@ -75,6 +75,7 @@ function PushCloseButton({ isOpen, ...rest }) {
   return (
     <motion.div
       variants={variant}
+      initial={false}
       animate={isOpen ? 'show' : 'hidden'}
       transition={menuTransition}
       sx={{ position: 'fixed', zIndex: 2, marginTop: 3 }}
@@ -303,6 +304,7 @@ export function PushBody({ children, isOpen, ...rest }) {
   return (
     <motion.div
       variants={variant}
+      initial={false}
       animate={isOpen ? 'show' : 'hidden'}
       transition={menuTransition}
       sx={{ position: 'relative' }}
@@ -329,6 +331,7 @@ export function Push({ children, isOpen, onClose, behavior }) {
       />
       <motion.nav
         variants={variant}
+        initial={false}
         animate={isOpen ? 'show' : 'hidden'}
         transition={menuTransition}
         onHoverStart={() => setIsCloseButtonHidden(true)}
