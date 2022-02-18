@@ -181,23 +181,10 @@ export function PushSubItem({ children }) {
 }
 
 export function PushItem({ children, label, description, icon, ...props }) {
-  const [isItemHovered, setIsItemHovered] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const iconVariant = {
-    hidden: {
-      opacity: 0
-    },
-    show: {
-      opacity: 1
-    }
-  };
 
   return (
-    <motion.li
-      variants={itemVariantShadow}
-      onHoverStart={() => setIsItemHovered(true)}
-      onHoverEnd={() => setIsItemHovered(false)}
-    >
+    <motion.li variants={itemVariantShadow}>
       <motion.a
         whileHover={itemVariantShadow.active}
         onTap={() => setIsSubMenuOpen(!isSubMenuOpen)}
@@ -224,13 +211,9 @@ export function PushItem({ children, label, description, icon, ...props }) {
             {label}
           </motion.span>
 
-          <motion.span
-            variants={iconVariant}
-            animate={isItemHovered ? 'show' : 'hidden'}
-            sx={{ marginLeft: 'auto' }}
-          >
+          <span sx={{ marginLeft: 'auto' }}>
             {!icon ? <MdChevronRight /> : icon}
-          </motion.span>
+          </span>
         </Flex>
 
         {description && (

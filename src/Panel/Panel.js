@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useThemeUI } from 'theme-ui';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -144,7 +143,6 @@ export function PanelBody({ children }) {
 }
 
 export function PanelItem({ children, icon, active, ...props }) {
-  const [isItemHovered, setIsItemHovered] = useState(false);
   const variant = {
     hidden: {
       x: '50%',
@@ -161,22 +159,9 @@ export function PanelItem({ children, icon, active, ...props }) {
       boxShadow: useThemeUI().theme.shadows.soft.highMiddle
     }
   };
-  const iconVariant = {
-    hidden: {
-      opacity: 0
-    },
-    show: {
-      opacity: 1
-    }
-  };
 
   return (
-    <motion.li
-      animate={active && 'active'}
-      variants={variant}
-      onHoverStart={() => setIsItemHovered(true)}
-      onHoverEnd={() => setIsItemHovered(false)}
-    >
+    <motion.li animate={active && 'active'} variants={variant}>
       <motion.a
         whileHover={variant.active}
         style={{ boxShadow: '0px 5px 16px rgba(0, 0, 0, 0)' }}
@@ -194,13 +179,9 @@ export function PanelItem({ children, icon, active, ...props }) {
       >
         {children}
 
-        <motion.span
-          variants={iconVariant}
-          animate={isItemHovered ? 'show' : 'hidden'}
-          sx={{ marginLeft: 'auto' }}
-        >
+        <span sx={{ marginLeft: 'auto' }}>
           {!icon ? <MdChevronRight /> : icon}
-        </motion.span>
+        </span>
       </motion.a>
     </motion.li>
   );

@@ -5,8 +5,10 @@
 ### Changed
 
 - Default body `font-weight` to 400. ([KRAD-303])
+- For better usability, the `Panel` and `Push` menu icons are now persistent regardless of hover state. ([KRAD-315])
 
-[krad-303]: https://akrade.atlassian.net/browse/KRAD-303s
+[krad-303]: https://akrade.atlassian.net/browse/KRAD-303
+[krad-315]: https://akrade.atlassian.net/browse/KRAD-315
 
 ## [0.11.0] - 2022-02-14
 
