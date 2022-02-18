@@ -29,26 +29,45 @@ export function Default() {
         <AnimatePresence exitBeforeEnter>
           {activeMenu === 'main' && (
             <PushContent key="main">
+              <PushLabel>Overview</PushLabel>
+              <PushItem label="Getting Started" />
+              <PushItem label="About" />
+              <PushItem label="Support" />
+              <PushDivider />
+              <PushLabel>Foundation</PushLabel>
               <PushItem label="Identity" />
+              <PushItem label="Accessibility" />
+              <PushLabel>Web & App</PushLabel>
               <PushItem label="Desktop" />
               <PushItem label="Web" />
-              <PushItem
-                onClick={() => setActiveMenu('mobile')}
-                label="
-                Mobile"
-              />
               <PushItem label="Tablet" />
+              <PushItem
+                label="Mobile"
+                onClick={() => setActiveMenu('mobile')}
+              />
+              <PushItem label="Wearables" />
               <PushItem label="Print" />
+              <PushDivider />
+              <PushLabel>Virtual</PushLabel>
+              <PushItem label="Virtual Reality" />
+              <PushItem label="Augmented Reality" />
+              <PushItem label="Games" />
+              <PushDivider />
+              <PushLabel>Broadcast</PushLabel>
               <PushItem label="Television" />
+              <PushItem label="Video" />
               <PushItem label="Voice" />
-              <PushItem href="#" icon={<MdLink />} label="VR/AR" />
+              <PushLabel>Graphics</PushLabel>
+              <PushItem label="Print" />
+              <PushItem label="Outdoor" />
+              <PushDivider />
+              <PushItem href="#" icon={<MdLink />} label="Internal Link" />
               <PushItem
                 href="https://example.com"
                 target="_blank"
                 rel="noopener"
                 icon={<MdLaunch />}
-                label="
-                Wearables"
+                label="External Link"
               />
             </PushContent>
           )}
@@ -112,7 +131,8 @@ export function Default() {
         </AnimatePresence>
       </Push>
 
-      <Box paddingX={6}>
+      <Box>
+        <Box sx={{ width: '100%', height: '50px', backgroundColor: 'red' }} />
         <Text>
           Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
           tellus etiam, posuere ornare platea sollicitudin netus nostra eget
