@@ -16,6 +16,7 @@
 
 [krad-303]: https://akrade.atlassian.net/browse/KRAD-303
 [krad-315]: https://akrade.atlassian.net/browse/KRAD-315
+[krad-259]: https://akrade.atlassian.net/browse/KRAD-259
 [krad-248]: https://akrade.atlassian.net/browse/KRAD-248
 [krad-317]: https://akrade.atlassian.net/browse/KRAD-317
 [krad-243]: https://akrade.atlassian.net/browse/KRAD-243
