@@ -5,6 +5,7 @@
 ### Fixed
 
 - Incorrect `addHeaderOffset` prop type in `Push` cell.
+- `Push` cell not having a higher `z-index` level.
 
 ## [0.12.1] - 2022-02-18
 

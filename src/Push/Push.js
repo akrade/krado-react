@@ -340,6 +340,7 @@ export function Push({ children, isOpen, onClose, behavior, addHeaderOffset }) {
         sx={{
           position: 'fixed',
           left: 0,
+          zIndex: 1,
           overflowY: 'auto',
           paddingBottom: 6,
           width: `${menuWidth}px`,
