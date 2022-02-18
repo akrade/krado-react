@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useThemeUI } from 'theme-ui';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
@@ -10,6 +11,9 @@ import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
 import theme from '../theme';
+
+const menuWidth = 287;
+const menuTransition = { type: 'spring', duration: 0.5, bounce: 0 };
 
 // Predefined Framer Motion animations
 const menuVariant = {
@@ -46,6 +50,9 @@ const subItemVariant = {
 };
 
 function PushCloseButton({ isOpen, ...rest }) {
+  const context = useThemeUI();
+  const { theme } = context;
+
   const open = {
     loop: false,
     animationData: chevronOpen,
@@ -53,7 +60,6 @@ function PushCloseButton({ isOpen, ...rest }) {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
-
   const close = {
     loop: false,
     animationData: chevronClose,
@@ -61,26 +67,32 @@ function PushCloseButton({ isOpen, ...rest }) {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
+  const variant = {
+    hidden: { marginLeft: `${theme.space[3]}px` },
+    show: { marginLeft: `${menuWidth - 16}px` }
+  };
 
   return (
-    <ToggleIcon
-      sx={{
-        position: 'sticky',
-        top: 3,
-        marginLeft: isOpen ? -14 : 3,
-        zIndex: 2,
-        fontSize: 6,
-        boxShadow: 'soft.low',
-        transition: 'margin 90ms ease'
-      }}
-      {...rest}
+    <motion.div
+      variants={variant}
+      animate={isOpen ? 'show' : 'hidden'}
+      transition={menuTransition}
+      sx={{ position: 'fixed', zIndex: 2, marginTop: 3 }}
     >
-      {isOpen ? (
-        <Lottie options={open} width={24} height={24} />
-      ) : (
-        <Lottie options={close} width={24} height={24} />
-      )}
-    </ToggleIcon>
+      <ToggleIcon
+        sx={{
+          fontSize: 6,
+          boxShadow: 'soft.low'
+        }}
+        {...rest}
+      >
+        {isOpen ? (
+          <Lottie options={open} width={24} height={24} />
+        ) : (
+          <Lottie options={close} width={24} height={24} />
+        )}
+      </ToggleIcon>
+    </motion.div>
   );
 }
 
@@ -285,14 +297,14 @@ PushContent.defaultProps = {
 export function PushBody({ children, isOpen, ...rest }) {
   const variant = {
     hidden: { marginLeft: '0px' },
-    show: { marginLeft: '287px' }
+    show: { marginLeft: `${menuWidth}px` }
   };
 
   return (
     <motion.div
       variants={variant}
       animate={isOpen ? 'show' : 'hidden'}
-      transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
+      transition={menuTransition}
       sx={{ position: 'relative' }}
       {...rest}
     >
@@ -303,7 +315,7 @@ export function PushBody({ children, isOpen, ...rest }) {
 export function Push({ children, isOpen, onClose, behavior }) {
   const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
   const variant = {
-    hidden: { x: -287 },
+    hidden: { x: -menuWidth },
     show: { x: 0 }
   };
 
@@ -318,17 +330,17 @@ export function Push({ children, isOpen, onClose, behavior }) {
       <motion.nav
         variants={variant}
         animate={isOpen ? 'show' : 'hidden'}
-        transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
+        transition={menuTransition}
         onHoverStart={() => setIsCloseButtonHidden(true)}
         onHoverEnd={() => setIsCloseButtonHidden(false)}
         sx={{
           position: 'fixed',
-          top: 0,
           left: 0,
           overflowY: 'auto',
           paddingBottom: 6,
-          width: '287px',
-          height: '100vh',
+          width: `${menuWidth}px`,
+          // Offset by large `Header` cell height
+          height: 'calc(100vh - 81px)',
           backgroundColor: 'background',
           boxShadow: 'hard.high',
           scrollbarWidth: 'thin',
