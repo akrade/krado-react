@@ -6,6 +6,7 @@
 
 - Default body `font-weight` to 400. ([KRAD-303])
 - For better usability, the `Panel` and `Push` menu icons are now persistent regardless of hover state. ([KRAD-315])
+- `Push` menu cell has been reworked for a better experience. ([KRAD-259]).
 
 ### Fixed
 
