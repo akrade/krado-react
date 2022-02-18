@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Default body `font-weight` to 400. ([KRAD-303])
+
+[krad-303]: https://akrade.atlassian.net/browse/KRAD-303s
+
 ## [0.11.0] - 2022-02-14
 
 ### Added

@@ -93,7 +93,7 @@ const theme = {
     display: 'Merriweather, Georgia, serif'
   },
   fontWeights: {
-    body: 500,
+    body: 400,
     heading: 400,
     bold: 700
   },
@@ -220,7 +220,6 @@ const theme = {
       h1: {
         variant: 'text.base',
         fontSize: 8,
-        fontWeight: 400,
         lineHeight: 'heading'
       },
       h2: {
@@ -294,7 +293,6 @@ const theme = {
         variant: 'text.base',
         fontFamily: 'display',
         fontSize: '104px',
-        fontWeight: 400,
         lineHeight: '104px',
         letterSpacing: 'display'
       },
@@ -302,7 +300,6 @@ const theme = {
         variant: 'text.base',
         fontFamily: 'display',
         fontSize: 10,
-        fontWeight: 400,
         lineHeight: '78px',
         letterSpacing: 'display'
       },
@@ -331,7 +328,6 @@ const theme = {
         fontFamily: 'display',
         fontStyle: 'italic',
         fontSize: 6,
-        fontWeight: 400,
         lineHeight: '31px'
       }
     }
