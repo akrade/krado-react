@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import {
+  MdLaunch,
+  MdLink,
+  MdExpandMore,
+  MdMenu,
+  MdSearch
+} from 'react-icons/md';
+import {
   Push,
   PushBody,
   PushContent,
@@ -10,15 +17,6 @@ import {
   PushLabel,
   PushSubItem
 } from './Push';
-import Text from '../Text/Text';
-import {
-  MdLaunch,
-  MdLink,
-  MdExpandMore,
-  MdMenu,
-  MdSearch
-} from 'react-icons/md';
-import Container from '../Container/Container';
 import {
   Header,
   HeaderAvatar,
@@ -28,6 +26,14 @@ import {
   HeaderNavigation,
   HeaderTitle
 } from '../Header/Header';
+import {
+  Footer,
+  FooterContent,
+  FooterFootnote,
+  FooterItem
+} from '../Footer/Footer';
+import Text from '../Text/Text';
+import Container from '../Container/Container';
 
 export default {
   title: 'Push',
@@ -55,6 +61,20 @@ function PageHeader() {
         <HeaderAvatar />
       </HeaderBody>
     </Header>
+  );
+}
+
+function PageFooter() {
+  return (
+    <Footer>
+      <FooterFootnote>
+        2021 Akrade, LLC. By Akrade & Company. All Rights Reserved.
+      </FooterFootnote>
+      <FooterContent>
+        <FooterItem href="#">Terms of Use</FooterItem>
+        <FooterItem href="#">Akrade Privacy Policy</FooterItem>
+      </FooterContent>
+    </Footer>
   );
 }
 
@@ -209,7 +229,7 @@ export function Default() {
   return <PushMenu />;
 }
 
-export function WithHeader() {
+export function WithHeaderAndFooter() {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <>
@@ -224,6 +244,7 @@ export function WithHeader() {
       </Push>
       <PushBody isOpen={isOpen}>
         <PageContent />
+        <PageFooter />
       </PushBody>
     </>
   );
