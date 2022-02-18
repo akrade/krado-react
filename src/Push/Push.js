@@ -375,7 +375,7 @@ Push.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   behavior: PropTypes.oneOf(['ghost', 'shuffle']),
-  addHeaderOffset: false
+  addHeaderOffset: PropTypes.bool
 };
 Push.defaultProps = {
   behavior: 'shuffle'

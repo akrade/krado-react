@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Incorrect `addHeaderOffset` prop type in `Push` cell.
+
 ## [0.12.1] - 2022-02-18
 
 ### Changed
