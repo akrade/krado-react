@@ -314,7 +314,7 @@ export function PushBody({ children, isOpen, ...rest }) {
     </motion.div>
   );
 }
-export function Push({ children, isOpen, onClose, behavior }) {
+export function Push({ children, isOpen, onClose, behavior, addHeaderOffset }) {
   const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
   const variant = {
     hidden: { x: -menuWidth, opacity: 0 },
@@ -343,7 +343,7 @@ export function Push({ children, isOpen, onClose, behavior }) {
           paddingBottom: 6,
           width: `${menuWidth}px`,
           // Offset by large `Header` cell height
-          height: 'calc(100vh - 81px)',
+          height: addHeaderOffset ? 'calc(100vh - 81px)' : '100vh',
           backgroundColor: 'background',
           boxShadow: 'hard.high',
           scrollbarWidth: 'thin',
@@ -372,7 +372,8 @@ export function Push({ children, isOpen, onClose, behavior }) {
 Push.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  behavior: PropTypes.oneOf(['ghost', 'shuffle'])
+  behavior: PropTypes.oneOf(['ghost', 'shuffle']),
+  addHeaderOffset: false
 };
 Push.defaultProps = {
   behavior: 'shuffle'

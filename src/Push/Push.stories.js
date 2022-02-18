@@ -214,7 +214,12 @@ export function WithHeader() {
   return (
     <>
       <PageHeader />
-      <Push isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} behavior="ghost">
+      <Push
+        isOpen={isOpen}
+        onClose={() => setIsOpen(!isOpen)}
+        behavior="ghost"
+        addHeaderOffset
+      >
         <PushExampleContent />
       </Push>
       <PushBody isOpen={isOpen}>
