@@ -329,6 +329,7 @@ export function Push({ children, isOpen, onClose, behavior, addHeaderOffset }) {
         behavior={behavior}
         isOpen={isOpen}
       />
+
       <motion.nav
         variants={variant}
         initial={false}
@@ -357,10 +358,11 @@ export function Push({ children, isOpen, onClose, behavior, addHeaderOffset }) {
             border: '5px solid transparent',
             borderRadius: 4,
             backgroundClip: 'padding-box',
-            backgroundColor: 'surface.thin'
+            // `background-color` based off Surface Thin
+            backgroundColor: 'rgba(222, 222, 221, 0.4)'
           },
           '&::-webkit-scrollbar-thumb:hover': {
-            backgroundColor: 'surface.extralight'
+            backgroundColor: 'surface.thin'
           }
         }}
       >

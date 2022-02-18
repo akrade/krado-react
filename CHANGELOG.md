@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- `Push` cell custom scroll bar now has a lighter color.
+
 ## [0.12.0] - 2022-02-18
 
 ### Changed
