@@ -317,8 +317,8 @@ export function PushBody({ children, isOpen, ...rest }) {
 export function Push({ children, isOpen, onClose, behavior }) {
   const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
   const variant = {
-    hidden: { x: -menuWidth },
-    show: { x: 0 }
+    hidden: { x: -menuWidth, opacity: 0 },
+    show: { x: 0, opacity: 1 }
   };
 
   return (
