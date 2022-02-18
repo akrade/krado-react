@@ -326,6 +326,7 @@ export function Push({ children, isOpen, onClose, behavior }) {
           top: 0,
           left: 0,
           overflowY: 'auto',
+          paddingBottom: 6,
           width: '287px',
           height: '100vh',
           backgroundColor: 'background',
