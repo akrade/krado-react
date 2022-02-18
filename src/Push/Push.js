@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useThemeUI } from 'theme-ui';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import Lottie from 'react-lottie';
@@ -10,6 +11,9 @@ import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
 import theme from '../theme';
+
+const menuWidth = 287;
+const menuTransition = { type: 'spring', duration: 0.5, bounce: 0 };
 
 // Predefined Framer Motion animations
 const menuVariant = {
@@ -46,6 +50,9 @@ const subItemVariant = {
 };
 
 function PushCloseButton({ isOpen, ...rest }) {
+  const context = useThemeUI();
+  const { theme } = context;
+
   const open = {
     loop: false,
     animationData: chevronOpen,
@@ -53,7 +60,6 @@ function PushCloseButton({ isOpen, ...rest }) {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
-
   const close = {
     loop: false,
     animationData: chevronClose,
@@ -61,25 +67,33 @@ function PushCloseButton({ isOpen, ...rest }) {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
+  const variant = {
+    hidden: { marginLeft: `${theme.space[3]}px` },
+    show: { marginLeft: `${menuWidth - 16}px` }
+  };
 
   return (
-    <ToggleIcon
-      sx={{
-        position: 'absolute',
-        top: 3,
-        right: -15,
-        zIndex: 2,
-        fontSize: 6,
-        boxShadow: 'soft.low'
-      }}
-      {...rest}
+    <motion.div
+      variants={variant}
+      initial={false}
+      animate={isOpen ? 'show' : 'hidden'}
+      transition={menuTransition}
+      sx={{ position: 'fixed', zIndex: 2, marginTop: 3 }}
     >
-      {isOpen ? (
-        <Lottie options={open} width={24} height={24} />
-      ) : (
-        <Lottie options={close} width={24} height={24} />
-      )}
-    </ToggleIcon>
+      <ToggleIcon
+        sx={{
+          fontSize: 6,
+          boxShadow: 'soft.low'
+        }}
+        {...rest}
+      >
+        {isOpen ? (
+          <Lottie options={open} width={24} height={24} />
+        ) : (
+          <Lottie options={close} width={24} height={24} />
+        )}
+      </ToggleIcon>
+    </motion.div>
   );
 }
 
@@ -258,21 +272,16 @@ export function PushContent({ children, level }) {
 
   return (
     <motion.ul
-      key="push"
       variants={menuVariant}
       initial="hidden"
       animate="show"
       exit="hidden"
       sx={{
         variant: getLevel(level),
-        position: 'absolute',
-        zIndex: 2,
-        overflow: 'auto',
+        zIndex: 1,
         listStyle: 'none',
         margin: 0,
-        padding: 0,
-        width: '100%',
-        height: '100%'
+        padding: 0
       }}
     >
       {children}
@@ -286,57 +295,85 @@ PushContent.defaultProps = {
   level: 100
 };
 
-export function Push({ children, isOpen, onClose, behavior }) {
-  const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
+export function PushBody({ children, isOpen, ...rest }) {
   const variant = {
-    hidden: { marginLeft: '-255px' },
-    show: { marginLeft: '0px' }
+    hidden: { marginLeft: '0px' },
+    show: { marginLeft: `${menuWidth}px` }
   };
 
   return (
-    <motion.nav
+    <motion.div
       variants={variant}
+      initial={false}
       animate={isOpen ? 'show' : 'hidden'}
-      transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
-      sx={{
-        flex: '0 0 auto',
-        position: 'relative',
-        width: '287px',
-        height: '100vh'
-      }}
+      transition={menuTransition}
+      sx={{ position: 'relative' }}
+      {...rest}
     >
-      <Box sx={{ position: 'fixed', width: '287px', height: '100vh' }}>
-        <PushCloseButton
-          onClick={onClose}
-          isHidden={isCloseButtonHidden}
-          behavior={behavior}
-          isOpen={isOpen}
-        />
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, transitionEnd: { display: 'none' } },
-            show: { display: 'block', opacity: 1 }
-          }}
-          onHoverStart={() => setIsCloseButtonHidden(true)}
-          onHoverEnd={() => setIsCloseButtonHidden(false)}
-          sx={{
-            zIndex: 2,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'background',
-            boxShadow: 'hard.high'
-          }}
-        >
-          {children}
-        </motion.div>
-      </Box>
-    </motion.nav>
+      {children}
+    </motion.div>
+  );
+}
+export function Push({ children, isOpen, onClose, behavior, addHeaderOffset }) {
+  const [isCloseButtonHidden, setIsCloseButtonHidden] = useState(false);
+  const variant = {
+    hidden: { x: -menuWidth, opacity: 0 },
+    show: { x: 0, opacity: 1 }
+  };
+
+  return (
+    <>
+      <PushCloseButton
+        onClick={onClose}
+        isHidden={isCloseButtonHidden}
+        behavior={behavior}
+        isOpen={isOpen}
+      />
+      <motion.nav
+        variants={variant}
+        initial={false}
+        animate={isOpen ? 'show' : 'hidden'}
+        transition={menuTransition}
+        onHoverStart={() => setIsCloseButtonHidden(true)}
+        onHoverEnd={() => setIsCloseButtonHidden(false)}
+        sx={{
+          position: 'fixed',
+          left: 0,
+          overflowY: 'auto',
+          paddingBottom: 6,
+          width: `${menuWidth}px`,
+          // Offset by large `Header` cell height
+          height: addHeaderOffset ? 'calc(100vh - 81px)' : '100vh',
+          backgroundColor: 'background',
+          boxShadow: 'hard.high',
+          scrollbarWidth: 'thin',
+          '&::-webkit-scrollbar': {
+            width: '16px'
+          },
+          '&::-webkit-scrollbar-track': {
+            marginY: 5
+          },
+          '&::-webkit-scrollbar-thumb': {
+            border: '5px solid transparent',
+            borderRadius: 4,
+            backgroundClip: 'padding-box',
+            backgroundColor: 'surface.thin'
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: 'surface.extralight'
+          }
+        }}
+      >
+        {children}
+      </motion.nav>
+    </>
   );
 }
 Push.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  behavior: PropTypes.oneOf(['ghost', 'shuffle'])
+  behavior: PropTypes.oneOf(['ghost', 'shuffle']),
+  addHeaderOffset: false
 };
 Push.defaultProps = {
   behavior: 'shuffle'

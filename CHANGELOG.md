@@ -6,9 +6,20 @@
 
 - Default body `font-weight` to 400. ([KRAD-303])
 - For better usability, the `Panel` and `Push` menu icons are now persistent regardless of hover state. ([KRAD-315])
+- `Push` menu cell has been reworked for a better experience. ([KRAD-259]).
+
+### Fixed
+
+- Push menu not letting you scroll all the way down when there is overflowed content. ([KRAD-248])
+- Push menu casing page content to not meet the left edge of the screen. ([KRAD-317])
+- Push menu causing page to jitter on page load. ([KRAD-243])
 
 [krad-303]: https://akrade.atlassian.net/browse/KRAD-303
 [krad-315]: https://akrade.atlassian.net/browse/KRAD-315
+[krad-259]: https://akrade.atlassian.net/browse/KRAD-259
+[krad-248]: https://akrade.atlassian.net/browse/KRAD-248
+[krad-317]: https://akrade.atlassian.net/browse/KRAD-317
+[krad-243]: https://akrade.atlassian.net/browse/KRAD-243
 
 ## [0.11.0] - 2022-02-14
 

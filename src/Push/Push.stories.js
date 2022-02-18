@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import {
   Push,
+  PushBody,
   PushContent,
   PushDivider,
   PushHeader,
@@ -10,498 +11,220 @@ import {
   PushSubItem
 } from './Push';
 import Text from '../Text/Text';
-import Flex from '../Flex/Flex';
-import Box from '../Box/Box';
-import { MdLaunch, MdLink, MdExpandMore } from 'react-icons/md';
+import {
+  MdLaunch,
+  MdLink,
+  MdExpandMore,
+  MdMenu,
+  MdSearch
+} from 'react-icons/md';
+import Container from '../Container/Container';
+import {
+  Header,
+  HeaderAvatar,
+  HeaderBody,
+  HeaderIconButton,
+  HeaderItem,
+  HeaderNavigation,
+  HeaderTitle
+} from '../Header/Header';
 
 export default {
   title: 'Push',
   component: Push
 };
 
-export function Default() {
-  const [isOpen, setIsOpen] = useState(true);
+function PageHeader() {
+  return (
+    <Header>
+      <HeaderIconButton>
+        <MdMenu />
+      </HeaderIconButton>
+      <HeaderTitle sx={{ textTransform: 'uppercase' }}>Kràdoyé</HeaderTitle>
+      <HeaderBody>
+        <HeaderNavigation>
+          <HeaderItem href="#">Home</HeaderItem>
+          <HeaderItem href="#">Strategy</HeaderItem>
+          <HeaderItem href="#">Design</HeaderItem>
+          <HeaderItem href="#">About</HeaderItem>
+          <HeaderItem href="#">Help</HeaderItem>
+        </HeaderNavigation>
+        <HeaderIconButton>
+          <MdSearch />
+        </HeaderIconButton>
+        <HeaderAvatar />
+      </HeaderBody>
+    </Header>
+  );
+}
+
+function PushExampleContent() {
   const [activeMenu, setActiveMenu] = useState('main');
 
   return (
-    <Flex>
+    <>
+      <AnimatePresence exitBeforeEnter>
+        {activeMenu === 'main' && (
+          <PushContent key="main">
+            <PushLabel>Overview</PushLabel>
+            <PushItem label="Getting Started" />
+            <PushItem label="About" />
+            <PushItem label="Support" />
+            <PushDivider />
+            <PushLabel>Foundation</PushLabel>
+            <PushItem label="Identity" />
+            <PushItem label="Accessibility" />
+            <PushLabel>Web & App</PushLabel>
+            <PushItem label="Desktop" />
+            <PushItem label="Web" />
+            <PushItem label="Tablet" />
+            <PushItem label="Mobile" onClick={() => setActiveMenu('mobile')} />
+            <PushItem label="Wearables" />
+            <PushItem label="Print" />
+            <PushDivider />
+            <PushLabel>Virtual</PushLabel>
+            <PushItem label="Virtual Reality" />
+            <PushItem label="Augmented Reality" />
+            <PushItem label="Games" />
+            <PushDivider />
+            <PushLabel>Broadcast</PushLabel>
+            <PushItem label="Television" />
+            <PushItem label="Video" />
+            <PushItem label="Voice" />
+            <PushLabel>Graphics</PushLabel>
+            <PushItem label="Print" />
+            <PushItem label="Outdoor" />
+            <PushDivider />
+            <PushItem href="#" icon={<MdLink />} label="Internal Link" />
+            <PushItem
+              href="https://example.com"
+              target="_blank"
+              rel="noopener"
+              icon={<MdLaunch />}
+              label="External Link"
+            />
+          </PushContent>
+        )}
+
+        {activeMenu === 'mobile' && (
+          <PushContent level={200} key="mobile">
+            <PushHeader
+              onClick={() => setActiveMenu('main')}
+              description="The fundemental building blocks of the design system."
+            >
+              Mobile
+            </PushHeader>
+            <PushDivider />
+            <PushItem onClick={() => setActiveMenu('core')} label="Core" />
+            <PushItem label="Advertising" />
+            <PushItem label="Chat" />
+            <PushItem label="Email" />
+            <PushItem label="Food" />
+            <PushItem label="Publish" />
+            <PushItem label="Shop" />
+            <PushItem label="Social Media" />
+            <PushItem label="Survey" />
+            <PushItem label="Security" />
+          </PushContent>
+        )}
+
+        {activeMenu === 'core' && (
+          <PushContent level={200} key="core">
+            <PushHeader
+              onClick={() => setActiveMenu('mobile')}
+              description="The fundemental building blocks of the design system."
+            >
+              Core
+            </PushHeader>
+            <PushDivider />
+            <PushLabel>Global</PushLabel>
+            <PushItem label="iOS" icon={<MdExpandMore />}>
+              <PushSubItem>Keyboards</PushSubItem>
+              <PushSubItem>Alerts</PushSubItem>
+              <PushSubItem>Pickers</PushSubItem>
+              <PushSubItem>Notifications</PushSubItem>
+              <PushSubItem>Lockscreens</PushSubItem>
+              <PushSubItem>Edit Menus</PushSubItem>
+              <PushSubItem>Devices</PushSubItem>
+            </PushItem>
+            <PushItem label="Grids" />
+            <PushItem label="Header" />
+            <PushItem
+              label="Footer"
+              description="The fundemental building blocks of the design system."
+            />
+            <PushItem label="Search" />
+            <PushDivider />
+            <PushLabel>Style</PushLabel>
+            <PushItem label="Icons" />
+            <PushItem label="Illustrations" />
+            <PushItem label="Spacing" />
+            <PushItem label="Typography" />
+          </PushContent>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
+
+function PageContent() {
+  return (
+    <Container sx={{ paddingY: 4, height: '2000px' }}>
+      <Text>
+        Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies tellus
+        etiam, posuere ornare platea sollicitudin netus nostra eget quisque odio
+        proin, maecenas sapien congue natoque eros vel nibh fermentum tortor.
+        Quam nisl commodo curae orci class dapibus ante cubilia, bibendum purus
+        torquent lectus cursus nulla luctus, sollicitudin vel id posuere nisi
+        varius senectus. Dapibus ultrices sociis platea habitasse dictumst
+        posuere taciti nibh ante, pulvinar ligula lacinia ridiculus enim aliquet
+        interdum laoreet quam imperdiet, turpis gravida convallis ut id rutrum
+        aliquam justo. Lectus integer etiam posuere eu cubilia arcu tristique,
+        neque porttitor in mattis ac ultricies, lacinia consequat laoreet
+        viverra duis nisl. Tristique facilisis aliquet feugiat ac platea gravida
+        natoque, habitant suspendisse nibh montes iaculis vehicula, semper
+        rhoncus metus vel nec fames. Euismod a cras fringilla vivamus, odio
+        pulvinar nostra.
+      </Text>
+    </Container>
+  );
+}
+
+function PushMenu() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  return (
+    <>
       <Push isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} behavior="ghost">
-        <AnimatePresence exitBeforeEnter>
-          {activeMenu === 'main' && (
-            <PushContent key="main">
-              <PushLabel>Overview</PushLabel>
-              <PushItem label="Getting Started" />
-              <PushItem label="About" />
-              <PushItem label="Support" />
-              <PushDivider />
-              <PushLabel>Foundation</PushLabel>
-              <PushItem label="Identity" />
-              <PushItem label="Accessibility" />
-              <PushLabel>Web & App</PushLabel>
-              <PushItem label="Desktop" />
-              <PushItem label="Web" />
-              <PushItem label="Tablet" />
-              <PushItem
-                label="Mobile"
-                onClick={() => setActiveMenu('mobile')}
-              />
-              <PushItem label="Wearables" />
-              <PushItem label="Print" />
-              <PushDivider />
-              <PushLabel>Virtual</PushLabel>
-              <PushItem label="Virtual Reality" />
-              <PushItem label="Augmented Reality" />
-              <PushItem label="Games" />
-              <PushDivider />
-              <PushLabel>Broadcast</PushLabel>
-              <PushItem label="Television" />
-              <PushItem label="Video" />
-              <PushItem label="Voice" />
-              <PushLabel>Graphics</PushLabel>
-              <PushItem label="Print" />
-              <PushItem label="Outdoor" />
-              <PushDivider />
-              <PushItem href="#" icon={<MdLink />} label="Internal Link" />
-              <PushItem
-                href="https://example.com"
-                target="_blank"
-                rel="noopener"
-                icon={<MdLaunch />}
-                label="External Link"
-              />
-            </PushContent>
-          )}
-
-          {activeMenu === 'mobile' && (
-            <PushContent level={200} key="mobile">
-              <PushHeader
-                onClick={() => setActiveMenu('main')}
-                description="The fundemental building blocks of the design system."
-              >
-                Mobile
-              </PushHeader>
-              <PushDivider />
-              <PushItem onClick={() => setActiveMenu('core')} label="Core" />
-              <PushItem label="Advertising" />
-              <PushItem label="Chat" />
-              <PushItem label="Email" />
-              <PushItem label="Food" />
-              <PushItem label="Publish" />
-              <PushItem label="Shop" />
-              <PushItem label="Social Media" />
-              <PushItem label="Survey" />
-              <PushItem label="Security" />
-            </PushContent>
-          )}
-
-          {activeMenu === 'core' && (
-            <PushContent level={200} key="core">
-              <PushHeader
-                onClick={() => setActiveMenu('mobile')}
-                description="The fundemental building blocks of the design system."
-              >
-                Core
-              </PushHeader>
-              <PushDivider />
-              <PushLabel>Global</PushLabel>
-              <PushItem label="iOS" icon={<MdExpandMore />}>
-                <PushSubItem>Keyboards</PushSubItem>
-                <PushSubItem>Alerts</PushSubItem>
-                <PushSubItem>Pickers</PushSubItem>
-                <PushSubItem>Notifications</PushSubItem>
-                <PushSubItem>Lockscreens</PushSubItem>
-                <PushSubItem>Edit Menus</PushSubItem>
-                <PushSubItem>Devices</PushSubItem>
-              </PushItem>
-              <PushItem label="Grids" />
-              <PushItem label="Header" />
-              <PushItem
-                label="Footer"
-                description="The fundemental building blocks of the design system."
-              />
-              <PushItem label="Search" />
-              <PushDivider />
-              <PushLabel>Style</PushLabel>
-              <PushItem label="Icons" />
-              <PushItem label="Illustrations" />
-              <PushItem label="Spacing" />
-              <PushItem label="Typography" />
-            </PushContent>
-          )}
-        </AnimatePresence>
+        <PushExampleContent />
       </Push>
+      <PushBody isOpen={isOpen}>
+        <PageContent />
+      </PushBody>
+    </>
+  );
+}
 
-      <Box>
-        <Box sx={{ width: '100%', height: '50px', backgroundColor: 'red' }} />
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit ultricies
-          tellus etiam, posuere ornare platea sollicitudin netus nostra eget
-          quisque odio proin, maecenas sapien congue natoque eros vel nibh
-          fermentum tortor. Quam nisl commodo curae orci class dapibus ante
-          cubilia, bibendum purus torquent lectus cursus nulla luctus,
-          sollicitudin vel id posuere nisi varius senectus. Dapibus ultrices
-          sociis platea habitasse dictumst posuere taciti nibh ante, pulvinar
-          ligula lacinia ridiculus enim aliquet interdum laoreet quam imperdiet,
-          turpis gravida convallis ut id rutrum aliquam justo. Lectus integer
-          etiam posuere eu cubilia arcu tristique, neque porttitor in mattis ac
-          ultricies, lacinia consequat laoreet viverra duis nisl. Tristique
-          facilisis aliquet feugiat ac platea gravida natoque, habitant
-          suspendisse nibh montes iaculis vehicula, semper rhoncus metus vel nec
-          fames. Euismod a cras fringilla vivamus, odio pulvinar nostra. Et
-          aliquet varius euismod nam rutrum taciti fusce quam pharetra, sed
-          blandit mus congue magna per ut urna ante sociis, bibendum nisl sem
-          aenean aliquam laoreet tincidunt aptent. Porta vestibulum nunc iaculis
-          etiam elementum nisi curae cubilia vel fermentum cras a quisque massa
-          luctus, dignissim lectus eget litora orci pretium aenean montes ligula
-          fames augue gravida laoreet. Urna aliquet ultrices magnis eget
-          phasellus laoreet ante cras malesuada dui purus eu mollis, odio
-          praesent facilisis eleifend senectus in egestas tortor est augue
-          ultricies habitant. Luctus suscipit iaculis posuere diam ligula vel
-          orci condimentum faucibus, etiam commodo facilisis tellus euismod
-          pulvinar facilisi natoque, odio imperdiet himenaeos sapien convallis
-          sodales tempus accumsan. Vehicula posuere placerat in lacinia, ac
-          tincidunt. Suspendisse malesuada dictumst risus posuere felis leo
-          enim, venenatis mollis aliquam ac at hendrerit, sagittis primis magna
-          egestas neque pharetra. Et at ultricies in nam nibh, malesuada nunc
-          dignissim litora, dapibus lectus mauris montes. Nulla magna euismod at
-          aenean suscipit mi mollis, duis id dictumst potenti nisi malesuada,
-          urna nam varius est lectus a. Nascetur magna fusce molestie malesuada
-          natoque elementum, mi sem cum nibh venenatis, congue tristique iaculis
-          at euismod. Porta gravida velit nascetur tristique fusce est felis,
-          tincidunt placerat vivamus turpis eleifend faucibus aliquet semper,
-          cubilia tellus proin facilisi urna vehicula. Ultricies dictumst
-          aliquet imperdiet tellus nunc vehicula, dictum posuere cras ultrices
-          torquent. Ullamcorper libero eu semper vulputate malesuada in pharetra
-          enim, consequat dapibus neque sodales eleifend blandit aenean turpis
-          quam, venenatis donec potenti fermentum rhoncus dis risus. Torquent
-          bibendum lacus sociis fames interdum augue neque convallis mollis
-          litora placerat tempor cursus ullamcorper ut, est per praesent morbi
-          vulputate metus risus facilisis vestibulum nascetur auctor taciti
-          tellus.
-        </Text>
-      </Box>
-    </Flex>
+export function Default() {
+  return <PushMenu />;
+}
+
+export function WithHeader() {
+  const [isOpen, setIsOpen] = useState(true);
+  return (
+    <>
+      <PageHeader />
+      <Push
+        isOpen={isOpen}
+        onClose={() => setIsOpen(!isOpen)}
+        behavior="ghost"
+        addHeaderOffset
+      >
+        <PushExampleContent />
+      </Push>
+      <PushBody isOpen={isOpen}>
+        <PageContent />
+      </PushBody>
+    </>
   );
 }
