@@ -82,7 +82,7 @@ export function HeaderIconButton({ children, ...props }) {
   );
 }
 
-export function Header({ children, isSmall }) {
+export function Header({ children, isSmall, ...rest }) {
   const variant = {
     small: { paddingTop: '0px' },
     large: { paddingTop: `${useThemeUI().theme.space[5]}px` }
@@ -100,6 +100,7 @@ export function Header({ children, isSmall }) {
         backgroundColor: 'background',
         boxShadow: 'soft.low'
       }}
+      {...rest}
     >
       <div
         sx={{
