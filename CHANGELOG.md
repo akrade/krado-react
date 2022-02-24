@@ -2,10 +2,16 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Made level 200 Push menu's `font-size` two pixels smaller. ([KRAD-322])
+
 ### Fixed
 
 - Incorrect `addHeaderOffset` prop type in `Push` cell.
 - `Push` cell not having a higher `z-index` level.
+
+[krad-322]: https://akrade.atlassian.net/browse/KRAD-322
 
 ## [0.12.1] - 2022-02-18
 
