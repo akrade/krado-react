@@ -262,14 +262,13 @@ export function PushDivider() {
 export function PushContent({ children, level }) {
   function getLevel(level) {
     if (level === 100) {
-      return 'text.body.h3';
+      return { variant: 'text.body.h3' };
     }
 
     if (level === 200) {
-      return 'text.body.h5';
+      return { fontSize: '18px', fontWeight: 600 };
     }
   }
-
   return (
     <motion.ul
       variants={menuVariant}
@@ -277,11 +276,11 @@ export function PushContent({ children, level }) {
       animate="show"
       exit="hidden"
       sx={{
-        variant: getLevel(level),
         zIndex: 1,
         listStyle: 'none',
         margin: 0,
-        padding: 0
+        padding: 0,
+        ...getLevel(level)
       }}
     >
       {children}
