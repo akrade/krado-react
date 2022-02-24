@@ -7,6 +7,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
+import Divider from '../Divider/Divider';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
 import chevronOpen from '../lotties/chevron-open.json';
 import chevronClose from '../lotties/chevron-close.json';
@@ -249,14 +250,7 @@ PushItem.propTypes = {
 };
 
 export function PushDivider() {
-  return (
-    <Box
-      marginX={4}
-      marginY={3}
-      backgroundColor="divider"
-      sx={{ height: '1px' }}
-    />
-  );
+  return <Divider marginX={3} />;
 }
 
 export function PushContent({ children, level }) {

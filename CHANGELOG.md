@@ -5,6 +5,7 @@
 ### Changed
 
 - Made level 200 Push menu's `font-size` two pixels smaller. ([KRAD-322])
+- `PushDivider` is now full width and extends the `Divider` cell. ([KRAD-325])
 
 ### Fixed
 
@@ -12,6 +13,7 @@
 - `Push` cell not having a higher `z-index` level.
 
 [krad-322]: https://akrade.atlassian.net/browse/KRAD-322
+[krad-325]: https://akrade.atlassian.net/browse/KRAD-325
 
 ## [0.12.1] - 2022-02-18
 
