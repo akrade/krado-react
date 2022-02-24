@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changes
+
+- `Header` tissue elements now have transparent backgrounds.
+
 ## [0.13.0] - 2022-02-24
 
 ### Changed

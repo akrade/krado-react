@@ -13,7 +13,6 @@ export function HeaderItem({ children, href, onClick, active, ...rest }) {
         sx={{
           padding: 2,
           color: active ? 'action.active' : 'initial',
-          backgroundColor: 'background',
           borderRadius: 1,
           textDecoration: 'none',
           boxShadow: active ? 'hard.high' : 'none',
@@ -76,7 +75,10 @@ export function HeaderTitle({ children, ...rest }) {
 
 export function HeaderIconButton({ children, ...props }) {
   return (
-    <ToggleIcon sx={{ marginRight: 3 }} {...props}>
+    <ToggleIcon
+      sx={{ marginRight: 3, backgroundColor: 'transparent' }}
+      {...props}
+    >
       {children}
     </ToggleIcon>
   );
