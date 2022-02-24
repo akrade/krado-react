@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.13.0] - 2022-02-24
+
 ### Changed
 
 - Made level 200 Push menu's `font-size` two pixels smaller. ([KRAD-322])
@@ -414,7 +416,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.12.1...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.13.0...HEAD
+[0.13.0]: https://github.com/akrade/krado-react/compare/v0.12.1...v0.13.0
 [0.12.1]: https://github.com/akrade/krado-react/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/akrade/krado-react/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/akrade/krado-react/compare/v0.10.0...v0.11.0
