@@ -60,6 +60,7 @@ export function HeaderTitle({ children, ...rest }) {
   return (
     <motion.div
       variants={variant}
+      initial={false}
       transition={{ type: 'spring', duration: 0.4, bounce: 0 }}
       sx={{
         variant: 'text.display.h2',
@@ -93,6 +94,7 @@ export function Header({ children, isSmall, ...rest }) {
   return (
     <motion.header
       variants={variant}
+      initial={false}
       animate={isSmall ? 'small' : 'large'}
       transition={{ type: 'spring', duration: 0.4, bounce: 0 }}
       sx={{

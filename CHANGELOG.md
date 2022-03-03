@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- `Header` tissue jittering on page load.
+
 ## [0.13.1] - 2022-02-24
 
 ### Changes
