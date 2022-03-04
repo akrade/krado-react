@@ -1,5 +1,6 @@
 export { default as theme } from './theme';
-export { default as colors } from './colors';
+export { default as colors } from './colors/colors';
+export * from './colors/getColors';
 
 // Layout
 export { default as Box } from './Box/Box';
