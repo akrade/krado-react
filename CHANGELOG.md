@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Adjusted `Push` menu scrollbar color.
+
 ## [0.14.0] - 2022-03-03
 
 ### Added

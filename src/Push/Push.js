@@ -352,11 +352,10 @@ export function Push({ children, isOpen, onClose, behavior, addHeaderOffset }) {
             border: '5px solid transparent',
             borderRadius: 4,
             backgroundClip: 'padding-box',
-            // `background-color` based off Surface Thin
-            backgroundColor: 'rgba(222, 222, 221, 0.4)'
+            backgroundColor: 'surface.thin'
           },
           '&::-webkit-scrollbar-thumb:hover': {
-            backgroundColor: 'surface.thin'
+            backgroundColor: 'surface.light'
           }
         }}
       >
