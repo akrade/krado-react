@@ -2,9 +2,15 @@
 
 ## [Unreleased]
 
+### Added
+
+- The ability to create dynamic themes. ([KRAD-331])
+
 ### Fixed
 
 - `Header` tissue jittering on page load.
+
+[krad-331]: https://akrade.atlassian.net/browse/KRAD-331
 
 ## [0.13.1] - 2022-02-24
 
