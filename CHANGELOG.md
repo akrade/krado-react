@@ -2,9 +2,20 @@
 
 ## [Unreleased]
 
+### Added
+
+- The ability to create dynamic themes. ([KRAD-331])
+- New updated colors from the Sūsū Identity (Nsõ, Nsõ Hot, Nsõ Warm, Nsõ Cool, Nsõ Cream, Nsõ White). ([KRAD-331])
+
 ### Fixed
 
 - `Header` tissue jittering on page load.
+
+### Removed
+
+- Ash, Cool Ash, Warm Ash, Cream White, and Egg Shell White colors. ([KRAD-331])
+
+[krad-331]: https://akrade.atlassian.net/browse/KRAD-331
 
 ## [0.13.1] - 2022-02-24
 

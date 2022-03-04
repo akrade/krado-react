@@ -1,4 +1,5 @@
-import kradoColors from './colors';
+import kradoColors from './colors/colors';
+import { buildColorTheme } from './colors/getColors';
 
 const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -11,82 +12,20 @@ const theme = {
   },
   breakpoints: ['40em', '52em', '90em', '120rem'],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 42, 52, 62, 84],
-  colors: {
-    primary: {
-      regular: '#9C264B',
-      contrast: '#FFFFFF'
-    },
-    secondary: {
-      light: '#AB4666',
-      regular: '#6E1B35',
-      bold: '#3E0F1E',
-      contrast: '#FFFFFF'
-    },
-    accent: {
-      light: '#F5E9ED',
-      regular: '#D7A8B7',
-      medium: '#E1BDC9',
-      bold: '#C47D93',
-      contrast: '#FFFFFF'
-    },
-    error: {
-      light: '#FAF4F6',
-      regular: '#9C264B',
-      medium: '#6E1B35',
-      bold: '#3E0F1E',
-      contrast: '#FFFFFF'
-    },
-    warning: {
-      light: '#F3E8CC',
-      regular: '#C18B01',
-      medium: '#876201',
-      bold: '#4D3800',
-      contrast: '#FFFFFF'
-    },
-    success: {
-      light: '#DCE4D4',
-      regular: '#52792A',
-      medium: '#97AF7F',
-      bold: '#213011',
-      contrast: '#FFFFFF'
-    },
-    info: {
-      light: '#F3F7FB',
-      regular: '#1661AB',
-      medium: '#0F4478',
-      bold: '#092744',
-      contrast: '#FFFFFF'
-    },
-    surface: {
-      extrathin: '#F4F4F3',
-      thin: '#DEDEDD',
-      extralight: '#B2B1AF',
-      light: '#868481',
-      regular: '#65625E',
-      medium: '#44403B',
-      semibold: '#393530',
-      bold: '#2E2A25',
-      semiblack: '#242220',
-      black: '#1A1816',
-      heavy: '#050403',
-      extraheavy: '#000000'
-    },
-    action: {
-      active: '#6E1B35',
-      hover: '#9C264B',
-      selected: '#9C264B',
-      disabled: '#E1BDC9',
-      contrast: '#F5E9ED'
-    },
-    text: {
-      primary: '#2E2A25',
-      secondary: '#5A5753',
-      placeholder: '#9C9A97',
-      disabled: '#C8C7C5'
-    },
-    background: '#FFFFFF',
-    divider: '#DEDEDD'
-  },
+  colors: buildColorTheme({
+    primary: 'oshun',
+    secondary: 'oshun',
+    accent: 'oshun',
+    error: 'asset',
+    warning: 'oshun',
+    success: 'usir',
+    info: 'ptah',
+    surface: 'nsoWarm',
+    action: 'oshun',
+    text: 'nsoWarm',
+    background: 'nso',
+    divider: 'nso'
+  }),
   fonts: {
     body: 'Inter, Arial, sans-serif',
     heading: 'Inter, Arial, sans-serif',
