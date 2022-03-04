@@ -1,8 +1,8 @@
-import Box from './Box/Box';
-import Flex from './Flex/Flex';
-import Text from './Text/Text';
-import Heading from './Heading/Heading';
-import LinkHeading from './LinkHeading/LinkHeading';
+import Box from '../Box/Box';
+import Flex from '../Flex/Flex';
+import Text from '../Text/Text';
+import Heading from '../Heading/Heading';
+import LinkHeading from '../LinkHeading/LinkHeading';
 
 // I wish I can make this a proper MDX story, but I can't get it to work.
 
