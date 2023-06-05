@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.15.0-rc.1]
+
 Current bugs include broken Push menu on navigation.
 
 ### Changed
@@ -455,7 +457,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.14.1...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.15.0-rc.1...HEAD
+[0.15.0-rc.1]: https://github.com/akrade/krado-react/compare/v0.14.1...v0.15.0-rc.1
 [0.14.1]: https://github.com/akrade/krado-react/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/akrade/krado-react/compare/v0.13.1...v0.14.0
 [0.13.1]: https://github.com/akrade/krado-react/compare/v0.13.0...v0.13.1
