@@ -1,23 +1,19 @@
 module.exports = {
-  core: {
-    builder: 'webpack5'
-  },
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   features: {
     emotionAlias: false
   },
-  babel: async (options) => ({
+  babel: async options => ({
     ...options,
-    presets: [
-      [
-        '@babel/preset-react',
-        {
-          importSource: 'theme-ui',
-          runtime: 'automatic',
-          throwIfNamespace: false
-        }
-      ]
-    ]
-  })
+    presets: [['@babel/preset-react', {
+      importSource: 'theme-ui',
+      runtime: 'automatic',
+      throwIfNamespace: false
+    }]]
+  }),
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {}
+  }
 };
