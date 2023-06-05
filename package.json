@@ -26,7 +26,6 @@
     "build-storybook": "sb build"
   },
   "peerDependencies": {
-    "framer-motion": "^4.1.17",
     "react": "^18.2.0"
   },
   "devDependencies": {
@@ -63,7 +62,8 @@
     "dist"
   ],
   "dependencies": {
-    "framer-motion": "^4.1.17",
+    "@emotion/react": "^11.11.0",
+    "framer-motion": "^10.12.16",
     "prop-types": "^15.7.2",
     "react-icons": "^4.3.1",
     "react-lottie": "^1.2.3",
