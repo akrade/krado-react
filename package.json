@@ -35,6 +35,8 @@
     "@storybook/addon-actions": "^6.4.0",
     "@storybook/addon-essentials": "^6.4.0",
     "@storybook/addon-links": "^6.4.0",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.4.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.2.2",
@@ -65,6 +67,6 @@
     "prop-types": "^15.7.2",
     "react-icons": "^4.3.1",
     "react-lottie": "^1.2.3",
-    "theme-ui": "0.12.1"
+    "theme-ui": "^0.12.1"
   }
 }
