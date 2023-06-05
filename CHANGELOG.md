@@ -2,7 +2,13 @@
 
 ## [Unreleased]
 
-## [0.15.0]
+## [0.15.1] - 2023-06-05
+
+### Fixed
+
+- Fixed missing date for 0.15.0 in `CHANGELOG.md`.
+
+## [0.15.0] - 2023-06-05
 
 Current bugs include broken Push menu on navigation.
 
