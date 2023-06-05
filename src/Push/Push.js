@@ -2,15 +2,12 @@ import { useState } from 'react';
 import { useThemeUI } from 'theme-ui';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import Lottie from 'react-lottie';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import Flex from '../Flex/Flex';
 import Divider from '../Divider/Divider';
 import ToggleIcon from '../ToggleIcon/ToggleIcon';
-import chevronOpen from '../lotties/chevron-open.json';
-import chevronClose from '../lotties/chevron-close.json';
 import theme from '../theme';
 
 const menuWidth = 287;
@@ -54,20 +51,6 @@ function PushCloseButton({ isOpen, ...rest }) {
   const context = useThemeUI();
   const { theme } = context;
 
-  const open = {
-    loop: false,
-    animationData: chevronOpen,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
-  const close = {
-    loop: false,
-    animationData: chevronClose,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
   const variant = {
     hidden: { marginLeft: `${theme.space[3]}px` },
     show: { marginLeft: `${menuWidth - 16}px` }
@@ -88,11 +71,7 @@ function PushCloseButton({ isOpen, ...rest }) {
         }}
         {...rest}
       >
-        {isOpen ? (
-          <Lottie options={open} width={24} height={24} />
-        ) : (
-          <Lottie options={close} width={24} height={24} />
-        )}
+        {isOpen ? <MdChevronLeft /> : <MdChevronRight />}
       </ToggleIcon>
     </motion.div>
   );

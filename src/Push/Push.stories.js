@@ -83,7 +83,7 @@ function PushExampleContent() {
 
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {activeMenu === 'main' && (
           <PushContent key="main">
             <PushLabel>Overview</PushLabel>

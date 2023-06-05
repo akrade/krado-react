@@ -4,17 +4,16 @@ module.exports = {
   features: {
     emotionAlias: false
   },
-  babel: async (options) => ({
+  babel: async options => ({
     ...options,
-    presets: [
-      [
-        '@babel/preset-react',
-        {
-          importSource: 'theme-ui',
-          runtime: 'automatic',
-          throwIfNamespace: false
-        }
-      ]
-    ]
-  })
+    presets: [['@babel/preset-react', {
+      importSource: 'theme-ui',
+      runtime: 'automatic',
+      throwIfNamespace: false
+    }]]
+  }),
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {}
+  }
 };

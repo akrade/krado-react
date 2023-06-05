@@ -1,0 +1,58 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: react-lottie@1.2.3
+npm ERR! Found: react@17.0.2
+npm ERR! node_modules/react
+npm ERR!   peer react@">=16.8.0" from @emotion/react@11.11.0
+npm ERR!   node_modules/@emotion/react
+npm ERR!     peer @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.11.0
+npm ERR!     node_modules/@emotion/styled
+npm ERR!       @emotion/styled@"^11.6.0" from @theme-ui/components@0.12.1
+npm ERR!       node_modules/@theme-ui/components
+npm ERR!         @theme-ui/components@"0.12.1" from theme-ui@0.12.1
+npm ERR!         node_modules/theme-ui
+npm ERR!       1 more (@theme-ui/mdx)
+npm ERR!     @emotion/react@"^11.6.0" from @theme-ui/color-modes@0.12.1
+npm ERR!     node_modules/@theme-ui/color-modes
+npm ERR!       @theme-ui/color-modes@"0.12.1" from @theme-ui/theme-provider@0.12.1
+npm ERR!       node_modules/@theme-ui/theme-provider
+npm ERR!         @theme-ui/theme-provider@"0.12.1" from theme-ui@0.12.1
+npm ERR!         node_modules/theme-ui
+npm ERR!       1 more (theme-ui)
+npm ERR!     6 more (@theme-ui/components, @theme-ui/core, @theme-ui/css, ...)
+npm ERR!   peer react@">=16.8.0" from @emotion/styled@11.11.0
+npm ERR!   node_modules/@emotion/styled
+npm ERR!     @emotion/styled@"^11.6.0" from @theme-ui/components@0.12.1
+npm ERR!     node_modules/@theme-ui/components
+npm ERR!       @theme-ui/components@"0.12.1" from theme-ui@0.12.1
+npm ERR!       node_modules/theme-ui
+npm ERR!         theme-ui@"^0.12.1" from the root project
+npm ERR!     @emotion/styled@"^11.6.0" from @theme-ui/mdx@0.12.1
+npm ERR!     node_modules/@theme-ui/mdx
+npm ERR!       @theme-ui/mdx@"0.12.1" from @theme-ui/theme-provider@0.12.1
+npm ERR!       node_modules/@theme-ui/theme-provider
+npm ERR!         @theme-ui/theme-provider@"0.12.1" from theme-ui@0.12.1
+npm ERR!         node_modules/theme-ui
+npm ERR!       1 more (theme-ui)
+npm ERR!   41 more (@emotion/use-insertion-effect-with-fallbacks, ...)
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer react@"^0.14.7 || ^15.0.0 || ^16.0.0" from react-lottie@1.2.3
+npm ERR! node_modules/react-lottie
+npm ERR!   react-lottie@"^1.2.3" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: react@16.14.0
+npm ERR! node_modules/react
+npm ERR!   peer react@"^0.14.7 || ^15.0.0 || ^16.0.0" from react-lottie@1.2.3
+npm ERR!   node_modules/react-lottie
+npm ERR!     react-lottie@"^1.2.3" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See C:\Users\imset\AppData\Local\npm-cache\eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\imset\AppData\Local\npm-cache\_logs\2023-06-05T04_09_19_159Z-debug-0.log

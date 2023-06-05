@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+Current bugs include broken Push menu on navigation.
+
+### Changed
+
+- Upgraded from Storybook 6 to 7.
+- Upgraded from React 17 to 18.
+- Upgraded from Theme UI 12 to 15.
+- Upgraded from Framer Motion 4 to 10.
+- Updated other dependencies.
+
 ## [0.14.1] - 2022-03-03
 
 ### Changed
