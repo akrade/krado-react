@@ -66,6 +66,6 @@
     "framer-motion": "^10.12.16",
     "prop-types": "^15.8.1",
     "react-icons": "^4.9.0",
-    "theme-ui": "^0.15.7"
+    "theme-ui": "^0.16.0"
   }
 }
