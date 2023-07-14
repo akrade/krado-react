@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.16.0] - 2023-07-14
+
+### Changed
+
+- Upgraded from Theme UI 0.15.7 to 0.16.0.
+
 ## [0.15.1] - 2023-06-05
 
 ### Fixed
@@ -463,7 +469,8 @@ Upgraded dependencies. ([KRAD-42])
 
 Initial development
 
-[unreleased]: https://github.com/akrade/krado-react/compare/v0.15.1...HEAD
+[unreleased]: https://github.com/akrade/krado-react/compare/v0.16.0...HEAD
+[0.16.0]: https://github.com/akrade/krado-react/compare/v0.15.1...v0.16.0
 [0.15.1]: https://github.com/akrade/krado-react/compare/v0.15.0...v0.15.1
 [0.15.0]: https://github.com/akrade/krado-react/compare/v0.14.1...v0.15.0
 [0.14.1]: https://github.com/akrade/krado-react/compare/v0.14.0...v0.14.1
